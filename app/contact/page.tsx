@@ -23,6 +23,8 @@ export default function ContactPage() {
               <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
               <input className="h-14 rounded-md border hairline bg-bone/5 px-4 text-bone outline-none focus:border-gold" placeholder={t.name} aria-label={t.name} name="name" required />
               <input className="h-14 rounded-md border hairline bg-bone/5 px-4 text-bone outline-none focus:border-gold" placeholder={t.email} type="email" aria-label={t.email} name="email" required />
+              <input className="h-14 rounded-md border hairline bg-bone/5 px-4 text-bone outline-none focus:border-gold" placeholder="Travel dates" aria-label="Travel dates" name="travel_dates" required />
+              <input className="h-14 rounded-md border hairline bg-bone/5 px-4 text-bone outline-none focus:border-gold" placeholder="Number of people" type="number" min="1" aria-label="Number of people" name="number_of_people" required />
               <textarea className="min-h-36 rounded-md border hairline bg-bone/5 px-4 py-4 text-bone outline-none focus:border-gold" placeholder={t.message} aria-label={t.message} name="message" required />
               <button type="submit" className="mt-2 h-12 rounded-full bg-bone px-7 text-sm font-medium text-ink transition hover:bg-gold">{t.send}</button>
             </form>
