@@ -7,11 +7,11 @@ import { getSiteCopy } from "@/lib/site-copy";
 const navHrefs = ["/experiences", "/private-car", "/#local-life", "/destinations", "/about", "/contact"];
 
 const socialLinks = [
-  { label: "YouTube", href: "https://www.youtube.com/", color: "bg-[#ff0000] text-white" },
-  { label: "TikTok", href: "https://www.tiktok.com/", color: "bg-black text-white" },
-  { label: "X", href: "https://x.com/", color: "bg-black text-white" },
-  { label: "小红书", href: "https://www.xiaohongshu.com/", color: "bg-[#ff2442] text-white" },
-  { label: "Instagram", href: "https://www.instagram.com/", color: "instagram-brand text-white" }
+  { label: "YouTube", href: "https://www.youtube.com/@WusorCHINAexp", color: "bg-[#ff0000] text-white" },
+  { label: "TikTok", href: "https://www.tiktok.com/@wusorchinaexp", color: "bg-black text-white" },
+  { label: "X", href: "https://x.com/gladlyplanet", color: "bg-black text-white" },
+  { label: "小红书", href: "https://xhslink.com/m/3JFB2pFdEvd", color: "bg-[#ff2442] text-white" },
+  { label: "Instagram", href: "https://www.instagram.com/wusorchinaexp?igsh=MWg5NzBuaWZjbzR6Mg%3D%3D&utm_source=qr", color: "instagram-brand text-white" }
 ];
 
 function SocialLogo({ name }: { name: string }) {
