@@ -38,7 +38,7 @@ export default function PrivateCarPage() {
 
         <section id="customize" className="scroll-mt-28 bg-[#ece9e1] px-5 py-20 text-ink sm:px-8">
           <div className="mx-auto max-w-7xl"><h2 className="font-serif text-4xl font-semibold sm:text-6xl">{t.formTitle}</h2><div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">{t.features.map(([title, body]) => <div key={title} className="border-s-2 border-moss ps-5"><h3 className="text-lg font-semibold">{title}</h3><p className="mt-3 text-sm leading-6 text-mist">{body}</p></div>)}</div>
-            <form className="mt-12 grid gap-5 rounded-lg bg-white p-6 shadow-card md:grid-cols-2" action="https://formsubmit.co/ly13845267281@sina.com" method="post">
+            <form className="mt-12 grid gap-5 rounded-lg bg-white p-6 shadow-card md:grid-cols-2" action="https://formsubmit.co/e3a0636acf2542a784c9d3ba3a01433d" method="post">
               <input type="hidden" name="_subject" value="New Local China private car enquiry" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_captcha" value="false" />

@@ -15,7 +15,7 @@ export default function ContactPage() {
         <section className="grid min-h-[calc(100vh-124px)] lg:grid-cols-[0.92fr_1.08fr] xl:min-h-[calc(100vh-80px)]">
           <div className="relative min-h-[42vh] lg:min-h-0"><Image src="/images/real-night-market.jpg" alt={t.title} fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" /><div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" /></div>
           <div className="flex items-center px-5 py-14 sm:px-8 lg:px-16"><div className="w-full max-w-xl"><p className="text-xs uppercase tracking-[0.24em] text-gold">{t.eyebrow}</p><h1 className="mt-5 font-serif text-5xl leading-tight sm:text-7xl">{t.title}</h1><p className="mt-7 text-lg leading-8 text-mist">{t.intro}</p>
-            <form className="mt-10 grid gap-4" action="https://formsubmit.co/ly13845267281@sina.com" method="post">
+            <form className="mt-10 grid gap-4" action="https://formsubmit.co/e3a0636acf2542a784c9d3ba3a01433d" method="post">
               <input type="hidden" name="_subject" value="New Local China travel enquiry" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_captcha" value="false" />
