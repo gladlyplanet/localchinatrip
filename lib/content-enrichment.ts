@@ -468,19 +468,31 @@ function localized(lang: Lang, value: Localized) {
   return value.en;
 }
 
-export function getRecommendationEnrichment(lang: Lang, item: ProvinceRecommendation, provinceName?: string) {
-  const media = {
-    ...genericByKind[item.kind],
-    ...fallbackRecommendationText(item, provinceName),
-    ...recommendationMedia[item.name],
-    ...specificRecommendationText[item.name],
-    ...curatedRecommendationMedia[item.name]
-  } as MediaText;
-  const image = curatedRecommendationMedia[item.name]?.image ?? verifiedRecommendationImages[item.name] ?? media.image;
+function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: string): MediaText {
+  const place = provinceName ? `${item.name}, ${provinceName}` : item.name;
+  const placeZh = item.nameZh;
+  const kind = genericByKind[item.kind];
   return {
-    image,
+    image: verifiedRecommendationImages[item.name] ?? kind.image,
+    fallbackImage: kind.fallbackImage,
+    caption: { en: place, zh: placeZh },
+    overview: {
+      en: `${place} is recommended for ${item.focus}.`,
+      zh: `${placeZh}适合围绕${item.focusZh}来理解。`
+    },
+    experience: {
+      en: `A private visit should connect the route, timing and explanation directly to ${item.name}, so the experience feels specific to the destination rather than generic sightseeing.`,
+      zh: `私人游览应把路线、时间和讲解都直接围绕${placeZh}展开，让体验和这个地点本身对应，而不是普通打卡。`
+    }
+  };
+}
+
+export function getRecommendationEnrichment(lang: Lang, item: ProvinceRecommendation, provinceName?: string) {
+  const media = cleanRecommendationText(item, provinceName);
+  return {
+    image: media.image,
     fallbackImage: media.fallbackImage,
-    caption: recommendationMedia[item.name] ? localized(lang, media.caption) : localized(lang, { en: item.name, zh: item.nameZh }),
+    caption: localized(lang, media.caption),
     overview: localized(lang, media.overview),
     experience: localized(lang, media.experience)
   };
