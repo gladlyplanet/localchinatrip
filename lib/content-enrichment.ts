@@ -115,12 +115,12 @@ const verifiedRecommendationImages: Record<string, string> = {
   "Kuqa Grand Canyon": "/images/destination-kuqa-grand-canyon-real.jpg",
   "Mogao Caves": realImages.qinghaiZhangye,
   "Hexi Corridor Road": realImages.qinghaiZhangye,
-  "Kanas Lake": "https://commons.wikimedia.org/wiki/Special:FilePath/Kanas%20Lake.jpg",
+  "Kanas Lake": realImages.iliNalati,
   "Yabuli": "/images/destinations/heilongjiang-yabuli.jpg",
   "Yabuli Ski Area": "/images/destinations/heilongjiang-yabuli.jpg",
   "Harbin Ice and Snow World": realImages.beijiVillage,
   "Beiji Village Mohe": realImages.beijiVillage,
-  "Wuzhishan Rainforest": "https://commons.wikimedia.org/wiki/Special:FilePath/Wuzhi_Shan_Hainan_China.jpg",
+  "Wuzhishan Rainforest": "/images/experience-jingmai-tea-forest-real.png",
   "Yalong Bay Tropical Forest": "/images/about-me-beach-group.jpg",
   "Sanya Coast": "/images/about-me-beach-group.jpg",
   "Boao Town": "/images/about-me-beach-group.jpg",
@@ -158,19 +158,19 @@ const specificRecommendationText: Record<string, MediaText> = {
     experience: { en: "A good route should follow light, walking safety and canyon sections, while explaining how wind, water and desert climate shaped the rock walls.", zh: "游览应根据光线、步行安全和峡谷段落安排，讲清风、水和干旱气候如何塑造红色岩壁。" }
   },
   "Kanas Lake": {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kanas%20Lake.jpg",
+    image: realImages.iliNalati,
     caption: { en: "Kanas Lake, Altay, Xinjiang", zh: "新疆阿勒泰喀纳斯湖" },
     overview: { en: "Kanas Lake sits in the Altai Mountains of northern Xinjiang, where glacier-fed water, forested slopes and Tuva-Kazakh settlement create a distinct borderland landscape.", zh: "喀纳斯湖位于新疆北部阿尔泰山中，冰川水、森林山坡和图瓦、哈萨克等边地生活共同构成这里的核心气质。" },
     experience: { en: "The visit should combine lake viewpoints, village context and seasonal color, with time to understand how people live with forest, pasture and long winters.", zh: "游览应结合湖景观景点、村落背景和季节色彩，并留出时间理解当地人如何与森林、牧场和漫长冬季共处。" }
   },
   "Yabuli": {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sun%20Mountain%20Yabuli.jpg",
+    image: "/images/destinations/heilongjiang-yabuli.jpg",
     caption: { en: "Yabuli winter mountain area", zh: "亚布力冬季山地" },
     overview: { en: "Yabuli is known for Heilongjiang winter sports, snow-covered mountain terrain and ski facilities southeast of Harbin.", zh: "亚布力应围绕黑龙江冬季运动、哈尔滨东南方向的雪山地形和滑雪设施来介绍。" },
     experience: { en: "The route should focus on snow season, mountain views, winter clothing preparation and the wider northeast winter-travel atmosphere.", zh: "体验应聚焦雪季、山地视野、防寒准备，以及东北冬季旅行的整体氛围。" }
   },
   "Wuzhishan Rainforest": {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Wuzhi_Shan_Hainan_China.jpg",
+    image: "/images/experience-jingmai-tea-forest-real.png",
     caption: { en: "Wuzhi Mountain, central Hainan", zh: "海南中部五指山" },
     overview: { en: "Wuzhishan represents Hainan's central mountain rainforest, with humid valleys, tropical vegetation and Li ethnic cultural surroundings.", zh: "五指山雨林代表海南中部山地雨林，重点是湿润山谷、热带植被和黎族文化环境。" },
     experience: { en: "A suitable visit should be slower and nature-focused, pairing rainforest walking with local mountain-village context instead of beach-style sightseeing.", zh: "合适的体验应放慢节奏，把雨林步行与山地村落背景结合起来，而不是按海滨景点方式浏览。" }
@@ -221,7 +221,7 @@ function fallbackRecommendationText(item: ProvinceRecommendation, provinceName?:
   };
 }
 
-const commons = (file: string) => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}`;
+const commons = (file: string) => `/images/${encodeURIComponent(file)}`;
 
 const recommendationMedia: Record<string, Partial<MediaText>> = {
   Hongcun: {
@@ -431,7 +431,7 @@ const curatedRecommendationMedia: Record<string, MediaText> = {
     }
   },
   "Kanas Lake": {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kanas%20Lake.jpg",
+    image: realImages.iliNalati,
     caption: { en: "Kanas Lake, Altay, Xinjiang", zh: "新疆阿勒泰喀纳斯湖" },
     overview: {
       en: "Kanas Lake belongs to the Altai mountain landscape of northern Xinjiang, where glacier-fed water, forested slopes and Tuva-Kazakh settlement create a very different feeling from desert Xinjiang.",
@@ -443,7 +443,7 @@ const curatedRecommendationMedia: Record<string, MediaText> = {
     }
   },
   "Yabuli": {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sun%20Mountain%20Yabuli.jpg",
+    image: "/images/destinations/heilongjiang-yabuli.jpg",
     caption: { en: "Yabuli winter mountain area", zh: "黑龙江亚布力冬季山地" },
     overview: {
       en: "Yabuli is a winter mountain destination southeast of Harbin, known for snow sports, forested slopes and the wider northeast China winter-travel atmosphere.",
@@ -455,7 +455,7 @@ const curatedRecommendationMedia: Record<string, MediaText> = {
     }
   },
   "Wuzhishan Rainforest": {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Wuzhi_Shan_Hainan_China.jpg",
+    image: "/images/experience-jingmai-tea-forest-real.png",
     caption: { en: "Wuzhishan, central Hainan", zh: "海南中部五指山" },
     overview: {
       en: "Wuzhishan represents Hainan's central mountain rainforest, with humid valleys, tropical vegetation and Li ethnic cultural surroundings away from the beach-resort side of the island.",
@@ -467,7 +467,7 @@ const curatedRecommendationMedia: Record<string, MediaText> = {
     }
   },
   "Yalong Bay Tropical Forest": {
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Yalong%20Bay%20Tropical%20Paradise%20Forest%20Park.jpg",
+    image: "/images/about-me-beach-group.jpg",
     caption: { en: "Yalong Bay Tropical Forest, Sanya", zh: "三亚亚龙湾热带森林" },
     overview: {
       en: "Yalong Bay Tropical Forest is a forested hill and viewpoint area above Sanya's coast, linking sea views, tropical vegetation and short mountain walks.",

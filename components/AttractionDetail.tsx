@@ -33,7 +33,7 @@ export function AttractionDetail({ province, attraction }: { province: Province;
 
             <figure className="overflow-hidden rounded-lg border hairline bg-white shadow-card">
               <div className="relative aspect-[4/3]">
-                <DestinationPhoto name={attraction.name} province={province.name} caption={enrichment.caption} fallbackImage={enrichment.image} />
+                <DestinationPhoto caption={enrichment.caption} fallbackImage={enrichment.image} />
               </div>
               <figcaption className="px-5 py-4 text-sm text-mist">{enrichment.caption}</figcaption>
             </figure>
