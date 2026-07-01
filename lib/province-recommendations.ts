@@ -142,7 +142,7 @@ export const provinceRecommendations: Record<string, ProvinceRecommendation[]> =
   ],
   hebei: [
     spot("Chengde Mountain Resort","承德避暑山庄","heritage","Qing imperial gardens and frontier political symbolism","清代皇家园林和边疆政治象征"),
-    spot("Shanhaiguan Pass","山海关","heritage","Great Wall gateway where mountains meet the sea","山海之间的长城关口"),
+    spot("Shanhaiguan Pass","山海关","heritage","the Great Wall gateway where mountains, fortress walls and the Bohai Sea meet","山海之间的长城关口、关城防御和渤海海岸背景"),
     spot("Baiyangdian Wetland","白洋淀","nature","reed lakes, boats and North China wetland villages","芦苇湖泊、船行体验和华北水乡村落"),
     spot("Mulan Weichang","木兰围场","nature","grassland, forest and Qing imperial hunting landscape","草原、森林和清代皇家围猎景观"),
     spot("Zhaozhou Bridge","赵州桥","heritage","ancient stone arch engineering and Sui dynasty craftsmanship","古代石拱桥工程和隋代工艺"),
@@ -200,7 +200,7 @@ export const provinceRecommendations: Record<string, ProvinceRecommendation[]> =
     spot("Nanjing City Wall","南京城墙","heritage","Ming capital fortifications and views across the old city","明代都城城防和老城视野"),
     spot("Zhouzhuang Water Town","周庄水乡","village","canals, stone bridges and Jiangnan water-town life","河道、石桥和江南水乡生活"),
     spot("Nanjing Confucius Temple Area","南京夫子庙秦淮河","city","Qinhuai riverfront lights, old shops and literary memory","秦淮河灯火、老店和文学记忆"),
-    spot("Yangzhou Slender West Lake","扬州瘦西湖","heritage","garden lake scenery and salt-merchant culture","园林湖景和盐商文化"),
+    spot("Yangzhou Slender West Lake","扬州瘦西湖","heritage","garden lake scenery, Qing-era pavilions, bridges and Yangzhou salt-merchant culture","园林湖景、清代亭桥空间和扬州盐商文化"),
     spot("Suzhou Silk Embroidery","苏州丝绣工坊","craft","fine silk stitching, color gradation and Jiangnan handwork","丝线针法、色阶变化和江南手工艺"),
     spot("Yixing Zisha Teapot Studio","宜兴紫砂工作室","craft","purple clay teapots, kiln traditions and tea utensils","紫砂壶、窑火传统和茶器文化"),
     spot("Huaiyang Cuisine Kitchen","淮扬菜厨房","food","knife skills, clear flavors and refined Jiangsu cooking","刀工、清鲜味型和江苏精致烹饪"),
