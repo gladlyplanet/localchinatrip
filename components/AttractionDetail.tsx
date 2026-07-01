@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { DestinationPhoto } from "@/components/DestinationPhoto";
 import { Footer, Header } from "@/components/SiteChrome";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getRecommendationEnrichment } from "@/lib/content-enrichment";
@@ -33,7 +33,7 @@ export function AttractionDetail({ province, attraction }: { province: Province;
 
             <figure className="overflow-hidden rounded-lg border hairline bg-white shadow-card">
               <div className="relative aspect-[4/3]">
-                <Image src={enrichment.image} alt={enrichment.caption} fill sizes="(min-width: 1024px) 420px, 100vw" className="object-cover" unoptimized />
+                <DestinationPhoto name={attraction.name} province={province.name} caption={enrichment.caption} fallbackImage={enrichment.image} />
               </div>
               <figcaption className="px-5 py-4 text-sm text-mist">{enrichment.caption}</figcaption>
             </figure>

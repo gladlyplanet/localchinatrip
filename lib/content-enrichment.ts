@@ -512,17 +512,63 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   const place = provinceName ? `${item.name}, ${provinceName}` : item.name;
   const placeZh = item.nameZh;
   const kind = genericByKind[item.kind];
+  const kindContext: Record<RecommendationKind, Localized> = {
+    heritage: {
+      en: `${item.name} is best read through its buildings, preserved spaces and the historical layers still visible on site.`,
+      zh: `${item.nameZh}最适合从建筑、遗存空间和现场仍能看到的历史层次来理解。`
+    },
+    nature: {
+      en: `${item.name} should be arranged around season, light, terrain and a realistic pace for the landscape.`,
+      zh: `${item.nameZh}应结合季节、光线、地形和适合当地景观的游览节奏来安排。`
+    },
+    food: {
+      en: `${item.name} is a food stop where ingredients, local habits and table culture matter as much as taste.`,
+      zh: `${item.nameZh}不只是吃味道，也要理解食材、吃法和当地餐桌习惯。`
+    },
+    village: {
+      en: `${item.name} works best as a slow visit to homes, lanes, fields, family memory and daily routines.`,
+      zh: `${item.nameZh}适合慢慢看民居、街巷、田地、家族记忆和真实日常。`
+    },
+    craft: {
+      en: `${item.name} should focus on makers, materials, tools and the local aesthetic behind the craft.`,
+      zh: `${item.nameZh}应聚焦手艺人、材料、工具和背后的地方审美。`
+    },
+    spiritual: {
+      en: `${item.name} needs a respectful visit with context on belief, ritual space and living practice.`,
+      zh: `${item.nameZh}需要以尊重的方式参访，并理解信仰、仪式空间和现实生活。`
+    },
+    city: {
+      en: `${item.name} is best understood through streets, neighborhoods, transport, food and ordinary local routines.`,
+      zh: `${item.nameZh}适合从街道、社区、交通、饮食和普通人的日常节奏中理解。`
+    },
+    road: {
+      en: `${item.name} works as a private route where the journey itself becomes part of the destination.`,
+      zh: `${item.nameZh}适合作为私人路线，让路途本身也成为目的地体验的一部分。`
+    },
+    market: {
+      en: `${item.name} shows vendors, ingredients, household routines and the direct conversations of daily shopping.`,
+      zh: `${item.nameZh}能看到摊主、食材、家庭采购和真实的日常交流。`
+    },
+    tea: {
+      en: `${item.name} connects tea fields, growers, processing, tasting and the landscape that shapes the cup.`,
+      zh: `${item.nameZh}应把茶园、茶农、制作、品鉴和山地风土联系起来。`
+    },
+    coast: {
+      en: `${item.name} should connect sea views with harbor life, fishing communities, trade and local food.`,
+      zh: `${item.nameZh}应把海景、港口生活、渔村、贸易和地方饮食联系起来。`
+    }
+  };
   return {
     image: verifiedRecommendationImages[item.name] ?? kind.image,
     fallbackImage: kind.fallbackImage,
     caption: { en: place, zh: placeZh },
     overview: {
-      en: `${place} is recommended for ${item.focus}.`,
-      zh: `${placeZh}适合围绕${item.focusZh}来理解。`
+      en: `${place} is recommended for ${item.focus}. ${kindContext[item.kind].en}`,
+      zh: `${placeZh}适合围绕${item.focusZh}来理解。${kindContext[item.kind].zh}`
     },
     experience: {
-      en: `A private visit should connect the route, timing and explanation directly to ${item.name}, so the experience feels specific to the destination rather than generic sightseeing.`,
-      zh: `私人游览应把路线、时间和讲解都直接围绕${placeZh}展开，让体验和这个地点本身对应，而不是普通打卡。`
+      en: `A private visit should connect the route, timing, photo stops and explanation directly to ${item.name}. The goal is to make the place understandable through local context, not just to stop for a quick picture.`,
+      zh: `私人游览应把路线、时间、拍照停留和讲解都直接围绕${placeZh}展开。重点是通过本地背景理解这个地方，而不是普通打卡。`
     }
   };
 }
