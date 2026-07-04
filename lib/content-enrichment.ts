@@ -1,6 +1,7 @@
 import type { Lang } from "@/components/LanguageProvider";
 import type { ExperienceLocation } from "@/lib/experiences";
 import type { ProvinceRecommendation, RecommendationKind } from "@/lib/province-recommendations";
+import { destinationImages } from "@/lib/generated-destination-media";
 
 type Localized = {
   en: string;
@@ -710,66 +711,51 @@ function localized(lang: Lang, value: Localized) {
 
 function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: string): MediaText {
   const place = provinceName ? `${item.name}, ${provinceName}` : item.name;
-  const placeZh = item.nameZh;
+  const placeZh = item.nameZh || item.name;
   const kind = genericByKind[item.kind];
   const provinceFallback = provinceName ? provinceFallbackImages[provinceName] : undefined;
-  const kindContext: Record<RecommendationKind, Localized> = {
-    heritage: {
-      en: `${item.name} is best read through its buildings, preserved spaces and the historical layers still visible on site.`,
-      zh: `${item.nameZh}最适合从建筑、遗存空间和现场仍能看到的历史层次来理解。`
-    },
-    nature: {
-      en: `${item.name} should be arranged around season, light, terrain and a realistic pace for the landscape.`,
-      zh: `${item.nameZh}应结合季节、光线、地形和适合当地景观的游览节奏来安排。`
-    },
-    food: {
-      en: `${item.name} is a food stop where ingredients, local habits and table culture matter as much as taste.`,
-      zh: `${item.nameZh}不只是吃味道，也要理解食材、吃法和当地餐桌习惯。`
-    },
-    village: {
-      en: `${item.name} works best as a slow visit to homes, lanes, fields, family memory and daily routines.`,
-      zh: `${item.nameZh}适合慢慢看民居、街巷、田地、家族记忆和真实日常。`
-    },
-    craft: {
-      en: `${item.name} should focus on makers, materials, tools and the local aesthetic behind the craft.`,
-      zh: `${item.nameZh}应聚焦手艺人、材料、工具和背后的地方审美。`
-    },
-    spiritual: {
-      en: `${item.name} needs a respectful visit with context on belief, ritual space and living practice.`,
-      zh: `${item.nameZh}需要以尊重的方式参访，并理解信仰、仪式空间和现实生活。`
-    },
-    city: {
-      en: `${item.name} is best understood through streets, neighborhoods, transport, food and ordinary local routines.`,
-      zh: `${item.nameZh}适合从街道、社区、交通、饮食和普通人的日常节奏中理解。`
-    },
-    road: {
-      en: `${item.name} works as a private route where the journey itself becomes part of the destination.`,
-      zh: `${item.nameZh}适合作为私人路线，让路途本身也成为目的地体验的一部分。`
-    },
-    market: {
-      en: `${item.name} shows vendors, ingredients, household routines and the direct conversations of daily shopping.`,
-      zh: `${item.nameZh}能看到摊主、食材、家庭采购和真实的日常交流。`
-    },
-    tea: {
-      en: `${item.name} connects tea fields, growers, processing, tasting and the landscape that shapes the cup.`,
-      zh: `${item.nameZh}应把茶园、茶农、制作、品鉴和山地风土联系起来。`
-    },
-    coast: {
-      en: `${item.name} should connect sea views with harbor life, fishing communities, trade and local food.`,
-      zh: `${item.nameZh}应把海景、港口生活、渔村、贸易和地方饮食联系起来。`
-    }
+  const exactImage = provinceName ? destinationImages[`${provinceName}::${item.name}`] : undefined;
+  const zhKindContext: Record<RecommendationKind, string> = {
+    heritage: "\u4ece\u5efa\u7b51\u9057\u5b58\u3001\u5386\u53f2\u7a7a\u95f4\u548c\u73b0\u573a\u4ecd\u80fd\u770b\u5230\u7684\u65f6\u4ee3\u5c42\u6b21\u6765\u7406\u89e3\u3002",
+    nature: "\u7ed3\u5408\u5b63\u8282\u3001\u5149\u7ebf\u3001\u5730\u5f62\u548c\u9002\u5408\u5f53\u5730\u666f\u89c2\u7684\u6e38\u89c8\u8282\u594f\u6765\u5b89\u6392\u3002",
+    food: "\u4e0d\u53ea\u770b\u5473\u9053\uff0c\u4e5f\u8981\u7406\u89e3\u98df\u6750\u3001\u5403\u6cd5\u548c\u5f53\u5730\u9910\u684c\u4e60\u60ef\u3002",
+    village: "\u9002\u5408\u6162\u6162\u770b\u6c11\u5c45\u3001\u8857\u5df7\u3001\u7530\u5730\u3001\u5bb6\u5ead\u8bb0\u5fc6\u548c\u771f\u5b9e\u65e5\u5e38\u3002",
+    craft: "\u91cd\u70b9\u653e\u5728\u624b\u827a\u4eba\u3001\u6750\u6599\u3001\u5de5\u5177\u548c\u80cc\u540e\u7684\u5730\u65b9\u5ba1\u7f8e\u3002",
+    spiritual: "\u9700\u8981\u4ee5\u5c0a\u91cd\u7684\u65b9\u5f0f\u53c2\u89c2\uff0c\u5e76\u7406\u89e3\u4fe1\u4ef0\u3001\u4eea\u5f0f\u7a7a\u95f4\u548c\u73b0\u5b9e\u751f\u6d3b\u3002",
+    city: "\u9002\u5408\u4ece\u8857\u9053\u3001\u793e\u533a\u3001\u4ea4\u901a\u3001\u996e\u98df\u548c\u666e\u901a\u4eba\u7684\u65e5\u5e38\u8282\u594f\u4e2d\u7406\u89e3\u3002",
+    road: "\u9002\u5408\u4f5c\u4e3a\u79c1\u4eba\u8def\u7ebf\uff0c\u8ba9\u8def\u9014\u672c\u8eab\u4e5f\u6210\u4e3a\u76ee\u7684\u5730\u4f53\u9a8c\u7684\u4e00\u90e8\u5206\u3002",
+    market: "\u80fd\u770b\u5230\u644a\u4e3b\u3001\u98df\u6750\u3001\u5bb6\u5ead\u91c7\u8d2d\u548c\u771f\u5b9e\u7684\u65e5\u5e38\u4ea4\u6d41\u3002",
+    tea: "\u5e94\u628a\u8336\u56ed\u3001\u8336\u519c\u3001\u5236\u4f5c\u3001\u54c1\u9274\u548c\u5c71\u5730\u98ce\u571f\u8054\u7cfb\u8d77\u6765\u3002",
+    coast: "\u5e94\u628a\u6d77\u666f\u3001\u6e2f\u53e3\u751f\u6d3b\u3001\u6e14\u6751\u3001\u8d38\u6613\u548c\u5730\u65b9\u996e\u98df\u8054\u7cfb\u8d77\u6765\u3002"
   };
+  const zhTheme: Record<RecommendationKind, string> = {
+    heritage: "\u5386\u53f2\u9057\u5b58\u4e0e\u73b0\u573a\u7a7a\u95f4",
+    nature: "\u81ea\u7136\u666f\u89c2\u4e0e\u6e38\u89c8\u8282\u594f",
+    food: "\u5730\u65b9\u98df\u6750\u4e0e\u9910\u684c\u6587\u5316",
+    village: "\u6751\u843d\u751f\u6d3b\u4e0e\u65e5\u5e38\u573a\u666f",
+    craft: "\u624b\u5de5\u827a\u4e0e\u5730\u65b9\u5ba1\u7f8e",
+    spiritual: "\u4fe1\u4ef0\u7a7a\u95f4\u4e0e\u793c\u4eea\u4f20\u7edf",
+    city: "\u57ce\u5e02\u8857\u533a\u4e0e\u672c\u5730\u751f\u6d3b",
+    road: "\u6cbf\u9014\u98ce\u666f\u4e0e\u8def\u7ebf\u4f53\u9a8c",
+    market: "\u5e02\u573a\u65e5\u5e38\u4e0e\u5728\u5730\u4ea4\u6d41",
+    tea: "\u8336\u5c71\u3001\u5236\u4f5c\u4e0e\u54c1\u9274",
+    coast: "\u6d77\u5cb8\u3001\u6e2f\u53e3\u4e0e\u6e14\u6751\u751f\u6d3b"
+  };
+  const zhOverviewPrefix = "\u9002\u5408\u56f4\u7ed5";
+  const zhOverviewSuffix = "\u6765\u7406\u89e3\u3002";
+  const zhExperiencePrefix = "\u79c1\u4eba\u6e38\u89c8\u5e94\u628a\u8def\u7ebf\u3001\u65f6\u95f4\u3001\u62cd\u7167\u505c\u7559\u548c\u8bb2\u89e3\u90fd\u76f4\u63a5\u56f4\u7ed5";
+  const zhExperienceSuffix = "\u5c55\u5f00\u3002\u91cd\u70b9\u662f\u901a\u8fc7\u672c\u5730\u80cc\u666f\u7406\u89e3\u8fd9\u4e2a\u5730\u65b9\uff0c\u800c\u4e0d\u662f\u666e\u901a\u6253\u5361\u3002";
   return {
-    image: verifiedRecommendationImages[item.name] ?? provinceFallback?.[item.kind] ?? provinceFallback?.default ?? kind.image,
+    image: exactImage ?? verifiedRecommendationImages[item.name] ?? provinceFallback?.[item.kind] ?? provinceFallback?.default ?? kind.image,
     fallbackImage: kind.fallbackImage,
     caption: { en: place, zh: placeZh },
     overview: {
-      en: `${place} is recommended for ${item.focus}. ${kindContext[item.kind].en}`,
-      zh: `${placeZh}适合围绕${item.focusZh}来理解。${kindContext[item.kind].zh}`
+      en: `${place} is recommended for ${item.focus}. ${item.name} is best understood through local context, realistic timing and what can actually be seen on site.`,
+      zh: `${placeZh}${zhOverviewPrefix}${zhTheme[item.kind]}${zhOverviewSuffix}${zhKindContext[item.kind]}`
     },
     experience: {
       en: `A private visit should connect the route, timing, photo stops and explanation directly to ${item.name}. The goal is to make the place understandable through local context, not just to stop for a quick picture.`,
-      zh: `私人游览应把路线、时间、拍照停留和讲解都直接围绕${placeZh}展开。重点是通过本地背景理解这个地方，而不是普通打卡。`
+      zh: `${zhExperiencePrefix}${placeZh}${zhExperienceSuffix}`
     }
   };
 }
