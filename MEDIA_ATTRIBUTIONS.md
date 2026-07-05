@@ -11,5 +11,8 @@ The following experience photographs were sourced from Wikimedia Commons. See ea
 - `experience-guilin-ride.jpg`: [Li River at Yangshuo](https://commons.wikimedia.org/wiki/File:Yangshuo-Li-River-2019-Luka-Peternel.jpg)
 - `experience-beijing-hutong.jpg`: [Beijing hutong](https://commons.wikimedia.org/wiki/File:Beijing_hutong_1.jpg)
 - `destinations/optimized/wiki-shandong-jinan-springs.jpg`: [Baotu Spring, Jinan](https://commons.wikimedia.org/wiki/File:China_Jinan_5196975.jpg)
+- `Guizhou::Kaili Market` detail image: [Kaili market scene](https://www.travelchinaguide.com/package/guiyangtour5s.htm)
+- `Henan::Yellow River Scenic Area Zhengzhou` detail image: [Yan and Huang Emperors sculpture](https://commons.wikimedia.org/wiki/File:%E7%82%8E%E9%BB%84%E4%BA%8C%E5%B8%9D%E9%9B%95%E5%A1%91_-_panoramio.jpg)
+- `Zhejiang::Zhoushan Fishing Coast` detail image: [Gouqi Island, Zhoushan](https://commons.wikimedia.org/wiki/File:Gouqi_Island_in_Zhoushan,_Zhejiang_03.jpg)
 
 The province boundary data in `public/data/china-provinces.json` is sourced from the Aliyun DataV area boundary dataset.
