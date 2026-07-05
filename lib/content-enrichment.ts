@@ -631,7 +631,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Henan::Yellow River Scenic Area Zhengzhou": {
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/%E7%82%8E%E9%BB%84%E4%BA%8C%E5%B8%9D%E9%9B%95%E5%A1%91_-_panoramio.jpg/1200px-%E7%82%8E%E9%BB%84%E4%BA%8C%E5%B8%9D%E9%9B%95%E5%A1%91_-_panoramio.jpg",
+    image: "/images/destinations/wiki-qinghai-guide-yellow-river.jpg",
     caption: { en: "Yellow River Scenic Area, Zhengzhou", zh: "郑州黄河风景名胜区" },
     overview: {
       en: "Zhengzhou Yellow River Scenic Area is about the Yellow River at the edge of the Central Plains: river terraces, loess landforms, flood-control memory, the Yan and Huang Emperors sculpture and the cultural idea of the river as a Chinese origin landscape.",
@@ -643,7 +643,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Shandong::Jinan Springs": {
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/China_Jinan_5196975.jpg/1200px-China_Jinan_5196975.jpg",
+    image: "/images/destinations/jinan-springs-baotu-corrected.png",
     caption: { en: "Baotu Spring and Jinan's spring water", zh: "趵突泉与济南泉水" },
     overview: {
       en: "Jinan Springs should be introduced through Baotu Spring, Black Tiger Spring, the old moat, Daming Lake and the spring-fed rhythm that gives Jinan its identity as the City of Springs.",
@@ -655,7 +655,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Zhejiang::Zhoushan Fishing Coast": {
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Gouqi_Island_in_Zhoushan%2C_Zhejiang_03.jpg/1200px-Gouqi_Island_in_Zhoushan%2C_Zhejiang_03.jpg",
+    image: "/images/about-me-boat-seafood.jpg",
     caption: { en: "Zhoushan island coast and fishing life", zh: "舟山海岛海岸与渔港生活" },
     overview: {
       en: "Zhoushan Fishing Coast should be read through island harbors, fishing boats, seafood markets, old port streets and East China Sea island life around places such as Shenjiamen and the outer islands.",
