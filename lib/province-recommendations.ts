@@ -1,4 +1,5 @@
 import type { Lang } from "@/components/LanguageProvider";
+import { toTraditionalChinese } from "@/lib/chinese-text";
 
 export type RecommendationKind = "heritage" | "nature" | "food" | "village" | "craft" | "spiritual" | "city" | "road" | "market" | "tea" | "coast";
 
@@ -404,12 +405,6 @@ const localizedKind: Record<Exclude<Lang, "en" | "zh-CN" | "zh-TW">, { project: 
   ar: { project: "تجربة محلية مختارة", description: "زيارة خاصة لفهم هذا المكان من خلال المناظر والثقافة والحياة اليومية." }
 };
 
-const twMap: Record<string, string> = {};
-
-function traditionalize(value: string) {
-  return [...value].map((character) => twMap[character] ?? character).join("");
-}
-
 export function recommendationSlug(item: ProvinceRecommendation) {
   return item.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
@@ -426,7 +421,7 @@ export function getRecommendationCopy(lang: Lang, item: ProvinceRecommendation) 
   const project = kindCopy[item.kind];
   if (lang === "en") return { name: item.name, project: project.en, description: `Explore ${item.focus} at ${item.name}.` };
   if (lang === "zh-CN") return { name: item.nameZh, project: project.zh, description: `${item.nameZh}适合体验${item.focusZh}。` };
-  if (lang === "zh-TW") return { name: traditionalize(item.nameZh), project: traditionalize(project.zh), description: traditionalize(`${item.nameZh}适合体验${item.focusZh}。`) };
+  if (lang === "zh-TW") return { name: toTraditionalChinese(item.nameZh), project: toTraditionalChinese(project.zh), description: toTraditionalChinese(`${item.nameZh}适合体验${item.focusZh}。`) };
   const text = localizedKind[lang];
   return { name: item.name, project: text.project, description: text.description };
 }
