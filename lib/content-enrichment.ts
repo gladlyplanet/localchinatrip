@@ -618,6 +618,30 @@ const genericByKind: Record<RecommendationKind, MediaText> = {
 };
 
 const destinationSpecificText: Record<string, MediaText> = {
+  "Guizhou::Kaili Market": {
+    image: "https://data.travelchinaguide.com/package/image/113401.jpg",
+    caption: { en: "Kaili local market and Miao market life", zh: "凯里市集与苗侗日常交易" },
+    overview: {
+      en: "Kaili Market should be introduced through southeast Guizhou's Miao and Dong daily trade: woven textiles, silver ornaments, sour-soup ingredients, mountain vegetables, rice products and the conversations between vendors and local families.",
+      zh: "凯里市集要围绕黔东南苗侗地区的日常交易来理解：织物、银饰、酸汤食材、山野菜、米制品和本地家庭采购都在这里交汇。这里看的不是普通商业街，而是凯里周边乡镇生活、节庆物资和家常饮食如何进入城市。"
+    },
+    experience: {
+      en: "A good visit starts in the morning, follows food stalls and textile sections, explains sour-soup flavors, festival clothing and buying habits, and keeps enough room for respectful conversation rather than staged photos.",
+      zh: "合适的游览应放在清晨或上午，从食材摊、织物摊和小吃摊慢慢走起，讲清酸汤口味、节庆服饰、赶集习惯和摊主与顾客的互动。重点是看真实市集节奏，而不是把凯里市集拍成一张泛泛的街景。"
+    }
+  },
+  "Henan::Yellow River Scenic Area Zhengzhou": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/%E7%82%8E%E9%BB%84%E4%BA%8C%E5%B8%9D%E9%9B%95%E5%A1%91_-_panoramio.jpg/1200px-%E7%82%8E%E9%BB%84%E4%BA%8C%E5%B8%9D%E9%9B%95%E5%A1%91_-_panoramio.jpg",
+    caption: { en: "Yellow River Scenic Area, Zhengzhou", zh: "郑州黄河风景名胜区" },
+    overview: {
+      en: "Zhengzhou Yellow River Scenic Area is about the Yellow River at the edge of the Central Plains: river terraces, loess landforms, flood-control memory, the Yan and Huang Emperors sculpture and the cultural idea of the river as a Chinese origin landscape.",
+      zh: "郑州黄河风景区应围绕中原边缘的黄河来写：黄河河岸、黄土地貌、花园口水患记忆、炎黄二帝塑像和“母亲河”文化共同构成这里。它不是航空或军事展品，也不是普通山水公园，而是郑州理解黄河与中原文明关系的重要地点。"
+    },
+    experience: {
+      en: "The route should connect the river-view platforms, loess slopes, the Yan-Huang monument and nearby river-history context, with timing chosen for clearer light and enough space to understand the scale of the river plain.",
+      zh: "游览建议把观河平台、黄土坡地、炎黄二帝塑像和黄河历史背景串起来，根据天气和光线安排停留。重点是看河道、地形和中原文化脉络，而不是只拍一个孤立的景点。"
+    }
+  },
   "Shandong::Jinan Springs": {
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/China_Jinan_5196975.jpg/1200px-China_Jinan_5196975.jpg",
     caption: { en: "Baotu Spring and Jinan's spring water", zh: "趵突泉与济南泉水" },
@@ -628,6 +652,18 @@ const destinationSpecificText: Record<string, MediaText> = {
     experience: {
       en: "A good route follows the water: start with Baotu Spring or Black Tiger Spring, walk along the moat and old lanes, then connect the springs with Daming Lake, local tea, small eateries and Jinan's slower old-city pace.",
       zh: "合适的游览应顺着水走：从趵突泉或黑虎泉开始，沿护城河和老街巷慢慢看，再把泉水、大明湖、茶摊、小吃和济南老城节奏串起来，而不是只看一个普通城市景观。"
+    }
+  },
+  "Zhejiang::Zhoushan Fishing Coast": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Gouqi_Island_in_Zhoushan%2C_Zhejiang_03.jpg/1200px-Gouqi_Island_in_Zhoushan%2C_Zhejiang_03.jpg",
+    caption: { en: "Zhoushan island coast and fishing life", zh: "舟山海岛海岸与渔港生活" },
+    overview: {
+      en: "Zhoushan Fishing Coast should be read through island harbors, fishing boats, seafood markets, old port streets and East China Sea island life around places such as Shenjiamen and the outer islands.",
+      zh: "舟山渔港海岸要围绕群岛、渔船、码头、海鲜市场和东海岛民生活来写。这里的重点不是机关标志或抽象海景，而是沈家门一带的渔港气息、出海与靠岸节奏、海鲜交易和岛城街巷如何连在一起。"
+    },
+    experience: {
+      en: "A good visit follows harbor timing: watch boats, walk port streets, pair a seafood meal with market context and leave time for weather, tide and ferry connections between island viewpoints.",
+      zh: "合适的路线应顺着渔港节奏安排：看船只停靠、走老港街巷、把海鲜餐与市场背景连起来，并根据潮汐、天气和轮渡时间安排海岸观景。这样看到的是舟山的渔港生活，而不是一张不相干的图。"
     }
   }
 };
