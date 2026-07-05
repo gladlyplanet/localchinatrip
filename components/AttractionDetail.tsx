@@ -297,25 +297,40 @@ function l(lang: Lang, phraseValue: Phrase) {
   return phraseValue[lang] ?? phraseValue.en;
 }
 
-function destinationPhrase(en: string, zhCN: string): Phrase {
+function destinationPhrase(en: string, zhCN: string, es?: string, pt?: string, ar?: string): Phrase {
   return {
     en,
     "zh-CN": zhCN,
     "zh-TW": toTraditionalChinese(zhCN),
-    es: en,
-    pt: en,
-    ar: en
+    es: es ?? en,
+    pt: pt ?? en,
+    ar: ar ?? en
   };
 }
 
 function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof kindMeta)[RecommendationKind]) {
   return {
     ...base,
-    subtitle: destinationPhrase(attraction.focus, attraction.focusZh),
-    keywords: destinationPhrase(attraction.focus, attraction.focusZh),
+    subtitle: destinationPhrase(
+      attraction.focus,
+      attraction.focusZh,
+      `Enfoque: ${attraction.focus}`,
+      `Foco: ${attraction.focus}`,
+      `التركيز: ${attraction.focus}`
+    ),
+    keywords: destinationPhrase(
+      attraction.focus,
+      attraction.focusZh,
+      `Claves: ${attraction.focus}`,
+      `Palavras-chave: ${attraction.focus}`,
+      `كلمات مفتاحية: ${attraction.focus}`
+    ),
     lead: destinationPhrase(
       `Start from ${attraction.name}'s own setting: ${attraction.focus}. The visit should explain this place directly, not reuse a generic attraction story.`,
-      `先围绕${attraction.nameZh}本身的${attraction.focusZh}来理解。页面介绍、游览建议和导览节奏都要扣住这个地点，不套用泛泛的景点文案。`
+      `先围绕${attraction.nameZh}本身的${attraction.focusZh}来理解。页面介绍、游览建议和导览节奏都要扣住这个地点，不套用泛泛的景点文案。`,
+      `Empieza por el carácter propio de ${attraction.name}: ${attraction.focus}. La visita debe explicar este lugar directamente, no usar un texto genérico.`,
+      `Comece pelo contexto próprio de ${attraction.name}: ${attraction.focus}. A visita deve explicar este lugar diretamente, sem usar um texto genérico.`,
+      `ابدأ من طابع ${attraction.name} نفسه: ${attraction.focus}. يجب أن يشرح المسار هذا المكان مباشرة، لا أن يستخدم نصا عاما.`
     )
   };
 }
