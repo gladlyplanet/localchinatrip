@@ -88,8 +88,8 @@ const verifiedRecommendationImages: Record<string, string> = {
   "West Lake": realImages.westLake,
   "Changsha Night Food": realImages.changshaFood,
   "Guilin Rice Noodle Trail": realImages.yangshuoFarmFood,
-  "Chengdu Market Cooking": realImages.chengduFood,
-  "Chengdu Teahouses": realImages.chengduFood,
+  "Chengdu Market Cooking": "/images/experience-chengdu-market.jpg",
+  "Chengdu Teahouses": "/images/destinations/optimized/wiki-sichuan-chengdu-teahouses.jpg",
   "Wuhan Breakfast Streets": realImages.wuhanEastLake,
   "Xi'an City Wall": realImages.xianFoodTable,
   "Muslim Quarter Xi'an": realImages.xianFoodTable,
@@ -760,6 +760,114 @@ const destinationSpecificText: Record<string, MediaText> = {
     experience: {
       en: "A respectful visit should explain relic belief, Tang history and museum display logic, with a slower pace through temple and exhibition spaces.",
       zh: "游览应放慢节奏，讲清舍利信仰、唐代历史和展陈逻辑。寺院空间和博物馆空间要分开看，也要连起来理解。"
+    }
+  },
+  "Sichuan::Chengdu Teahouses": {
+    image: "/images/destinations/optimized/wiki-sichuan-chengdu-teahouses.jpg",
+    caption: { en: "Chengdu open-air teahouse", zh: "成都露天茶馆" },
+    overview: {
+      en: "Chengdu teahouses are a window into the city's slow public life: bamboo chairs, covered bowls of tea, neighborhood conversations, shade trees and the rhythm of sitting for an unhurried afternoon.",
+      zh: "成都茶馆要从竹椅、盖碗茶、摆龙门阵、树荫下的慢坐和街坊日常来理解。这里看的不是一杯茶本身，而是成都人把社交、休闲、信息交换和城市松弛感放在同一个空间里的方式。"
+    },
+    experience: {
+      en: "A good visit should choose a living local teahouse, explain gaiwan etiquette and leave time to sit, listen and observe rather than treating it as a quick photo stop.",
+      zh: "合适的体验应选择仍有本地人使用的茶馆，讲清盖碗茶、续水、座位和聊天礼貌，再留出真正坐下来的时间。重点是体会成都茶馆的公共生活节奏，而不是只拍几把竹椅。"
+    }
+  },
+  "Sichuan::Chengdu Panda Base": {
+    image: "/images/destinations/optimized/wiki-sichuan-chengdu-panda-base.jpg",
+    caption: { en: "Chengdu Research Base of Giant Panda Breeding", zh: "成都大熊猫繁育研究基地" },
+    overview: {
+      en: "Chengdu Panda Base should be introduced as a conservation and research setting, not only as a place to see cute animals. The visit connects panda habitats, nursery areas, bamboo feeding routines and public education about giant panda protection.",
+      zh: "成都大熊猫基地要放在保护、繁育和科普场景里写，而不只是“看熊猫”。熊猫馆舍、竹林环境、饲喂时间、幼年熊猫照护和公众教育共同构成这里的重点。"
+    },
+    experience: {
+      en: "A good route starts early when pandas are more active, keeps expectations realistic, and explains behavior, habitat and conservation work while avoiding noisy or rushed viewing.",
+      zh: "合适的游览应尽量安排早些进入，结合熊猫活动时间选择馆区，讲清它们的行为、栖息环境和保护工作。重点是安静观察和理解保护价值，而不是在人最多的时候只挤着拍照。"
+    }
+  },
+  "Sichuan::Jiuzhaigou Valley": {
+    image: "/images/destinations/optimized/wiki-sichuan-jiuzhaigou-valley.jpg",
+    caption: { en: "Jiuzhaigou Valley lakes and forests", zh: "九寨沟湖泊与森林" },
+    overview: {
+      en: "Jiuzhaigou is defined by clear mineral lakes, layered waterfalls, forested valleys and strong seasonal color. Its identity comes from water clarity, fallen trunks under the surface and the rhythm of moving between valleys.",
+      zh: "九寨沟的核心是高透明度海子、钙华滩流、层层瀑布、森林峡谷和季节色彩。这里不能只写成普通山水，重点应放在水色、倒木、雪山森林背景和沟谷动线如何共同形成九寨沟的辨识度。"
+    },
+    experience: {
+      en: "A good visit follows the shuttle system without overloading the day, chooses lake and waterfall stops by season and light, and leaves time for quieter boardwalk sections.",
+      zh: "合适的游览应顺着景区交通和栈道节奏安排，不硬塞所有点位。根据季节和光线选择海子、瀑布和林间步道，给诺日朗、五花海、长海等重点区域留出慢看的时间。"
+    }
+  },
+  "Sichuan::Mount Emei": {
+    image: "/images/destinations/optimized/wiki-sichuan-mount-emei.jpg",
+    caption: { en: "Mount Emei sea of clouds", zh: "峨眉山云海" },
+    overview: {
+      en: "Mount Emei combines Buddhist mountain culture, forest roads, temples, macaque zones, high cliffs and the Golden Summit landscape. It is both a sacred mountain and a layered natural route.",
+      zh: "峨眉山要把佛教名山、山路森林、寺院体系、猴区、高山云海和金顶视野放在一起理解。它不是单纯登山，也不是只看一座寺，而是一条从山脚到山顶逐渐变化的宗教与自然线路。"
+    },
+    experience: {
+      en: "A good route should match walking distance, cableway use and weather, with clear pacing between temples, forest sections and summit viewpoints.",
+      zh: "合适的行程要根据体力选择步行段和索道，提前考虑天气、海拔和返程时间。重点是把寺院、林间路段和金顶视野串起来，而不是匆忙追一个山顶打卡。"
+    }
+  },
+  "Sichuan::Leshan Giant Buddha": {
+    image: "/images/destinations/optimized/wiki-sichuan-leshan-giant-buddha.jpg",
+    caption: { en: "Leshan Giant Buddha by the river", zh: "乐山大佛与江面" },
+    overview: {
+      en: "Leshan Giant Buddha should be read through its cliff-carved scale, river junction setting and Tang Buddhist engineering. The Buddha faces the meeting of the Min, Dadu and Qingyi rivers, where water, cliff and carving belong together.",
+      zh: "乐山大佛要从临江石刻、唐代佛教工程和三江汇流的地理位置来理解。大佛不是孤立雕像，它与岷江、大渡河、青衣江交汇处的水势、崖壁和航运记忆连在一起。"
+    },
+    experience: {
+      en: "A good visit can compare the cliff path and boat perspective, explain scale and drainage details, and choose timing based on crowds and river conditions.",
+      zh: "合适的游览可比较步行栈道和江面船看两个视角，讲清大佛尺度、排水细节和临江位置。根据人流和江面情况安排节奏，避免只在佛脚排队拍一张照片。"
+    }
+  },
+  "Sichuan::Dujiangyan Irrigation System": {
+    image: "/images/destinations/optimized/wiki-sichuan-dujiangyan-irrigation-system.jpg",
+    caption: { en: "Dujiangyan Irrigation System", zh: "都江堰水利工程" },
+    overview: {
+      en: "Dujiangyan is a living water-control system on the Min River, centered on Yuzui, Feishayan and Baopingkou. Its value lies in how ancient engineering still distributes water and shapes the Chengdu Plain.",
+      zh: "都江堰要围绕岷江上的鱼嘴、飞沙堰、宝瓶口来写。这里的重点不是普通古建筑，而是一个仍在发挥作用的无坝引水工程，以及它如何塑造成都平原的农业与城市基础。"
+    },
+    experience: {
+      en: "A good visit follows the water logic step by step, using viewpoints and bridges to explain diversion, sediment control and flood management before adding temple or old-town time.",
+      zh: "合适的游览应顺着水流逻辑走，先看分水、排沙和控水方式，再把安澜索桥、二王庙和灌县古城等空间串联起来。重点是看懂工程原理，而不是只看一个江景。"
+    }
+  },
+  "Sichuan::Danba Tibetan Villages": {
+    image: "/images/experience-western-sichuan-danba-real.jpg",
+    caption: { en: "Danba Tibetan villages in western Sichuan", zh: "川西丹巴藏寨" },
+    overview: {
+      en: "Danba Tibetan villages are known for hillside Tibetan homes, stone watchtowers, terraced fields and valley settlements in western Sichuan. The image should be village architecture in a mountain setting, not a map.",
+      zh: "丹巴藏寨要从川西山谷里的藏式民居、碉楼、层层田地和坡地村落格局来理解。这里看的不是行政区地图，而是房屋如何依山分布、碉楼如何标记村寨空间，以及藏寨与河谷地形的关系。"
+    },
+    experience: {
+      en: "A good visit should keep a respectful village pace, choose viewpoints for architecture and fields, and explain watchtowers, household life and valley geography together.",
+      zh: "合适的游览应放慢节奏，选择能看清民居、碉楼和田地关系的视角，尊重居民生活。讲解重点应放在藏寨建筑、碉楼功能、川西山谷环境和当地日常如何结合。"
+    }
+  },
+  "Sichuan::Ya'an Mengding Tea Mountain": {
+    image: "/images/experience-mengding-tea.jpg",
+    caption: { en: "Mengding Mountain tea fields near Ya'an", zh: "雅安蒙顶山茶园" },
+    overview: {
+      en: "Mengding Tea Mountain should be introduced through Ya'an's humid tea hills, early Sichuan tea history, terraced tea gardens and green-tea making traditions. The page needs tea fields and mountain atmosphere, not a regional map.",
+      zh: "雅安蒙顶山要从湿润山地、茶园梯田、川茶早期历史和绿茶制作传统来写。这里的核心不是一张区域地图，而是蒙顶山作为川茶名山，如何把山地气候、茶树生长、采茶制茶和品饮习惯连在一起。"
+    },
+    experience: {
+      en: "A good visit should be paced around tea season, field walking, maker explanation and tasting, with enough time to understand how mountain moisture shapes the cup.",
+      zh: "合适的体验应围绕茶季、茶园步行、制茶讲解和品饮安排。重点是看茶山环境、采摘与制作步骤，再理解蒙顶山茶为什么和雅安潮湿山地、川茶历史联系紧密。"
+    }
+  },
+  "Sichuan::Chengdu Market Cooking": {
+    image: "/images/experience-chengdu-market.jpg",
+    caption: { en: "Chengdu neighborhood market ingredients", zh: "成都社区菜市场食材" },
+    overview: {
+      en: "Chengdu market cooking should begin in a neighborhood market: vegetables, chilies, doubanjiang, tofu, fresh noodles, aromatics and the everyday buying habits behind Sichuan home cooking.",
+      zh: "成都市场与家常菜要从社区菜市场开始：时令蔬菜、辣椒、豆瓣、豆腐、鲜面、香料和摊主与顾客的日常交流，才是川味家常菜的入口。这里不应使用成都天际线，而应呈现真实采购和厨房前的食材场景。"
+    },
+    experience: {
+      en: "A good experience links shopping to the dishes cooked later, explaining seasonings, cutting, heat control and the difference between restaurant Sichuan food and family-table flavors.",
+      zh: "合适的体验应把买菜、认调料、备菜、下锅和围桌吃饭连起来，讲清豆瓣、花椒、辣椒、姜蒜等如何进入家常菜。重点不是远看成都城市景观，而是理解川菜如何从市场走到家庭餐桌。"
     }
   },
   "Hunan::Dongjiang Lake": {
