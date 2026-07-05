@@ -715,18 +715,57 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   const kind = genericByKind[item.kind];
   const provinceFallback = provinceName ? provinceFallbackImages[provinceName] : undefined;
   const exactImage = provinceName ? destinationImages[`${provinceName}::${item.name}`] : undefined;
-  const zhKindContext: Record<RecommendationKind, string> = {
-    heritage: "\u4ece\u5efa\u7b51\u9057\u5b58\u3001\u5386\u53f2\u7a7a\u95f4\u548c\u73b0\u573a\u4ecd\u80fd\u770b\u5230\u7684\u65f6\u4ee3\u5c42\u6b21\u6765\u7406\u89e3\u3002",
-    nature: "\u7ed3\u5408\u5b63\u8282\u3001\u5149\u7ebf\u3001\u5730\u5f62\u548c\u9002\u5408\u5f53\u5730\u666f\u89c2\u7684\u6e38\u89c8\u8282\u594f\u6765\u5b89\u6392\u3002",
-    food: "\u4e0d\u53ea\u770b\u5473\u9053\uff0c\u4e5f\u8981\u7406\u89e3\u98df\u6750\u3001\u5403\u6cd5\u548c\u5f53\u5730\u9910\u684c\u4e60\u60ef\u3002",
-    village: "\u9002\u5408\u6162\u6162\u770b\u6c11\u5c45\u3001\u8857\u5df7\u3001\u7530\u5730\u3001\u5bb6\u5ead\u8bb0\u5fc6\u548c\u771f\u5b9e\u65e5\u5e38\u3002",
-    craft: "\u91cd\u70b9\u653e\u5728\u624b\u827a\u4eba\u3001\u6750\u6599\u3001\u5de5\u5177\u548c\u80cc\u540e\u7684\u5730\u65b9\u5ba1\u7f8e\u3002",
-    spiritual: "\u9700\u8981\u4ee5\u5c0a\u91cd\u7684\u65b9\u5f0f\u53c2\u89c2\uff0c\u5e76\u7406\u89e3\u4fe1\u4ef0\u3001\u4eea\u5f0f\u7a7a\u95f4\u548c\u73b0\u5b9e\u751f\u6d3b\u3002",
-    city: "\u9002\u5408\u4ece\u8857\u9053\u3001\u793e\u533a\u3001\u4ea4\u901a\u3001\u996e\u98df\u548c\u666e\u901a\u4eba\u7684\u65e5\u5e38\u8282\u594f\u4e2d\u7406\u89e3\u3002",
-    road: "\u9002\u5408\u4f5c\u4e3a\u79c1\u4eba\u8def\u7ebf\uff0c\u8ba9\u8def\u9014\u672c\u8eab\u4e5f\u6210\u4e3a\u76ee\u7684\u5730\u4f53\u9a8c\u7684\u4e00\u90e8\u5206\u3002",
-    market: "\u80fd\u770b\u5230\u644a\u4e3b\u3001\u98df\u6750\u3001\u5bb6\u5ead\u91c7\u8d2d\u548c\u771f\u5b9e\u7684\u65e5\u5e38\u4ea4\u6d41\u3002",
-    tea: "\u5e94\u628a\u8336\u56ed\u3001\u8336\u519c\u3001\u5236\u4f5c\u3001\u54c1\u9274\u548c\u5c71\u5730\u98ce\u571f\u8054\u7cfb\u8d77\u6765\u3002",
-    coast: "\u5e94\u628a\u6d77\u666f\u3001\u6e2f\u53e3\u751f\u6d3b\u3001\u6e14\u6751\u3001\u8d38\u6613\u548c\u5730\u65b9\u996e\u98df\u8054\u7cfb\u8d77\u6765\u3002"
+  const enLead: Record<RecommendationKind, string> = {
+    heritage: "The visit should connect visible structures, preserved spaces, inscriptions, street context and the historical layers around the site.",
+    nature: "The visit should be paced around season, weather, light, walking distance and the best viewpoints instead of rushing through a checklist.",
+    food: "The experience should move through ingredients, vendors, cooking habits and table culture so the stop feels local rather than generic.",
+    village: "The visit should slow down enough to read homes, lanes, fields, water systems, public spaces and the rhythm of daily life.",
+    craft: "The experience should follow materials, tools, makers, process and the local aesthetic behind the finished object.",
+    spiritual: "The visit should be quiet and respectful, connecting architecture, ritual etiquette, worship routes and living belief.",
+    city: "The route should connect streets, transport, architecture, food stops and ordinary neighborhood routines into one readable urban walk.",
+    road: "The route itself matters, so viewpoints, village stops, meals, weather and driving pace should be designed together.",
+    market: "The visit should focus on vendors, seasonal produce, household shopping habits and the direct conversations of daily life.",
+    tea: "The experience should connect tea fields, season, processing, tasting and the landscape that shapes the cup.",
+    coast: "The visit should connect sea views with harbors, fishing communities, markets, old streets and local food."
+  };
+  const enVisit: Record<RecommendationKind, string> = {
+    heritage: "A private guide can choose the right entrance, timing, photo angles and background story so the place reads as more than an old monument.",
+    nature: "A private plan can protect time for light, weather changes, short walks and quiet viewpoints, which often matter more than covering every stop.",
+    food: "A private visit can start with market or shop context, then explain flavors, ingredients and eating customs in a way menus cannot.",
+    village: "A private visit can keep the pace gentle and respectful, making room for observation without turning lived neighborhoods into a quick photo stop.",
+    craft: "A private visit should leave time for process, conversation and close looking, because the value is usually in details that are easy to miss.",
+    spiritual: "A private guide can help with etiquette, photography boundaries and the right amount of explanation while keeping the visit respectful.",
+    city: "A private route can combine walking, short transfers and food breaks so the city feels like a lived place, not disconnected stops.",
+    road: "A private route can adjust for weather, altitude, rest stops and meal timing while still keeping the strongest scenery in the plan.",
+    market: "A private visit can enter at the right hour, explain stall types and buying habits, and keep photography polite and unobtrusive.",
+    tea: "A private visit can match the season with fields, processing rooms and tasting, turning tea into a complete local story.",
+    coast: "A private route can follow tide, weather, harbor work and meal timing so the coast feels active rather than merely scenic."
+  };
+  const zhLead: Record<RecommendationKind, string> = {
+    heritage: "\u8fd9\u91cc\u4e0d\u9002\u5408\u53ea\u770b\u5916\u89c2\uff0c\u66f4\u9002\u5408\u628a\u57ce\u5899\u3001\u9662\u843d\u3001\u8857\u5df7\u3001\u7891\u523b\u3001\u5c55\u9648\u548c\u5468\u8fb9\u57ce\u5e02\u808c\u7406\u8fde\u8d77\u6765\u770b\u3002",
+    nature: "\u8fd9\u91cc\u7684\u91cd\u70b9\u4e0d\u662f\u8d76\u666f\u70b9\uff0c\u800c\u662f\u6839\u636e\u5b63\u8282\u3001\u5929\u6c14\u3001\u5149\u7ebf\u548c\u4f53\u529b\u5b89\u6392\u8282\u594f\uff0c\u8ba9\u5c71\u6c34\u672c\u8eab\u6709\u65f6\u95f4\u5c55\u5f00\u3002",
+    food: "\u8fd9\u91cc\u9002\u5408\u4ece\u65e9\u5e02\u3001\u5e97\u94fa\u3001\u98df\u6750\u3001\u505a\u6cd5\u548c\u5f53\u5730\u4eba\u7684\u5403\u6cd5\u8fdb\u5165\uff0c\u800c\u4e0d\u662f\u53ea\u70b9\u4e00\u9053\u201c\u4ee3\u8868\u83dc\u201d\u3002",
+    village: "\u8fd9\u91cc\u9002\u5408\u653e\u6162\u811a\u6b65\uff0c\u770b\u4f4f\u5b85\u683c\u5c40\u3001\u5df7\u9053\u5c3a\u5ea6\u3001\u516c\u5171\u7a7a\u95f4\u3001\u7530\u5730\u6c34\u7cfb\u548c\u5c45\u6c11\u65e5\u5e38\u3002",
+    craft: "\u8fd9\u91cc\u9002\u5408\u628a\u5de5\u5e8f\u62c6\u5f00\u770b\uff1a\u6750\u6599\u4ece\u54ea\u91cc\u6765\u3001\u5de5\u5177\u600e\u4e48\u7528\u3001\u624b\u827a\u4eba\u5982\u4f55\u5224\u65ad\u7ec6\u8282\uff0c\u4ee5\u53ca\u4f5c\u54c1\u4e3a\u4ec0\u4e48\u5f62\u6210\u8fd9\u79cd\u5730\u65b9\u5ba1\u7f8e\u3002",
+    spiritual: "\u8fd9\u91cc\u9700\u8981\u5b89\u9759\u3001\u6709\u5206\u5bf8\u5730\u53c2\u89c2\uff0c\u628a\u5efa\u7b51\u3001\u793c\u4eea\u3001\u9999\u706b\u3001\u671d\u62dc\u8def\u7ebf\u548c\u5f53\u5730\u4eba\u7684\u4fe1\u4ef0\u751f\u6d3b\u4e00\u8d77\u7406\u89e3\u3002",
+    city: "\u8fd9\u91cc\u9002\u5408\u7528\u6b65\u884c\u548c\u77ed\u9014\u8f66\u7a0b\u4e32\u8054\u8857\u533a\uff0c\u770b\u5546\u4e1a\u3001\u4ea4\u901a\u3001\u5efa\u7b51\u3001\u996e\u98df\u548c\u666e\u901a\u65e5\u5e38\u5982\u4f55\u53e0\u5728\u4e00\u8d77\u3002",
+    road: "\u8fd9\u91cc\u7684\u8def\u9014\u5c31\u662f\u4f53\u9a8c\u7684\u4e00\u90e8\u5206\uff0c\u9002\u5408\u628a\u89c2\u666f\u70b9\u3001\u6751\u9547\u505c\u7559\u3001\u9910\u98df\u548c\u884c\u8f66\u8282\u594f\u4e00\u8d77\u8bbe\u8ba1\u3002",
+    market: "\u8fd9\u91cc\u6700\u503c\u5f97\u770b\u7684\u662f\u644a\u4e3b\u548c\u987e\u5ba2\u7684\u4e92\u52a8\u3001\u5b63\u8282\u98df\u6750\u3001\u4ef7\u683c\u4e60\u60ef\u3001\u5bb6\u5ead\u91c7\u8d2d\u548c\u57ce\u5e02\u65e5\u5e38\u7684\u771f\u5b9e\u8282\u594f\u3002",
+    tea: "\u8fd9\u91cc\u9002\u5408\u4ece\u8336\u56ed\u73af\u5883\u3001\u91c7\u6458\u5b63\u8282\u3001\u5236\u8336\u6b65\u9aa4\u3001\u51b2\u6ce1\u65b9\u5f0f\u548c\u5f53\u5730\u5f85\u5ba2\u4e60\u60ef\u4e2d\u7406\u89e3\u4e00\u676f\u8336\u3002",
+    coast: "\u8fd9\u91cc\u4e0d\u53ea\u662f\u770b\u6d77\uff0c\u66f4\u9002\u5408\u628a\u7801\u5934\u3001\u6e14\u8239\u3001\u6d77\u9c9c\u5e02\u573a\u3001\u8001\u8857\u548c\u6d77\u98ce\u91cc\u7684\u751f\u6d3b\u8282\u594f\u8fde\u8d77\u6765\u3002"
+  };
+  const zhVisit: Record<RecommendationKind, string> = {
+    heritage: "\u79c1\u4eba\u6e38\u89c8\u53ef\u4ee5\u5b89\u6392\u5165\u53e3\u9009\u62e9\u3001\u907f\u5f00\u4eba\u6d41\u7684\u65f6\u6bb5\u3001\u9002\u5408\u62cd\u7167\u7684\u89d2\u5ea6\uff0c\u4ee5\u53ca\u5fc5\u8981\u7684\u5386\u53f2\u80cc\u666f\u8bb2\u89e3\uff0c\u8ba9\u9057\u5b58\u548c\u4eca\u5929\u7684\u57ce\u5e02\u5173\u7cfb\u53d8\u5f97\u6e05\u695a\u3002",
+    nature: "\u79c1\u4eba\u6e38\u89c8\u53ef\u4ee5\u628a\u6700\u4f73\u5149\u7ebf\u3001\u6b65\u884c\u8ddd\u79bb\u3001\u89c2\u666f\u505c\u7559\u548c\u5b89\u5168\u8fd4\u7a0b\u5b89\u6392\u597d\uff0c\u907f\u514d\u4e3a\u4e86\u6253\u5361\u800c\u9519\u8fc7\u771f\u6b63\u8212\u670d\u7684\u89c2\u770b\u65b9\u5f0f\u3002",
+    food: "\u79c1\u4eba\u6e38\u89c8\u53ef\u4ee5\u4ece\u91c7\u8d2d\u6216\u8857\u8fb9\u5c0f\u5e97\u5f00\u59cb\uff0c\u518d\u89e3\u91ca\u53e3\u5473\u3001\u98df\u6750\u548c\u5f53\u5730\u9910\u684c\u793c\u8c8c\uff0c\u8ba9\u4f53\u9a8c\u66f4\u50cf\u4e00\u6b21\u672c\u5730\u4eba\u7684\u65e5\u5e38\u3002",
+    village: "\u79c1\u4eba\u6e38\u89c8\u53ef\u4ee5\u5b89\u6392\u6162\u8d70\u3001\u77ed\u6682\u505c\u7559\u548c\u5728\u5730\u8bb2\u89e3\uff0c\u5c0a\u91cd\u5c45\u6c11\u751f\u6d3b\uff0c\u540c\u65f6\u770b\u61c2\u6751\u843d\u4e3a\u4ec0\u4e48\u8fd9\u6837\u751f\u957f\u3002",
+    craft: "\u79c1\u4eba\u6e38\u89c8\u53ef\u4ee5\u9884\u7559\u8db3\u591f\u65f6\u95f4\u770b\u5236\u4f5c\u8fc7\u7a0b\uff0c\u5fc5\u8981\u65f6\u5b89\u6392\u7b80\u77ed\u4f53\u9a8c\u6216\u4e0e\u5e08\u5085\u4ea4\u6d41\uff0c\u800c\u4e0d\u662f\u53ea\u5728\u6210\u54c1\u67dc\u524d\u505c\u7559\u3002",
+    spiritual: "\u79c1\u4eba\u6e38\u89c8\u4f1a\u6ce8\u610f\u670d\u88c5\u3001\u62cd\u7167\u8fb9\u754c\u3001\u52a8\u7ebf\u548c\u8bb2\u89e3\u5c3a\u5ea6\uff0c\u8ba9\u53c2\u89c2\u4fdd\u6301\u5c0a\u91cd\uff0c\u4e5f\u80fd\u542c\u61c2\u80cc\u540e\u7684\u6587\u5316\u3002",
+    city: "\u79c1\u4eba\u6e38\u89c8\u53ef\u4ee5\u628a\u5730\u94c1\u3001\u6b65\u884c\u3001\u8f66\u884c\u548c\u9910\u996e\u505c\u7559\u7ed3\u5408\u8d77\u6765\uff0c\u8ba9\u57ce\u5e02\u4e0d\u662f\u4e00\u4e32\u666f\u70b9\uff0c\u800c\u662f\u4e00\u6761\u6709\u8282\u594f\u7684\u751f\u6d3b\u7ebf\u3002",
+    road: "\u79c1\u4eba\u8def\u7ebf\u4f1a\u628a\u8f66\u7a0b\u3001\u4f11\u606f\u70b9\u3001\u6d77\u62d4\u6216\u5929\u6c14\u53d8\u5316\u3001\u5348\u9910\u5730\u70b9\u548c\u4e34\u65f6\u8c03\u6574\u7a7a\u95f4\u90fd\u8003\u8651\u8fdb\u53bb\u3002",
+    market: "\u79c1\u4eba\u6e38\u89c8\u53ef\u4ee5\u9009\u62e9\u5408\u9002\u65f6\u95f4\u8fdb\u5165\u5e02\u573a\uff0c\u89e3\u91ca\u644a\u4f4d\u5206\u533a\u3001\u98df\u6750\u7528\u9014\u548c\u5f53\u5730\u8d2d\u7269\u4e60\u60ef\uff0c\u4e5f\u7ed9\u62cd\u7167\u7559\u51fa\u793c\u8c8c\u8fb9\u754c\u3002",
+    tea: "\u79c1\u4eba\u6e38\u89c8\u53ef\u4ee5\u6839\u636e\u8336\u5b63\u5b89\u6392\u8336\u56ed\u3001\u5236\u4f5c\u7a7a\u95f4\u548c\u54c1\u996e\u73af\u8282\uff0c\u8ba9\u8336\u4e0d\u53ea\u662f\u7eaa\u5ff5\u54c1\uff0c\u800c\u662f\u4e00\u6b21\u5b8c\u6574\u7684\u5730\u65b9\u4f53\u9a8c\u3002",
+    coast: "\u79c1\u4eba\u6e38\u89c8\u53ef\u4ee5\u6839\u636e\u6f6e\u6c50\u3001\u5929\u6c14\u3001\u7801\u5934\u4f5c\u4e1a\u548c\u7528\u9910\u65f6\u95f4\u5b89\u6392\uff0c\u628a\u6d77\u5cb8\u98ce\u666f\u548c\u771f\u5b9e\u751f\u6d3b\u7ed3\u5408\u8d77\u6765\u3002"
   };
   const zhTheme: Record<RecommendationKind, string> = {
     heritage: "\u5386\u53f2\u9057\u5b58\u4e0e\u73b0\u573a\u7a7a\u95f4",
@@ -743,19 +782,17 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   };
   const zhOverviewPrefix = "\u9002\u5408\u56f4\u7ed5";
   const zhOverviewSuffix = "\u6765\u7406\u89e3\u3002";
-  const zhExperiencePrefix = "\u79c1\u4eba\u6e38\u89c8\u5e94\u628a\u8def\u7ebf\u3001\u65f6\u95f4\u3001\u62cd\u7167\u505c\u7559\u548c\u8bb2\u89e3\u90fd\u76f4\u63a5\u56f4\u7ed5";
-  const zhExperienceSuffix = "\u5c55\u5f00\u3002\u91cd\u70b9\u662f\u901a\u8fc7\u672c\u5730\u80cc\u666f\u7406\u89e3\u8fd9\u4e2a\u5730\u65b9\uff0c\u800c\u4e0d\u662f\u666e\u901a\u6253\u5361\u3002";
   return {
     image: exactImage ?? verifiedRecommendationImages[item.name] ?? provinceFallback?.[item.kind] ?? provinceFallback?.default ?? kind.image,
     fallbackImage: kind.fallbackImage,
     caption: { en: place, zh: placeZh },
     overview: {
-      en: `${place} is recommended for ${item.focus}. ${item.name} is best understood through local context, realistic timing and what can actually be seen on site.`,
-      zh: `${placeZh}${zhOverviewPrefix}${zhTheme[item.kind]}${zhOverviewSuffix}${zhKindContext[item.kind]}`
+      en: `${place} is recommended for ${item.focus}. ${enLead[item.kind]}`,
+      zh: `${placeZh}${zhOverviewPrefix}${zhTheme[item.kind]}${zhOverviewSuffix}${zhLead[item.kind]}`
     },
     experience: {
-      en: `A private visit should connect the route, timing, photo stops and explanation directly to ${item.name}. The goal is to make the place understandable through local context, not just to stop for a quick picture.`,
-      zh: `${zhExperiencePrefix}${placeZh}${zhExperienceSuffix}`
+      en: `${enVisit[item.kind]} The goal is to make ${item.name} understandable through local context, not just to stop for a quick picture.`,
+      zh: `${zhVisit[item.kind]}`
     }
   };
 }
