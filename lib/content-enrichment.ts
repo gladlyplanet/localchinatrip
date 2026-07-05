@@ -1,7 +1,6 @@
 import type { Lang } from "@/components/LanguageProvider";
 import type { ExperienceLocation } from "@/lib/experiences";
 import type { ProvinceRecommendation, RecommendationKind } from "@/lib/province-recommendations";
-import { destinationImages } from "@/lib/generated-destination-media";
 
 type Localized = {
   en: string;
@@ -765,7 +764,6 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   const placeZh = item.nameZh || item.name;
   const kind = genericByKind[item.kind];
   const provinceFallback = provinceName ? provinceFallbackImages[provinceName] : undefined;
-  const exactImage = provinceName ? destinationImages[`${provinceName}::${item.name}`] : undefined;
   const destinationSpecific = provinceName ? destinationSpecificText[`${provinceName}::${item.name}`] : undefined;
   if (destinationSpecific) return destinationSpecific;
   const enLead: Record<RecommendationKind, string> = {
@@ -837,7 +835,7 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   const zhOverviewSuffix = "\u6765\u7406\u89e3\u3002";
   const focusZh = item.focusZh || zhTheme[item.kind];
   return {
-    image: exactImage ?? verifiedRecommendationImages[item.name] ?? provinceFallback?.[item.kind] ?? provinceFallback?.default ?? kind.image,
+    image: verifiedRecommendationImages[item.name] ?? provinceFallback?.[item.kind] ?? provinceFallback?.default ?? kind.image,
     fallbackImage: kind.fallbackImage,
     caption: { en: place, zh: placeZh },
     overview: {
