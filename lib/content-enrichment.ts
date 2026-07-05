@@ -876,14 +876,41 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   };
 }
 
+function destinationDetailCopy(lang: Lang, item: ProvinceRecommendation, provinceName?: string) {
+  const place = provinceName ? `${item.name}, ${provinceName}` : item.name;
+  if (lang === "es") {
+    return {
+      caption: place,
+      overview: `${place} se entiende mejor a partir de ${item.focus}. La visita debe conectar el lugar concreto, su contexto local y el ritmo real del recorrido, no presentarlo como una parada genérica.`,
+      experience: `El plan privado debe ajustar horarios, luz, desplazamientos y explicación local para que ${item.name} se comprenda por su propio carácter.`
+    };
+  }
+  if (lang === "pt") {
+    return {
+      caption: place,
+      overview: `${place} se entende melhor a partir de ${item.focus}. A visita deve ligar o lugar concreto, seu contexto local e o ritmo real do percurso, sem tratá-lo como uma parada genérica.`,
+      experience: `O plano privado deve ajustar horários, luz, deslocamentos e interpretação local para que ${item.name} seja compreendido pelo seu próprio caráter.`
+    };
+  }
+  if (lang === "ar") {
+    return {
+      caption: place,
+      overview: `يُفهم ${place} من خلال ${item.focus}. يجب أن يربط المسار بين المكان نفسه والسياق المحلي وإيقاع الزيارة، لا أن يقدمه كمحطة عامة.`,
+      experience: `ينبغي أن يوازن البرنامج الخاص بين التوقيت والضوء والتنقل والشرح المحلي حتى يظهر طابع ${item.name} بوضوح.`
+    };
+  }
+  return null;
+}
+
 export function getRecommendationEnrichment(lang: Lang, item: ProvinceRecommendation, provinceName?: string) {
   const media = cleanRecommendationText(item, provinceName);
+  const translated = destinationDetailCopy(lang, item, provinceName);
   return {
     image: media.image,
     fallbackImage: media.fallbackImage,
-    caption: localized(lang, media.caption),
-    overview: localized(lang, media.overview),
-    experience: localized(lang, media.experience)
+    caption: translated?.caption ?? localized(lang, media.caption),
+    overview: translated?.overview ?? localized(lang, media.overview),
+    experience: translated?.experience ?? localized(lang, media.experience)
   };
 }
 
