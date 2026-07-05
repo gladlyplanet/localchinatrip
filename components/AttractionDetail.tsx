@@ -402,7 +402,7 @@ export function AttractionDetail({ province, attraction }: { province: Province;
                 <span className="h-px w-7 bg-gold" />
                 <p className="text-sm font-semibold tracking-[0.22em]">{l(lang, text.eyebrow)}</p>
               </div>
-              <h1 className="mt-7 font-serif text-5xl font-semibold leading-none sm:text-7xl lg:text-8xl">{itemCopy.name}</h1>
+              <h1 className="mt-7 break-words font-serif text-5xl font-semibold leading-none [overflow-wrap:anywhere] sm:text-7xl lg:text-8xl">{itemCopy.name}</h1>
               <div className="mt-7 flex items-center gap-4 text-lg font-semibold text-moss">
                 <span className="h-px w-10 bg-gold" />
                 <span>{l(lang, meta.subtitle)}</span>
