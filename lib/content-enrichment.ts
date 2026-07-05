@@ -1,6 +1,7 @@
 import type { Lang } from "@/components/LanguageProvider";
 import type { ExperienceLocation } from "@/lib/experiences";
 import type { ProvinceRecommendation, RecommendationKind } from "@/lib/province-recommendations";
+import { toTraditionalChinese } from "@/lib/chinese-text";
 
 type Localized = {
   en: string;
@@ -755,7 +756,8 @@ const curatedRecommendationMedia: Record<string, MediaText> = {
 };
 
 function localized(lang: Lang, value: Localized) {
-  if (lang === "zh-CN" || lang === "zh-TW") return value.zh;
+  if (lang === "zh-CN") return value.zh;
+  if (lang === "zh-TW") return toTraditionalChinese(value.zh);
   return value.en;
 }
 
