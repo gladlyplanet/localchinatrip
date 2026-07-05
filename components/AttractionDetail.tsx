@@ -144,13 +144,65 @@ function phrase(en: string, zhCN: string, zhTW: string, es: string, pt: string, 
 }
 
 function simplePhrase(en: string, zhCN: string, zhTW: string): Phrase {
+  const translated: Partial<Record<string, Pick<Phrase, "es" | "pt" | "ar">>> = {
+    "Best moment": { es: "Mejor momento", pt: "Melhor momento", ar: "أفضل وقت" },
+    "Start local": { es: "Empieza en lo local", pt: "Comece pelo local", ar: "ابدأ بالمحلي" },
+    "Walk and observe": { es: "Caminar y observar", pt: "Caminhar e observar", ar: "امش وراقب" },
+    "Understand the setting": { es: "Entender el contexto", pt: "Entender o contexto", ar: "افهم السياق" },
+    "Stay flexible": { es: "Mantener flexibilidad", pt: "Mantenha flexibilidade", ar: "حافظ على المرونة" },
+    "Route by rhythm": { es: "Ruta por ritmo", pt: "Rota pelo ritmo", ar: "مسار حسب الإيقاع" },
+    "Private route": { es: "Ruta privada", pt: "Rota privada", ar: "مسار خاص" },
+    "Local interpretation": { es: "Interpretación local", pt: "Interpretação local", ar: "شرح محلي" },
+    "Flexible transport": { es: "Transporte flexible", pt: "Transporte flexível", ar: "نقل مرن" },
+    "Use morning or late afternoon when light, crowds and pace are usually softer.": {
+      es: "Usa la mañana o el final de la tarde, cuando la luz, la gente y el ritmo suelen ser más suaves.",
+      pt: "Use a manhã ou o fim da tarde, quando luz, público e ritmo costumam ser mais suaves.",
+      ar: "اختر الصباح أو آخر النهار عندما يكون الضوء والزحام والإيقاع أهدأ."
+    },
+    "Begin with a market, old shop or neighborhood street before sitting down.": {
+      es: "Empieza por un mercado, una tienda antigua o una calle de barrio antes de sentarte.",
+      pt: "Comece por um mercado, uma loja antiga ou uma rua de bairro antes de se sentar.",
+      ar: "ابدأ بسوق أو متجر قديم أو شارع حي قبل الجلوس."
+    },
+    "Keep the route comfortable, with pauses for details and local scenes.": {
+      es: "Mantén la ruta cómoda, con pausas para detalles y escenas locales.",
+      pt: "Mantenha a rota confortável, com pausas para detalhes e cenas locais.",
+      ar: "اجعل المسار مريحا مع توقفات للتفاصيل والمشاهد المحلية."
+    },
+    "Connect scenery, history, daily life and local habits instead of only taking photos.": {
+      es: "Conecta paisaje, historia, vida diaria y costumbres locales, no solo fotos.",
+      pt: "Conecte paisagem, história, vida diária e hábitos locais, não apenas fotos.",
+      ar: "اربط المنظر بالتاريخ والحياة اليومية والعادات المحلية، لا بالتصوير فقط."
+    },
+    "Leave space for weather, energy and small discoveries along the way.": {
+      es: "Deja margen para el clima, la energía y pequeños hallazgos del camino.",
+      pt: "Deixe espaço para clima, energia e pequenas descobertas no caminho.",
+      ar: "اترك مجالا للطقس والطاقة والاكتشافات الصغيرة في الطريق."
+    },
+    "Plan the order around season, distance, light and the group's energy.": {
+      es: "Ordena el día según temporada, distancia, luz y energía del grupo.",
+      pt: "Organize o dia conforme temporada, distância, luz e energia do grupo.",
+      ar: "رتب اليوم حسب الموسم والمسافة والضوء وطاقة المجموعة."
+    },
+    "Use stories, maps and details to explain why the place matters.": {
+      es: "Usa historias, mapas y detalles para explicar por qué importa el lugar.",
+      pt: "Use histórias, mapas e detalhes para explicar por que o lugar importa.",
+      ar: "استخدم القصص والخرائط والتفاصيل لشرح أهمية المكان."
+    },
+    "Add private transfers when entrances, viewpoints or villages are far apart.": {
+      es: "Añade traslados privados cuando entradas, miradores o aldeas estén separados.",
+      pt: "Inclua traslados privados quando entradas, mirantes ou vilas estiverem distantes.",
+      ar: "أضف نقلا خاصا عندما تكون المداخل أو نقاط المشاهدة أو القرى متباعدة."
+    }
+  };
+  const extra = translated[en];
   return {
     en,
     "zh-CN": zhCN,
     "zh-TW": zhTW,
-    es: en,
-    pt: en,
-    ar: en
+    es: extra?.es ?? en,
+    pt: extra?.pt ?? en,
+    ar: extra?.ar ?? en
   };
 }
 
