@@ -2,20 +2,23 @@
 
 import Image from "next/image";
 import { Footer, Header } from "@/components/SiteChrome";
-import { useLanguage } from "@/components/LanguageProvider";
+import { useLanguage, type Lang } from "@/components/LanguageProvider";
 import { getSiteCopy } from "@/lib/site-copy";
+
+const contactFields: Record<Lang, { travelDates: string; people: string }> = {
+  en: { travelDates: "Travel dates", people: "Number of people" },
+  "zh-CN": { travelDates: "旅行日期", people: "人数" },
+  "zh-TW": { travelDates: "旅行日期", people: "人數" },
+  es: { travelDates: "Fechas de viaje", people: "Número de personas" },
+  pt: { travelDates: "Datas da viagem", people: "Número de pessoas" },
+  ar: { travelDates: "تواريخ السفر", people: "عدد الأشخاص" }
+};
 
 export default function ContactPage() {
   const { lang, dir } = useLanguage();
   const t = getSiteCopy(lang).contact;
-  const contactFields = {
-    en: { travelDates: "Travel dates", people: "Number of people" },
-    "zh-CN": { travelDates: "旅行日期", people: "人数" },
-    "zh-TW": { travelDates: "旅行日期", people: "人數" },
-    es: { travelDates: "Fechas de viaje", people: "Número de personas" },
-    pt: { travelDates: "Datas da viagem", people: "Número de pessoas" },
-    ar: { travelDates: "تواريخ السفر", people: "عدد الأشخاص" }
-  }[lang] ?? { travelDates: "Travel dates", people: "Number of people" };
+  const fields = contactFields[lang] ?? contactFields.en;
+
   return (
     <>
       <Header />
@@ -28,8 +31,8 @@ export default function ContactPage() {
               <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
               <input className="h-14 rounded-md border hairline bg-bone/5 px-4 text-bone outline-none focus:border-gold" placeholder={t.name} aria-label={t.name} name="name" required />
               <input className="h-14 rounded-md border hairline bg-bone/5 px-4 text-bone outline-none focus:border-gold" placeholder={t.email} type="email" aria-label={t.email} name="email" required />
-              <input className="h-14 rounded-md border hairline bg-bone/5 px-4 text-bone outline-none focus:border-gold" placeholder={contactFields.travelDates} aria-label={contactFields.travelDates} name="travel_dates" required />
-              <input className="h-14 rounded-md border hairline bg-bone/5 px-4 text-bone outline-none focus:border-gold" placeholder={contactFields.people} type="number" min="1" aria-label={contactFields.people} name="number_of_people" required />
+              <input className="h-14 rounded-md border hairline bg-bone/5 px-4 text-bone outline-none focus:border-gold" placeholder={fields.travelDates} aria-label={fields.travelDates} name="travel_dates" required />
+              <input className="h-14 rounded-md border hairline bg-bone/5 px-4 text-bone outline-none focus:border-gold" placeholder={fields.people} type="number" min="1" aria-label={fields.people} name="number_of_people" required />
               <textarea className="min-h-36 rounded-md border hairline bg-bone/5 px-4 py-4 text-bone outline-none focus:border-gold" placeholder={t.message} aria-label={t.message} name="message" required />
               <button type="submit" className="mt-2 h-12 rounded-full bg-bone px-7 text-sm font-medium text-ink transition hover:bg-gold">{t.send}</button>
             </form>
