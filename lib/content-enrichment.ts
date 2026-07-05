@@ -835,17 +835,18 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   };
   const zhOverviewPrefix = "\u9002\u5408\u56f4\u7ed5";
   const zhOverviewSuffix = "\u6765\u7406\u89e3\u3002";
+  const focusZh = item.focusZh || zhTheme[item.kind];
   return {
     image: exactImage ?? verifiedRecommendationImages[item.name] ?? provinceFallback?.[item.kind] ?? provinceFallback?.default ?? kind.image,
     fallbackImage: kind.fallbackImage,
     caption: { en: place, zh: placeZh },
     overview: {
       en: `${place} is recommended for ${item.focus}. ${enLead[item.kind]}`,
-      zh: `${placeZh}${zhOverviewPrefix}${zhTheme[item.kind]}${zhOverviewSuffix}${zhLead[item.kind]}`
+      zh: `${placeZh}${zhOverviewPrefix}${focusZh}${zhOverviewSuffix}${zhLead[item.kind]}`
     },
     experience: {
       en: `${enVisit[item.kind]} The goal is to make ${item.name} understandable through local context, not just to stop for a quick picture.`,
-      zh: `${zhVisit[item.kind]}`
+      zh: `${zhVisit[item.kind]}行程重点应扣住${placeZh}本身的${focusZh}，而不是套用同一段泛泛介绍。`
     }
   };
 }
