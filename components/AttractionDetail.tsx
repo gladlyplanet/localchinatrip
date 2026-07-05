@@ -5,6 +5,7 @@ import { DestinationPhoto } from "@/components/DestinationPhoto";
 import { Footer, Header } from "@/components/SiteChrome";
 import { useLanguage, type Lang } from "@/components/LanguageProvider";
 import { getRecommendationEnrichment } from "@/lib/content-enrichment";
+import { toTraditionalChinese } from "@/lib/chinese-text";
 import { getProvinceName, type Province } from "@/lib/provinces";
 import { getRecommendationCopy, type ProvinceRecommendation, type RecommendationKind } from "@/lib/province-recommendations";
 import { getSiteCopy } from "@/lib/site-copy";
@@ -300,7 +301,7 @@ function destinationPhrase(en: string, zhCN: string): Phrase {
   return {
     en,
     "zh-CN": zhCN,
-    "zh-TW": zhCN,
+    "zh-TW": toTraditionalChinese(zhCN),
     es: en,
     pt: en,
     ar: en
