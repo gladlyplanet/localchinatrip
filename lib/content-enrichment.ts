@@ -827,7 +827,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     caption: { en: "Dujiangyan Irrigation System", zh: "都江堰水利工程" },
     overview: {
       en: "Dujiangyan is a living water-control system on the Min River, centered on Yuzui, Feishayan and Baopingkou. Its value lies in how ancient engineering still distributes water and shapes the Chengdu Plain.",
-      zh: "都江堰要围绕岷江上的鱼嘴、飞沙堰、宝瓶口来写。这里的重点不是普通古建筑，而是一个仍在发挥作用的无坝引水工程，以及它如何塑造成都平原的农业与城市基础。"
+      zh: "都江堰要围绕岷江上的鱼嘴、飞沙堰、宝瓶口来写。它的核心价值在于仍在发挥作用的无坝引水工程，以及这套水利系统如何塑造成都平原的农业与城市基础。"
     },
     experience: {
       en: "A good visit follows the water logic step by step, using viewpoints and bridges to explain diversion, sediment control and flood management before adding temple or old-town time.",
