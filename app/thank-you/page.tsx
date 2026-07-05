@@ -15,14 +15,14 @@ const copy: Record<Lang, { eyebrow: string; title: string; body: string; home: s
   "zh-CN": {
     eyebrow: "咨询已发送",
     title: "谢谢。",
-    body: "你的信息已经发送成功。我会尽快通过邮箱或 WhatsApp 回复你。",
+    body: "你的信息已经成功发送。我会尽快通过邮箱或 WhatsApp 回复你。",
     home: "返回首页",
     another: "再发送一条咨询"
   },
   "zh-TW": {
     eyebrow: "諮詢已送出",
     title: "謝謝。",
-    body: "你的資訊已成功送出。我會盡快透過電子郵件或 WhatsApp 回覆你。",
+    body: "你的資訊已經成功送出。我會盡快透過電子郵件或 WhatsApp 回覆你。",
     home: "返回首頁",
     another: "再送出一則諮詢"
   },
@@ -42,7 +42,7 @@ const copy: Record<Lang, { eyebrow: string; title: string; body: string; home: s
   },
   ar: {
     eyebrow: "تم إرسال الطلب",
-    title: "شكراً لك.",
+    title: "شكرا لك.",
     body: "تم إرسال رسالتك. سأرد عليك عبر البريد الإلكتروني أو واتساب في أقرب وقت ممكن.",
     home: "العودة إلى الصفحة الرئيسية",
     another: "إرسال طلب آخر"
