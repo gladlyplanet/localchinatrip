@@ -311,13 +311,35 @@ function Icon({ name }: { name: IconName }) {
   return <svg viewBox="0 0 24 24" className={common} fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M5 12c5.5 0 7-5 7-8 4.5 3 6.8 7.6 3.8 12.1C13.1 20.2 7.2 20 5 15.8V12Z" /><path d="M5 12c3.8.4 6.5 2.1 8 5" /></svg>;
 }
 
+const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: Phrase; people: Phrase; keywords: Phrase; lead: Phrase; advice: Array<{ icon: IconName; title: Phrase; body: Phrase }>; guide: Array<{ icon: IconName; title: Phrase; body: Phrase }> }> = {
+  "Chengyang Wind and Rain Bridge": {
+    subtitle: phrase("Dong bridge architecture · Village life · Timber craft", "侗族木桥 · 村寨公共空间 · 木构工艺", "侗族木橋 · 村寨公共空間 · 木構工藝", "Puente dong · Vida de aldea · Carpintería", "Ponte dong · Vida de aldeia · Carpintaria", "جسر دونغ · حياة القرية · حرفة الخشب"),
+    season: phrase("Spring and autumn are comfortable; festival days add Dong village atmosphere.", "春秋慢走最舒适，若遇侗族节庆更能看到村寨生活。", "春秋慢走最舒適，若遇侗族節慶更能看到村寨生活。", "Primavera y otoño son cómodos; los festivales añaden vida local.", "Primavera e outono são confortáveis; festivais trazem vida local.", "الربيع والخريف مريحان، وأيام المهرجانات تضيف حياة محلية."),
+    pace: phrase("Half day, with time for the bridge, nearby villages and drum towers.", "半日游，给桥身、邻近侗寨和鼓楼都留出停留时间。", "半日遊，給橋身、鄰近侗寨和鼓樓都留出停留時間。", "Medio día, con tiempo para puente, aldeas y torres del tambor.", "Meio dia, com tempo para ponte, aldeias e torres do tambor.", "نصف يوم للجسر والقرى وأبراج الطبول القريبة."),
+    people: phrase("Architecture, folk culture, photography and slow-travel lovers.", "适合建筑、民俗文化、摄影和慢旅行爱好者。", "適合建築、民俗文化、攝影和慢旅行愛好者。", "Arquitectura, cultura local, fotografía y viaje lento.", "Arquitetura, cultura local, fotografia e viagem lenta.", "لمحبي العمارة والثقافة المحلية والتصوير والسفر الهادئ."),
+    keywords: phrase("Wind-rain bridge · Dong village · Drum tower · Timber structure", "风雨桥 · 侗寨 · 鼓楼 · 木构", "風雨橋 · 侗寨 · 鼓樓 · 木構", "Puente cubierto · Aldea dong · Torre del tambor · Madera", "Ponte coberta · Aldeia dong · Torre do tambor · Madeira", "جسر مغطى · قرية دونغ · برج الطبول · هيكل خشبي"),
+    lead: phrase("Read the bridge as part of Dong village life, not as a generic landscape viewpoint.", "把风雨桥放回侗寨生活里看，而不是当成普通山水观景点。", "把風雨橋放回侗寨生活裡看，而不是當成普通山水觀景點。", "Lee el puente como parte de la vida dong, no como un mirador genérico.", "Veja a ponte como parte da vida dong, não como um mirante genérico.", "اقرأ الجسر كجزء من حياة قرى دونغ، لا كنقطة منظر عامة."),
+    advice: [
+      { icon: "shoe", title: phrase("Walk the bridge slowly", "慢慢走桥", "慢慢走橋", "Cruzar despacio", "Cruzar devagar", "اعبر ببطء"), body: phrase("Look at the covered corridor, roof layers, timber joints and how people use the bridge.", "看廊道、屋顶层次、木构节点，也看村民如何在桥上停留和通行。", "看廊道、屋頂層次、木構節點，也看村民如何在橋上停留和通行。", "Observa el corredor, los techos, la madera y el uso cotidiano.", "Observe o corredor, os telhados, a madeira e o uso cotidiano.", "لاحظ الممر والسقف والخشب والاستخدام اليومي.") },
+      { icon: "book", title: phrase("Connect village context", "连到侗寨背景", "連到侗寨背景", "Conectar con la aldea", "Conectar com a aldeia", "اربطها بالقرية"), body: phrase("The bridge makes most sense together with drum towers, village paths, fields and Dong customs.", "风雨桥要和鼓楼、寨路、田地、侗族习俗一起看才完整。", "風雨橋要和鼓樓、寨路、田地、侗族習俗一起看才完整。", "El puente se entiende con torres, caminos, campos y costumbres dong.", "A ponte se entende com torres, caminhos, campos e costumes dong.", "يفهم الجسر مع الأبراج والطرق والحقول وعادات دونغ.") },
+      { icon: "camera", title: phrase("Choose soft light", "选择柔和光线", "選擇柔和光線", "Luz suave", "Luz suave", "اختر ضوءا ناعما"), body: phrase("Morning or late afternoon is better for bridge details and village scenes.", "清晨或傍晚更适合看桥体细节、溪流和村寨环境。", "清晨或傍晚更適合看橋體細節、溪流和村寨環境。", "Mañana o tarde son mejores para detalles y escenas locales.", "Manhã ou fim da tarde são melhores para detalhes e cenas locais.", "الصباح أو آخر النهار أفضل للتفاصيل والمشاهد المحلية.") },
+      { icon: "hat", title: phrase("Keep the pace respectful", "保持分寸", "保持分寸", "Ritmo respetuoso", "Ritmo respeitoso", "وتيرة محترمة"), body: phrase("It is a lived village space, so photography and stopping points should not disturb local life.", "这里是仍在使用的村寨空间，拍照和停留都要不打扰当地生活。", "這裡是仍在使用的村寨空間，拍照和停留都要不打擾當地生活。", "Es un espacio vivo; fotos y pausas no deben molestar.", "É um espaço vivo; fotos e pausas não devem incomodar.", "إنه مكان معيش، فلا تزعج الصور والتوقفات الحياة المحلية.") }
+    ],
+    guide: [
+      { icon: "route", title: phrase("Bridge and village route", "桥与侗寨路线", "橋與侗寨路線", "Ruta puente-aldea", "Rota ponte-aldeia", "مسار الجسر والقرية"), body: phrase("Arrange the bridge, nearby Dong villages, drum towers and fields as one route.", "把风雨桥、邻近侗寨、鼓楼和田地安排成一条完整路线。", "把風雨橋、鄰近侗寨、鼓樓和田地安排成一條完整路線。", "Une puente, aldeas, torres y campos en una ruta.", "Una ponte, aldeias, torres e campos em uma rota.", "اجمع الجسر والقرى والأبراج والحقول في مسار واحد.") },
+      { icon: "book", title: phrase("Dong culture interpretation", "侗族文化讲解", "侗族文化講解", "Contexto dong", "Contexto dong", "شرح ثقافة دونغ"), body: phrase("Explain wind-rain bridges, drum towers, timber craft and Dong singing traditions.", "讲清风雨桥、鼓楼、木构工艺和侗族大歌之间的关系。", "講清風雨橋、鼓樓、木構工藝和侗族大歌之間的關係。", "Explica puentes, torres, madera y canto dong.", "Explique pontes, torres, madeira e canto dong.", "اشرح الجسور والأبراج والخشب وغناء دونغ.") },
+      { icon: "car", title: phrase("Flexible transfer", "灵活接驳", "靈活接駁", "Traslado flexible", "Traslado flexível", "تنقل مرن"), body: phrase("Use private transfer when connecting Sanjiang, villages and surrounding viewpoints.", "串联三江、村寨和周边观景点时，可安排包车接驳。", "串聯三江、村寨和周邊觀景點時，可安排包車接駁。", "Usa traslado privado para Sanjiang, aldeas y miradores.", "Use traslado privado para Sanjiang, aldeias e mirantes.", "استخدم نقلا خاصا بين سانجيانغ والقرى ونقاط المشاهدة.") }
+    ]
+  }
+};
+
 export function AttractionDetail({ province, attraction }: { province: Province; attraction: ProvinceRecommendation }) {
   const { lang, dir } = useLanguage();
   const t = getSiteCopy(lang).destinations;
   const provinceLabel = getProvinceName(province.slug, lang);
   const itemCopy = getRecommendationCopy(lang, attraction);
   const enrichment = getRecommendationEnrichment(lang, attraction, province.name);
-  const meta = kindMeta[attraction.kind];
+  const meta = destinationMeta[attraction.name] ?? kindMeta[attraction.kind];
   const facts = [
     { icon: "leaf" as IconName, title: text.bestSeason, value: meta.season },
     { icon: "clock" as IconName, title: text.pace, value: meta.pace },
