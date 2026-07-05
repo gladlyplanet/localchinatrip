@@ -630,6 +630,18 @@ const destinationSpecificText: Record<string, MediaText> = {
       zh: "合适的游览应放在清晨或上午，从食材摊、织物摊和小吃摊慢慢走起，讲清酸汤口味、节庆服饰、赶集习惯和摊主与顾客的互动。重点是看真实市集节奏，而不是把凯里市集拍成一张泛泛的街景。"
     }
   },
+  "Guangxi::Chengyang Wind and Rain Bridge": {
+    image: "/images/destinations/wiki-guangxi-chengyang-wind-and-rain-bridge.jpg",
+    caption: { en: "Chengyang Wind and Rain Bridge, Sanjiang", zh: "三江程阳风雨桥" },
+    overview: {
+      en: "Chengyang Wind and Rain Bridge should be introduced as Dong wooden architecture in Sanjiang: a covered bridge, pavilions, river crossing, village entrances and the public life that gathers around drum towers and wind-rain bridges.",
+      zh: "程阳风雨桥要围绕三江侗族木构桥梁来理解：廊桥、亭阁、河道、村寨入口和鼓楼一起组成侗寨公共空间。这里不是桂林山水观景点，也不是普通古城建筑，而是侗族村寨交通、休憩、议事和节庆生活交汇的地方。"
+    },
+    experience: {
+      en: "A good visit should walk the bridge slowly, look at the timber structure and roof layers, then connect the bridge with nearby Dong villages, drum towers, rice fields and local singing or festival traditions.",
+      zh: "合适的游览应慢慢走过桥身，看木构榫卯、廊亭屋顶和桥下溪流，再把风雨桥、侗寨、鼓楼、稻田和侗族大歌或节庆习俗连起来讲。重点是理解它为什么是村寨生活的一部分，而不是只拍一张山水照片。"
+    }
+  },
   "Henan::Yellow River Scenic Area Zhengzhou": {
     image: "/images/destinations/wiki-qinghai-guide-yellow-river.jpg",
     caption: { en: "Yellow River Scenic Area, Zhengzhou", zh: "郑州黄河风景名胜区" },
