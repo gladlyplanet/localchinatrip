@@ -10,5 +10,6 @@ The following experience photographs were sourced from Wikimedia Commons. See ea
 - `experience-longjing-tea.jpg`: [Tea plantation in Hangzhou](https://commons.wikimedia.org/wiki/File:Tea_plantation_in_hangzhou.JPG)
 - `experience-guilin-ride.jpg`: [Li River at Yangshuo](https://commons.wikimedia.org/wiki/File:Yangshuo-Li-River-2019-Luka-Peternel.jpg)
 - `experience-beijing-hutong.jpg`: [Beijing hutong](https://commons.wikimedia.org/wiki/File:Beijing_hutong_1.jpg)
+- `destinations/optimized/wiki-shandong-jinan-springs.jpg`: [Baotu Spring, Jinan](https://commons.wikimedia.org/wiki/File:China_Jinan_5196975.jpg)
 
 The province boundary data in `public/data/china-provinces.json` is sourced from the Aliyun DataV area boundary dataset.
