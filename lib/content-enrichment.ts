@@ -617,6 +617,21 @@ const genericByKind: Record<RecommendationKind, MediaText> = {
   }
 };
 
+const destinationSpecificText: Record<string, MediaText> = {
+  "Shandong::Jinan Springs": {
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/China_Jinan_5196975.jpg/1200px-China_Jinan_5196975.jpg",
+    caption: { en: "Baotu Spring and Jinan's spring water", zh: "趵突泉与济南泉水" },
+    overview: {
+      en: "Jinan Springs should be introduced through Baotu Spring, Black Tiger Spring, the old moat, Daming Lake and the spring-fed rhythm that gives Jinan its identity as the City of Springs.",
+      zh: "济南泉水应围绕趵突泉、黑虎泉、护城河、大明湖和泉水滋养出的泉城生活来理解。这里的重点不是高楼天际线，而是泉眼、池水、柳树、老城水系和市民日常如何连在一起。"
+    },
+    experience: {
+      en: "A good route follows the water: start with Baotu Spring or Black Tiger Spring, walk along the moat and old lanes, then connect the springs with Daming Lake, local tea, small eateries and Jinan's slower old-city pace.",
+      zh: "合适的游览应顺着水走：从趵突泉或黑虎泉开始，沿护城河和老街巷慢慢看，再把泉水、大明湖、茶摊、小吃和济南老城节奏串起来，而不是只看一个普通城市景观。"
+    }
+  }
+};
+
 const curatedRecommendationMedia: Record<string, MediaText> = {
   "Kuqa Grand Canyon": {
     image: "/images/destination-kuqa-grand-canyon-real.jpg",
@@ -715,6 +730,8 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   const kind = genericByKind[item.kind];
   const provinceFallback = provinceName ? provinceFallbackImages[provinceName] : undefined;
   const exactImage = provinceName ? destinationImages[`${provinceName}::${item.name}`] : undefined;
+  const destinationSpecific = provinceName ? destinationSpecificText[`${provinceName}::${item.name}`] : undefined;
+  if (destinationSpecific) return destinationSpecific;
   const enLead: Record<RecommendationKind, string> = {
     heritage: "The visit should connect visible structures, preserved spaces, inscriptions, street context and the historical layers around the site.",
     nature: "The visit should be paced around season, weather, light, walking distance and the best viewpoints instead of rushing through a checklist.",
