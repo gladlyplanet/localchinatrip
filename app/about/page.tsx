@@ -46,16 +46,26 @@ const localFriendCopy: Record<Lang, string[]> = {
 };
 
 const aboutPhotos = [
-  { src: "/images/about-me-dinner-table.jpg", alt: "Sharing dinner with foreign guests in China", caption: "Family-style dinners" },
-  { src: "/images/about-me-beach-group.jpg", alt: "Beach moment with foreign guests in China", caption: "Easy local days" },
-  { src: "/images/about-me-boat-seafood.jpg", alt: "Boat seafood experience with guests", caption: "Real local experiences" },
-  { src: "/images/about-me-restaurant-selfie.jpg", alt: "Restaurant selfie with a guest", caption: "Local friend in China" }
+  { src: "/images/about-me-dinner-table.jpg", alt: "Sharing dinner with foreign guests in China" },
+  { src: "/images/about-me-beach-group.jpg", alt: "Beach moment with foreign guests in China" },
+  { src: "/images/about-me-boat-seafood.jpg", alt: "Boat seafood experience with guests" },
+  { src: "/images/about-me-restaurant-selfie.jpg", alt: "Restaurant selfie with a guest" }
 ];
+
+const photoCaptions: Record<Lang, string[]> = {
+  en: ["Family-style dinners", "Easy local days", "Real local experiences", "Local friend in China"],
+  "zh-CN": ["家常餐桌", "轻松的本地时光", "真实的本地体验", "在中国的本地朋友"],
+  "zh-TW": ["家常餐桌", "輕鬆的在地時光", "真實的在地體驗", "在中國的在地朋友"],
+  es: ["Comidas familiares", "Días locales tranquilos", "Experiencias locales reales", "Un amigo local en China"],
+  pt: ["Refeições em estilo familiar", "Dias locais tranquilos", "Experiências locais reais", "Um amigo local na China"],
+  ar: ["وجبات عائلية", "أيام محلية هادئة", "تجارب محلية حقيقية", "صديق محلي في الصين"]
+};
 
 export default function AboutPage() {
   const { lang, dir } = useLanguage();
   const t = getSiteCopy(lang).about;
   const localFriend = localFriendCopy[lang] ?? localFriendCopy.en;
+  const captions = photoCaptions[lang] ?? photoCaptions.en;
 
   return (
     <>
@@ -87,7 +97,7 @@ export default function AboutPage() {
                     <Image src={photo.src} alt={photo.alt} fill priority={index === 0} sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, 100vw" className="object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
                   </div>
-                  <figcaption className="px-4 py-3 text-xs font-medium leading-5 text-bone/70 sm:text-sm">{photo.caption}</figcaption>
+                  <figcaption className="px-4 py-3 text-xs font-medium leading-5 text-bone/70 sm:text-sm">{captions[index]}</figcaption>
                 </figure>
               ))}
             </div>
