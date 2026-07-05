@@ -630,6 +630,54 @@ const genericByKind: Record<RecommendationKind, MediaText> = {
 };
 
 const destinationSpecificText: Record<string, MediaText> = {
+  "Shaanxi::Terracotta Army": {
+    image: "/images/destinations/optimized/wiki-shaanxi-terracotta-army.jpg",
+    caption: { en: "Terracotta Army, Xi'an", zh: "西安秦始皇兵马俑" },
+    overview: {
+      en: "The Terracotta Army is the archaeological entrance to Qin imperial power: underground military formations, individual pottery figures, weapon remains and the burial landscape of the First Emperor.",
+      zh: "秦始皇兵马俑要从秦帝国的地下军阵来看。陶俑队列、面部差异、兵种组合、兵器遗存和秦始皇陵园格局，一起呈现秦代国家力量和陵墓考古的现场。"
+    },
+    experience: {
+      en: "A good visit compares the pits, explains formation and restoration, and connects the army to the wider mausoleum system rather than only photographing Pit 1.",
+      zh: "合适的游览应比较不同俑坑，看军阵排列、修复过程和陶俑细节，再把兵马俑放回秦始皇陵体系中理解，而不是只在一号坑拍照。"
+    }
+  },
+  "Shaanxi::Xi'an City Wall": {
+    image: "/images/destinations/optimized/wiki-shaanxi-xi-an-city-wall.jpg",
+    caption: { en: "Xi'an City Wall", zh: "西安城墙" },
+    overview: {
+      en: "Xi'an City Wall is one of the clearest places to read the old capital's urban scale: gates, ramparts, corner towers, moat lines and views into both the old city and modern Xi'an.",
+      zh: "西安城墙适合从城门、瓮城、马道、角楼、护城河和城内外视野来读。它展示的不只是古墙外观，而是明代城市防御体系和今天西安城市格局之间的关系。"
+    },
+    experience: {
+      en: "The route should choose a gate section with good light, walk or cycle a manageable distance, and explain how the wall still frames the old city.",
+      zh: "游览可选择光线好的城门段，步行或骑行一小段即可，不必赶完整圈。重点是看城墙如何组织道路、街区和老城视野。"
+    }
+  },
+  "Shaanxi::Muslim Quarter Xi'an": {
+    image: "/images/destinations/optimized/wiki-shaanxi-muslim-quarter-xi-an.jpg",
+    caption: { en: "Muslim Quarter, Xi'an", zh: "西安回民街" },
+    overview: {
+      en: "Xi'an Muslim Quarter should be read as Hui community life around mosques, breads, noodles, grilled meats, sweets and night food lanes shaped by Silk Road exchange.",
+      zh: "西安回民街要和清真寺、回坊街巷、馍、面点、烤肉、甜食和夜间小吃一起看。这里不是单纯小吃街，而是丝路交流、回族社区生活和西安夜食传统重叠的地方。"
+    },
+    experience: {
+      en: "A good food walk balances trusted stalls, mosque context and eating rhythm, with attention to halal customs and crowded evening lanes.",
+      zh: "合适的夜食路线应避开只排队打卡，选择可靠摊位和老店，讲清清真饮食习惯、回坊空间和西安人夜间吃法。"
+    }
+  },
+  "Shaanxi::Big Wild Goose Pagoda": {
+    image: "/images/destinations/optimized/wiki-shaanxi-big-wild-goose-pagoda.jpg",
+    caption: { en: "Big Wild Goose Pagoda, Xi'an", zh: "西安大雁塔" },
+    overview: {
+      en: "Big Wild Goose Pagoda is tied to Tang Chang'an, Xuanzang's Buddhist translation work, pagoda architecture and the temple-city memory around Da Ci'en Temple.",
+      zh: "大雁塔要放在唐长安和大慈恩寺背景中看。玄奘译经、佛教经典收藏、塔式建筑比例和周边城市空间，共同构成它在西安历史中的分量。"
+    },
+    experience: {
+      en: "The visit should connect the pagoda, temple axis and Tang history, then choose nearby viewpoints by light and crowd level.",
+      zh: "游览应先看塔与寺院轴线，再讲玄奘和唐代佛教传播，最后根据光线和人流选择广场或周边视角。"
+    }
+  },
   "Guizhou::Kaili Market": {
     image: "https://data.travelchinaguide.com/package/image/113401.jpg",
     caption: { en: "Kaili local market and Miao market life", zh: "凯里市集与苗侗日常交易" },
@@ -666,6 +714,54 @@ const destinationSpecificText: Record<string, MediaText> = {
       zh: "合适的游览应把温泉池遗址、宫苑动线、骊山背景和历史讲解串起来，区分唐代爱情叙事、遗址本身和后来的近现代记忆。重点是看清华清宫为什么在西安历史中有多重身份，而不是只走一圈外观。"
     }
   },
+  "Shaanxi::Mount Hua": {
+    image: "/images/destinations/optimized/wiki-shaanxi-mount-hua.jpg",
+    caption: { en: "Mount Hua, Shaanxi", zh: "陕西华山" },
+    overview: {
+      en: "Mount Hua is a steep granite mountain known for sharp peaks, cliff paths, temples and Daoist mountain culture. Its appeal comes from height, exposure and the sequence of ridges between peaks.",
+      zh: "华山的气质来自花岗岩峭壁、五峰格局、险峻栈道和道教名山传统。这里要看的是山势如何突然拔起、峰与峰之间如何相连，以及人在险道上行走时对高度和空间的感受。"
+    },
+    experience: {
+      en: "A good route should match cableway choices and walking distance to the group, leaving time for peak views and weather changes instead of forcing every summit.",
+      zh: "路线要根据体力选择索道和步行段，不必硬赶所有峰。重点是留出看云雾、山脊和绝壁视野的时间，同时注意天气和安全。"
+    }
+  },
+  "Shaanxi::Yan'an Cave Dwellings": {
+    image: "/images/destinations/optimized/wiki-shaanxi-yan-an-cave-dwellings.jpg",
+    caption: { en: "Yan'an cave dwellings", zh: "延安窑洞" },
+    overview: {
+      en: "Yan'an cave dwellings should be introduced through loess plateau living: earth-cut homes, winter-warm summer-cool interiors, village slopes and the modern revolutionary history attached to Yan'an.",
+      zh: "延安窑洞要从黄土高原生活方式来写。依山开凿的窑洞、冬暖夏凉的居住经验、坡地村落形态和延安近现代革命记忆，构成这里的核心。"
+    },
+    experience: {
+      en: "The visit should connect cave-house structure with local climate and history, then read Yan'an beyond slogans through everyday plateau life.",
+      zh: "游览应把窑洞结构、黄土气候和当地人的居住方式讲清，再把革命历史放进真实的高原村落环境中理解。"
+    }
+  },
+  "Shaanxi::Hanzhong Rapeseed Fields": {
+    image: "/images/destinations/optimized/wiki-jiangxi-wuyuan-villages.jpg",
+    caption: { en: "Hanzhong spring rapeseed fields", zh: "汉中春季油菜花田" },
+    overview: {
+      en: "Hanzhong rapeseed fields belong to the spring landscape of the Hanzhong Basin, where yellow flower fields spread between Qinling foothills, villages and river plains.",
+      zh: "汉中油菜花田要放在汉中盆地春天来看。大片金黄色花田、秦岭南麓、村落和河谷平原连在一起，形成陕西南部与关中完全不同的温润田园景观。"
+    },
+    experience: {
+      en: "A good visit should follow bloom timing, choose open field viewpoints and combine short village stops, rather than treating it as a generic flower photo stop.",
+      zh: "游览要看花期和天气，选择开阔田埂或高处视角，再结合村落和公路沿线停留。重点是看汉中盆地春季农田的尺度和层次，而不是只拍一片黄色背景。"
+    }
+  },
+  "Shaanxi::Famen Temple": {
+    image: "/images/destinations/optimized/wiki-shaanxi-famen-temple.jpg",
+    caption: { en: "Famen Temple, Shaanxi", zh: "陕西法门寺" },
+    overview: {
+      en: "Famen Temple is centered on Buddhist relic culture, Tang-dynasty religious patronage and the relationship between the historic temple site and the modern relic museum.",
+      zh: "法门寺要从佛指舍利、唐代皇家供养和寺院遗址与现代博物馆的关系来理解。这里的重点是宗教记忆、文物展示和唐代礼佛传统如何叠在一起。"
+    },
+    experience: {
+      en: "A respectful visit should explain relic belief, Tang history and museum display logic, with a slower pace through temple and exhibition spaces.",
+      zh: "游览应放慢节奏，讲清舍利信仰、唐代历史和展陈逻辑。寺院空间和博物馆空间要分开看，也要连起来理解。"
+    }
+  },
   "Hunan::Dongjiang Lake": {
     image: "/images/destinations/optimized/wiki-hunan-dongjiang-lake.jpg",
     caption: { en: "Dongjiang Lake, Chenzhou", zh: "郴州东江湖" },
@@ -676,6 +772,102 @@ const destinationSpecificText: Record<string, MediaText> = {
     experience: {
       en: "A good visit should start early for mist and soft light, then connect the lake viewpoints, short boat or riverside sections and Chenzhou's southern Hunan landscape context.",
       zh: "合适的游览应尽量安排清晨，看雾气、逆光和湖面变化，再串联观景点、短程船行或沿水步行。讲解重点应放在小东江为什么会形成雾漫景象、东江湖水域如何塑造郴州山水，而不是只拍一张湖面照片。"
+    }
+  },
+  "Hunan::Zhangjiajie National Forest Park": {
+    image: "/images/destinations/optimized/wiki-hunan-zhangjiajie-national-forest-park.jpg",
+    caption: { en: "Zhangjiajie National Forest Park", zh: "张家界国家森林公园" },
+    overview: {
+      en: "Zhangjiajie National Forest Park is defined by sandstone pillars, deep valleys, forested trails and cliff viewpoints. The landscape feels vertical, with peaks rising like stone towers out of the canyon.",
+      zh: "张家界国家森林公园要从砂岩峰林、峡谷、森林步道和悬崖观景台来写。这里最有辨识度的是一根根石柱从谷地拔起的垂直感，以及云雾、植被和峰墙形成的层次。"
+    },
+    experience: {
+      en: "A good route should choose viewpoints by weather and crowd level, balance cableways with walking, and avoid trying to cover every platform in one rush.",
+      zh: "游览要根据天气和人流选择观景台，把索道、电梯和步行段搭配好。重点是留时间看峰林变化，而不是把所有平台赶成清单。"
+    }
+  },
+  "Hunan::Fenghuang Ancient Town": {
+    image: "/images/destinations/optimized/wiki-hunan-fenghuang-ancient-town.jpg",
+    caption: { en: "Fenghuang Ancient Town", zh: "凤凰古城" },
+    overview: {
+      en: "Fenghuang Ancient Town is shaped by the Tuo River, stilt houses, stone lanes, bridges and Miao-Tujia cultural surroundings. Its strongest scenes come from river life and evening lights.",
+      zh: "凤凰古城要从沱江、吊脚楼、石板巷、桥和苗土文化背景一起看。河岸生活、临水建筑和夜晚灯影，是它区别于普通古镇的地方。"
+    },
+    experience: {
+      en: "A good visit should walk both riverside and back lanes, compare day and night atmosphere, and keep space for local culture beyond the busiest photo spots.",
+      zh: "游览不要只沿江拍照，应把河边、背街小巷和白天夜晚的气氛放在一起看，也要为当地民俗和日常生活留出位置。"
+    }
+  },
+  "Hunan::Changsha Night Food": {
+    image: "/images/destinations/optimized/wiki-hunan-changsha-night-food.jpg",
+    caption: { en: "Changsha night food", zh: "长沙夜食" },
+    overview: {
+      en: "Changsha night food is about rice noodles, barbecue, spicy snacks, tea drinks and the city's late-night street energy. The experience is loud, direct and strongly local.",
+      zh: "长沙夜食要从米粉、烧烤、香辣小吃、茶饮和深夜街头气氛来写。它不是单一菜品，而是长沙人把夜晚、社交和鲜辣口味放在一起的城市节奏。"
+    },
+    experience: {
+      en: "A good route should mix classic snacks with reliable neighborhood stops and explain Hunan spice, ordering rhythm and late-night social habits.",
+      zh: "路线应把经典小吃和可靠街区店铺搭配起来，讲清湖南辣味、点单节奏和长沙人的夜间社交方式。"
+    }
+  },
+  "Hunan::Yuelu Academy": {
+    image: "/images/destinations/optimized/wiki-hunan-yuelu-academy.jpg",
+    caption: { en: "Yuelu Academy, Changsha", zh: "长沙岳麓书院" },
+    overview: {
+      en: "Yuelu Academy is a mountain academy landscape tied to classical education, Hunan scholarship, courtyards, lecture halls and the wooded paths of Yuelu Mountain.",
+      zh: "岳麓书院要放在岳麓山脚下来看：院落、讲堂、碑刻、古树和湖湘学术传统连在一起，形成中国古代书院空间和长沙文脉的重要现场。"
+    },
+    experience: {
+      en: "A good visit should follow the academy axis slowly, read plaques and courtyards, then connect the site with Yuelu Mountain and Hunan intellectual history.",
+      zh: "游览应顺着书院轴线慢慢走，看匾额、院落和讲堂，再把岳麓山环境与湖湘学术传统联系起来。"
+    }
+  },
+  "Hunan::Orange Isle": {
+    image: "/images/destinations/optimized/wiki-hunan-orange-isle.jpg",
+    caption: { en: "Orange Isle, Changsha", zh: "长沙橘子洲" },
+    overview: {
+      en: "Orange Isle is a long island in the Xiang River, known for riverside walking, Changsha skyline views, public lawns and modern Chinese historical symbolism.",
+      zh: "橘子洲是湘江中的长洲岛，要从江心步道、两岸城市视野、公共草地和近现代历史象征一起看。它呈现的是长沙与湘江关系最直接的城市空间。"
+    },
+    experience: {
+      en: "A good visit should choose a cooler time, walk selected sections rather than the whole island, and connect river views with Changsha's urban rhythm.",
+      zh: "游览适合选择清晨或傍晚，挑重点路段步行，不必硬走完整个洲岛。重点是看湘江、城市天际线和长沙日常休闲如何连在一起。"
+    }
+  },
+  "Hunan::Dehang Miao Village": {
+    image: "/images/destinations/optimized/wiki-hunan-dehang-miao-village.jpg",
+    caption: { en: "Dehang Miao Village", zh: "德夯苗寨" },
+    overview: {
+      en: "Dehang Miao Village sits in a mountain-valley landscape where Miao homes, festivals, paths, streams and surrounding cliffs shape the village experience.",
+      zh: "德夯苗寨要从山谷地貌、苗族民居、溪流、节庆习俗和周边峭壁一起看。这里的村寨生活和自然峡谷不是分开的，而是共同构成湘西山地的日常。"
+    },
+    experience: {
+      en: "A good visit should keep a slow village pace, connect homes and paths with valley scenery, and treat performances or festivals as cultural context rather than a quick show.",
+      zh: "游览应放慢脚步，把寨路、民居、溪流和峡谷视野串起来。若遇到节庆或表演，也要放回苗族生活背景中理解。"
+    }
+  },
+  "Hunan::Shaoshan": {
+    image: "/images/destinations/optimized/wiki-hunan-shaoshan.jpg",
+    caption: { en: "Shaoshan, Hunan", zh: "湖南韶山" },
+    overview: {
+      en: "Shaoshan is tied to modern Chinese history and rural Hunan landscapes: family homes, memorial spaces, village roads and the political memory around Mao Zedong's birthplace.",
+      zh: "韶山要从近现代中国历史和湖南乡村环境一起看。故居、纪念空间、村路、田地和毛泽东出生地的政治记忆，共同构成这里的参观核心。"
+    },
+    experience: {
+      en: "A good visit should keep historical context clear, move respectfully through memorial spaces and also notice the rural setting around them.",
+      zh: "游览应保持庄重，讲清历史背景和纪念空间的关系，同时留意周边乡村地貌，而不是只完成纪念点打卡。"
+    }
+  },
+  "Hunan::Yueyang Tower": {
+    image: "/images/destinations/optimized/wiki-hunan-yueyang-tower.jpg",
+    caption: { en: "Yueyang Tower and Dongting Lake", zh: "岳阳楼与洞庭湖" },
+    overview: {
+      en: "Yueyang Tower is inseparable from Dongting Lake views and classical literary memory. Its meaning comes from tower architecture, lake expanse and the cultural echo of the Yueyang Tower essay.",
+      zh: "岳阳楼要和洞庭湖视野一起看。楼阁建筑、湖面开阔感、城墙空间和《岳阳楼记》的文学记忆，构成了它区别于普通楼阁景点的核心。"
+    },
+    experience: {
+      en: "A good visit should read the tower from both architecture and text, then spend time on lake views and the surrounding old-city context.",
+      zh: "游览应同时看建筑和文本，讲清范仲淹文章如何改变这座楼的文化意义，再留时间看洞庭湖和周边老城空间。"
     }
   },
   "Henan::Yellow River Scenic Area Zhengzhou": {
