@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useCallback, useContext, useLayoutEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 export type Lang = "en" | "zh-CN" | "zh-TW" | "es" | "pt" | "ar";
 
@@ -19,7 +19,12 @@ type LanguageContextValue = {
   setLang: (lang: Lang) => void;
 };
 
+const storageKey = "local-china-lang";
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
+
+export function isSupportedLang(value: string | null | undefined): value is Lang {
+  return !!value && languageOptions.some((item) => item.code === value);
+}
 
 function applyDocumentLanguage(lang: Lang) {
   const option = languageOptions.find((item) => item.code === lang) ?? languageOptions[0];
@@ -29,20 +34,22 @@ function applyDocumentLanguage(lang: Lang) {
 }
 
 export function LanguageProvider({ children, initialLang = "en" }: { children: React.ReactNode; initialLang?: Lang }) {
-  const [lang, setLangState] = useState<Lang>(initialLang);
+  const normalizedInitial = isSupportedLang(initialLang) ? initialLang : "en";
+  const [lang, setLangState] = useState<Lang>(normalizedInitial);
 
-  useLayoutEffect(() => {
-    const saved = window.localStorage.getItem("local-china-lang") as Lang | null;
-    const initial = saved && languageOptions.some((item) => item.code === saved) ? saved : initialLang;
-    setLangState(initial);
-    applyDocumentLanguage(initial);
-  }, [initialLang]);
+  useEffect(() => {
+    const saved = window.localStorage.getItem(storageKey);
+    const nextLang = isSupportedLang(saved) ? saved : normalizedInitial;
+    setLangState(nextLang);
+    applyDocumentLanguage(nextLang);
+  }, [normalizedInitial]);
 
   const setLang = useCallback((nextLang: Lang) => {
-    setLangState(nextLang);
-    window.localStorage.setItem("local-china-lang", nextLang);
-    document.cookie = `local-china-lang=${encodeURIComponent(nextLang)}; Max-Age=31536000; Path=/; SameSite=Lax`;
-    applyDocumentLanguage(nextLang);
+    const safeLang = isSupportedLang(nextLang) ? nextLang : "en";
+    setLangState(safeLang);
+    window.localStorage.setItem(storageKey, safeLang);
+    document.cookie = `${storageKey}=${encodeURIComponent(safeLang)}; Max-Age=31536000; Path=/; SameSite=Lax`;
+    applyDocumentLanguage(safeLang);
   }, []);
 
   const dir = languageOptions.find((option) => option.code === lang)?.dir ?? "ltr";
