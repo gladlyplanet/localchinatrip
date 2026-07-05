@@ -25,7 +25,7 @@ function SocialLogo({ name }: { name: string }) {
 function LanguageSwitcher() {
   const { lang, setLang } = useLanguage();
   return (
-    <select value={lang} onChange={(event) => setLang(event.target.value as Lang)} className="h-10 w-[106px] rounded-full border hairline bg-cream px-3 text-sm font-semibold text-ink outline-none transition-colors focus:border-moss sm:w-auto" aria-label="Select language">
+    <select value={lang} onChange={(event) => setLang(event.target.value as Lang)} className="h-10 w-[118px] rounded-full border hairline bg-cream px-3 text-sm font-semibold text-ink outline-none transition-colors focus:border-moss sm:w-auto" aria-label="Select language">
       {languageOptions.map((option) => <option key={option.code} value={option.code}>{option.label}</option>)}
     </select>
   );
@@ -69,7 +69,7 @@ export function Footer() {
         <div className="mt-8 grid gap-6 border-t hairline pt-6 md:grid-cols-[1fr_auto] md:items-center">
           <div className="flex flex-col gap-3 text-sm text-mist sm:flex-row sm:gap-6">
             <a href="mailto:ly13845267281@sina.com" className="inline-flex items-center gap-2 hover:text-moss"><span aria-hidden="true">✉</span>{text.email}: ly13845267281@sina.com</a>
-            <a href="https://wa.me/8618871477084" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-[#25D366]"><span className="font-bold text-[#25D366]" aria-hidden="true">◉</span>{text.whatsapp}: +86 188 7147 7084</a>
+            <a href="https://wa.me/8618871477084" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-[#25D366]"><span className="font-bold text-[#25D366]" aria-hidden="true">●</span>{text.whatsapp}: +86 188 7147 7084</a>
           </div>
           <div className="flex flex-wrap items-center gap-3">
             {socialLinks.map((social) => <a key={social.label} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label} title={social.label} className={`inline-flex h-11 min-w-11 items-center justify-center rounded-full px-3 shadow-sm transition-transform hover:-translate-y-0.5 ${social.color}`}><SocialLogo name={social.label} /></a>)}
