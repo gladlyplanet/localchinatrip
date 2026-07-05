@@ -870,6 +870,114 @@ const destinationSpecificText: Record<string, MediaText> = {
       zh: "合适的体验应把买菜、认调料、备菜、下锅和围桌吃饭连起来，讲清豆瓣、花椒、辣椒、姜蒜等如何进入家常菜。重点不是远看成都城市景观，而是理解川菜如何从市场走到家庭餐桌。"
     }
   },
+  "Ningxia::Shapotou": {
+    image: "/images/destinations/optimized/wiki-ningxia-shapotou.jpg",
+    caption: { en: "Shapotou, Yellow River and Tengger Desert", zh: "沙坡头黄河与腾格里沙漠" },
+    overview: {
+      en: "Shapotou should be introduced through the meeting of the Yellow River and the Tengger Desert: dunes, river bends, desert-control history and the sharp contrast between water and sand.",
+      zh: "沙坡头要围绕黄河与腾格里沙漠的交汇来写。这里的辨识度来自沙丘、黄河弯道、治沙工程、羊皮筏子记忆和水沙相邻的强烈反差，不是普通沙漠景点。"
+    },
+    experience: {
+      en: "A good visit should time the desert light, river views and activity choices carefully, leaving space to explain sand-control ecology and Yellow River geography.",
+      zh: "合适的游览应根据光线安排沙丘和黄河视角，活动项目不宜排得过满。讲解重点应放在黄河如何穿过干旱地带、治沙如何改变这里，以及沙漠与河流为什么能形成这样的景观。"
+    }
+  },
+  "Ningxia::Western Xia Tombs": {
+    image: "/images/destinations/optimized/wiki-ningxia-western-xia-tombs.jpg",
+    caption: { en: "Western Xia Tombs below the Helan Mountains", zh: "贺兰山下的西夏陵" },
+    overview: {
+      en: "Western Xia Tombs are the royal mausoleum landscape of the Tangut Western Xia state, set below the Helan Mountains with earthen tomb mounds, archaeological remains and a strong desert-edge atmosphere.",
+      zh: "西夏陵要放在贺兰山下的王陵格局里理解。夯土陵台、陪葬遗迹、荒漠边缘的开阔环境和党项西夏历史共同构成这里的现场感。"
+    },
+    experience: {
+      en: "A good visit should connect the tomb forms, museum context and Helan Mountain backdrop, so the site reads as a lost dynasty's capital-region memory.",
+      zh: "合适的游览应把陵台形制、博物馆信息和贺兰山背景连起来看，讲清西夏为什么在宁夏留下这样的王陵群，而不是只把它当成几座土丘。"
+    }
+  },
+  "Ningxia::Helan Mountain Rock Art": {
+    image: "/images/destinations/optimized/wiki-ningxia-helan-mountain-rock-art.jpg",
+    caption: { en: "Helan Mountain rock art", zh: "贺兰山岩画" },
+    overview: {
+      en: "Helan Mountain Rock Art records hunting, animals, faces, ritual symbols and steppe-edge life along the mountain valleys. It is a place to read ancient frontier imagery in the landscape itself.",
+      zh: "贺兰山岩画要从山谷岩面上的人面、动物、狩猎、祭祀符号和农牧交界生活来理解。这里看的不是普通山景，而是古代人群如何把生活、信仰和环境刻在岩石上。"
+    },
+    experience: {
+      en: "A good route should slow down at selected panels, explain motifs and protect the fragile site, while connecting the carvings with Helan Mountain's corridor position.",
+      zh: "合适的游览应在重点岩画前慢看，讲清图像含义、年代层次和保护边界，再把这些刻痕放回贺兰山通道和北方草原边缘的历史中。"
+    }
+  },
+  "Ningxia::Zhenbeibao Western Studios": {
+    image: "/images/destinations/ningxia-zhenbeibao-western-studios-corrected.png",
+    caption: { en: "Zhenbeibao Western Studios, Yinchuan", zh: "银川镇北堡西部影城" },
+    overview: {
+      en: "Zhenbeibao Western Studios should be shown through earthen fort walls, film sets, northwest light and the memory of Chinese cinema shot in desert-edge landscapes.",
+      zh: "镇北堡西部影城要从土堡墙体、影视布景、西北荒漠光线和中国电影记忆来写。它不是西夏陵，也不是普通古城，而是把旧堡寨空间改造成电影场景和宁夏文化符号的地方。"
+    },
+    experience: {
+      en: "A good visit should identify the set spaces, explain why the ruined-fort texture works on screen and leave time for light, courtyards and film references.",
+      zh: "合适的游览应看清不同片场、土墙质感、院落动线和电影取景记忆，说明为什么这种粗粝的西北空间适合影像表达，而不是只把它当作拍照街区。"
+    }
+  },
+  "Ningxia::Qingtongxia 108 Stupas": {
+    image: "/images/destinations/optimized/wiki-ningxia-qingtongxia-108-stupas.jpg",
+    caption: { en: "Qingtongxia 108 Stupas", zh: "青铜峡一百零八塔" },
+    overview: {
+      en: "Qingtongxia 108 Stupas form a distinctive Buddhist stupa group beside the Yellow River, combining religious forms, river-corridor geography and Ningxia's historical passageways.",
+      zh: "青铜峡一百零八塔要从黄河岸边的佛塔群形制来理解。塔群排列、宗教象征、河谷通道和宁夏作为交通走廊的历史叠在一起，形成这里独特的现场。"
+    },
+    experience: {
+      en: "A good visit should compare the stupa arrangement with the river setting, keeping a respectful pace and explaining Buddhist symbolism without turning it into a quick roadside stop.",
+      zh: "合适的游览应把塔群排列、黄河视角和佛教象征连起来看，节奏保持安静，既看建筑形制，也理解它为什么出现在这条黄河通道旁。"
+    }
+  },
+  "Ningxia::Yellow River Grand Canyon": {
+    image: "/images/destinations/optimized/wiki-ningxia-yellow-river-grand-canyon.jpg",
+    caption: { en: "Yellow River Grand Canyon, Ningxia", zh: "宁夏黄河大峡谷" },
+    overview: {
+      en: "Ningxia's Yellow River Grand Canyon is about river cuts through dry northern terrain, cliffs, reservoirs, old crossings and the visual scale of the Yellow River corridor.",
+      zh: "宁夏黄河大峡谷要从干旱北方地貌中的河流切割来写。峡谷崖壁、库区水面、古渡口记忆和黄河走廊的尺度，是这里区别于普通河景的关键。"
+    },
+    experience: {
+      en: "A good route should choose river viewpoints by light and weather, connect canyon landforms with crossings and irrigation history, and avoid reducing the stop to a single panorama.",
+      zh: "合适的路线应根据光线选择观河视角，把峡谷地貌、渡口、灌溉和黄河通道历史串起来。重点是看懂河流如何塑造宁夏，而不是只拍一张全景照。"
+    }
+  },
+  "Ningxia::Ningxia Winery Route": {
+    image: "/images/destinations/ningxia-winery-route-corrected.png",
+    caption: { en: "Helan Mountain east foothill wineries", zh: "贺兰山东麓酒庄与葡萄园" },
+    overview: {
+      en: "The Ningxia winery route belongs to the east foothills of Helan Mountain, where vineyards, winery architecture, dry climate, irrigation and desert light shape one of China's most important wine regions.",
+      zh: "宁夏酒庄路线要放在贺兰山东麓来看：葡萄园、酒庄建筑、干旱气候、灌溉系统和沙漠光线共同塑造了中国重要葡萄酒产区。它不应使用岩画图片，而应呈现葡萄园和酒庄现场。"
+    },
+    experience: {
+      en: "A good route should connect vineyard landscape, cellar visits, tasting rhythm and mountain-desert geography, with transport planned so tasting stays comfortable and responsible.",
+      zh: "合适的路线应把葡萄园景观、酒窖参观、品鉴节奏和贺兰山地理背景连起来，同时安排好车辆和停留时间。重点是理解宁夏葡萄酒为什么来自这片山麓与荒漠之间的土地。"
+    }
+  },
+  "Ningxia::Shuidonggou": {
+    image: "/images/destinations/optimized/wiki-ningxia-shuidonggou.jpg",
+    caption: { en: "Shuidonggou archaeological and frontier site", zh: "水洞沟遗址与边塞遗存" },
+    overview: {
+      en: "Shuidonggou combines Paleolithic archaeological remains with Ming frontier defense traces, showing both early human activity and later borderland military geography in eastern Ningxia.",
+      zh: "水洞沟要把旧石器遗址和明代边塞防御遗存放在一起看。这里既有早期人类活动的考古线索，也有长城、城堡和峡谷地形构成的边防空间。"
+    },
+    experience: {
+      en: "A good visit should separate the archaeological layer from the frontier-defense layer, then connect both to the valley landscape and Ningxia's corridor position.",
+      zh: "合适的游览应先分清史前考古层和边塞防御层，再把两者放回水洞沟的峡谷地貌与宁夏交通通道中理解，而不是把它看成单一遗址。"
+    }
+  },
+  "Ningxia::Wuzhong Morning Tea": {
+    image: "/images/destinations/ningxia-wuzhong-morning-tea-corrected.png",
+    caption: { en: "Wuzhong morning tea table", zh: "吴忠早茶餐桌" },
+    overview: {
+      en: "Wuzhong morning tea is a Hui food culture built from tea, beef, noodles, pastries, side dishes and a social breakfast rhythm along the Yellow River.",
+      zh: "吴忠早茶要从回族饮食、牛肉、面点、茶、凉菜小吃和清晨社交节奏来写。这里不是普通早餐，而是吴忠人把吃饭、会客和一天开始放在同一张餐桌上的地方文化。"
+    },
+    experience: {
+      en: "A good visit should go early, order with local guidance and explain halal customs, beef-and-noodle habits, tea service and the relaxed pace of morning conversation.",
+      zh: "合适的体验应安排在早晨，由本地人带着点菜，讲清清真饮食礼貌、牛肉与面点搭配、茶水和小菜节奏。重点是进入吴忠早茶的日常氛围，而不是只拍一桌食物。"
+    }
+  },
   "Hunan::Dongjiang Lake": {
     image: "/images/destinations/optimized/wiki-hunan-dongjiang-lake.jpg",
     caption: { en: "Dongjiang Lake, Chenzhou", zh: "郴州东江湖" },
