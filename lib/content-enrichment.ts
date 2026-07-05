@@ -739,7 +739,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Shaanxi::Hanzhong Rapeseed Fields": {
-    image: "/images/destinations/optimized/wiki-jiangxi-wuyuan-villages.jpg",
+    image: "/images/destinations/hanzhong-rapeseed-fields-corrected.png",
     caption: { en: "Hanzhong spring rapeseed fields", zh: "汉中春季油菜花田" },
     overview: {
       en: "Hanzhong rapeseed fields belong to the spring landscape of the Hanzhong Basin, where yellow flower fields spread between Qinling foothills, villages and river plains.",
