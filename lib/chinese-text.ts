@@ -2,6 +2,7 @@ const simplifiedToTraditional: Record<string, string> = {
   "万": "萬",
   "与": "與",
   "专": "專",
+  "业": "業",
   "东": "東",
   "丝": "絲",
   "两": "兩",
@@ -78,6 +79,7 @@ const simplifiedToTraditional: Record<string, string> = {
   "击": "擊",
   "凿": "鑿",
   "刘": "劉",
+  "制": "製",
   "则": "則",
   "创": "創",
   "删": "刪",
@@ -1493,5 +1495,10 @@ const simplifiedToTraditional: Record<string, string> = {
 };
 
 export function toTraditionalChinese(value: string) {
-  return [...value].map((character) => simplifiedToTraditional[character] ?? character).join("");
+  return [...value]
+    .map((character) => simplifiedToTraditional[character] ?? character)
+    .join("")
+    .replace(/這里/g, "這裡")
+    .replace(/那里/g, "那裡")
+    .replace(/哪里/g, "哪裡");
 }
