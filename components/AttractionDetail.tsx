@@ -326,11 +326,11 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
       `كلمات مفتاحية: ${attraction.focus}`
     ),
     lead: destinationPhrase(
-      `Start from ${attraction.name}'s own setting: ${attraction.focus}. The visit should explain this place directly, not reuse a generic attraction story.`,
-      `先围绕${attraction.nameZh}本身的${attraction.focusZh}来理解。页面介绍、游览建议和导览节奏都要扣住这个地点，不套用泛泛的景点文案。`,
-      `Empieza por el carácter propio de ${attraction.name}: ${attraction.focus}. La visita debe explicar este lugar directamente, no usar un texto genérico.`,
-      `Comece pelo contexto próprio de ${attraction.name}: ${attraction.focus}. A visita deve explicar este lugar diretamente, sem usar um texto genérico.`,
-      `ابدأ من طابع ${attraction.name} نفسه: ${attraction.focus}. يجب أن يشرح المسار هذا المكان مباشرة، لا أن يستخدم نصا عاما.`
+      `Use ${attraction.name}'s ${attraction.focus} as the main thread, then choose timing, walking distance and explanation depth around the group's pace.`,
+      `${attraction.nameZh}的游览主线应落在${attraction.focusZh}上，再根据时间、体力和现场人流安排停留、讲解和拍照节奏。`,
+      `Usa ${attraction.focus} como hilo principal de ${attraction.name}, ajustando horarios, distancia a pie y explicación al ritmo del grupo.`,
+      `Use ${attraction.focus} como fio principal de ${attraction.name}, ajustando horários, caminhada e explicação ao ritmo do grupo.`,
+      `اجعل ${attraction.focus} هو خيط الزيارة الرئيسي في ${attraction.name}، ثم اضبط الوقت والمشي والشرح حسب إيقاع المجموعة.`
     )
   };
 }
