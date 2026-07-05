@@ -2,6 +2,7 @@ import type { Lang } from "@/components/LanguageProvider";
 import type { ExperienceLocation } from "@/lib/experiences";
 import type { ProvinceRecommendation, RecommendationKind } from "@/lib/province-recommendations";
 import { toTraditionalChinese } from "@/lib/chinese-text";
+import { destinationImages } from "@/lib/generated-destination-media";
 
 type Localized = {
   en: string;
@@ -15,6 +16,17 @@ type MediaText = {
   overview: Localized;
   experience: Localized;
 };
+
+function destinationSlug(value: string) {
+  return value.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+function safeDestinationImage(provinceName: string | undefined, item: ProvinceRecommendation) {
+  if (!provinceName) return undefined;
+  const image = destinationImages[`${provinceName}::${item.name}`];
+  if (!image) return undefined;
+  return image.toLowerCase().includes(destinationSlug(item.name)) ? image : undefined;
+}
 
 const kindImages: Record<RecommendationKind, string> = {
   heritage: "/images/experience-beijing-hutong.jpg",
@@ -780,6 +792,7 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   const provinceFallback = provinceName ? provinceFallbackImages[provinceName] : undefined;
   const destinationSpecific = provinceName ? destinationSpecificText[`${provinceName}::${item.name}`] : undefined;
   if (destinationSpecific) return destinationSpecific;
+  const exactImage = safeDestinationImage(provinceName, item);
   const enLead: Record<RecommendationKind, string> = {
     heritage: "The visit should connect visible structures, preserved spaces, inscriptions, street context and the historical layers around the site.",
     nature: "The visit should be paced around season, weather, light, walking distance and the best viewpoints instead of rushing through a checklist.",
@@ -849,7 +862,7 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   const zhOverviewSuffix = "\u6765\u7406\u89e3\u3002";
   const focusZh = item.focusZh || zhTheme[item.kind];
   return {
-    image: verifiedRecommendationImages[item.name] ?? provinceFallback?.[item.kind] ?? provinceFallback?.default ?? kind.image,
+    image: exactImage ?? verifiedRecommendationImages[item.name] ?? provinceFallback?.[item.kind] ?? provinceFallback?.default ?? kind.image,
     fallbackImage: kind.fallbackImage,
     caption: { en: place, zh: placeZh },
     overview: {
