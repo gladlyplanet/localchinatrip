@@ -654,6 +654,30 @@ const destinationSpecificText: Record<string, MediaText> = {
       zh: "合适的游览应慢慢走过桥身，看木构榫卯、廊亭屋顶和桥下溪流，再把风雨桥、侗寨、鼓楼、稻田和侗族大歌或节庆习俗连起来讲。重点是理解它为什么是村寨生活的一部分，而不是只拍一张山水照片。"
     }
   },
+  "Shaanxi::Huaqing Palace": {
+    image: "/images/destinations/optimized/wiki-shaanxi-huaqing-palace.jpg",
+    caption: { en: "Huaqing Palace, Lintong, Xi'an", zh: "西安临潼华清宫" },
+    overview: {
+      en: "Huaqing Palace should be introduced through the Tang imperial hot-spring complex at the foot of Mount Li, the story of Emperor Xuanzong and Yang Guifei, palace garden space and the later historical memory around Lintong.",
+      zh: "华清宫要放在临潼骊山脚下来看：唐代皇家温泉、宫苑遗址、唐玄宗与杨贵妃的故事，以及近现代历史记忆共同构成这里。它不是普通仿古建筑，也不只是拍一块题字石，而是理解唐代宫廷生活、温泉文化和骊山历史层次的地点。"
+    },
+    experience: {
+      en: "A good visit connects the spring pools, palace axes, Mount Li backdrop and historical storytelling, with enough time to separate Tang romance, archaeological remains and later political memory.",
+      zh: "合适的游览应把温泉池遗址、宫苑动线、骊山背景和历史讲解串起来，区分唐代爱情叙事、遗址本身和后来的近现代记忆。重点是看清华清宫为什么在西安历史中有多重身份，而不是只走一圈外观。"
+    }
+  },
+  "Hunan::Dongjiang Lake": {
+    image: "/images/destinations/optimized/wiki-hunan-dongjiang-lake.jpg",
+    caption: { en: "Dongjiang Lake, Chenzhou", zh: "郴州东江湖" },
+    overview: {
+      en: "Dongjiang Lake is best introduced through the morning mist over Xiaodongjiang, the reservoir water, boat routes and the green mountain scenery of southern Hunan. Its character comes from water vapor, light and quiet lake-valley views, not from a generic mountain-and-water label.",
+      zh: "东江湖要从小东江清晨雾气、水库湖面、行船视角和湘南山地一起写。这里最有辨识度的是水汽升起时的湖面层次、两岸青山和安静的湖谷气氛，不是泛泛一句“山水景观”就能说明。"
+    },
+    experience: {
+      en: "A good visit should start early for mist and soft light, then connect the lake viewpoints, short boat or riverside sections and Chenzhou's southern Hunan landscape context.",
+      zh: "合适的游览应尽量安排清晨，看雾气、逆光和湖面变化，再串联观景点、短程船行或沿水步行。讲解重点应放在小东江为什么会形成雾漫景象、东江湖水域如何塑造郴州山水，而不是只拍一张湖面照片。"
+    }
+  },
   "Henan::Yellow River Scenic Area Zhengzhou": {
     image: "/images/destinations/wiki-qinghai-guide-yellow-river.jpg",
     caption: { en: "Yellow River Scenic Area, Zhengzhou", zh: "郑州黄河风景名胜区" },
@@ -671,7 +695,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     caption: { en: "Baotu Spring and Jinan's spring water", zh: "趵突泉与济南泉水" },
     overview: {
       en: "Jinan Springs should be introduced through Baotu Spring, Black Tiger Spring, the old moat, Daming Lake and the spring-fed rhythm that gives Jinan its identity as the City of Springs.",
-      zh: "济南泉水应围绕趵突泉、黑虎泉、护城河、大明湖和泉水滋养出的泉城生活来理解。这里的重点不是高楼天际线，而是泉眼、池水、柳树、老城水系和市民日常如何连在一起。"
+      zh: "济南泉水要从趵突泉、黑虎泉、护城河、大明湖和老城水系一起看。泉眼、池水、柳树、茶摊和市民取水休闲的日常，构成了济南“泉城”最有辨识度的生活气质。"
     },
     experience: {
       en: "A good route follows the water: start with Baotu Spring or Black Tiger Spring, walk along the moat and old lanes, then connect the springs with Daming Lake, local tea, small eateries and Jinan's slower old-city pace.",
@@ -683,7 +707,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     caption: { en: "Zhoushan island coast and fishing life", zh: "舟山海岛海岸与渔港生活" },
     overview: {
       en: "Zhoushan Fishing Coast should be read through island harbors, fishing boats, seafood markets, old port streets and East China Sea island life around places such as Shenjiamen and the outer islands.",
-      zh: "舟山渔港海岸要围绕群岛、渔船、码头、海鲜市场和东海岛民生活来写。这里的重点不是机关标志或抽象海景，而是沈家门一带的渔港气息、出海与靠岸节奏、海鲜交易和岛城街巷如何连在一起。"
+      zh: "舟山渔港海岸要从群岛、渔船、码头、海鲜市场和东海岛民生活一起看。沈家门一带的渔港气息、出海与靠岸节奏、海鲜交易和岛城街巷，构成了这里比普通海景更鲜活的地方感。"
     },
     experience: {
       en: "A good visit follows harbor timing: watch boats, walk port streets, pair a seafood meal with market context and leave time for weather, tide and ferry connections between island viewpoints.",
@@ -820,7 +844,7 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
     coast: "A private route can follow tide, weather, harbor work and meal timing so the coast feels active rather than merely scenic."
   };
   const zhLead: Record<RecommendationKind, string> = {
-    heritage: "\u8fd9\u91cc\u8981\u5148\u56f4\u7ed5\u8be5\u5730\u70b9\u672c\u8eab\u7684\u4e3b\u9898\u3001\u7a7a\u95f4\u548c\u5728\u5730\u751f\u6d3b\u6765\u7406\u89e3\uff0c\u518d\u8865\u5145\u5fc5\u8981\u7684\u5386\u53f2\u80cc\u666f\u4e0e\u53c2\u89c2\u8282\u594f\u3002",
+    heritage: "\u8fd9\u91cc\u8981\u628a\u53ef\u89c1\u7684\u5efa\u7b51\u3001\u9057\u5b58\u3001\u52a8\u7ebf\u548c\u5468\u8fb9\u73af\u5883\u653e\u5728\u540c\u4e00\u6761\u5386\u53f2\u7ebf\u7d22\u91cc\u770b\uff0c\u907f\u514d\u53ea\u505c\u7559\u5728\u5916\u89c2\u6253\u5361\u3002",
     nature: "\u8fd9\u91cc\u7684\u91cd\u70b9\u4e0d\u662f\u8d76\u666f\u70b9\uff0c\u800c\u662f\u6839\u636e\u5b63\u8282\u3001\u5929\u6c14\u3001\u5149\u7ebf\u548c\u4f53\u529b\u5b89\u6392\u8282\u594f\uff0c\u8ba9\u5c71\u6c34\u672c\u8eab\u6709\u65f6\u95f4\u5c55\u5f00\u3002",
     food: "\u8fd9\u91cc\u9002\u5408\u4ece\u65e9\u5e02\u3001\u5e97\u94fa\u3001\u98df\u6750\u3001\u505a\u6cd5\u548c\u5f53\u5730\u4eba\u7684\u5403\u6cd5\u8fdb\u5165\uff0c\u800c\u4e0d\u662f\u53ea\u70b9\u4e00\u9053\u201c\u4ee3\u8868\u83dc\u201d\u3002",
     village: "\u8fd9\u91cc\u9002\u5408\u653e\u6162\u811a\u6b65\uff0c\u770b\u4f4f\u5b85\u683c\u5c40\u3001\u5df7\u9053\u5c3a\u5ea6\u3001\u516c\u5171\u7a7a\u95f4\u3001\u7530\u5730\u6c34\u7cfb\u548c\u5c45\u6c11\u65e5\u5e38\u3002",
@@ -858,16 +882,27 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
     tea: "\u8336\u5c71\u3001\u5236\u4f5c\u4e0e\u54c1\u9274",
     coast: "\u6d77\u5cb8\u3001\u6e2f\u53e3\u4e0e\u6e14\u6751\u751f\u6d3b"
   };
-  const zhOverviewPrefix = "\u9002\u5408\u56f4\u7ed5";
-  const zhOverviewSuffix = "\u6765\u7406\u89e3\u3002";
   const focusZh = item.focusZh || zhTheme[item.kind];
+  const zhOverviewByKind: Record<RecommendationKind, string> = {
+    heritage: `${placeZh}的价值主要在${focusZh}。游览时应把现场遗存、空间动线和相关历史人物或事件连起来看，让这处地点从“到此一游”变成能读出背景的历史现场。`,
+    nature: `${placeZh}以${focusZh}见长。游览时应关注地貌、水系、天气和光线如何共同塑造这里的景色，并为主要观景点留出足够停留时间。`,
+    food: `${placeZh}的吸引力在${focusZh}。这里更适合从食材、摊位或店铺、地方口味和当地人的吃法进入，而不是只点一道代表菜。`,
+    village: `${placeZh}呈现的是${focusZh}。好的游览要慢下来，看民居、巷道、公共空间和仍在发生的日常生活，避免把村落当成布景。`,
+    craft: `${placeZh}的重点是${focusZh}。介绍应落到材料、工具、工序和手艺人的判断上，让作品背后的地方审美变得具体。`,
+    spiritual: `${placeZh}与${focusZh}相关。参观时需要注意礼仪、动线、建筑细节和仍在延续的信仰生活，保持安静和分寸。`,
+    city: `${placeZh}适合从${focusZh}切入。路线应把街区、交通、建筑、饮食和普通日常连在一起，看这座城市真实运转的方式。`,
+    road: `${placeZh}的体验核心是${focusZh}。路线本身就是内容，观景停靠、村镇休息、餐食和行车节奏都需要一起设计。`,
+    market: `${placeZh}最值得看的是${focusZh}。重点应放在摊主、食材、采购习惯和本地交流上，而不是只看市场外观。`,
+    tea: `${placeZh}的茶体验来自${focusZh}。游览要把茶园环境、采摘季节、制作步骤、冲泡品鉴和当地待客习惯连起来。`,
+    coast: `${placeZh}的气质来自${focusZh}。好的路线要把海岸风景、港口生活、渔船或老街和地方饮食放在一起看。`
+  };
   return {
     image: exactImage ?? verifiedRecommendationImages[item.name] ?? provinceFallback?.[item.kind] ?? provinceFallback?.default ?? kind.image,
     fallbackImage: kind.fallbackImage,
     caption: { en: place, zh: placeZh },
     overview: {
       en: `${place} is recommended for ${item.focus}. ${enLead[item.kind]}`,
-      zh: `${placeZh}${zhOverviewPrefix}${focusZh}${zhOverviewSuffix}${zhLead[item.kind]}`
+      zh: zhOverviewByKind[item.kind]
     },
     experience: {
       en: `${enVisit[item.kind]} The goal is to make ${item.name} understandable through local context, not just to stop for a quick picture.`,
