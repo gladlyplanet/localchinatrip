@@ -296,6 +296,29 @@ function l(lang: Lang, phraseValue: Phrase) {
   return phraseValue[lang] ?? phraseValue.en;
 }
 
+function destinationPhrase(en: string, zhCN: string): Phrase {
+  return {
+    en,
+    "zh-CN": zhCN,
+    "zh-TW": zhCN,
+    es: en,
+    pt: en,
+    ar: en
+  };
+}
+
+function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof kindMeta)[RecommendationKind]) {
+  return {
+    ...base,
+    subtitle: destinationPhrase(attraction.focus, attraction.focusZh),
+    keywords: destinationPhrase(attraction.focus, attraction.focusZh),
+    lead: destinationPhrase(
+      `Start from ${attraction.name}'s own setting: ${attraction.focus}. The visit should explain this place directly, not reuse a generic attraction story.`,
+      `先围绕${attraction.nameZh}本身的${attraction.focusZh}来理解。页面介绍、游览建议和导览节奏都要扣住这个地点，不套用泛泛的景点文案。`
+    )
+  };
+}
+
 function Icon({ name }: { name: IconName }) {
   const common = "h-6 w-6";
   if (name === "clock") return <svg viewBox="0 0 24 24" className={common} fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="8" /><path d="M12 7v5l3 2" /></svg>;
@@ -339,7 +362,7 @@ export function AttractionDetail({ province, attraction }: { province: Province;
   const provinceLabel = getProvinceName(province.slug, lang);
   const itemCopy = getRecommendationCopy(lang, attraction);
   const enrichment = getRecommendationEnrichment(lang, attraction, province.name);
-  const meta = destinationMeta[attraction.name] ?? kindMeta[attraction.kind];
+  const meta = destinationMeta[attraction.name] ?? destinationFocusMeta(attraction, kindMeta[attraction.kind]);
   const facts = [
     { icon: "leaf" as IconName, title: text.bestSeason, value: meta.season },
     { icon: "clock" as IconName, title: text.pace, value: meta.pace },
