@@ -193,7 +193,7 @@ export const provinceRecommendations: Record<string, ProvinceRecommendation[]> =
     spot("Guoliang Village","郭亮村","village","cliff road, Taihang stone houses and mountain village resilience","挂壁公路、太行石屋和山村生活"),
     spot("Chenjiagou Taiji Village","陈家沟太极村","craft","Taijiquan lineage, village training and local martial culture","太极拳传承、村落训练和地方武术文化"),
     spot("Zhengzhou Museum and Market","郑州博物馆与市集","city","central plains history connected with modern city food streets","中原历史与现代城市饮食街区"),
-    spot("Yellow River Scenic Area Zhengzhou","郑州黄河风景区","nature","river terraces, loess landscape and Yellow River culture","河岸台地、黄土地貌和黄河文化")
+    spot("Yellow River Scenic Area Zhengzhou","郑州黄河风景区","nature","Yellow River banks, loess terraces, Yan-Huang monument and Central Plains river culture","黄河河岸、黄土台地、炎黄二帝塑像和中原黄河文化")
   ],
   jiangsu: [
     spot("Suzhou Classical Gardens","苏州古典园林","heritage","garden design, rocks, water, windows and scholar aesthetics","园林布局、叠石理水、漏窗和文人审美"),
@@ -270,7 +270,7 @@ export const provinceRecommendations: Record<string, ProvinceRecommendation[]> =
     spot("Shaoxing Old City","绍兴老城","heritage","canals, yellow rice wine, Lu Xun memory and bridges","河道、黄酒、鲁迅记忆和古桥"),
     spot("Ningbo Tianyi Pavilion","宁波天一阁","heritage","historic library culture and port-city scholarship","古代藏书楼文化和港口城市学术传统"),
     spot("Nanxun Ancient Town","南浔古镇","village","merchant mansions, canals and blended Chinese-Western details","商宅、河道和中西合璧细节"),
-    spot("Zhoushan Fishing Coast","舟山渔港海岸","coast","island harbors, seafood and East China Sea fishing life","海岛港口、海鲜和东海渔业生活")
+    spot("Zhoushan Fishing Coast","舟山渔港海岸","coast","island harbors, fishing boats, seafood markets and East China Sea island life","海岛港口、渔船、海鲜市场和东海岛民生活")
   ],
   jiangxi: [
     spot("Jingdezhen Porcelain Workshops","景德镇瓷器工坊","craft","kilns, clay, glazing and China's porcelain capital","窑火、泥料、釉色和中国瓷都工艺"),
@@ -312,7 +312,7 @@ export const provinceRecommendations: Record<string, ProvinceRecommendation[]> =
     spot("Zhaoxing Dong Village","肇兴侗寨","village","drum towers, wind-rain bridges and Dong singing culture","鼓楼、风雨桥和侗族大歌文化"),
     spot("Qingyan Ancient Town","青岩古镇","heritage","stone lanes, fortress history and Guizhou snacks","石板街巷、城防历史和贵州小吃"),
     spot("Fanjing Mountain","梵净山","nature","isolated peaks, Buddhist sites and biodiversity","孤峰、佛教遗迹和生物多样性"),
-    spot("Kaili Market","凯里市集","market","minority textiles, sour soup ingredients and local trade","民族织物、酸汤食材和本地交易"),
+    spot("Kaili Market","凯里市集","market","Miao-Dong textiles, silver ornaments, sour soup ingredients and morning market trade","苗侗织物、银饰、酸汤食材和清晨赶集交易"),
     spot("Miao Embroidery Workshop","苗绣工坊","craft","embroidery symbols, silver ornaments and village handwork","苗绣纹样、银饰和村落手工艺"),
     spot("Maotai Town","茅台镇","food","sauce-aroma liquor, river-valley climate and brewing culture","酱香白酒、河谷气候和酿造文化")
   ],
