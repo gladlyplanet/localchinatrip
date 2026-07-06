@@ -811,7 +811,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Jilin::Songhua Lake": {
-    image: "/images/destinations/jilin-songhua-lake-corrected.png",
+    image: "/images/destinations/jilin-songhua-lake-clean.png",
     caption: { en: "Songhua Lake scenic area", zh: "松花湖风景区" },
     overview: {
       en: "Songhua Lake is a forested reservoir landscape near Jilin city, combining open water, islands, mountain slopes and seasonal outdoor routes.",
