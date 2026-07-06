@@ -630,6 +630,438 @@ const genericByKind: Record<RecommendationKind, MediaText> = {
 };
 
 const destinationSpecificText: Record<string, MediaText> = {
+  "Jilin::Changbai Mountain": {
+    image: "/images/destinations/optimized/wiki-jilin-changbai-mountain.jpg",
+    caption: { en: "Changbai Mountain alpine scenery", zh: "长白山高山景观" },
+    overview: {
+      en: "Changbai Mountain is defined by volcanic landforms, Tianchi crater-lake views, alpine forests, waterfalls and the border mountain climate of northeast China.",
+      zh: "长白山要从火山地貌、天池视野、高山森林、瀑布和东北边境山地气候来理解。它的重点不是单一观景台，而是从林带、山坡到火山口逐层变化的自然景观。"
+    },
+    experience: {
+      en: "A good visit should plan around weather, shuttle timing and viewing-platform access, leaving flexibility because Tianchi visibility changes quickly.",
+      zh: "游览要提前考虑天气、景区交通和观景台开放情况。天池能见度变化很快，行程应留有弹性，把瀑布、林带和山地气候一起纳入体验。"
+    }
+  },
+  "Jilin::Jilin Rime Island": {
+    image: "/images/destinations/jilin-rime-island-corrected.png",
+    caption: { en: "Winter rime beside the Songhua River", zh: "松花江畔冬季雾凇" },
+    overview: {
+      en: "Jilin Rime Island should show the winter rime formed along the Songhua River: white-coated riverside trees, cold morning light and the seasonal atmosphere of Jilin city.",
+      zh: "吉林雾凇岛的核心是松花江畔冬季雾凇。树枝被霜花包裹，清晨冷光、江雾和岸边村落共同形成吉林冬天最有辨识度的景观。"
+    },
+    experience: {
+      en: "A good route starts early, checks rime forecasts and temperature, and keeps time for quiet walking rather than treating it as a generic snow scene.",
+      zh: "适合清晨出发，结合气温、湿度和雾凇预报安排。重点是慢慢看江边树影和霜花层次，而不是把它当成普通雪景。"
+    }
+  },
+  "Jilin::Yanji Food Streets": {
+    image: "/images/destinations/jilin-yanji-food-streets-corrected.png",
+    caption: { en: "Yanji market snacks and Korean-Chinese food", zh: "延吉市场小吃与朝鲜族风味" },
+    overview: {
+      en: "Yanji Food Streets are about Korean-Chinese daily flavors: cold noodles, rice cakes, barbecue, markets, cafes and the bilingual street life of Yanbian.",
+      zh: "延吉饮食街区要围绕朝鲜族风味和延边日常来写：冷面、打糕、烤肉、早市小吃、咖啡店和双语招牌共同构成这里的城市气质。"
+    },
+    experience: {
+      en: "A good food walk mixes morning market stalls, trusted noodle or barbecue shops and cafe streets, with attention to ordering rhythm and local etiquette.",
+      zh: "合适的路线可把早市、冷面店、烤肉店和咖啡街串起来，讲清食材、点单方式和本地人的吃饭节奏。"
+    }
+  },
+  "Jilin::Koguryo Heritage Ji'an": {
+    image: "/images/destinations/optimized/wiki-jilin-koguryo-heritage-ji-an.jpg",
+    caption: { en: "Koguryo heritage remains in Ji'an", zh: "集安高句丽遗址" },
+    overview: {
+      en: "Koguryo Heritage in Ji'an is best understood through ancient tombs, fortress remains, stone inscriptions and the frontier history along the Yalu River.",
+      zh: "集安高句丽遗址要从古墓群、山城遗址、石刻和鸭绿江边疆历史来理解。它呈现的是东北古代政权、交通与防御体系的空间记忆。"
+    },
+    experience: {
+      en: "A good visit should link tomb murals, fortress sites and river geography, with enough historical context before moving between scattered locations.",
+      zh: "游览时应把墓葬壁画、山城遗址和江岸地理联系起来，先补充背景，再按点位慢慢看，避免只停留在外观拍照。"
+    }
+  },
+  "Jilin::Chagan Lake Winter Fishing": {
+    image: "/images/destinations/jilin-chagan-lake-winter-fishing-corrected.png",
+    caption: { en: "Chagan Lake winter fishing", zh: "查干湖冬捕" },
+    overview: {
+      en: "Chagan Lake Winter Fishing is a seasonal northeast tradition: frozen lake work, fishing nets, local ceremony and the community rhythm around winter harvest.",
+      zh: "查干湖冬捕的重点是冰封湖面上的渔猎传统、下网起鱼、祭湖醒网仪式和冬季社区生活。它应呈现真实冬捕现场，而不是普通湖景。"
+    },
+    experience: {
+      en: "A good visit follows festival dates, cold-weather preparation and safe viewing distance, while explaining why winter fishing remains a living regional custom.",
+      zh: "行程要对准冬捕节期，注意保暖和安全观赏距离。讲解应说明冬捕如何与渔村生活、季节劳动和东北民俗相连。"
+    }
+  },
+  "Jilin::Changchun Puppet Palace": {
+    image: "/images/destinations/optimized/wiki-jilin-changchun-puppet-palace.jpg",
+    caption: { en: "Museum of the Imperial Palace of Manchukuo", zh: "长春伪满皇宫博物院" },
+    overview: {
+      en: "Changchun Puppet Palace should be introduced through Manchukuo history, palace rooms, political symbolism and the modern memory of northeast China.",
+      zh: "长春伪满皇宫要放在近代东北历史中理解。宫殿空间、办公与生活陈设、政治象征和殖民时期城市记忆，共同构成这里的参观重点。"
+    },
+    experience: {
+      en: "A good visit should move room by room with historical explanation, separating architecture, exhibition objects and the political context of the site.",
+      zh: "适合按展厅和院落慢慢走，区分建筑本身、陈列物和历史背景。重点是理解这处遗址的近代历史意义。"
+    }
+  },
+  "Jilin::Songhua Lake": {
+    image: "/images/destinations/jilin-songhua-lake-corrected.png",
+    caption: { en: "Songhua Lake scenic area", zh: "松花湖风景区" },
+    overview: {
+      en: "Songhua Lake is a forested reservoir landscape near Jilin city, combining open water, islands, mountain slopes and seasonal outdoor routes.",
+      zh: "松花湖要呈现吉林市近郊的森林湖泊景观：开阔水面、岛屿、山坡、游船和四季户外路线。它不能用地图或无关地形图替代。"
+    },
+    experience: {
+      en: "A good route chooses lake viewpoints, boat or shoreline sections by season, and connects the scenery with nearby forest and resort areas.",
+      zh: "游览可根据季节选择湖岸观景、游船或山地视角，把水面、森林和度假区动线结合起来。"
+    }
+  },
+  "Jilin::Jingyuetan Forest": {
+    image: "/images/destinations/optimized/wiki-jilin-jingyuetan-forest.jpg",
+    caption: { en: "Jingyuetan forest and lake trails", zh: "净月潭森林与湖畔步道" },
+    overview: {
+      en: "Jingyuetan Forest is Changchun's large lake-and-forest recreation area, shaped by pine woods, cycling roads, snow season activities and city leisure life.",
+      zh: "净月潭森林体现长春城市边缘的湖泊与森林休闲：松林、环湖路、骑行步道、冬季雪上活动和市民周末生活都在这里交织。"
+    },
+    experience: {
+      en: "A good visit should choose walking, cycling or snow-season activities based on weather, with time for both forest shade and lake views.",
+      zh: "行程可按季节选择步行、骑行或雪季项目，留出看林荫、湖面和城市休闲节奏的时间。"
+    }
+  },
+  "Jilin::Hunchun Border View": {
+    image: "/images/destinations/optimized/wiki-jilin-hunchun-border-view.jpg",
+    caption: { en: "Hunchun border landscape", zh: "珲春边境景观" },
+    overview: {
+      en: "Hunchun Border View is about Tumen River geography, port towns, multi-country frontier context and the layered identities of Yanbian's borderland.",
+      zh: "珲春边境眺望要从图们江地理、口岸城镇、多国交界背景和延边边境生活来理解。这里的吸引力来自边境空间本身。"
+    },
+    experience: {
+      en: "A good route should combine official viewpoints, river geography and town life, explaining border etiquette and why distances feel so compressed here.",
+      zh: "适合把观景点、江岸地理和城镇生活放在一起看，同时说明边境礼仪与多国相邻的空间感。"
+    }
+  },
+  "Liaoning::Shenyang Imperial Palace": {
+    image: "/images/destinations/liaoning-shenyang-imperial-palace-corrected.png",
+    caption: { en: "Shenyang Imperial Palace", zh: "沈阳故宫" },
+    overview: {
+      en: "Shenyang Imperial Palace should show early Qing palace architecture, Manchu political history, courtyard organization and the transition from regional power to imperial rule.",
+      zh: "沈阳故宫要从清初宫殿建筑、满族政治历史、院落格局和后金到清朝的权力转变来理解。主图应是宫殿实景，而不是器物特写。"
+    },
+    experience: {
+      en: "A good visit compares palace halls, courtyard axes and decorative details, linking the site to the broader story of Shenyang before the Qing entered Beijing.",
+      zh: "游览应比较殿宇、院落轴线和装饰细节，把这里放进清入关前的沈阳历史中看。"
+    }
+  },
+  "Liaoning::Zhang Family Mansion": {
+    image: "/images/destinations/liaoning-zhang-family-mansion-corrected.png",
+    caption: { en: "Zhang Family Mansion, Shenyang", zh: "沈阳张氏帅府" },
+    overview: {
+      en: "Zhang Family Mansion is tied to Republican-era northeast politics, Zhang Zuolin and Zhang Xueliang, courtyard houses and western-style buildings inside one compound.",
+      zh: "张氏帅府要围绕民国东北政治、张作霖与张学良、大院生活和中西合璧建筑来介绍。它的重点是历史人物、宅院格局和近代沈阳。"
+    },
+    experience: {
+      en: "A good visit should move between the traditional courtyards and western-style blocks, explaining how private residence, military power and city history overlap.",
+      zh: "适合从传统院落走到西式楼房，讲清私人宅邸、军政权力和城市近代史如何在同一院落中叠加。"
+    }
+  },
+  "Liaoning::Dalian Binhai Road": {
+    image: "/images/destinations/liaoning-dalian-binhai-road-corrected.png",
+    caption: { en: "Dalian Binhai Road coastline", zh: "大连滨海路海岸" },
+    overview: {
+      en: "Dalian Binhai Road is a coastal route of cliffs, sea views, parks, bridges and urban seaside leisure, rather than a generic city skyline.",
+      zh: "大连滨海路要呈现海岸山崖、海湾视野、公园步道、桥梁和城市滨海休闲。它不是普通天际线，而是一条把山海与城市串起来的路。"
+    },
+    experience: {
+      en: "A good route selects manageable walking sections and viewpoints by weather, linking the coastline with Dalian's seaside identity.",
+      zh: "游览可选择适合体力的一段步行，按天气和光线安排观景点，把海岸线与大连的滨海城市气质连起来。"
+    }
+  },
+  "Liaoning::Panjin Red Beach": {
+    image: "/images/destinations/optimized/wiki-liaoning-panjin-red-beach.jpg",
+    caption: { en: "Panjin Red Beach wetland", zh: "盘锦红海滩湿地" },
+    overview: {
+      en: "Panjin Red Beach is shaped by seasonal seepweed wetlands, reed fields, migratory birds and the Liaohe River delta ecosystem.",
+      zh: "盘锦红海滩的核心是季节性碱蓬湿地、芦苇荡、候鸟和辽河三角洲生态。红色景观与潮汐、季节和湿地保护密切相关。"
+    },
+    experience: {
+      en: "A good visit should check color season and tide conditions, then use boardwalks and viewing platforms without disturbing wetland habitat.",
+      zh: "行程要结合最佳变红季节和潮汐情况，通过栈道和观景台观看，同时注意湿地保护。"
+    }
+  },
+  "Liaoning::Benxi Water Cave": {
+    image: "/images/destinations/optimized/wiki-liaoning-benxi-water-cave.jpg",
+    caption: { en: "Benxi Water Cave", zh: "本溪水洞" },
+    overview: {
+      en: "Benxi Water Cave is a karst underground river cave, known for boat passages, limestone formations, cold cave air and eastern Liaoning mountain scenery.",
+      zh: "本溪水洞要从喀斯特地下河、乘船洞穴通道、钟乳石形态和辽东山地环境来理解。它的特点是水道与洞穴空间结合。"
+    },
+    experience: {
+      en: "A good visit should prepare for cave temperature, boat timing and low-light viewing, focusing on geology rather than rushing through the route.",
+      zh: "游览要注意洞内温度、乘船节奏和弱光环境，重点看地质形态和地下河空间。"
+    }
+  },
+  "Liaoning::Dandong Yalu River": {
+    image: "/images/destinations/optimized/wiki-liaoning-dandong-yalu-river.jpg",
+    caption: { en: "Yalu River, Dandong", zh: "丹东鸭绿江" },
+    overview: {
+      en: "Dandong Yalu River is a border-river experience, connecting river bridges, waterfront life, modern history and northeast frontier geography.",
+      zh: "丹东鸭绿江要从边境江景、桥梁遗迹、滨江生活、近现代历史和东北边疆地理来理解。这里的重点是江河如何形成城市与边境的关系。"
+    },
+    experience: {
+      en: "A good route should compare bridge viewpoints, riverside walking and local food streets, with clear explanation of border etiquette.",
+      zh: "适合把桥梁视角、江边步行和本地餐饮串起来，同时讲清边境参观礼仪。"
+    }
+  },
+  "Liaoning::Xingcheng Ancient City": {
+    image: "/images/destinations/optimized/wiki-liaoning-xingcheng-ancient-city.jpg",
+    caption: { en: "Xingcheng Ancient City", zh: "兴城古城" },
+    overview: {
+      en: "Xingcheng Ancient City is a Ming coastal-defense city, with walls, gates, old streets and the military geography of the Liaodong coast.",
+      zh: "兴城古城要从明代海防城池、城墙城门、老街生活和辽东海岸军事地理来理解。它不是普通仿古街区，而是真实城防遗存。"
+    },
+    experience: {
+      en: "A good visit should walk the walls and gates, then connect the old city with nearby coastal defense and local daily life.",
+      zh: "游览应走城墙和城门，再把古城与周边海防背景、本地日常生活联系起来。"
+    }
+  },
+  "Liaoning::Liaoyang White Pagoda": {
+    image: "/images/destinations/optimized/wiki-liaoning-liaoyang-white-pagoda.jpg",
+    caption: { en: "Liaoyang White Pagoda", zh: "辽阳白塔" },
+    overview: {
+      en: "Liaoyang White Pagoda represents Liao-Jin Buddhist architecture, old regional-center history and the layered urban memory of Liaoyang.",
+      zh: "辽阳白塔要从辽金佛教建筑、古代区域中心和辽阳城市记忆来介绍。塔体比例、寺院环境和老城位置共同构成它的价值。"
+    },
+    experience: {
+      en: "A good visit should slow down for pagoda proportions, brick details and surrounding urban context, not just photograph the tower from one angle.",
+      zh: "适合慢看塔身比例、砖构细节和周边城市环境，不要只从一个角度拍塔。"
+    }
+  },
+  "Liaoning::Jinzhou Guta Night Food": {
+    image: "/images/destinations/liaoning-jinzhou-guta-night-food-corrected.png",
+    caption: { en: "Jinzhou Guta night market", zh: "锦州古塔夜市" },
+    overview: {
+      en: "Jinzhou Guta Night Food should focus on barbecue, night-market stalls, local snacks and the evening street rhythm around Guta District.",
+      zh: "锦州古塔夜食要围绕锦州烧烤、夜市摊位、本地小吃和古塔区夜间街头节奏来写。主图应呈现真实夜市，而不是只有塔楼。"
+    },
+    experience: {
+      en: "A good tasting route should mix skewers, small dishes and local snack stops, explaining ordering habits and why Jinzhou barbecue is regionally famous.",
+      zh: "合适的路线可把烤串、小菜和本地小吃摊串起来，讲清点单方式和锦州烧烤在东北饮食中的辨识度。"
+    }
+  },
+  "Beijing::Forbidden City": {
+    image: "/images/destinations/optimized/wiki-beijing-forbidden-city.jpg",
+    caption: { en: "Forbidden City, Beijing", zh: "北京故宫" },
+    overview: {
+      en: "The Forbidden City should be read through the imperial axis, palace hierarchy, courtyards, ceremonial spaces and Ming-Qing court life.",
+      zh: "故宫要从中轴线、宫殿等级、院落秩序、礼制空间和明清宫廷生活来理解。它的价值在于整体宫城结构，不只是单个大殿。"
+    },
+    experience: {
+      en: "A good visit should choose a focused route, compare outer and inner court spaces, and leave time for side halls or quieter courtyards.",
+      zh: "游览应选择有重点的路线，比较外朝与内廷空间，并给侧殿或安静院落留出时间。"
+    }
+  },
+  "Beijing::Mutianyu Great Wall": {
+    image: "/images/destinations/optimized/wiki-beijing-mutianyu-great-wall.jpg",
+    caption: { en: "Mutianyu Great Wall", zh: "慕田峪长城" },
+    overview: {
+      en: "Mutianyu Great Wall combines mountain ridges, watchtowers, restored wall sections and northern-defense history in a greener Beijing landscape.",
+      zh: "慕田峪长城要从山脊、敌楼、修复墙体和北方防御历史来理解。它的特点是山势开阔、植被丰富，适合看长城如何顺山而行。"
+    },
+    experience: {
+      en: "A good route matches cableway and walking distance to fitness, choosing tower sections by light, crowd level and weather.",
+      zh: "路线要按体力选择缆车和步行段，根据光线、人流和天气安排敌楼区间。"
+    }
+  },
+  "Beijing::Temple of Heaven": {
+    image: "/images/destinations/optimized/wiki-beijing-temple-of-heaven.jpg",
+    caption: { en: "Temple of Heaven", zh: "天坛" },
+    overview: {
+      en: "Temple of Heaven is about ritual architecture, cosmology, imperial ceremonies and the living morning activity of Beijing residents in the surrounding park.",
+      zh: "天坛要从祭天建筑、礼制宇宙观、皇家仪式和公园里的北京晨练生活来理解。圜丘、祈年殿和林荫空间要一起看。"
+    },
+    experience: {
+      en: "A good visit starts early if possible, balancing major ritual buildings with local park life and quieter tree-lined paths.",
+      zh: "适合早些进入，把主要礼制建筑、本地晨练和林间步道结合起来看。"
+    }
+  },
+  "Beijing::Hutong Family Visit": {
+    image: "/images/experience-beijing-hutong.jpg",
+    caption: { en: "Beijing hutong courtyard life", zh: "北京胡同与四合院生活" },
+    overview: {
+      en: "A hutong family visit should focus on courtyard homes, alley scale, neighborhood routines, local conversation and the changing life of old Beijing lanes.",
+      zh: "胡同家庭拜访要围绕四合院、巷道尺度、邻里日常、本地交流和老北京街巷生活变化来介绍。它不是单纯看老房子。"
+    },
+    experience: {
+      en: "A good visit should be respectful and small-scale, with time to understand courtyard layout, family routines and how hutongs are lived in today.",
+      zh: "体验应保持小规模和尊重，讲清院落格局、家庭日常和今天胡同如何继续被使用。"
+    }
+  },
+  "Beijing::Summer Palace": {
+    image: "/images/destinations/optimized/wiki-beijing-summer-palace.jpg",
+    caption: { en: "Summer Palace and Kunming Lake", zh: "颐和园与昆明湖" },
+    overview: {
+      en: "The Summer Palace combines imperial gardens, Kunming Lake, Longevity Hill, corridors, pavilions and Qing leisure politics.",
+      zh: "颐和园要从皇家园林、昆明湖、万寿山、长廊、亭台和清代宫廷休闲政治来理解。湖山格局是它的核心。"
+    },
+    experience: {
+      en: "A good route should choose lakeside and hill sections based on time, with attention to viewpoints, painted corridors and seasonal light.",
+      zh: "游览可按时间选择湖边与山上路线，重点看视角转换、长廊彩画和季节光线。"
+    }
+  },
+  "Beijing::Lama Temple": {
+    image: "/images/destinations/optimized/wiki-beijing-lama-temple.jpg",
+    caption: { en: "Lama Temple, Beijing", zh: "北京雍和宫" },
+    overview: {
+      en: "Lama Temple should be understood as a Tibetan Buddhist temple within Beijing's imperial-city context, with ritual practice, halls, incense and Qing history.",
+      zh: "雍和宫要放在北京皇城背景中的藏传佛教寺院来理解。殿宇、香火、礼佛秩序和清代历史共同构成这里的气质。"
+    },
+    experience: {
+      en: "A respectful visit should explain prayer etiquette, hall sequence and religious context, keeping a slower and quieter pace.",
+      zh: "参观应讲清礼佛礼仪、殿宇顺序和宗教背景，保持较慢、安静的节奏。"
+    }
+  },
+  "Beijing::798 Art District": {
+    image: "/images/destinations/optimized/wiki-beijing-798-art-district.jpg",
+    caption: { en: "798 Art District", zh: "798艺术区" },
+    overview: {
+      en: "798 Art District is about factory architecture, industrial reuse, contemporary galleries, design shops and Beijing's creative urban culture.",
+      zh: "798艺术区要从工厂建筑、工业遗存再利用、当代画廊、设计店和北京创意街区文化来理解。"
+    },
+    experience: {
+      en: "A good visit should move between galleries, old factory details and public art, checking current exhibitions rather than only walking the main street.",
+      zh: "适合把画廊、老厂房细节和公共艺术结合起来看，并关注当期展览，而不是只走主街。"
+    }
+  },
+  "Beijing::Panjiayuan Market": {
+    image: "/images/destinations/optimized/wiki-beijing-panjiayuan-market.jpg",
+    caption: { en: "Panjiayuan Market", zh: "潘家园市场" },
+    overview: {
+      en: "Panjiayuan Market is a folk-object and antiques market, full of ceramics, old books, beads, crafts, replicas and weekend bargaining culture.",
+      zh: "潘家园市场要围绕古玩、旧书、瓷器、珠串、民间物件、仿制品和周末淘货文化来介绍。它更像观察北京市场生活的窗口。"
+    },
+    experience: {
+      en: "A good visit should explain browsing and bargaining habits, authenticity caution and the difference between collecting, souvenirs and visual curiosity.",
+      zh: "游览要讲清逛摊、议价和真假辨别的基本常识，区分收藏、纪念品和纯粹看热闹的不同体验。"
+    }
+  },
+  "Beijing::Beijing Breakfast Walk": {
+    image: "/images/destinations/beijing-breakfast-walk-corrected.png",
+    caption: { en: "Beijing breakfast: douzhi and jiaoquan", zh: "北京早点：豆汁与焦圈" },
+    overview: {
+      en: "Beijing Breakfast Walk should focus on neighborhood morning food such as douzhi, jiaoquan, jianbing, baozi, soy milk and small shop routines.",
+      zh: "北京早点漫步要围绕豆汁、焦圈、煎饼、包子、豆浆和社区小店的早晨节奏来写。主图应是早点实景，不能用烤鸭替代。"
+    },
+    experience: {
+      en: "A good route starts early, mixes classic and approachable foods, and explains local tastes honestly, especially strong flavors such as douzhi.",
+      zh: "合适的路线要早出发，把经典早点和更容易接受的食物搭配起来，也要诚实说明豆汁这类强烈地方口味。"
+    }
+  },
+  "Hebei::Chengde Mountain Resort": {
+    image: "/images/destinations/optimized/wiki-hebei-chengde-mountain-resort.jpg",
+    caption: { en: "Chengde Mountain Resort", zh: "承德避暑山庄" },
+    overview: {
+      en: "Chengde Mountain Resort should be understood through Qing imperial gardens, lakes, plains, hills and the political symbolism of ruling a multi-ethnic frontier empire.",
+      zh: "承德避暑山庄要从清代皇家园林、湖区、平原、山地和多民族边疆治理象征来理解。它不是普通园林，而是政治与景观结合的宫苑。"
+    },
+    experience: {
+      en: "A good visit should divide the large site into lake, plain and hill areas, then connect it with the surrounding temples if time allows.",
+      zh: "游览应把湖区、平原区和山区分开安排，再视时间连接外八庙等周边遗产。"
+    }
+  },
+  "Hebei::Shanhaiguan Pass": {
+    image: "/images/destinations/optimized/wiki-hebei-shanhaiguan-pass.jpg",
+    caption: { en: "Shanhaiguan Pass", zh: "山海关" },
+    overview: {
+      en: "Shanhaiguan Pass is the Great Wall gateway where mountains, fortress walls and the Bohai Sea meet, carrying strong coastal-defense meaning.",
+      zh: "山海关的重点是山、关城、长城和渤海海岸相接的防御格局。它要作为长城入海前后的关隘体系来理解。"
+    },
+    experience: {
+      en: "A good route should compare the gate tower, walls and sea-facing geography, explaining why this pass became so symbolically important.",
+      zh: "游览应比较关楼、城墙和面海地理，讲清这里为什么成为长城关隘中极具象征性的地点。"
+    }
+  },
+  "Hebei::Baiyangdian Wetland": {
+    image: "/images/destinations/optimized/wiki-hebei-baiyangdian-wetland.jpg",
+    caption: { en: "Baiyangdian Wetland", zh: "白洋淀湿地" },
+    overview: {
+      en: "Baiyangdian Wetland is a North China water landscape of reed lakes, boats, villages, lotus seasons and wetland ecology.",
+      zh: "白洋淀要从芦苇湖泊、船行水道、水乡村落、荷花季节和华北湿地生态来介绍。这里的特点是水网与村庄相互嵌套。"
+    },
+    experience: {
+      en: "A good visit should choose boat routes and viewing seasons carefully, balancing scenery with wetland protection and village context.",
+      zh: "行程要根据季节选择船线和停留点，把风景、湿地保护和村落背景结合起来。"
+    }
+  },
+  "Hebei::Mulan Weichang": {
+    image: "/images/destinations/hebei-mulan-weichang-corrected.png",
+    caption: { en: "Mulan Weichang forest and grassland", zh: "木兰围场森林草原" },
+    overview: {
+      en: "Mulan Weichang should show the Saihanba-style mix of grassland, forest, rolling hills and Qing imperial hunting landscape, not rapeseed fields.",
+      zh: "木兰围场要呈现塞罕坝一带的森林、草原、丘陵和清代皇家围猎背景。它不应使用油菜花田这类南方田园图。"
+    },
+    experience: {
+      en: "A good visit should follow season, road conditions and viewpoint distances, linking grassland scenery with forest restoration and historical hunting grounds.",
+      zh: "游览要结合季节、道路和观景距离，把草原风景、林场恢复和围猎历史一起讲清。"
+    }
+  },
+  "Hebei::Zhaozhou Bridge": {
+    image: "/images/destinations/optimized/wiki-hebei-zhaozhou-bridge.jpg",
+    caption: { en: "Zhaozhou Bridge", zh: "赵州桥" },
+    overview: {
+      en: "Zhaozhou Bridge is an ancient open-spandrel stone arch bridge, important for Sui-dynasty engineering, proportions and long structural survival.",
+      zh: "赵州桥要从隋代石拱桥工程、敞肩拱结构、比例和长期保存来理解。它的价值在于古代桥梁技术本身。"
+    },
+    experience: {
+      en: "A good visit should focus on arch structure, stonework and river setting, with enough context to appreciate why the bridge is technically significant.",
+      zh: "参观应重点看拱券结构、石作细节和河道环境，说明它在古代桥梁工程中的意义。"
+    }
+  },
+  "Hebei::Zhengding Ancient City": {
+    image: "/images/destinations/hebei-zhengding-ancient-city-corrected.png",
+    caption: { en: "Zhengding Longxing Temple", zh: "正定隆兴寺" },
+    overview: {
+      en: "Zhengding Ancient City should be introduced through temples, pagodas, old-city layout and especially Longxing Temple's northern Buddhist architecture.",
+      zh: "正定古城要从寺庙、古塔、老城格局和隆兴寺等北方佛教建筑来理解。它应使用正定实景，而不是其他城市城墙图。"
+    },
+    experience: {
+      en: "A good route should connect Longxing Temple, pagodas and city streets, showing how Zhengding's historic layers sit inside an active county town.",
+      zh: "路线可把隆兴寺、古塔和古城街巷串起来，看历史层次如何嵌在今天的县城生活里。"
+    }
+  },
+  "Hebei::Xibaipo": {
+    image: "/images/destinations/optimized/wiki-hebei-xibaipo.jpg",
+    caption: { en: "Xibaipo revolutionary site", zh: "西柏坡革命旧址" },
+    overview: {
+      en: "Xibaipo is a modern revolutionary-history site in the Taihang foothills, centered on village offices, meeting rooms and the late-1940s political transition.",
+      zh: "西柏坡要从太行山前村落、旧址院落、会议空间和近现代革命历史转折来理解。它的重点是历史现场与村庄环境。"
+    },
+    experience: {
+      en: "A good visit should connect exhibition halls with preserved village spaces, keeping historical explanation concrete and site-based.",
+      zh: "参观应把展馆和保存下来的村庄空间结合起来，让历史讲解落到具体地点上。"
+    }
+  },
+  "Hebei::Beidaihe Coast": {
+    image: "/images/destinations/optimized/wiki-hebei-beidaihe-coast.jpg",
+    caption: { en: "Beidaihe coast", zh: "北戴河海滨" },
+    overview: {
+      en: "Beidaihe Coast combines beaches, seaside villas, birding areas and the summer resort history of North China's Bohai shoreline.",
+      zh: "北戴河海滨要围绕沙滩、海滨别墅、观鸟区域和华北渤海岸避暑传统来介绍。它的气质来自海岸休闲与历史度假生活。"
+    },
+    experience: {
+      en: "A good visit should match beach time, coastal walking and seasonal birding or villa-history stops, avoiding an overly rushed seaside checklist.",
+      zh: "行程可把沙滩、海岸步行、观鸟季节或别墅历史点结合起来，不要只匆忙打卡海边。"
+    }
+  },
+  "Hebei::Cangzhou Martial Arts": {
+    image: "/images/destinations/hebei-cangzhou-martial-arts-corrected.png",
+    caption: { en: "Cangzhou martial arts practice", zh: "沧州武术练习" },
+    overview: {
+      en: "Cangzhou Martial Arts should show living northern martial-arts practice, lineages, training spaces and Grand Canal folk culture, not a random plaza sculpture.",
+      zh: "沧州武术文化要呈现真实的北方武术练习、门派传承、训练空间和大运河民间文化，而不是用无关雕塑或广场替代。"
+    },
+    experience: {
+      en: "A good visit should connect demonstrations or training halls with local history, explaining how martial arts remain part of Cangzhou's civic identity.",
+      zh: "合适的体验应把武术展示、训练场馆和地方历史联系起来，说明武术如何成为沧州城市身份的一部分。"
+    }
+  },
   "Shaanxi::Terracotta Army": {
     image: "/images/destinations/optimized/wiki-shaanxi-terracotta-army.jpg",
     caption: { en: "Terracotta Army, Xi'an", zh: "西安秦始皇兵马俑" },
