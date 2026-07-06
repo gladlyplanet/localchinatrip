@@ -835,7 +835,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Jilin::Jingyuetan Forest": {
-    image: "/images/destinations/optimized/wiki-jilin-jingyuetan-forest.jpg",
+    image: "/images/destinations/jilin-jingyuetan-forest-clean.png",
     caption: { en: "Jingyuetan forest and lake trails", zh: "净月潭森林与湖畔步道" },
     overview: {
       en: "Jingyuetan Forest is Changchun's large lake-and-forest recreation area, shaped by pine woods, cycling roads, snow season activities and city leisure life.",

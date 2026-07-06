@@ -168,7 +168,7 @@ export const destinationImages: Record<string, string> = {
   "Jilin::Changchun Puppet Palace": "/images/destinations/jilin-changchun-puppet-palace-clean.png",
   "Jilin::Hunchun Border View": "/images/destinations/optimized/wiki-jilin-hunchun-border-view.jpg",
   "Jilin::Jilin Rime Island": "/images/destinations/optimized/wiki-jilin-jilin-rime-island.jpg",
-  "Jilin::Jingyuetan Forest": "/images/destinations/optimized/wiki-jilin-jingyuetan-forest.jpg",
+  "Jilin::Jingyuetan Forest": "/images/destinations/jilin-jingyuetan-forest-clean.png",
   "Jilin::Koguryo Heritage Ji'an": "/images/destinations/optimized/wiki-jilin-koguryo-heritage-ji-an.jpg",
   "Jilin::Songhua Lake": "/images/destinations/jilin-songhua-lake-clean.png",
   "Jilin::Yanji Food Streets": "/images/destinations/optimized/wiki-jilin-yanji-food-streets.jpg",
