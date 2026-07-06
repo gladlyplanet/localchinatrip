@@ -799,7 +799,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Jilin::Changchun Puppet Palace": {
-    image: "/images/destinations/optimized/wiki-jilin-changchun-puppet-palace.jpg",
+    image: "/images/destinations/jilin-changchun-puppet-palace-clean.png",
     caption: { en: "Museum of the Imperial Palace of Manchukuo", zh: "长春伪满皇宫博物院" },
     overview: {
       en: "Changchun Puppet Palace should be introduced through Manchukuo history, palace rooms, political symbolism and the modern memory of northeast China.",
@@ -1015,7 +1015,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Beijing::Lama Temple": {
-    image: "/images/destinations/optimized/wiki-beijing-lama-temple.jpg",
+    image: "/images/destinations/beijing-lama-temple-clean.png",
     caption: { en: "Lama Temple, Beijing", zh: "北京雍和宫" },
     overview: {
       en: "Lama Temple should be understood as a Tibetan Buddhist temple within Beijing's imperial-city context, with ritual practice, halls, incense and Qing history.",
@@ -1051,7 +1051,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Beijing::Beijing Breakfast Walk": {
-    image: "/images/destinations/beijing-breakfast-walk-corrected.png",
+    image: "/images/destinations/beijing-breakfast-walk-clean.png",
     caption: { en: "Beijing breakfast: douzhi and jiaoquan", zh: "北京早点：豆汁与焦圈" },
     overview: {
       en: "Beijing Breakfast Walk is best understood through neighborhood morning food such as douzhi, jiaoquan, jianbing, baozi, soy milk and small shop routines.",
@@ -1411,7 +1411,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Qinghai::Kumbum Monastery": {
-    image: "/images/destinations/optimized/wiki-qinghai-kumbum-monastery.jpg",
+    image: "/images/destinations/qinghai-kumbum-monastery-clean.png",
     caption: { en: "Kumbum Monastery, Qinghai", zh: "青海塔尔寺" },
     overview: {
       en: "Kumbum Monastery is a major Tibetan Buddhist monastery near Xining, known for halls, butter sculpture, murals, thangka traditions and monastic courtyards.",
@@ -1459,7 +1459,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Qinghai::Qilian Grassland": {
-    image: "/images/destinations/optimized/wiki-qinghai-qilian-grassland.jpg",
+    image: "/images/destinations/qinghai-qilian-grassland-clean.png",
     caption: { en: "Qilian grassland and snow peaks", zh: "祁连草原与雪山" },
     overview: {
       en: "Qilian Grassland combines alpine pasture, snow peaks, herds, wildflowers and the mountain edge of northern Qinghai.",
@@ -1771,7 +1771,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Heilongjiang::Wudalianchi": {
-    image: "/images/destinations/heilongjiang-wudalianchi-corrected.png",
+    image: "/images/destinations/heilongjiang-wudalianchi-clean.png",
     caption: { en: "Wudalianchi volcanic landscape", zh: "五大连池火山地貌" },
     overview: {
       en: "Wudalianchi should be shown through volcanic landforms, lava fields, crater scenery, mineral springs and cold northern forests, not a railway-station exterior.",
@@ -1783,7 +1783,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Heilongjiang::Beiji Village Mohe": {
-    image: "/images/destinations/heilongjiang-beiji-village-mohe-corrected.png",
+    image: "/images/destinations/heilongjiang-beiji-village-mohe-clean.png",
     caption: { en: "Beiji Village, Mohe", zh: "漠河北极村" },
     overview: {
       en: "Beiji Village near Mohe should be introduced through far-north village life, winter snow, borderland climate, wooden buildings and the idea of China's northernmost settlement.",
@@ -1831,7 +1831,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Heilongjiang::Daqing Petroleum Memory": {
-    image: "/images/destinations/heilongjiang-daqing-petroleum-memory-corrected.png",
+    image: "/images/destinations/heilongjiang-daqing-petroleum-memory-clean.png",
     caption: { en: "Daqing oilfield history exhibition", zh: "大庆油田历史展馆" },
     overview: {
       en: "Daqing Petroleum Memory should use real oilfield and museum scenes: Iron Man Wang Jinxi, workers' culture, production history and the role of Daqing in northeast China's industrial modernization.",
@@ -1855,7 +1855,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Tianjin::Ancient Culture Street": {
-    image: "/images/destinations/tianjin-ancient-culture-street-corrected.png",
+    image: "/images/destinations/tianjin-ancient-culture-street-clean.png",
     caption: { en: "Tianjin Ancient Culture Street", zh: "天津古文化街" },
     overview: {
       en: "Ancient Culture Street brings together Tianjin's folk-culture shopping street: traditional shopfronts, temple-fair atmosphere, crafts, snacks and old-brand signs. It should not use unrelated ancient wall paintings.",
@@ -1915,7 +1915,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Tianjin::Italian Style Area": {
-    image: "/images/destinations/tianjin-italian-style-area-corrected.png",
+    image: "/images/destinations/tianjin-italian-style-area-clean.png",
     caption: { en: "Tianjin Italian Style Area", zh: "天津意式风情区" },
     overview: {
       en: "Italian Style Area brings together Tianjin's former concession streets, European-style facades, cafes and leisure reuse. It should not use an unrelated black-and-white performance photo.",
@@ -1927,7 +1927,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Tianjin::Tianjin Snack Trail": {
-    image: "/images/destinations/tianjin-snack-trail-corrected.png",
+    image: "/images/destinations/tianjin-snack-trail-clean.png",
     caption: { en: "Tianjin snacks", zh: "天津小吃" },
     overview: {
       en: "Tianjin Snack Trail is best understood through local foods such as Goubuli buns, mahua, jianbing guozi and neighborhood breakfast habits, not a skyline or ferris-wheel view.",
@@ -2215,7 +2215,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Hunan::Yuelu Academy": {
-    image: "/images/destinations/optimized/wiki-hunan-yuelu-academy.jpg",
+    image: "/images/destinations/hunan-yuelu-academy-clean.png",
     caption: { en: "Yuelu Academy, Changsha", zh: "长沙岳麓书院" },
     overview: {
       en: "Yuelu Academy is a mountain academy landscape tied to classical education, Hunan scholarship, courtyards, lecture halls and the wooded paths of Yuelu Mountain.",
