@@ -859,11 +859,11 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Liaoning::Zhang Family Mansion": {
-    image: "/images/destinations/liaoning-zhang-family-mansion-corrected.png",
+    image: "/images/destinations/liaoning-zhang-family-mansion-clean.png",
     caption: { en: "Zhang Family Mansion, Shenyang", zh: "沈阳张氏帅府" },
     overview: {
-      en: "Zhang Family Mansion is tied to Republican-era northeast politics, Zhang Zuolin and Zhang Xueliang, courtyard houses and western-style buildings inside one compound.",
-      zh: "张氏帅府要围绕民国东北政治、张作霖与张学良、大院生活和中西合璧建筑来介绍。它的重点是历史人物、宅院格局和近代沈阳。"
+      en: "Zhang Family Mansion brings together Republican-era northeast politics, Zhang Zuolin and Zhang Xueliang, traditional courtyards and western-style buildings inside one compound.",
+      zh: "张氏帅府把民国东北政治、张作霖与张学良、大院生活和中西合璧建筑放在同一座院落里。这里适合看历史人物、宅院格局和近代沈阳的城市记忆。"
     },
     experience: {
       en: "A good visit should move between the traditional courtyards and western-style blocks, explaining how private residence, military power and city history overlap.",
@@ -871,11 +871,11 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Liaoning::Dalian Binhai Road": {
-    image: "/images/destinations/liaoning-dalian-binhai-road-corrected.png",
+    image: "/images/destinations/liaoning-dalian-binhai-road-clean.png",
     caption: { en: "Dalian Binhai Road coastline", zh: "大连滨海路海岸" },
     overview: {
-      en: "Dalian Binhai Road is a coastal route of cliffs, sea views, parks, bridges and urban seaside leisure, rather than a generic city skyline.",
-      zh: "大连滨海路要呈现海岸山崖、海湾视野、公园步道、桥梁和城市滨海休闲。它不是普通天际线，而是一条把山海与城市串起来的路。"
+      en: "Dalian Binhai Road follows cliffs, coves, seaside parks, bridges and open sea views, showing how Dalian's city life stays close to the coast.",
+      zh: "大连滨海路沿着海岸山崖、海湾视野、公园步道和跨海桥梁展开，能看到大连城市生活与山海岸线贴在一起的状态。"
     },
     experience: {
       en: "A good route selects manageable walking sections and viewpoints by weather, linking the coastline with Dalian's seaside identity.",
@@ -943,15 +943,15 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Liaoning::Jinzhou Guta Night Food": {
-    image: "/images/destinations/liaoning-jinzhou-guta-night-food-corrected.png",
+    image: "/images/destinations/liaoning-jinzhou-guta-night-food-clean.png",
     caption: { en: "Jinzhou Guta night market", zh: "锦州古塔夜市" },
     overview: {
-      en: "Jinzhou Guta Night Food should focus on barbecue, night-market stalls, local snacks and the evening street rhythm around Guta District.",
-      zh: "锦州古塔夜食要围绕锦州烧烤、夜市摊位、本地小吃和古塔区夜间街头节奏来写。主图应呈现真实夜市，而不是只有塔楼。"
+      en: "Jinzhou Guta Night Food is about barbecue smoke, night-market stalls, local snacks and the lively evening rhythm around Guta District.",
+      zh: "锦州古塔夜食适合从锦州烧烤、夜市摊位、本地小吃和古塔区夜间街头节奏进入。这里看的是东北小城夜晚怎么吃、怎么逛，烟火气比单独看塔楼更重要。"
     },
     experience: {
-      en: "A good tasting route should mix skewers, small dishes and local snack stops, explaining ordering habits and why Jinzhou barbecue is regionally famous.",
-      zh: "合适的路线可把烤串、小菜和本地小吃摊串起来，讲清点单方式和锦州烧烤在东北饮食中的辨识度。"
+      en: "A good tasting route can mix skewers, small dishes and local snack stops, explaining ordering habits and why Jinzhou barbecue is regionally famous.",
+      zh: "建议傍晚到夜间安排，先逛夜市摊位，再选本地烧烤店或小吃摊，留意蘸料、烤法和当地人点单节奏。"
     }
   },
   "Beijing::Forbidden City": {
