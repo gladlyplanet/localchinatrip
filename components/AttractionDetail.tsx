@@ -350,7 +350,77 @@ function Icon({ name }: { name: IconName }) {
   return <svg viewBox="0 0 24 24" className={common} fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M5 12c5.5 0 7-5 7-8 4.5 3 6.8 7.6 3.8 12.1C13.1 20.2 7.2 20 5 15.8V12Z" /><path d="M5 12c3.8.4 6.5 2.1 8 5" /></svg>;
 }
 
+function detailMeta(kind: RecommendationKind, en: string, zhCN: string, zhTW: string, season: string, pace: string, people: string, keywords: string, lead: string) {
+  const enCopy: Record<string, string> = {
+    "春秋舒适，夏季清凉，冬季需注意山路天气": "Spring and autumn are comfortable; summer is cool; winter needs road checks.",
+    "半日到一日，按寺院分区与交通安排": "Half day to one day, arranged by temple clusters and transport.",
+    "佛教文化、建筑与山地摄影爱好者": "Buddhist culture, architecture and mountain photography lovers.",
+    "五台山 · 寺院群 · 文殊信仰 · 朝台路线": "Wutai Mountain, monastery clusters, Manjusri belief, pilgrimage routes",
+    "五台山要把台怀镇寺院群、山地地形和朝拜传统放在一起看，而不是只看一座白塔或单个庙门。": "Read Wutai Mountain through Taihuai's temple clusters, mountain terrain and pilgrimage tradition, not only one white pagoda or temple gate.",
+    "四季皆可，春秋步行最舒适": "Year-round, with spring and autumn best for walking.",
+    "2-4小时，适合步行与短暂停留": "Two to four hours, best as a walk with short stops.",
+    "城市漫步、建筑与咖啡街区爱好者": "Urban walkers, architecture lovers and cafe-neighborhood travelers.",
+    "梧桐树 · 里弄 · 老洋房 · 社区街巷": "Plane trees, lane houses, old villas, neighborhood streets",
+    "原法租界要看街道尺度、梧桐树荫、里弄和老洋房如何组成上海日常，而不是把它当成一张区域地图。": "The Former French Concession should be read through street scale, plane-tree shade, lanes and villas that form everyday Shanghai, not as a district map.",
+    "春秋舒适，雨后和冬雪各有特色": "Spring and autumn are comfortable; after rain and winter snow each have character.",
+    "一日到两日，需按索道、步道和天气安排": "One to two days, planned around cable cars, trails and weather.",
+    "山水摄影、徒步与自然景观爱好者": "Landscape photographers, hikers and nature lovers.",
+    "黄山松 · 云海 · 花岗岩峰林 · 日出": "Huangshan pines, cloud seas, granite peaks, sunrise",
+    "黄山的重点是峰林、松树、云海和山路视角的变化，行程要跟天气和体力走，而不是只赶一个观景台。": "Huangshan is about peaks, pines, cloud seas and changing trail viewpoints; the route should follow weather and energy rather than chase one platform.",
+    "春秋舒适，法会和节庆期间人流更集中": "Spring and autumn are comfortable; Buddhist events and holidays are busier.",
+    "半日到一日，寺院与山路结合": "Half day to one day, combining temples and mountain paths.",
+    "佛教文化、山地建筑与慢旅行爱好者": "Buddhist culture, mountain architecture and slow-travel lovers.",
+    "九华山 · 寺院群 · 地藏信仰 · 山路": "Jiuhua Mountain, temples, Ksitigarbha belief, mountain paths",
+    "九华山要把寺院、山村、香火和地藏信仰连起来看，不是只拍一座牌坊或山门。": "Jiuhua Mountain should connect temples, mountain villages, incense life and Ksitigarbha belief, not only a gate or archway photo.",
+    "工作坊开放时段最佳，建议提前确认": "Best during workshop hours; confirm in advance.",
+    "1-3小时，重点看工序和讲解": "One to three hours, focused on process and explanation.",
+    "手工艺、书画与传统材料爱好者": "Craft, calligraphy, painting and traditional-material lovers.",
+    "宣纸 · 捞纸 · 晒纸 · 文房四宝": "Xuan paper, sheet forming, drying, scholar tools",
+    "宣城宣纸工坊要看青檀皮、稻草、浆料、捞纸和晒纸等工序，重点是纸如何被做出来。": "Xuancheng Xuan Paper Workshop should show bark, straw, pulp, sheet forming and drying so visitors understand how the paper is made.",
+    "春秋舒适，雨后云雾更有层次": "Spring and autumn are comfortable; mist after rain adds depth.",
+    "一日为宜，按索道与栈道体力安排": "One day works well, planned around cable cars, cliff paths and energy.",
+    "山水摄影、徒步和自然景观爱好者": "Landscape photographers, hikers and nature lovers.",
+    "三清山 · 奇峰 · 云雾 · 栈道": "Sanqing Mountain, peaks, mist, cliff paths",
+    "三清山要看奇峰、云雾、栈道和道教山水意象如何叠在一起，而不是用一张地图代替现场。": "Sanqing Mountain should be read through peaks, mist, paths and Daoist mountain imagery, not replaced by a map.",
+    "春秋舒适，雨雾天需预留弹性": "Spring and autumn are comfortable; keep flexibility for rain and mist.",
+    "一日，按索道、排队和天气安排": "One day, planned around cable cars, queues and weather.",
+    "山地摄影、自然和佛教文化爱好者": "Mountain photography, nature and Buddhist-culture lovers.",
+    "梵净山 · 红云金顶 · 云海 · 黔东山地": "Fanjing Mountain, Red Cloud Golden Summit, cloud seas, eastern Guizhou mountains",
+    "梵净山的核心是孤峰、红云金顶、云雾和黔东山地生态，行程要给天气变化留余地。": "Fanjing Mountain centers on isolated peaks, Red Cloud Golden Summit, mist and eastern Guizhou ecology; the plan needs weather flexibility.",
+    "秋冬较舒适，晴天适合海岛视野": "Autumn and winter are more comfortable; clear days suit island views.",
+    "半日到一日，可结合大佛、昂坪或大澳": "Half day to one day, combining the Buddha, Ngong Ping or Tai O.",
+    "家庭、海岛步行与香港文化爱好者": "Families, island walkers and Hong Kong culture lovers.",
+    "大屿山 · 天坛大佛 · 昂坪 · 大澳": "Lantau Island, Tian Tan Buddha, Ngong Ping, Tai O",
+    "大屿山要把天坛大佛、山地步道、离岛村落和海岸交通连起来看，不是一张行政地图。": "Lantau Island should connect the Tian Tan Buddha, hill trails, island villages and coastal transport, not an administrative map.",
+    "晴朗天气和海风舒适时最佳": "Best with clear weather and comfortable sea breeze.",
+    "半日游，可结合海岸、河口和小镇街区": "Half day, combining coast, river mouth and town streets.",
+    "家庭、海岸休闲与慢旅行爱好者": "Families, coastal leisure and slow-travel lovers.",
+    "博鳌 · 玉带滩 · 万泉河口 · 海岸小镇": "Boao, Jade Belt Beach, Wanquan River mouth, seaside town",
+    "博鳌要看玉带滩、河海交汇、海岸街区和小镇生活，不应只用论坛标志或会议楼代表。": "Boao should show Jade Belt Beach, river-sea scenery, seaside streets and town life, not only a forum logo or conference building."
+  };
+  const enFor = (value: string) => enCopy[value] ?? value;
+  return {
+    subtitle: simplePhrase(en, zhCN, zhTW),
+    season: simplePhrase(enFor(season), season, toTraditionalChinese(season)),
+    pace: simplePhrase(enFor(pace), pace, toTraditionalChinese(pace)),
+    people: simplePhrase(enFor(people), people, toTraditionalChinese(people)),
+    keywords: simplePhrase(enFor(keywords), keywords, toTraditionalChinese(keywords)),
+    lead: simplePhrase(enFor(lead), lead, toTraditionalChinese(lead)),
+    advice: sharedAdvice(kind),
+    guide: sharedGuide(kind)
+  };
+}
+
 const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: Phrase; people: Phrase; keywords: Phrase; lead: Phrase; advice: Array<{ icon: IconName; title: Phrase; body: Phrase }>; guide: Array<{ icon: IconName; title: Phrase; body: Phrase }> }> = {
+  "Wutai Mountain": detailMeta("spiritual", "Buddhist mountain · Monastery routes · Pilgrimage culture", "佛教名山 · 寺院路线 · 朝台文化", "佛教名山 · 寺院路線 · 朝台文化", "春秋舒适，夏季清凉，冬季需注意山路天气", "半日到一日，按寺院分区与交通安排", "佛教文化、建筑与山地摄影爱好者", "五台山 · 寺院群 · 文殊信仰 · 朝台路线", "五台山要把台怀镇寺院群、山地地形和朝拜传统放在一起看，而不是只看一座白塔或单个庙门。"),
+  "Former French Concession": detailMeta("city", "Plane-tree streets · Lane houses · Shanghai neighborhood life", "梧桐街道 · 里弄住宅 · 上海街区生活", "梧桐街道 · 里弄住宅 · 上海街區生活", "四季皆可，春秋步行最舒适", "2-4小时，适合步行与短暂停留", "城市漫步、建筑与咖啡街区爱好者", "梧桐树 · 里弄 · 老洋房 · 社区街巷", "原法租界要看街道尺度、梧桐树荫、里弄和老洋房如何组成上海日常，而不是把它当成一张区域地图。"),
+  "Huangshan": detailMeta("nature", "Granite peaks · Pines · Cloud seas", "奇松怪石 · 云海日出 · 山路节奏", "奇松怪石 · 雲海日出 · 山路節奏", "春秋舒适，雨后和冬雪各有特色", "一日到两日，需按索道、步道和天气安排", "山水摄影、徒步与自然景观爱好者", "黄山松 · 云海 · 花岗岩峰林 · 日出", "黄山的重点是峰林、松树、云海和山路视角的变化，行程要跟天气和体力走，而不是只赶一个观景台。"),
+  "Jiuhua Mountain": detailMeta("spiritual", "Buddhist temples · Mountain village routes · Anhui pilgrimage", "佛教寺院 · 山中聚落 · 安徽朝山路线", "佛教寺院 · 山中聚落 · 安徽朝山路線", "春秋舒适，法会和节庆期间人流更集中", "半日到一日，寺院与山路结合", "佛教文化、山地建筑与慢旅行爱好者", "九华山 · 寺院群 · 地藏信仰 · 山路", "九华山要把寺院、山村、香火和地藏信仰连起来看，不是只拍一座牌坊或山门。"),
+  "Xuancheng Xuan Paper Workshop": detailMeta("craft", "Xuan paper craft · Water and fibers · Scholar tools", "宣纸工艺 · 捞纸晒纸 · 文房传统", "宣紙工藝 · 撈紙曬紙 · 文房傳統", "工作坊开放时段最佳，建议提前确认", "1-3小时，重点看工序和讲解", "手工艺、书画与传统材料爱好者", "宣纸 · 捞纸 · 晒纸 · 文房四宝", "宣城宣纸工坊要看青檀皮、稻草、浆料、捞纸和晒纸等工序，重点是纸如何被做出来。"),
+  "Sanqing Mountain": detailMeta("nature", "Granite peaks · Daoist imagery · Mountain trails", "花岗岩峰林 · 道教意象 · 山间栈道", "花崗岩峰林 · 道教意象 · 山間棧道", "春秋舒适，雨后云雾更有层次", "一日为宜，按索道与栈道体力安排", "山水摄影、徒步和自然景观爱好者", "三清山 · 奇峰 · 云雾 · 栈道", "三清山要看奇峰、云雾、栈道和道教山水意象如何叠在一起，而不是用一张地图代替现场。"),
+  "Fanjing Mountain": detailMeta("nature", "Red Cloud Golden Summit · Biodiversity · Mountain weather", "红云金顶 · 黔东山地 · 生物多样性", "紅雲金頂 · 黔東山地 · 生物多樣性", "春秋舒适，雨雾天需预留弹性", "一日，按索道、排队和天气安排", "山地摄影、自然和佛教文化爱好者", "梵净山 · 红云金顶 · 云海 · 黔东山地", "梵净山的核心是孤峰、红云金顶、云雾和黔东山地生态，行程要给天气变化留余地。"),
+  "Lantau Island": detailMeta("nature", "Tian Tan Buddha · Villages · Island trails", "天坛大佛 · 离岛村落 · 海岛步道", "天壇大佛 · 離島村落 · 海島步道", "秋冬较舒适，晴天适合海岛视野", "半日到一日，可结合大佛、昂坪或大澳", "家庭、海岛步行与香港文化爱好者", "大屿山 · 天坛大佛 · 昂坪 · 大澳", "大屿山要把天坛大佛、山地步道、离岛村落和海岸交通连起来看，不是一张行政地图。"),
+  "Boao Town": detailMeta("coast", "Jade Belt Beach · River mouth · Qionghai seaside town", "玉带滩 · 河海交汇 · 琼海海岸小镇", "玉帶灘 · 河海交匯 · 瓊海海岸小鎮", "晴朗天气和海风舒适时最佳", "半日游，可结合海岸、河口和小镇街区", "家庭、海岸休闲与慢旅行爱好者", "博鳌 · 玉带滩 · 万泉河口 · 海岸小镇", "博鳌要看玉带滩、河海交汇、海岸街区和小镇生活，不应只用论坛标志或会议楼代表。"),
   "Fenyang Fenjiu Culture": {
     subtitle: phrase("Fenjiu heritage · Xinghua Village · Shanxi banquet customs", "汾酒传承 · 杏花村 · 山西宴席习俗", "汾酒傳承 · 杏花村 · 山西宴席習俗", "Patrimonio Fenjiu · Xinghua Village · banquetes de Shanxi", "Patrimônio Fenjiu · Xinghua Village · banquetes de Shanxi", "تراث فينجيو · قرية شينغهوا · عادات موائد شانشي"),
     season: phrase("Year-round, with indoor museum and workshop visits", "四季皆可，适合博物馆与老作坊参观", "四季皆可，適合博物館與老作坊參觀", "Todo el año, con museo y talleres históricos", "Todo o ano, com museu e oficinas antigas", "طوال العام مع زيارة المتحف والورش القديمة"),
