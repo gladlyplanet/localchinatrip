@@ -762,6 +762,222 @@ const destinationSpecificText: Record<string, MediaText> = {
       zh: "游览应放慢节奏，讲清舍利信仰、唐代历史和展陈逻辑。寺院空间和博物馆空间要分开看，也要连起来理解。"
     }
   },
+  "Heilongjiang::Harbin Ice and Snow World": {
+    image: "/images/destinations/optimized/wiki-heilongjiang-harbin-ice-and-snow-world.jpg",
+    caption: { en: "Harbin Ice and Snow World", zh: "哈尔滨冰雪大世界" },
+    overview: {
+      en: "Harbin Ice and Snow World is about large-scale ice architecture, colored night lighting, winter festival atmosphere and the northern city's ability to turn cold into public spectacle.",
+      zh: "哈尔滨冰雪大世界要从大型冰雕建筑、夜间灯光、冬季节庆和北方城市把严寒转化为公共景观的能力来理解。这里的核心不是普通灯会，而是冰、雪、光和城市冬季文化共同形成的现场。"
+    },
+    experience: {
+      en: "A good visit should be planned for evening light, warm clothing, shorter outdoor pacing and enough time to see the ice structures from both close details and wide views.",
+      zh: "合适的游览应安排在傍晚到夜间，注意保暖和停留节奏。路线要兼顾大型冰建筑的整体视角、细部纹理和灯光变化，而不是只匆忙拍几张夜景。"
+    }
+  },
+  "Heilongjiang::Saint Sophia Cathedral": {
+    image: "/images/destinations/optimized/wiki-heilongjiang-saint-sophia-cathedral.jpg",
+    caption: { en: "Saint Sophia Cathedral, Harbin", zh: "哈尔滨圣索菲亚教堂" },
+    overview: {
+      en: "Saint Sophia Cathedral should be read as Harbin's Russian-influenced urban memory: brick walls, onion domes, square life and the city's layered railway-and-trade history.",
+      zh: "圣索菲亚教堂要放在哈尔滨俄式建筑和近代城市记忆中来看。红砖墙、洋葱头穹顶、广场空间和周边街区共同说明哈尔滨如何因铁路、贸易和移民形成独特城市气质。"
+    },
+    experience: {
+      en: "A good visit should compare the exterior, square and surrounding streets, then connect the building with Harbin's wider Russian-influenced architecture.",
+      zh: "合适的游览应先看教堂外观、广场尺度和周边街区，再把它与中央大街等俄式建筑放在一起理解，避免只把它当成单一拍照背景。"
+    }
+  },
+  "Heilongjiang::Central Street Harbin": {
+    image: "/images/destinations/optimized/wiki-heilongjiang-central-street-harbin.jpg",
+    caption: { en: "Central Street, Harbin", zh: "哈尔滨中央大街" },
+    overview: {
+      en: "Central Street Harbin is a stone-paved pedestrian street shaped by Russian-style facades, old shops, winter food and the city's everyday commercial memory.",
+      zh: "哈尔滨中央大街要从石板路、俄式立面、老字号、冰棍与面包等日常饮食，以及冬季步行街氛围来写。它不是普通商业街，而是哈尔滨近代城市生活的可见轴线。"
+    },
+    experience: {
+      en: "A good walk should slow down for facade details, old shop signs, snacks and side streets, linking the street to Harbin's railway-era growth.",
+      zh: "合适的步行应慢看建筑立面、老店招牌、小吃和支路空间，把中央大街与哈尔滨铁路时代的城市发展联系起来，而不是只从街头走到街尾。"
+    }
+  },
+  "Heilongjiang::Wudalianchi": {
+    image: "/images/destinations/heilongjiang-wudalianchi-corrected.png",
+    caption: { en: "Wudalianchi volcanic landscape", zh: "五大连池火山地貌" },
+    overview: {
+      en: "Wudalianchi should be shown through volcanic landforms, lava fields, crater scenery, mineral springs and cold northern forests, not a railway-station exterior.",
+      zh: "五大连池要从火山地貌、熔岩台地、火山口、矿泉和北方森林景观来理解。这里不应使用火车站照片，页面主图应呈现真实的火山地质公园现场。"
+    },
+    experience: {
+      en: "A good visit should connect boardwalks, volcanic rocks, lake views and mineral-spring culture, with timing adjusted for weather and walking conditions.",
+      zh: "合适的游览应把栈道、火山石、湖面视角和矿泉文化串联起来，根据天气和步行条件安排停留。重点是看懂火山活动如何塑造这片地貌。"
+    }
+  },
+  "Heilongjiang::Beiji Village Mohe": {
+    image: "/images/destinations/heilongjiang-beiji-village-mohe-corrected.png",
+    caption: { en: "Beiji Village, Mohe", zh: "漠河北极村" },
+    overview: {
+      en: "Beiji Village near Mohe should be introduced through far-north village life, winter snow, borderland climate, wooden buildings and the idea of China's northernmost settlement.",
+      zh: "漠河北极村要从中国极北村落生活、冬季雪景、边境气候、木屋街巷和黑龙江沿岸的北方生活来写。单独一块界碑不够，主图更应呈现真实村落和极寒氛围。"
+    },
+    experience: {
+      en: "A good visit should leave time for village streets, winter light, local homes and Heilong River context, while managing cold-weather pacing.",
+      zh: "合适的游览应给村落街巷、冬季光线、本地人家和黑龙江边境背景留出时间，同时根据气温安排室内外节奏。重点是体会极北生活，而不是只在标志牌前打卡。"
+    }
+  },
+  "Heilongjiang::Zhalong Wetland": {
+    image: "/images/destinations/optimized/wiki-heilongjiang-zhalong-wetland.jpg",
+    caption: { en: "Zhalong Wetland cranes", zh: "扎龙湿地丹顶鹤" },
+    overview: {
+      en: "Zhalong Wetland is centered on reed marshes, shallow water, red-crowned cranes and northeast wetland conservation. The strongest scene is bird life inside a broad marsh landscape.",
+      zh: "扎龙湿地要围绕芦苇沼泽、浅水湿地、丹顶鹤和东北湿地保护来写。这里看的不是普通草地，而是鸟类栖息、湿地水系和保护区管理共同形成的生态现场。"
+    },
+    experience: {
+      en: "A good visit should respect viewing distances, choose suitable bird-watching times and explain habitat protection rather than only chasing close-up photos.",
+      zh: "合适的游览应尊重观鸟距离，选择适合的观鸟时段，讲清湿地栖息地和丹顶鹤保护，而不是只追求近距离拍照。"
+    }
+  },
+  "Heilongjiang::Yabuli Ski Area": {
+    image: "/images/destinations/optimized/wiki-heilongjiang-yabuli-ski-area.jpg",
+    caption: { en: "Yabuli Ski Area", zh: "亚布力滑雪区" },
+    overview: {
+      en: "Yabuli Ski Area should be introduced through snowy mountain slopes, ski runs, forested terrain and Heilongjiang winter sports culture.",
+      zh: "亚布力滑雪区要从雪道、山地坡面、森林背景和黑龙江冬季运动文化来理解。它的重点是雪场地形、运动体验和东北冬季旅游氛围。"
+    },
+    experience: {
+      en: "A good plan should match slope choice with skill level, weather and equipment time, leaving room for mountain views and warm breaks.",
+      zh: "合适的安排应根据水平选择雪道，预留装备、热身和休息时间，并结合天气看山地雪景，而不是只把它当作一张滑雪场照片。"
+    }
+  },
+  "Heilongjiang::Volga Manor": {
+    image: "/images/destinations/optimized/wiki-heilongjiang-volga-manor.jpg",
+    caption: { en: "Volga Manor Russian-style architecture", zh: "伏尔加庄园俄式建筑" },
+    overview: {
+      en: "Volga Manor is a Russian-style architectural park near Harbin, useful for understanding how the city presents Russian cultural memory through wooden buildings, churches and landscaped grounds.",
+      zh: "伏尔加庄园要从哈尔滨近郊的俄式建筑、木构空间、教堂意象和园区景观来写。它展示的是哈尔滨如何把俄式文化记忆转化为可游览的建筑场景。"
+    },
+    experience: {
+      en: "A good visit should focus on building forms, seasonal scenery and Harbin's Russian-influenced context, not treat the manor as a generic European backdrop.",
+      zh: "合适的游览应关注建筑形式、季节景观和哈尔滨俄式文化背景，而不是把庄园当成普通欧式拍照布景。"
+    }
+  },
+  "Heilongjiang::Daqing Petroleum Memory": {
+    image: "/images/destinations/heilongjiang-daqing-petroleum-memory-corrected.png",
+    caption: { en: "Daqing oilfield history exhibition", zh: "大庆油田历史展馆" },
+    overview: {
+      en: "Daqing Petroleum Memory should use real oilfield and museum scenes: Iron Man Wang Jinxi, workers' culture, production history and the role of Daqing in northeast China's industrial modernization.",
+      zh: "大庆石油记忆要用真实油田历史和展馆场景来呈现：铁人王进喜、工人文化、会战记忆、油田生产和东北工业现代化。它不应使用抽象油泵剪影或无关标志图。"
+    },
+    experience: {
+      en: "A good visit should connect exhibition halls, worker stories, oilfield technology and urban memory, so Daqing reads as an industrial-history site rather than a generic city stop.",
+      zh: "合适的游览应把展厅、工人故事、油田技术和城市记忆连起来，讲清大庆为什么在中国石油工业史上重要，而不是只看一个符号化的油泵图案。"
+    }
+  },
+  "Tianjin::Five Great Avenues": {
+    image: "/images/destinations/optimized/wiki-tianjin-five-great-avenues.jpg",
+    caption: { en: "Tianjin Five Great Avenues", zh: "天津五大道" },
+    overview: {
+      en: "Five Great Avenues should be read through treaty-port villas, tree-lined streets, former residences and the layered urban history of modern Tianjin.",
+      zh: "五大道要从租界时期别墅、树荫街道、名人旧居和天津近代城市层次来理解。这里的价值在于街区尺度和建筑类型，而不是单栋建筑的打卡。"
+    },
+    experience: {
+      en: "A good walk should compare different street sections, facade styles and old-residence stories while keeping a neighborhood pace.",
+      zh: "合适的步行应比较不同道路、立面风格和旧居故事，保持街区漫步节奏，把建筑和天津近代历史连起来。"
+    }
+  },
+  "Tianjin::Ancient Culture Street": {
+    image: "/images/destinations/tianjin-ancient-culture-street-corrected.png",
+    caption: { en: "Tianjin Ancient Culture Street", zh: "天津古文化街" },
+    overview: {
+      en: "Ancient Culture Street should show Tianjin's folk-culture shopping street: traditional shopfronts, temple-fair atmosphere, crafts, snacks and old-brand signs. It should not use unrelated ancient wall paintings.",
+      zh: "天津古文化街要呈现传统商铺、牌楼街巷、民间工艺、小吃、老字号和庙会气氛。这里不应使用无关古代壁画，而应使用天津街区实景。"
+    },
+    experience: {
+      en: "A good visit should connect Tianhou Temple context, folk crafts, small snacks and shop signs, while distinguishing living tourist commerce from older temple-fair memory.",
+      zh: "合适的游览应把天后宫背景、民间工艺、小吃和老店招牌串起来，也要讲清今天的旅游商业与早期庙会记忆之间的关系。"
+    }
+  },
+  "Tianjin::Haihe River Night Walk": {
+    image: "/images/destinations/optimized/wiki-tianjin-haihe-river-night-walk.jpg",
+    caption: { en: "Haihe River night view", zh: "海河夜景" },
+    overview: {
+      en: "Haihe River Night Walk is about Tianjin's bridges, riverside lighting, evening public life and the way the city reads from the water.",
+      zh: "海河夜游要从桥梁、河岸灯光、夜间散步和城市水岸视角来写。海河把天津的近代建筑、现代天际线和市民休闲连在同一条夜间动线上。"
+    },
+    experience: {
+      en: "A good route should choose bridge viewpoints, ferry or walking sections by light and weather, leaving time to compare both riverbanks.",
+      zh: "合适的路线应根据光线和天气选择桥梁视角、步行段或游船段，留出时间比较两岸建筑和灯光变化。"
+    }
+  },
+  "Tianjin::Porcelain House": {
+    image: "/images/destinations/optimized/wiki-tianjin-porcelain-house.jpg",
+    caption: { en: "Tianjin Porcelain House", zh: "天津瓷房子" },
+    overview: {
+      en: "Porcelain House is a highly decorative Tianjin building covered with porcelain fragments, vases and sculptural surfaces, best understood as eccentric urban reuse.",
+      zh: "瓷房子要从瓷片、瓷瓶、装饰性墙面和城市奇观式再利用来理解。它不是普通小洋楼，而是天津街区中极具辨识度的装饰建筑。"
+    },
+    experience: {
+      en: "A good visit should focus on material details, facade composition and its place in Tianjin's mixed architectural landscape.",
+      zh: "合适的游览应看材料细节、立面构图和它在天津多元建筑景观中的位置，而不是只远远拍一张外观。"
+    }
+  },
+  "Tianjin::Tianjin Eye Area": {
+    image: "/images/destinations/optimized/wiki-tianjin-tianjin-eye-area.jpg",
+    caption: { en: "Tianjin Eye and Haihe River", zh: "天津之眼与海河" },
+    overview: {
+      en: "The Tianjin Eye area combines the ferris wheel, Yongle Bridge, riverfront walking and modern skyline views along the Haihe River.",
+      zh: "天津之眼周边要从摩天轮、永乐桥、海河步道和现代城市天际线来写。这里的重点是桥上摩天轮与河岸公共空间如何组成天津夜间和白天的城市视角。"
+    },
+    experience: {
+      en: "A good visit should choose daytime or evening viewpoints, combine river walking with bridge views and avoid treating the ferris wheel as the only stop.",
+      zh: "合适的游览应根据白天或夜间光线选择观景点，把河岸步行和桥梁视角结合起来，而不是只把摩天轮当成唯一目的。"
+    }
+  },
+  "Tianjin::Yangliuqing New Year Painting": {
+    image: "/images/destinations/optimized/wiki-tianjin-yangliuqing-new-year-painting.jpg",
+    caption: { en: "Yangliuqing New Year painting", zh: "杨柳青年画" },
+    overview: {
+      en: "Yangliuqing New Year Painting is a Tianjin folk-art tradition built from woodblock printing, hand coloring, auspicious imagery and New Year customs.",
+      zh: "杨柳青年画要从木版套印、手工彩绘、吉祥图像和年俗生活来理解。它不是普通画作展示，而是天津民间审美、节庆祝福和家庭空间联系在一起的手艺。"
+    },
+    experience: {
+      en: "A good visit should explain printing blocks, pigments, motifs and the way images entered New Year home life.",
+      zh: "合适的体验应讲清版木、颜料、题材和年画如何进入春节家庭生活，必要时结合工坊或展示空间慢看细节。"
+    }
+  },
+  "Tianjin::Italian Style Area": {
+    image: "/images/destinations/tianjin-italian-style-area-corrected.png",
+    caption: { en: "Tianjin Italian Style Area", zh: "天津意式风情区" },
+    overview: {
+      en: "Italian Style Area should show Tianjin's former concession streets, European-style facades, cafes and leisure reuse. It should not use an unrelated black-and-white performance photo.",
+      zh: "意式风情区要呈现天津原意租界街区、欧式立面、广场、咖啡馆和城市休闲再利用。这里不应使用无关黑白演出照片，而应使用天津街区实景。"
+    },
+    experience: {
+      en: "A good walk should compare street layout, restored facades and today's dining or leisure uses with the concession-era background.",
+      zh: "合适的步行应比较街区格局、修复后的立面和今天餐饮休闲功能，再补充租界历史背景，而不是只把它当成欧式布景。"
+    }
+  },
+  "Tianjin::Tianjin Snack Trail": {
+    image: "/images/destinations/tianjin-snack-trail-corrected.png",
+    caption: { en: "Tianjin snacks", zh: "天津小吃" },
+    overview: {
+      en: "Tianjin Snack Trail should focus on local foods such as Goubuli buns, mahua, jianbing guozi and neighborhood breakfast habits, not a skyline or ferris-wheel view.",
+      zh: "天津小吃路线要围绕狗不理包子、麻花、煎饼果子、早点摊和本地吃法来写。页面主图应是小吃实景，而不是天津之眼或城市天际线。"
+    },
+    experience: {
+      en: "A good tasting route should mix old-name foods with everyday breakfast stops, explaining texture, ordering habits and northern street-food rhythm.",
+      zh: "合适的品尝路线应把老字号和日常早点摊结合起来，讲清口感、点单习惯和北方街头饮食节奏，而不是只列几个名菜名点。"
+    }
+  },
+  "Tianjin::Dule Temple Jizhou": {
+    image: "/images/destinations/optimized/wiki-tianjin-dule-temple-jizhou.jpg",
+    caption: { en: "Dule Temple, Jizhou", zh: "蓟州独乐寺" },
+    overview: {
+      en: "Dule Temple in Jizhou should be introduced through its ancient wooden architecture, Guanyin Pavilion, temple courtyards and the older cultural layer of Tianjin beyond the port city.",
+      zh: "蓟州独乐寺要从古代木构建筑、观音阁、寺院院落和天津北部更早的文化层来理解。它说明天津不只有近代港口城市，也有辽代以来的寺院建筑传统。"
+    },
+    experience: {
+      en: "A good visit should slow down for timber structure, hall proportions and Buddhist context, with enough time to compare it with urban Tianjin sites.",
+      zh: "合适的游览应慢看木构、殿阁比例和佛教背景，并把它与天津市区近代建筑区分开来理解。"
+    }
+  },
   "Sichuan::Chengdu Teahouses": {
     image: "/images/destinations/optimized/wiki-sichuan-chengdu-teahouses.jpg",
     caption: { en: "Chengdu open-air teahouse", zh: "成都露天茶馆" },
