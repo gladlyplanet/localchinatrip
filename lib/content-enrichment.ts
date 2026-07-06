@@ -2275,7 +2275,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Henan::Yellow River Scenic Area Zhengzhou": {
-    image: "/images/destinations/wiki-qinghai-guide-yellow-river.jpg",
+    image: "/images/destinations/henan-yellow-river-scenic-area-zhengzhou-corrected.png",
     caption: { en: "Yellow River Scenic Area, Zhengzhou", zh: "郑州黄河风景名胜区" },
     overview: {
       en: "Zhengzhou Yellow River Scenic Area is about the Yellow River at the edge of the Central Plains: river terraces, loess landforms, flood-control memory, the Yan and Huang Emperors sculpture and the cultural idea of the river as a Chinese origin landscape.",
@@ -2287,7 +2287,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Shandong::Jinan Springs": {
-    image: "/images/destinations/jinan-springs-baotu-corrected.png",
+    image: "/images/destinations/shandong-jinan-springs-corrected.png",
     caption: { en: "Baotu Spring and Jinan's spring water", zh: "趵突泉与济南泉水" },
     overview: {
       en: "Jinan Springs should be introduced through Baotu Spring, Black Tiger Spring, the old moat, Daming Lake and the spring-fed rhythm that gives Jinan its identity as the City of Springs.",
@@ -2299,7 +2299,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Zhejiang::Zhoushan Fishing Coast": {
-    image: "/images/about-me-boat-seafood.jpg",
+    image: "/images/destinations/zhejiang-zhoushan-fishing-coast-corrected.png",
     caption: { en: "Zhoushan island coast and fishing life", zh: "舟山海岛海岸与渔港生活" },
     overview: {
       en: "Zhoushan Fishing Coast should be read through island harbors, fishing boats, seafood markets, old port streets and East China Sea island life around places such as Shenjiamen and the outer islands.",
@@ -2497,11 +2497,11 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
     fallbackImage: kind.fallbackImage,
     caption: { en: place, zh: placeZh },
     overview: {
-      en: `${place} is recommended for ${item.focus}. ${enLead[item.kind]}`,
+      en: `${place} is best understood through ${item.focus}. ${enLead[item.kind]}`,
       zh: zhOverviewByKind[item.kind]
     },
     experience: {
-      en: `${enVisit[item.kind]} The goal is to make ${item.name} understandable through local context, not just to stop for a quick picture.`,
+      en: `${enVisit[item.kind]} The route should stay anchored in ${item.name}'s own setting and avoid treating it as a generic photo stop.`,
       zh: `${zhVisit[item.kind]}行程重点应扣住${placeZh}本身的${focusZh}，而不是套用同一段泛泛介绍。`
     }
   };
