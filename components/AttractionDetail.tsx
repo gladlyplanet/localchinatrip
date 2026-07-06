@@ -396,7 +396,17 @@ function detailMeta(kind: RecommendationKind, en: string, zhCN: string, zhTW: st
     "半日游，可结合海岸、河口和小镇街区": "Half day, combining coast, river mouth and town streets.",
     "家庭、海岸休闲与慢旅行爱好者": "Families, coastal leisure and slow-travel lovers.",
     "博鳌 · 玉带滩 · 万泉河口 · 海岸小镇": "Boao, Jade Belt Beach, Wanquan River mouth, seaside town",
-    "博鳌要看玉带滩、河海交汇、海岸街区和小镇生活，不应只用论坛标志或会议楼代表。": "Boao should show Jade Belt Beach, river-sea scenery, seaside streets and town life, not only a forum logo or conference building."
+    "博鳌要看玉带滩、河海交汇、海岸街区和小镇生活，不应只用论坛标志或会议楼代表。": "Boao should show Jade Belt Beach, river-sea scenery, seaside streets and town life, not only a forum logo or conference building.",
+    "春秋与晴朗天气最佳，雨雾天需看能见度和水位": "Spring, autumn and clear days are best; misty days need visibility and water-level checks.",
+    "半日到一日，按观景点、船只和车程安排": "Half day to one day, planned around viewpoints, boats and driving time.",
+    "山水摄影、长江文化和工程背景爱好者": "Landscape photographers, Yangtze culture and engineering-history lovers.",
+    "西陵峡 · 长江航道 · 峭壁 · 宜昌": "Xiling Gorge, Yangtze shipping route, cliffs, Yichang",
+    "湖北三峡段要看长江如何穿过峡谷、城镇和工程景观，不是东湖湖景或普通山谷。": "The Hubei Three Gorges section should show how the Yangtze passes through gorges, towns and engineering landscapes, not East Lake or a generic canyon.",
+    "清晨最合适，早餐高峰前后最有现场感": "Early morning is best, especially around the breakfast rush.",
+    "1-3小时，边走边吃，适合小店串联": "One to three hours, walking and tasting across small shops.",
+    "美食爱好者、城市日常和街巷文化爱好者": "Food lovers, urban daily-life observers and neighborhood-culture travelers.",
+    "热干面 · 豆皮 · 面窝 · 过早": "Hot dry noodles, doupi, mianwo, guozao breakfast culture",
+    "武汉过早要看早点铺、排队、端碗站吃和通勤节奏，不是城市天际线。": "Wuhan breakfast culture should show breakfast shops, queues, standing meals and commute rhythm, not the city skyline."
   };
   const enFor = (value: string) => enCopy[value] ?? value;
   return {
@@ -421,6 +431,8 @@ const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: 
   "Fanjing Mountain": detailMeta("nature", "Red Cloud Golden Summit · Biodiversity · Mountain weather", "红云金顶 · 黔东山地 · 生物多样性", "紅雲金頂 · 黔東山地 · 生物多樣性", "春秋舒适，雨雾天需预留弹性", "一日，按索道、排队和天气安排", "山地摄影、自然和佛教文化爱好者", "梵净山 · 红云金顶 · 云海 · 黔东山地", "梵净山的核心是孤峰、红云金顶、云雾和黔东山地生态，行程要给天气变化留余地。"),
   "Lantau Island": detailMeta("nature", "Tian Tan Buddha · Villages · Island trails", "天坛大佛 · 离岛村落 · 海岛步道", "天壇大佛 · 離島村落 · 海島步道", "秋冬较舒适，晴天适合海岛视野", "半日到一日，可结合大佛、昂坪或大澳", "家庭、海岛步行与香港文化爱好者", "大屿山 · 天坛大佛 · 昂坪 · 大澳", "大屿山要把天坛大佛、山地步道、离岛村落和海岸交通连起来看，不是一张行政地图。"),
   "Boao Town": detailMeta("coast", "Jade Belt Beach · River mouth · Qionghai seaside town", "玉带滩 · 河海交汇 · 琼海海岸小镇", "玉帶灘 · 河海交匯 · 瓊海海岸小鎮", "晴朗天气和海风舒适时最佳", "半日游，可结合海岸、河口和小镇街区", "家庭、海岸休闲与慢旅行爱好者", "博鳌 · 玉带滩 · 万泉河口 · 海岸小镇", "博鳌要看玉带滩、河海交汇、海岸街区和小镇生活，不应只用论坛标志或会议楼代表。"),
+  "Three Gorges Hubei Section": detailMeta("nature", "Xiling Gorge · Yangtze cliffs · River towns", "西陵峡 · 长江峭壁 · 江边城镇", "西陵峽 · 長江峭壁 · 江邊城鎮", "春秋与晴朗天气最佳，雨雾天需看能见度和水位", "半日到一日，按观景点、船只和车程安排", "山水摄影、长江文化和工程背景爱好者", "西陵峡 · 长江航道 · 峭壁 · 宜昌", "湖北三峡段要看长江如何穿过峡谷、城镇和工程景观，不是东湖湖景或普通山谷。"),
+  "Wuhan Breakfast Streets": detailMeta("food", "Hot dry noodles · Doupi · Morning street life", "热干面 · 豆皮 · 面窝 · 过早文化", "熱乾麵 · 豆皮 · 麵窩 · 過早文化", "清晨最合适，早餐高峰前后最有现场感", "1-3小时，边走边吃，适合小店串联", "美食爱好者、城市日常和街巷文化爱好者", "热干面 · 豆皮 · 面窝 · 过早", "武汉过早要看早点铺、排队、端碗站吃和通勤节奏，不是城市天际线。"),
   "Fenyang Fenjiu Culture": {
     subtitle: phrase("Fenjiu heritage · Xinghua Village · Shanxi banquet customs", "汾酒传承 · 杏花村 · 山西宴席习俗", "汾酒傳承 · 杏花村 · 山西宴席習俗", "Patrimonio Fenjiu · Xinghua Village · banquetes de Shanxi", "Patrimônio Fenjiu · Xinghua Village · banquetes de Shanxi", "تراث فينجيو · قرية شينغهوا · عادات موائد شانشي"),
     season: phrase("Year-round, with indoor museum and workshop visits", "四季皆可，适合博物馆与老作坊参观", "四季皆可，適合博物館與老作坊參觀", "Todo el año, con museo y talleres históricos", "Todo o ano, com museu e oficinas antigas", "طوال العام مع زيارة المتحف والورش القديمة"),
