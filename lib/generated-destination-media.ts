@@ -122,7 +122,7 @@ export const destinationImages: Record<string, string> = {
   "Hubei::Enshi Grand Canyon": "/images/destinations/optimized/wiki-hubei-enshi-grand-canyon.jpg",
   "Hubei::Hubei Provincial Museum": "/images/destinations/optimized/wiki-hubei-hubei-provincial-museum.jpg",
   "Hubei::Jingzhou Ancient City": "/images/destinations/optimized/wiki-hubei-jingzhou-ancient-city.jpg",
-  "Hubei::Shennongjia Forest": "/images/destinations/hubei-shennongjia-forest-clean.png",
+  "Hubei::Shennongjia Forest": "/images/destinations/hubei-shennongjia-virgin-forest-real.png",
   "Hubei::Three Gorges Hubei Section": "/images/destinations/hubei-three-gorges-xiling-real.png",
   "Hubei::Wudang Mountains": "/images/destinations/optimized/wiki-hubei-wudang-mountains.jpg",
   "Hubei::Wuhan Breakfast Streets": "/images/destinations/hubei-wuhan-breakfast-streets-real.jpg",

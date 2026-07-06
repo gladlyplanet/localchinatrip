@@ -2715,6 +2715,21 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
   }
 };
 
+const priorityDestinationSpecificText: Record<string, MediaText> = {
+  "Hubei::Shennongjia Forest": {
+    image: "/images/destinations/hubei-shennongjia-virgin-forest-real.png",
+    caption: { en: "Shennongjia primeval forest", zh: "神农架原始森林" },
+    overview: {
+      en: "Shennongjia Forest should be understood through primeval forest, Shennong Peak, Dajiuhu wetlands, rare wildlife and changing mountain weather. Its identity is central China's protected mountain ecosystem, not a village street or ordinary road.",
+      zh: "神农架森林要从原始林区、神农顶、大九湖、高山湿地、珍稀动植物和多变山地气候来理解。这里的重点是华中山地保护地生态，不是村镇街道或普通山路。"
+    },
+    experience: {
+      en: "A good route should plan Shennong Peak, Dajiuhu or Golden Monkey Ridge around weather, altitude and park transport, with context on forest vertical zones, snub-nosed monkey protection and alpine wetland ecology.",
+      zh: "合适的游览应根据天气、海拔和景区交通安排神农顶、大九湖或金猴岭等点位，讲清森林垂直带谱、金丝猴保护和高山湿地生态。"
+    }
+  }
+};
+
 function localized(lang: Lang, value: Localized) {
   if (lang === "zh-CN") return value.zh;
   if (lang === "zh-TW") return toTraditionalChinese(value.zh);
@@ -2726,7 +2741,7 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   const placeZh = item.nameZh || item.name;
   const kind = genericByKind[item.kind];
   const provinceFallback = provinceName ? provinceFallbackImages[provinceName] : undefined;
-  const destinationSpecific = provinceName ? auditedDestinationSpecificText[`${provinceName}::${item.name}`] ?? destinationSpecificText[`${provinceName}::${item.name}`] : undefined;
+  const destinationSpecific = provinceName ? priorityDestinationSpecificText[`${provinceName}::${item.name}`] ?? auditedDestinationSpecificText[`${provinceName}::${item.name}`] ?? destinationSpecificText[`${provinceName}::${item.name}`] : undefined;
   if (destinationSpecific) return destinationSpecific;
   const exactImage = safeDestinationImage(provinceName, item);
   const enLead: Record<RecommendationKind, string> = {
