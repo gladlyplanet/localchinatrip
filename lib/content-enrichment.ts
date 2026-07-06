@@ -2437,6 +2437,30 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
       zh: "合适的路线应比较街道尺度、建筑细节、咖啡小店、居民弄堂和安静支路，再补充上海近代城市背景。"
     }
   },
+  "Hubei::Three Gorges Hubei Section": {
+    image: "/images/destinations/hubei-three-gorges-xiling-real.png",
+    caption: { en: "Xiling Gorge and the Hubei Three Gorges section", zh: "西陵峡与湖北三峡段" },
+    overview: {
+      en: "The Hubei section of the Three Gorges should be read through Xiling Gorge, Yangtze River bends, cliff walls, shipping lanes, bridge views and the river towns around Yichang. Its character is a working river gorge, not a lake park or a generic mountain canyon.",
+      zh: "湖北三峡段要围绕西陵峡、长江弯道、两岸峭壁、船运航道、桥梁视角和宜昌周边江边城镇来理解。它的重点是真实的长江峡谷与航运景观，不是东湖式湖景，也不是普通山谷。"
+    },
+    experience: {
+      en: "A good route should plan viewpoints by river visibility, boat movement and weather, then connect gorge scenery with Three Gorges Dam context, old river towns and the changing relationship between water level and cliffs.",
+      zh: "合适的游览应根据能见度、船只动态和天气安排观景点，再把峡谷景观、三峡大坝背景、老江镇和水位变化对峭壁景观的影响串起来讲。"
+    }
+  },
+  "Hubei::Wuhan Breakfast Streets": {
+    image: "/images/destinations/hubei-wuhan-breakfast-streets-real.jpg",
+    caption: { en: "Wuhan breakfast table", zh: "武汉过早小吃" },
+    overview: {
+      en: "Wuhan breakfast streets are about re gan mian, doupi, mianwo, rice wine, steamed snacks and the speed of eating before work. The page should show breakfast food and neighborhood stalls, not a skyline or river view.",
+      zh: "武汉过早街区要从热干面、豆皮、面窝、米酒、汤包和上班前快速吃早饭的城市节奏来理解。这里看的不是天际线或江景，而是早点铺、排队、端碗站吃和街巷里的烟火气。"
+    },
+    experience: {
+      en: "A good visit should start early, compare several classic snacks in one neighborhood, explain ordering rhythm and local names, and leave time to see how breakfast connects markets, commuting and daily Wuhan life.",
+      zh: "合适的路线应清早开始，在同一片街区比较几种经典早点，讲清点单节奏和本地叫法，也要看过早如何连接菜场、通勤和武汉人的日常生活。"
+    }
+  },
   "Anhui::Huangshan": {
     image: "/images/destinations/anhui-huangshan-clean.png",
     caption: { en: "Huangshan granite peaks", zh: "黄山峰林与松" },
