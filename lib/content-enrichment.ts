@@ -1062,6 +1062,438 @@ const destinationSpecificText: Record<string, MediaText> = {
       zh: "合适的体验应把武术展示、训练场馆和地方历史联系起来，说明武术如何成为沧州城市身份的一部分。"
     }
   },
+  "Xinjiang::Kashgar Old City": {
+    image: "/images/destinations/optimized/wiki-xinjiang-kashgar-old-city.jpg",
+    caption: { en: "Kashgar Old City lanes and bazaar life", zh: "喀什古城街巷与巴扎生活" },
+    overview: {
+      en: "Kashgar Old City is best read through Uyghur lanes, earthen homes, workshops, tea houses and the Sunday-bazaar rhythm that still shapes the old Silk Road city.",
+      zh: "喀什古城要从维吾尔族街巷、土黄色民居、手工作坊、茶馆和巴扎节奏来理解。它的吸引力在于仍然活着的丝路老城生活。"
+    },
+    experience: {
+      en: "A good visit should walk slowly through alleys, respect residential space, and connect crafts, food and mosque-area street life instead of only taking gate photos.",
+      zh: "游览应慢走街巷，尊重居民生活，把手工艺、饮食、清真寺周边街区和巴扎动线连起来看。"
+    }
+  },
+  "Xinjiang::Tianshan Tianchi": {
+    image: "/images/destinations/xinjiang-tianshan-tianchi-corrected.png",
+    caption: { en: "Tianshan Tianchi below Bogda Peak", zh: "博格达峰下的天山天池" },
+    overview: {
+      en: "Tianshan Tianchi is an alpine lake below Bogda Peak, framed by spruce forests, mountain slopes and changing highland weather.",
+      zh: "天山天池的核心是博格达峰下的高山湖泊、云杉林、山坡层次和高山天气变化。页面应呈现湖面实景，而不是红色峡谷。"
+    },
+    experience: {
+      en: "A good route should leave time for lake viewpoints, short forest walks and weather changes, with realistic expectations about crowds and mountain visibility.",
+      zh: "行程要留出湖边观景、林间短走和等待天气变化的时间，同时对人流和能见度有预期。"
+    }
+  },
+  "Xinjiang::Turpan Grape Valley": {
+    image: "/images/destinations/optimized/wiki-xinjiang-turpan-grape-valley.jpg",
+    caption: { en: "Turpan oasis vineyards", zh: "吐鲁番绿洲葡萄沟" },
+    overview: {
+      en: "Turpan Grape Valley is an oasis landscape of grape trellises, drying houses, courtyard shade and karez irrigation culture in one of China's hottest basins.",
+      zh: "吐鲁番葡萄沟要从绿洲葡萄架、晾房、庭院阴影和坎儿井灌溉文化来介绍。它体现的是干旱盆地里的生活智慧。"
+    },
+    experience: {
+      en: "A good visit should connect vineyard shade, drying rooms, local fruit tasting and water-use history, not treat it as a simple garden stop.",
+      zh: "游览应把葡萄架、晾房、瓜果品尝和水利历史结合起来，而不是只把它当成普通园林。"
+    }
+  },
+  "Xinjiang::Nalati Grassland": {
+    image: "/images/destinations/optimized/wiki-xinjiang-nalati-grassland.jpg",
+    caption: { en: "Nalati grassland and Kazakh pasture", zh: "那拉提草原与哈萨克牧场" },
+    overview: {
+      en: "Nalati Grassland belongs to the Ili valley landscape, where rolling meadows, spruce slopes, herds and Kazakh pastoral life define the experience.",
+      zh: "那拉提草原要从伊犁河谷草甸、云杉山坡、牧群和哈萨克牧区生活来理解。它的层次来自草原与山地相接。"
+    },
+    experience: {
+      en: "A good route should choose viewing platforms and meadow walks by season, keeping time for weather shifts and local pastoral context.",
+      zh: "行程可根据季节选择观景台和草甸步行，留意天气变化，并补充牧区生活背景。"
+    }
+  },
+  "Xinjiang::Karakoram Highway": {
+    image: "/images/destinations/xinjiang-karakoram-highway-corrected.png",
+    caption: { en: "Karakoram Highway in the Pamirs", zh: "帕米尔高原上的喀喇昆仑公路" },
+    overview: {
+      en: "Karakoram Highway should show the Pamir road itself: snow peaks, high passes, dry valleys, border towns and the feeling of crossing a huge plateau.",
+      zh: "喀喇昆仑公路要呈现帕米尔高原道路本身：雪峰、山口、干旱河谷、边境城镇和高原穿行感。它不能用路线地图替代。"
+    },
+    experience: {
+      en: "A good drive should plan for altitude, checkpoints, road time and photo stops, reading the landscape through distance rather than quick sightseeing.",
+      zh: "行程要考虑海拔、检查站、车程和停车点，用路上的距离感理解帕米尔景观。"
+    }
+  },
+  "Xinjiang::Kanas Lake": {
+    image: "/images/destinations/optimized/wiki-xinjiang-kanas-lake.jpg",
+    caption: { en: "Kanas Lake and Altai forests", zh: "喀纳斯湖与阿尔泰森林" },
+    overview: {
+      en: "Kanas Lake is defined by glacier-fed water, Altai forests, Tuva village culture and strong northern seasonal color.",
+      zh: "喀纳斯湖要从冰川补给湖水、阿尔泰森林、图瓦村落和北疆季节色彩来理解。水色与林色是它的辨识度。"
+    },
+    experience: {
+      en: "A good visit should balance lake viewpoints, village stops and shuttle timing, choosing routes by season and weather.",
+      zh: "游览应平衡湖景观台、村落停留和区间车时间，根据季节与天气安排路线。"
+    }
+  },
+  "Xinjiang::Hotan Bazaar": {
+    image: "/images/destinations/xinjiang-hotan-bazaar-corrected.png",
+    caption: { en: "Hotan bazaar food and jade trade", zh: "和田巴扎食物与玉石交易" },
+    overview: {
+      en: "Hotan Bazaar should be about southern Xinjiang market routines: naan, fruit, spices, carpets, jade trade and the dense everyday rhythm of Hotan streets.",
+      zh: "和田巴扎要围绕南疆市场日常来写：馕、瓜果、香料、地毯、玉石交易和和田街头的生活节奏。主图应是市场实景。"
+    },
+    experience: {
+      en: "A good visit should start with food and craft sections, explain bargaining etiquette and keep the experience grounded in local daily shopping.",
+      zh: "适合从食物和手工艺摊位看起，讲清议价习惯和本地采购节奏。"
+    }
+  },
+  "Xinjiang::Kuqa Grand Canyon": {
+    image: "/images/destination-kuqa-grand-canyon-real.jpg",
+    caption: { en: "Kuqa red sandstone canyon", zh: "库车红色砂岩峡谷" },
+    overview: {
+      en: "Kuqa Grand Canyon is a dry-land canyon of red sandstone walls shaped by wind, floodwater and southern Xinjiang light.",
+      zh: "库车大峡谷要从红色砂岩、狭窄谷壁、风蚀水蚀和南疆干燥光线来理解。它的震撼来自岩壁尺度和色彩。"
+    },
+    experience: {
+      en: "A good visit should consider heat, sun, walking distance and light direction, leaving time to notice texture rather than only rushing to the deepest section.",
+      zh: "游览要考虑高温、日晒、步行距离和光线方向，留时间看岩层纹理。"
+    }
+  },
+  "Xinjiang::Yining Kazanqi": {
+    image: "/images/destinations/xinjiang-yining-kazanqi-corrected.png",
+    caption: { en: "Yining Kazanqi colorful homes", zh: "伊宁喀赞其彩色民居" },
+    overview: {
+      en: "Yining Kazanqi is a living Uyghur neighborhood of colorful homes, courtyards, small shops, food stops and Ili multicultural street life.",
+      zh: "伊宁喀赞其要呈现彩色民居、庭院、小店、饮食和伊犁多民族街区生活。它不应只用清真寺夜景概括。"
+    },
+    experience: {
+      en: "A good walk should stay respectful in residential lanes, connect architecture with food and local conversation, and avoid over-staged photo stops.",
+      zh: "游览应尊重居住街巷，把民居色彩、饮食和本地交流连起来看，避免只做摆拍。"
+    }
+  },
+  "Tibet::Potala Palace": {
+    image: "/images/destinations/optimized/wiki-tibet-potala-palace.jpg",
+    caption: { en: "Potala Palace above Lhasa", zh: "拉萨布达拉宫" },
+    overview: {
+      en: "Potala Palace should be read as palace-fortress architecture, Buddhist history, old Lhasa political memory and the landmark skyline of the plateau city.",
+      zh: "布达拉宫要从宫堡建筑、藏传佛教历史、旧拉萨政治记忆和高原城市天际线来理解。"
+    },
+    experience: {
+      en: "A good visit should prepare ticket timing, altitude pacing and historical context before entering the palace route.",
+      zh: "参观要提前安排门票与高原节奏，进入前先补充历史背景，避免匆忙走完。"
+    }
+  },
+  "Tibet::Jokhang Temple": {
+    image: "/images/destinations/optimized/wiki-tibet-jokhang-temple.jpg",
+    caption: { en: "Jokhang Temple and Barkhor pilgrims", zh: "大昭寺与八廓朝圣" },
+    overview: {
+      en: "Jokhang Temple is the devotional center of old Lhasa, where pilgrimage circuits, incense, temple halls and Barkhor street life belong together.",
+      zh: "大昭寺是拉萨老城信仰生活的中心，转经路线、香火、殿堂和八廓街日常应一起理解。"
+    },
+    experience: {
+      en: "A respectful visit should explain pilgrimage etiquette, move slowly and observe Barkhor life without interrupting worship.",
+      zh: "参观应讲清朝圣礼仪，慢走并尊重礼佛秩序，不打扰信众。"
+    }
+  },
+  "Tibet::Yamdrok Lake": {
+    image: "/images/destinations/optimized/wiki-tibet-yamdrok-lake.jpg",
+    caption: { en: "Yamdrok Lake highland water", zh: "羊卓雍措高原湖水" },
+    overview: {
+      en: "Yamdrok Lake is a turquoise highland lake set among pasture, mountain roads and wide plateau light.",
+      zh: "羊卓雍措的重点是高原蓝色湖水、牧场、山路和开阔光线。湖岸曲线与山体共同形成景观。"
+    },
+    experience: {
+      en: "A good route should plan viewpoints, wind and altitude, avoiding rushed stops that miss the lake's scale.",
+      zh: "行程要考虑观景点、风和海拔，不要只短暂停车拍照而错过湖面尺度。"
+    }
+  },
+  "Tibet::Namtso Lake": {
+    image: "/images/destinations/optimized/wiki-tibet-namtso-lake.jpg",
+    caption: { en: "Namtso Lake sky and prayer flags", zh: "纳木措湖天光与经幡" },
+    overview: {
+      en: "Namtso Lake is defined by vast sky, prayer flags, nomadic land, cold wind and high-altitude lake scenery.",
+      zh: "纳木措要从辽阔天空、经幡、牧区、寒风和高海拔湖景来介绍。它的体验很大程度来自空间感。"
+    },
+    experience: {
+      en: "A good visit needs altitude awareness, warm clothing and time for lakeside walking when weather allows.",
+      zh: "游览要注意海拔反应和保暖，天气允许时留出湖边步行时间。"
+    }
+  },
+  "Tibet::Ganden Monastery": {
+    image: "/images/destinations/optimized/wiki-tibet-ganden-monastery.jpg",
+    caption: { en: "Ganden Monastery on the mountain slope", zh: "山坡上的甘丹寺" },
+    overview: {
+      en: "Ganden Monastery sits on a mountain slope above the Lhasa valley, connecting Gelug history, monastic courtyards and broad valley views.",
+      zh: "甘丹寺位于拉萨河谷上方山坡，要从格鲁派历史、寺院院落和开阔河谷视野来理解。"
+    },
+    experience: {
+      en: "A good visit should move gently at altitude, explain monastic history and allow time for the kora route or viewpoints.",
+      zh: "参观要放慢高原节奏，讲清寺院历史，并给转山路线或观景点留时间。"
+    }
+  },
+  "Tibet::Tashilhunpo Monastery": {
+    image: "/images/destinations/optimized/wiki-tibet-tashilhunpo-monastery.jpg",
+    caption: { en: "Tashilhunpo Monastery, Shigatse", zh: "日喀则扎什伦布寺" },
+    overview: {
+      en: "Tashilhunpo Monastery is central to Shigatse, with large monastic halls, golden roofs, courtyards and Gelug religious history.",
+      zh: "扎什伦布寺是日喀则的重要寺院，殿堂、金顶、院落和格鲁派宗教历史构成主要看点。"
+    },
+    experience: {
+      en: "A good visit should explain hall sequence and religious etiquette, keeping enough time for courtyards and surrounding old-town life.",
+      zh: "参观应讲清殿堂顺序和宗教礼仪，同时留意寺院周边老城生活。"
+    }
+  },
+  "Tibet::Basum Lake": {
+    image: "/images/destinations/optimized/wiki-tibet-basum-lake.jpg",
+    caption: { en: "Basum Lake forests and monastery island", zh: "巴松措森林与湖心岛" },
+    overview: {
+      en: "Basum Lake combines green water, forested slopes, monastery island scenery and the gentler landscape of eastern Tibet.",
+      zh: "巴松措要从绿色湖水、森林山坡、湖心岛寺院和藏东较湿润的山地景观来理解。"
+    },
+    experience: {
+      en: "A good route should allow time for lake walks, island views and weather changes rather than only a quick platform stop.",
+      zh: "游览应留时间走湖边、看湖心岛和观察天气变化，而不是只停观景台。"
+    }
+  },
+  "Tibet::Yarlung Valley": {
+    image: "/images/destinations/optimized/wiki-tibet-yarlung-valley.jpg",
+    caption: { en: "Yarlung Valley castles and river landscape", zh: "雅鲁藏布江谷地与古堡景观" },
+    overview: {
+      en: "Yarlung Valley is tied to early Tibetan history, river terraces, fortress-like sites and the cultural origins around the valley.",
+      zh: "雅砻河谷要从早期吐蕃历史、河谷台地、堡垒式遗址和文化源流来介绍。"
+    },
+    experience: {
+      en: "A good visit should connect viewpoints with historical explanation, reading the valley as a cultural landscape rather than only scenery.",
+      zh: "行程要把观景点和历史讲解结合起来，把河谷当成文化景观来理解。"
+    }
+  },
+  "Tibet::Lhasa Barkhor": {
+    image: "/images/destinations/optimized/wiki-tibet-lhasa-barkhor.jpg",
+    caption: { en: "Barkhor street life in old Lhasa", zh: "拉萨八廓街生活" },
+    overview: {
+      en: "Lhasa Barkhor is a devotional and commercial circuit around Jokhang Temple, mixing pilgrims, shops, tea houses and old-city lanes.",
+      zh: "八廓街是围绕大昭寺的转经与商业街巷，信众、商铺、茶馆和老城生活交织在一起。"
+    },
+    experience: {
+      en: "A good walk should follow local etiquette, move with the clockwise flow and leave time for tea-house or side-lane observations.",
+      zh: "游览要遵守转经方向和礼仪，留时间观察茶馆与支巷生活。"
+    }
+  },
+  "Qinghai::Qinghai Lake": {
+    image: "/images/destinations/qinghai-qinghai-lake-corrected.png",
+    caption: { en: "Qinghai Lake shoreline and plateau light", zh: "青海湖岸线与高原光线" },
+    overview: {
+      en: "Qinghai Lake should show real lakeshore scenery: blue water, grassland, distant mountains, birds and seasonal rapeseed fields along the plateau basin.",
+      zh: "青海湖要呈现真实湖岸：蓝色湖水、草原、远山、候鸟和季节性油菜花。它不能使用卫星图替代实景。"
+    },
+    experience: {
+      en: "A good visit should choose shoreline sections by season and light, with care for protected areas and weather changes.",
+      zh: "行程要按季节和光线选择湖岸段，注意保护区规定和高原天气变化。"
+    }
+  },
+  "Qinghai::Chaka Salt Lake": {
+    image: "/images/destinations/optimized/wiki-qinghai-chaka-salt-lake.jpg",
+    caption: { en: "Chaka Salt Lake reflections", zh: "茶卡盐湖倒影" },
+    overview: {
+      en: "Chaka Salt Lake is known for salt flats, shallow-water reflections, rail tracks and the big-sky visual effect of the Qaidam Basin edge.",
+      zh: "茶卡盐湖要从盐滩、浅水倒影、小火车轨道和柴达木边缘的大天空视觉来理解。"
+    },
+    experience: {
+      en: "A good visit depends on weather, wind and water level, with realistic expectations when reflections are weak.",
+      zh: "游览效果取决于天气、风和水位，倒影不稳定，要有合理预期。"
+    }
+  },
+  "Qinghai::Kumbum Monastery": {
+    image: "/images/destinations/optimized/wiki-qinghai-kumbum-monastery.jpg",
+    caption: { en: "Kumbum Monastery, Qinghai", zh: "青海塔尔寺" },
+    overview: {
+      en: "Kumbum Monastery is a major Tibetan Buddhist monastery near Xining, known for halls, butter sculpture, murals, thangka traditions and monastic courtyards.",
+      zh: "塔尔寺是西宁附近重要藏传佛教寺院，殿堂、酥油花、壁画、唐卡传统和院落空间是核心。"
+    },
+    experience: {
+      en: "A respectful visit should explain religious etiquette and craft traditions while keeping a quiet pace through halls and courtyards.",
+      zh: "参观应讲清宗教礼仪和工艺传统，在殿堂与院落中保持安静节奏。"
+    }
+  },
+  "Qinghai::Tongren Thangka Studios": {
+    image: "/images/destinations/optimized/wiki-qinghai-tongren-thangka-studios.jpg",
+    caption: { en: "Tongren thangka studios", zh: "同仁唐卡工作室" },
+    overview: {
+      en: "Tongren Thangka Studios are about Regong art, pigments, line drawing, apprenticeship and the patient craft behind Tibetan Buddhist images.",
+      zh: "同仁唐卡工作室要围绕热贡艺术、矿物颜料、线描、师徒传承和藏传佛教图像工艺来介绍。"
+    },
+    experience: {
+      en: "A good visit should focus on process and respect studio rules, asking before photographing artists or sacred images.",
+      zh: "体验应关注制作过程并尊重工作室规则，拍摄艺人或宗教图像前要先询问。"
+    }
+  },
+  "Qinghai::Guide Yellow River": {
+    image: "/images/destinations/optimized/wiki-qinghai-guide-yellow-river.jpg",
+    caption: { en: "Guide Yellow River clear-water valley", zh: "贵德黄河清水河谷" },
+    overview: {
+      en: "Guide Yellow River is known for clearer Yellow River water, Danxia-like banks, orchards and a gentler valley landscape near the plateau edge.",
+      zh: "贵德黄河要从较清澈的河水、丹霞色河岸、果园和高原边缘较温和的河谷景观来理解。"
+    },
+    experience: {
+      en: "A good route should combine river viewpoints, town stops and seasonal light instead of treating it as any ordinary river bend.",
+      zh: "游览可把河岸观景、县城停留和季节光线结合起来，而不是只看普通河湾。"
+    }
+  },
+  "Qinghai::Menyuan Rapeseed Fields": {
+    image: "/images/destinations/qinghai-menyuan-rapeseed-fields-corrected.png",
+    caption: { en: "Menyuan rapeseed fields below mountains", zh: "门源山下油菜花田" },
+    overview: {
+      en: "Menyuan Rapeseed Fields should show Qinghai's highland flower fields under mountains, with broad yellow fields, village belts and summer plateau light.",
+      zh: "门源油菜花田要呈现青海高原山脚下的大面积黄色花田、村庄带和夏季高原光线，不能用江西婺源图片替代。"
+    },
+    experience: {
+      en: "A good visit should follow bloom season and viewpoint conditions, leaving time for wide landscape views rather than only close flower photos.",
+      zh: "行程要看花期和观景台条件，重点看大尺度田园与山地背景。"
+    }
+  },
+  "Qinghai::Qilian Grassland": {
+    image: "/images/destinations/optimized/wiki-qinghai-qilian-grassland.jpg",
+    caption: { en: "Qilian grassland and snow peaks", zh: "祁连草原与雪山" },
+    overview: {
+      en: "Qilian Grassland combines alpine pasture, snow peaks, herds, wildflowers and the mountain edge of northern Qinghai.",
+      zh: "祁连草原要从高山牧场、雪峰、牧群、野花和青海北部山地边缘来理解。"
+    },
+    experience: {
+      en: "A good route should match road time, weather and grazing areas, keeping stops respectful and low-impact.",
+      zh: "行程要考虑车程、天气和牧场区域，停车观景要尊重牧区并减少干扰。"
+    }
+  },
+  "Qinghai::Hoh Xil View Route": {
+    image: "/images/destinations/qinghai-hoh-xil-view-route-corrected.png",
+    caption: { en: "Hoh Xil plateau wildlife route", zh: "可可西里高原野生动物线路" },
+    overview: {
+      en: "Hoh Xil View Route should show plateau wildlife, open road, permafrost land and Tibetan antelope habitat, not city transport.",
+      zh: "可可西里线路要呈现高原野生动物、开阔公路、冻土景观和藏羚羊栖息地，不能用城市公交车图片。"
+    },
+    experience: {
+      en: "A good visit should emphasize distance, altitude, wildlife protection and no-chase viewing rules.",
+      zh: "行程要强调距离、海拔、野生动物保护和不追逐不投喂的观赏规则。"
+    }
+  },
+  "Qinghai::Dongguan Mosque": {
+    image: "/images/destinations/optimized/wiki-qinghai-dongguan-mosque.jpg",
+    caption: { en: "Dongguan Mosque, Xining", zh: "西宁东关清真大寺" },
+    overview: {
+      en: "Dongguan Mosque reflects Xining's Muslim community life, mosque architecture, prayer routines and the city's multi-ethnic food streets.",
+      zh: "东关清真大寺体现西宁穆斯林社区生活、清真寺建筑、礼拜秩序和多民族饮食街区。"
+    },
+    experience: {
+      en: "A respectful visit should check visiting times, dress modestly and connect the mosque with surrounding local food streets.",
+      zh: "参观要确认开放时间、注意着装，并把清真寺与周边本地饮食街区联系起来。"
+    }
+  },
+  "Gansu::Mogao Caves": {
+    image: "/images/destinations/optimized/wiki-gansu-mogao-caves.jpg",
+    caption: { en: "Mogao Caves cliff temples", zh: "莫高窟崖壁石窟" },
+    overview: {
+      en: "Mogao Caves should be understood through Buddhist murals, painted sculpture, cave architecture and Dunhuang's Silk Road exchange history.",
+      zh: "莫高窟要从佛教壁画、彩塑、洞窟建筑和敦煌丝路交流史来理解。它的重点是石窟内部艺术与历史。"
+    },
+    experience: {
+      en: "A good visit should follow ticket rules, protect the caves from photography damage and use museum context before or after the cave route.",
+      zh: "参观要遵守门票和拍摄规定，保护洞窟，并结合数字展示或博物馆补充背景。"
+    }
+  },
+  "Gansu::Mingsha Mountain and Crescent Spring": {
+    image: "/images/destinations/optimized/wiki-gansu-mingsha-mountain-and-crescent-spring.jpg",
+    caption: { en: "Mingsha Mountain and Crescent Spring", zh: "鸣沙山与月牙泉" },
+    overview: {
+      en: "Mingsha Mountain and Crescent Spring combine desert dunes, the small oasis spring, camel routes and the edge-of-Dunhuang landscape.",
+      zh: "鸣沙山月牙泉要从沙丘、月牙形泉水、骆驼线路和敦煌城边的沙漠绿洲关系来理解。"
+    },
+    experience: {
+      en: "A good visit should choose cooler hours, protect from sand and sun, and plan viewpoints for both dunes and the spring.",
+      zh: "游览应避开高温，注意防沙防晒，并安排能同时看沙丘和泉水的视角。"
+    }
+  },
+  "Gansu::Jiayuguan Pass": {
+    image: "/images/destinations/optimized/wiki-gansu-jiayuguan-pass.jpg",
+    caption: { en: "Jiayuguan Pass fortress", zh: "嘉峪关关城" },
+    overview: {
+      en: "Jiayuguan Pass is a Ming Great Wall fortress at the western corridor, linking walls, gate towers, desert wind and Hexi frontier defense.",
+      zh: "嘉峪关要从明代长城关城、城楼、荒漠风和河西走廊防御体系来理解。"
+    },
+    experience: {
+      en: "A good visit should compare fortress layout, wall lines and desert surroundings, not isolate the gate as a single photo stop.",
+      zh: "游览应比较关城格局、城墙线和荒漠环境，不要只拍城楼。"
+    }
+  },
+  "Gansu::Zhangye Danxia": {
+    image: "/images/destinations/optimized/wiki-gansu-zhangye-danxia.jpg",
+    caption: { en: "Zhangye Danxia colored hills", zh: "张掖丹霞彩色丘陵" },
+    overview: {
+      en: "Zhangye Danxia is a landscape of layered colored hills, dry valleys and shifting light across red, yellow and gray rock bands.",
+      zh: "张掖丹霞要从层状彩丘、干谷地貌和红黄灰岩层在光线中的变化来理解。"
+    },
+    experience: {
+      en: "A good visit should choose sunrise or sunset light when possible and move between platforms without trampling protected landforms.",
+      zh: "适合选择日出或日落光线，在观景台之间移动，注意不要踩踏保护地貌。"
+    }
+  },
+  "Gansu::Labrang Monastery": {
+    image: "/images/destinations/optimized/wiki-gansu-labrang-monastery.jpg",
+    caption: { en: "Labrang Monastery, Xiahe", zh: "夏河拉卜楞寺" },
+    overview: {
+      en: "Labrang Monastery is a major Tibetan Buddhist monastery in Xiahe, with scripture halls, monk colleges, prayer wheels and grassland-town life.",
+      zh: "拉卜楞寺是夏河重要藏传佛教寺院，经堂、学院、转经廊和草原城镇生活构成主要体验。"
+    },
+    experience: {
+      en: "A respectful visit should follow monastery etiquette, allow time for the kora route and connect the site with Xiahe town life.",
+      zh: "参观要遵守寺院礼仪，留时间走转经路线，并把寺院与夏河镇生活联系起来。"
+    }
+  },
+  "Gansu::Bingling Temple Grottoes": {
+    image: "/images/destinations/optimized/wiki-gansu-bingling-temple-grottoes.jpg",
+    caption: { en: "Bingling Temple grottoes by the Yellow River", zh: "黄河边的炳灵寺石窟" },
+    overview: {
+      en: "Bingling Temple Grottoes sit along the Yellow River canyon, combining cliff carvings, Buddhist sculpture and a boat-or-road approach through rugged scenery.",
+      zh: "炳灵寺石窟位于黄河峡谷边，崖壁造像、佛教雕塑和水陆交通线路共同形成体验。"
+    },
+    experience: {
+      en: "A good route should check transport conditions, water levels and time for viewing cliff sculptures carefully.",
+      zh: "行程要确认交通、水位和参观时间，留足时间看崖壁造像细节。"
+    }
+  },
+  "Gansu::Maijishan Grottoes": {
+    image: "/images/destinations/optimized/wiki-gansu-maijishan-grottoes.jpg",
+    caption: { en: "Maijishan Grottoes cliff walkways", zh: "麦积山石窟栈道" },
+    overview: {
+      en: "Maijishan Grottoes are known for cliff-face caves, narrow walkways, clay sculpture and the dramatic vertical setting near Tianshui.",
+      zh: "麦积山石窟要从崖面洞窟、窄栈道、泥塑造像和天水山地环境来理解。"
+    },
+    experience: {
+      en: "A good visit should plan for stairs, heights and crowd flow, with time to look at sculpture details from allowed viewpoints.",
+      zh: "参观要考虑台阶、高度和人流，按允许视角慢看造像细节。"
+    }
+  },
+  "Gansu::Dunhuang Night Market": {
+    image: "/images/destinations/gansu-dunhuang-night-market-corrected.png",
+    caption: { en: "Dunhuang Shazhou Night Market", zh: "敦煌沙洲夜市" },
+    overview: {
+      en: "Dunhuang Night Market should show Shazhou night-market stalls, lanterns, local snacks, dried fruit, souvenirs and evening traveler energy.",
+      zh: "敦煌夜市要呈现沙洲夜市摊位、灯笼、小吃、干果、纪念品和夜间人流，不能用莫高窟图片替代。"
+    },
+    experience: {
+      en: "A good visit should mix food tasting with browsing, explain regional flavors and keep practical attention to crowds and prices.",
+      zh: "游览可把品尝小吃和逛摊结合起来，讲清地方口味，同时注意人流和价格。"
+    }
+  },
+  "Gansu::Hexi Corridor Road": {
+    image: "/images/destinations/optimized/wiki-gansu-hexi-corridor-road.jpg",
+    caption: { en: "Hexi Corridor road landscape", zh: "河西走廊路上风景" },
+    overview: {
+      en: "Hexi Corridor Road is a long landscape of desert edges, oasis towns, Great Wall remains, Danxia hills and Silk Road movement.",
+      zh: "河西走廊路上风景要从荒漠边缘、绿洲城镇、长城遗存、丹霞丘陵和丝路通行感来理解。"
+    },
+    experience: {
+      en: "A good route should treat drive time as part of the experience, linking stops by geography and history rather than isolated attractions.",
+      zh: "行程应把车程本身当成体验，用地理和历史把各个点串起来。"
+    }
+  },
   "Shaanxi::Terracotta Army": {
     image: "/images/destinations/optimized/wiki-shaanxi-terracotta-army.jpg",
     caption: { en: "Terracotta Army, Xi'an", zh: "西安秦始皇兵马俑" },
