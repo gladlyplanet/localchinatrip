@@ -90,14 +90,14 @@ const verifiedRecommendationImages: Record<string, string> = {
   "Guilin Rice Noodle Trail": "/images/destinations/guangxi-guilin-rice-noodle-trail-clean.png",
   "Chengdu Market Cooking": "/images/experience-chengdu-market.jpg",
   "Chengdu Teahouses": "/images/destinations/optimized/wiki-sichuan-chengdu-teahouses.jpg",
-  "Wuhan Breakfast Streets": realImages.wuhanEastLake,
+  "Wuhan Breakfast Streets": "/images/destinations/hubei-wuhan-breakfast-streets-real.jpg",
   "Xi'an City Wall": realImages.xianFoodTable,
   "Muslim Quarter Xi'an": realImages.xianFoodTable,
   "Kaifeng Night Market": realImages.kaifengNightMarket,
   "Kaifeng Old City": realImages.kaifengNightMarket,
   "Kunming Zhuanxin Market": realImages.kunmingZhuanxinMarket,
   "Stone Forest Kunming": "/images/destinations/yunnan-stone-forest.jpg",
-  "Liwan Food Market": realImages.guangzhouMarket,
+  "Liwan Food Market": "/images/experience-guangzhou-market.jpg",
   "Nanning Morning Market": realImages.guangzhouFreshMarket,
   "Kaili Market": "/images/destinations/guizhou-kaili-market-clean.png",
   "Red Market Macau": "/images/destination-macau-red-market-real.jpg",
@@ -141,7 +141,7 @@ const verifiedRecommendationImages: Record<string, string> = {
   "Haikou Qilou Old Street": realImages.guangzhouOldCity,
   "Tanmen Fishing Port": "/images/about-me-boat-seafood.jpg",
   "Hainan Family Kitchen": "/images/destinations/hainan-family-kitchen-corrected.png",
-  "Danba Tibetan Villages": realImages.westernSichuanDanba,
+  "Danba Tibetan Villages": "/images/destinations/sichuan-danba-tibetan-villages-real.jpg",
   "Jiuzhaigou Valley": realImages.westernSichuanDanba,
   "Li River": "/images/destinations/guangxi-li-river-local.jpg",
   "Yangshuo Countryside": "/images/destinations/guangxi-yangshuo-countryside-clean.png",
@@ -1232,7 +1232,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Xinjiang::Karakoram Highway": {
-    image: "/images/destinations/xinjiang-karakoram-highway-corrected.png",
+    image: "/images/destinations/xinjiang-karakoram-highway-wiki-real.jpg",
     caption: { en: "Karakoram Highway in the Pamirs", zh: "帕米尔高原上的喀喇昆仑公路" },
     overview: {
       en: "Karakoram Highway brings together the Pamir road itself: snow peaks, high passes, dry valleys, border towns and the feeling of crossing a huge plateau.",
@@ -1460,7 +1460,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Qinghai::Menyuan Rapeseed Fields": {
-    image: "/images/destinations/qinghai-menyuan-rapeseed-fields-corrected.png",
+    image: "/images/destinations/qinghai-menyuan-rapeseed-fields-clean.png",
     caption: { en: "Menyuan rapeseed fields below mountains", zh: "门源山下油菜花田" },
     overview: {
       en: "Menyuan Rapeseed Fields brings together Qinghai's highland flower fields under mountains, with broad yellow fields, village belts and summer plateau light.",
@@ -1664,7 +1664,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Guizhou::Kaili Market": {
-    image: realImages.guangzhouFreshMarket,
+    image: "/images/destinations/guizhou-kaili-market-clean.png",
     caption: { en: "Kaili local market and Miao market life", zh: "凯里市集与苗侗日常交易" },
     overview: {
       en: "Kaili Market should be introduced through southeast Guizhou's Miao and Dong daily trade: woven textiles, silver ornaments, sour-soup ingredients, mountain vegetables, rice products and the conversations between vendors and local families.",
@@ -2036,7 +2036,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Sichuan::Danba Tibetan Villages": {
-    image: "/images/experience-western-sichuan-danba-real.jpg",
+    image: "/images/destinations/sichuan-danba-tibetan-villages-real.jpg",
     caption: { en: "Danba Tibetan villages in western Sichuan", zh: "川西丹巴藏寨" },
     overview: {
       en: "Danba Tibetan villages are known for hillside Tibetan homes, stone watchtowers, terraced fields and valley settlements in western Sichuan. The image should be village architecture in a mountain setting, not a map.",
@@ -2108,7 +2108,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Ningxia::Zhenbeibao Western Studios": {
-    image: "/images/destinations/ningxia-zhenbeibao-western-studios-corrected.png",
+    image: "/images/destinations/ningxia-zhenbeibao-western-studios-clean.png",
     caption: { en: "Zhenbeibao Western Studios, Yinchuan", zh: "银川镇北堡西部影城" },
     overview: {
       en: "Zhenbeibao Western Studios should be shown through earthen fort walls, film sets, northwest light and the memory of Chinese cinema shot in desert-edge landscapes.",
@@ -2216,7 +2216,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Hunan::Changsha Night Food": {
-    image: "/images/destinations/optimized/wiki-hunan-changsha-night-food.jpg",
+    image: "/images/experience-changsha-food.jpg",
     caption: { en: "Changsha night food", zh: "长沙夜食" },
     overview: {
       en: "Changsha night food is about rice noodles, barbecue, spicy snacks, tea drinks and the city's late-night street energy. The experience is loud, direct and strongly local.",
