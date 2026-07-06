@@ -630,6 +630,114 @@ const genericByKind: Record<RecommendationKind, MediaText> = {
 };
 
 const destinationSpecificText: Record<string, MediaText> = {
+  "Hainan::Sanya Coast": {
+    image: "/images/destinations/optimized/wiki-hainan-sanya-coast.jpg",
+    caption: { en: "Sanya coast and tropical resort shoreline", zh: "三亚热带海岸" },
+    overview: {
+      en: "Sanya Coast should be introduced through tropical beaches, bays, coconut palms, resort life and the southern-island climate that shapes Hainan's seaside rhythm.",
+      zh: "三亚海岸要从热带沙滩、海湾、椰林、度假生活和海南南部海岛气候来理解。这里的重点是海岸线、阳光、水上活动和本地海鲜生活共同形成的节奏。"
+    },
+    experience: {
+      en: "A good visit should choose beach sections by weather, crowd level and water conditions, balancing swimming, coastal walks and seafood stops.",
+      zh: "行程应根据天气、人流和海况选择海滩段，把下水、海边步行和海鲜停留结合起来，而不是只看酒店外观。"
+    }
+  },
+  "Hainan::Boao Town": {
+    image: "/images/destinations/hainan-boao-town-corrected.png",
+    caption: { en: "Boao coastline and town scenery", zh: "博鳌海岸与小镇风景" },
+    overview: {
+      en: "Boao Town should show Qionghai's coastal town character: Jade Belt Beach, river-mouth scenery, conference-area landmarks and a slower seaside pace.",
+      zh: "博鳌小镇要呈现琼海海岸小镇气质：玉带滩、河海交汇、论坛地标和相对舒缓的海边生活。主图应是博鳌海岸或小镇实景。"
+    },
+    experience: {
+      en: "A good route links the beach, river-mouth viewpoints and town streets, leaving time for seafood or coffee rather than reducing Boao to one conference building.",
+      zh: "游览可把海滩、河口视角和小镇街区串起来，留出吃海鲜或喝咖啡的时间，不要只把博鳌理解成一座会议建筑。"
+    }
+  },
+  "Hainan::Tanmen Fishing Port": {
+    image: "/images/destinations/hainan-tanmen-fishing-port-corrected.png",
+    caption: { en: "Tanmen fishing port, Qionghai", zh: "琼海潭门渔港" },
+    overview: {
+      en: "Tanmen Fishing Port is about working boats, seafood trade, harbor life and Qionghai's long relationship with the South China Sea.",
+      zh: "潭门渔港要围绕渔船、海鲜交易、港口日常和琼海面向南海的渔业传统来写。它不能用普通游客船照替代。"
+    },
+    experience: {
+      en: "A good visit should focus on the harbor, seafood market rhythm and fishing-community stories, with respectful distance from working areas.",
+      zh: "体验应关注港口、海鲜市场节奏和渔民社区故事，同时与作业区域保持合适距离。"
+    }
+  },
+  "Hainan::Haikou Qilou Old Street": {
+    image: "/images/destinations/hainan-haikou-qilou-old-street-corrected.png",
+    caption: { en: "Haikou Qilou Old Street", zh: "海口骑楼老街" },
+    overview: {
+      en: "Haikou Qilou Old Street should be read through arcade shopfronts, overseas-Chinese architecture, old signs, snacks and the port-city memory of northern Hainan.",
+      zh: "海口骑楼老街要从骑楼立面、南洋风格、老招牌、小吃和海口港口城市记忆来理解。页面主图应是完整街景，而不是拼图式素材。"
+    },
+    experience: {
+      en: "A good walk compares facade details, shaded arcades and small food stops, connecting architecture with Haikou's trading history.",
+      zh: "适合慢走骑楼廊下，看立面细节、阴影空间和小吃店，把建筑与海口商贸历史联系起来。"
+    }
+  },
+  "Hainan::Dongpo Academy Danzhou": {
+    image: "/images/destinations/optimized/wiki-hainan-dongpo-academy-danzhou.jpg",
+    caption: { en: "Dongpo Academy, Danzhou", zh: "儋州东坡书院" },
+    overview: {
+      en: "Dongpo Academy in Danzhou is tied to Su Dongpo's exile years in Hainan, classical learning, courtyard architecture and the literary memory of the island.",
+      zh: "儋州东坡书院要从苏东坡谪居海南、书院庭院、文人记忆和海南地方文化传播来介绍。它不是普通古宅，而是海南文学记忆的重要地点。"
+    },
+    experience: {
+      en: "A good visit should explain Su Dongpo's Hainan period, read the courtyards slowly and connect the academy with Danzhou's local history.",
+      zh: "参观应讲清苏东坡在海南的经历，慢看院落与题刻，并把书院放进儋州地方历史中理解。"
+    }
+  },
+  "Hainan::Wuzhishan Rainforest": {
+    image: "/images/destinations/optimized/wiki-hainan-wuzhishan-rainforest.jpg",
+    caption: { en: "Wuzhishan rainforest and mountain villages", zh: "五指山雨林与山地村落" },
+    overview: {
+      en: "Wuzhishan Rainforest is Hainan's mountain interior, shaped by tropical forest, clouded peaks, rivers, Li and Miao communities and cooler highland air.",
+      zh: "五指山雨林要呈现海南岛中部山地：热带森林、云雾山峰、溪流、黎苗村落和更凉爽的高地气候。"
+    },
+    experience: {
+      en: "A good route should match trail difficulty and weather, linking rainforest ecology with mountain communities rather than treating it as only a viewpoint.",
+      zh: "行程要按步道难度和天气安排，把雨林生态与山地社区结合起来，而不是只停一个观景点。"
+    }
+  },
+  "Hainan::Yalong Bay Tropical Forest": {
+    image: "/images/destinations/optimized/wiki-hainan-yalong-bay-tropical-forest.jpg",
+    caption: { en: "Yalong Bay Tropical Forest Park", zh: "亚龙湾热带天堂森林公园" },
+    overview: {
+      en: "Yalong Bay Tropical Forest combines rainforest trails, hilltop sea views, suspension bridges and the contrast between Sanya's coast and green mountain slopes.",
+      zh: "亚龙湾热带森林要从雨林步道、山顶海景、吊桥和三亚海岸与山地森林的对比来理解。"
+    },
+    experience: {
+      en: "A good visit should choose viewpoints by light and visibility, leaving time for forest paths as well as the bay panorama.",
+      zh: "游览应根据光线和能见度选择观景点，既看海湾全景，也留时间走森林步道。"
+    }
+  },
+  "Hainan::Binglanggu Li and Miao Culture": {
+    image: "/images/destinations/hainan-binglanggu-li-miao-culture-corrected.png",
+    caption: { en: "Binglanggu Li and Miao cultural park", zh: "槟榔谷黎苗文化园" },
+    overview: {
+      en: "Binglanggu Li and Miao Culture should show Hainan's Li and Miao textile traditions, village forms, performance spaces and island ethnic culture in a complete setting.",
+      zh: "槟榔谷黎苗文化要呈现海南黎族、苗族的织锦传统、村寨形态、表演空间和岛屿民族文化。主图应是完整园区或村寨实景，而不是局部建筑角落。"
+    },
+    experience: {
+      en: "A good visit should connect textile craft, village architecture and performance interpretation, while distinguishing curated displays from everyday community life.",
+      zh: "游览应把织锦工艺、村寨建筑和演艺讲解连起来，同时说明景区展示与真实日常生活之间的关系。"
+    }
+  },
+  "Hainan::Hainan Family Kitchen": {
+    image: "/images/destinations/hainan-family-kitchen-corrected.png",
+    caption: { en: "Hainan local kitchen and home-style dishes", zh: "海南本地厨房与家常菜" },
+    overview: {
+      en: "Hainan Family Kitchen should focus on local food culture: Wenchang chicken, coconut, seafood, tropical vegetables, dipping sauces and the relaxed way island families eat together.",
+      zh: "海南本地厨房要围绕文昌鸡、椰子、海鲜、热带蔬菜、蘸料和岛上家庭聚餐方式来写。页面绝不能使用猴子或雨林动物图片。"
+    },
+    experience: {
+      en: "A good experience should move through markets, ingredients, cooking habits and table culture, making Hainan flavors feel specific rather than generic tropical food.",
+      zh: "体验应从市场、食材、烹饪习惯和餐桌文化展开，让海南味道具体起来，而不是泛泛写成热带食物。"
+    }
+  },
   "Jilin::Changbai Mountain": {
     image: "/images/destinations/optimized/wiki-jilin-changbai-mountain.jpg",
     caption: { en: "Changbai Mountain alpine scenery", zh: "长白山高山景观" },
