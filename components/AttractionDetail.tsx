@@ -326,8 +326,8 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
       `كلمات مفتاحية: ${attraction.focus}`
     ),
     lead: destinationPhrase(
-      `Use ${attraction.name}'s ${attraction.focus} as the main thread, then choose timing, walking distance and explanation depth around the group's pace.`,
-      `${attraction.nameZh}的游览主线应落在${attraction.focusZh}上，再根据时间、体力和现场人流安排停留、讲解和拍照节奏。`,
+      `Start from ${attraction.focus}, then choose timing, walking distance and explanation depth around the group's pace.`,
+      `${attraction.nameZh}适合从${attraction.focusZh}进入，再根据时间、体力和现场人流安排停留、讲解和拍照节奏。`,
       `Usa ${attraction.focus} como hilo principal de ${attraction.name}, ajustando horarios, distancia a pie y explicación al ritmo del grupo.`,
       `Use ${attraction.focus} como fio principal de ${attraction.name}, ajustando horários, caminhada e explicação ao ritmo do grupo.`,
       `اجعل ${attraction.focus} هو خيط الزيارة الرئيسي في ${attraction.name}، ثم اضبط الوقت والمشي والشرح حسب إيقاع المجموعة.`
