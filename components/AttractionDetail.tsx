@@ -473,13 +473,26 @@ const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: 
   }
 };
 
+const priorityDestinationMeta: typeof destinationMeta = {
+  "Shennongjia Forest": {
+    subtitle: phrase("Primeval forest · Shennong Peak · Dajiuhu wetlands", "原始森林 · 神农顶 · 大九湖湿地", "原始森林 · 神農頂 · 大九湖濕地", "Bosque primario · Pico Shennong · Humedales Dajiuhu", "Floresta primária · Pico Shennong · pântanos Dajiuhu", "睾丕亘丞 兀賵賱賷丞 路 賯賲丞 卮賳賳賵賳睾 路 兀乇丕囟 賵胤亘丞 丿丕噩賷賵賴賵"),
+    season: phrase("Spring and autumn are comfortable; summer is cool; misty days need visibility checks.", "春秋舒适，夏季清凉，雨雾天需看能见度", "春秋舒適，夏季清涼，雨霧天需看能見度", "Primavera y otoño son cómodos; el verano es fresco; con niebla hay que revisar visibilidad.", "Primavera e outono são agradáveis; o verão é fresco; em neblina, confira a visibilidade.", "丕賱乇亘賷毓 賵丕賱禺乇賷賮 賲乇賷丨丕賳貙 丕賱氐賷賮 亘丕乇丿貙 賵賷噩亘 賮丨氐 丕賱乇丐賷丞 賮賷 丕賱囟亘丕亘"),
+    pace: phrase("Half day to one day, planned around park transport and weather.", "半日到一日，按景区交通和天气安排", "半日到一日，按景區交通和天氣安排", "Medio día a un día, según transporte interno y clima.", "Meio dia a um dia, conforme transporte do parque e clima.", "賳氐賮 賷賵賲 廿賱賶 賷賵賲 賵丕丨丿貙 丨爻亘 賳賯賱 丕賱賲賳胤賯丞 賵丕賱胤賯爻"),
+    people: phrase("Nature observers, photographers and mountain-ecology travelers.", "自然观察、摄影和山地生态爱好者", "自然觀察、攝影和山地生態愛好者", "Observadores de naturaleza, fotógrafos y viajeros de ecología de montaña.", "Observadores da natureza, fotógrafos e viajantes de ecologia de montanha.", "賲乇丕賯亘賵 丕賱胤亘賷毓丞 賵丕賱賲氐賵乇賵賳 賵賲丨亘賵 亘賷卅丞 丕賱噩亘丕賱"),
+    keywords: phrase("Shennong Peak, Dajiuhu, snub-nosed monkeys, primeval forest", "神农顶 · 大九湖 · 金丝猴 · 原始林区", "神農頂 · 大九湖 · 金絲猴 · 原始林區", "Pico Shennong, Dajiuhu, monos dorados, bosque primario", "Pico Shennong, Dajiuhu, macacos dourados, floresta primária", "賯賲丞 卮賳賳賵賳睾貙 丿丕噩賷賵賴賵貙 賯乇賵丿 匕賴亘賷丞貙 睾丕亘丞 兀賵賱賷丞"),
+    lead: phrase("Shennongjia Forest should show how mountain forest, rare wildlife and alpine wetlands form a protected ecosystem, not village streets.", "神农架森林要看山地森林、珍稀动植物和高山湿地如何组成保护地生态，不是村镇街道。", "神農架森林要看山地森林、珍稀動植物和高山濕地如何組成保護地生態，不是村鎮街道。", "Shennongjia debe mostrar bosque de montaña, fauna rara y humedales alpinos, no calles de pueblo.", "Shennongjia deve mostrar floresta de montanha, vida rara e pântanos alpinos, não ruas de vila.", "賷噩亘 兀賳 鬲馗賴乇 卮賳賳賵賳睾噩賷丕 睾丕亘丞 噩亘賱賷丞 賵丨賷丕丞 賳丕丿乇丞 賵兀乇丕囟 賵胤亘丞 噩亘賱賷丞貙 賱丕 卮賵丕乇毓 賯乇賶"),
+    advice: sharedAdvice("nature"),
+    guide: sharedGuide("nature")
+  }
+};
+
 export function AttractionDetail({ province, attraction }: { province: Province; attraction: ProvinceRecommendation }) {
   const { lang, dir } = useLanguage();
   const t = getSiteCopy(lang).destinations;
   const provinceLabel = getProvinceName(province.slug, lang);
   const itemCopy = getRecommendationCopy(lang, attraction);
   const enrichment = getRecommendationEnrichment(lang, attraction, province.name);
-  const meta = destinationMeta[attraction.name] ?? destinationFocusMeta(attraction, kindMeta[attraction.kind]);
+  const meta = priorityDestinationMeta[attraction.name] ?? destinationMeta[attraction.name] ?? destinationFocusMeta(attraction, kindMeta[attraction.kind]);
   const facts = [
     { icon: "leaf" as IconName, title: text.bestSeason, value: meta.season },
     { icon: "clock" as IconName, title: text.pace, value: meta.pace },
