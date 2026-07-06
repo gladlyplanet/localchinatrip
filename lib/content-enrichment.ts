@@ -87,7 +87,7 @@ const verifiedRecommendationImages: Record<string, string> = {
   "Longjing Village": realImages.longjingFields,
   "West Lake": realImages.westLake,
   "Changsha Night Food": realImages.changshaFood,
-  "Guilin Rice Noodle Trail": realImages.yangshuoFarmFood,
+  "Guilin Rice Noodle Trail": "/images/destinations/guangxi-guilin-rice-noodle-trail-clean.png",
   "Chengdu Market Cooking": "/images/experience-chengdu-market.jpg",
   "Chengdu Teahouses": "/images/destinations/optimized/wiki-sichuan-chengdu-teahouses.jpg",
   "Wuhan Breakfast Streets": realImages.wuhanEastLake,
@@ -99,11 +99,12 @@ const verifiedRecommendationImages: Record<string, string> = {
   "Stone Forest Kunming": "/images/destinations/yunnan-stone-forest.jpg",
   "Liwan Food Market": realImages.guangzhouMarket,
   "Nanning Morning Market": realImages.guangzhouFreshMarket,
-  "Kaili Market": realImages.guangzhouFreshMarket,
+  "Kaili Market": "/images/destinations/guizhou-kaili-market-clean.png",
   "Red Market Macau": "/images/destination-macau-red-market-real.jpg",
   "Caoyang Community Market": realImages.shanghaiWetMarket,
   "Shanghai Breakfast Trail": realImages.shanghaiWetMarket,
-  "Shanghai Museum": realImages.shanghaiLanes,
+  "Shanghai Museum": "/images/destinations/shanghai-shanghai-museum-clean.png",
+  "Yu Garden and Old City": "/images/destinations/shanghai-yu-garden-old-city-clean.png",
   "Shikumen Lanes": realImages.shanghaiLanes,
   "Former French Concession": realImages.shanghaiLanes,
   "Kashgar Old City": realImages.kashgarBazaar,
@@ -139,11 +140,11 @@ const verifiedRecommendationImages: Record<string, string> = {
   "Boao Town": "/images/about-me-beach-group.jpg",
   "Haikou Qilou Old Street": realImages.guangzhouOldCity,
   "Tanmen Fishing Port": "/images/about-me-boat-seafood.jpg",
-  "Hainan Family Kitchen": "/images/about-me-dinner-table.jpg",
+  "Hainan Family Kitchen": "/images/destinations/hainan-family-kitchen-corrected.png",
   "Danba Tibetan Villages": realImages.westernSichuanDanba,
   "Jiuzhaigou Valley": realImages.westernSichuanDanba,
   "Li River": "/images/destinations/guangxi-li-river-local.jpg",
-  "Yangshuo Countryside": realImages.yangshuoFarmFood,
+  "Yangshuo Countryside": "/images/destinations/guangxi-yangshuo-countryside-clean.png",
   "Longji Rice Terraces": realImages.longjiTerraces,
   "Yuanyang Rice Terraces": realImages.yuanyangTerraces,
   "Guoliang Village": realImages.guoliangVillage,
@@ -157,7 +158,7 @@ const verifiedRecommendationImages: Record<string, string> = {
   "Huaiyang Cuisine Kitchen": realImages.suzhouCuisine,
   "Quanzhou Puppet Workshop": realImages.quanzhouPuppets,
   "Quanzhou Maritime Heritage": realImages.quanzhouPuppets,
-  "Shiwan Ceramic Studio": realImages.shiwanCeramics,
+  "Shiwan Ceramic Studio": "/images/destinations/guangdong-shiwan-ceramic-studio-clean.png",
   "Miao Embroidery Workshop": realImages.miaoCraft,
   "Xijiang Miao Village": realImages.miaoCraft,
   "Red Market": "/images/destination-macau-red-market-real.jpg"
@@ -1663,7 +1664,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Guizhou::Kaili Market": {
-    image: "https://data.travelchinaguide.com/package/image/113401.jpg",
+    image: realImages.guangzhouFreshMarket,
     caption: { en: "Kaili local market and Miao market life", zh: "凯里市集与苗侗日常交易" },
     overview: {
       en: "Kaili Market should be introduced through southeast Guizhou's Miao and Dong daily trade: woven textiles, silver ornaments, sour-soup ingredients, mountain vegetables, rice products and the conversations between vendors and local families.",
@@ -1867,7 +1868,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Tianjin::Ancient Culture Street": {
-    image: "/images/destinations/tianjin-ancient-culture-street-clean.png",
+    image: "/images/destinations/tianjin-ancient-culture-street-corrected.png",
     caption: { en: "Tianjin Ancient Culture Street", zh: "天津古文化街" },
     overview: {
       en: "Ancient Culture Street brings together Tianjin's folk-culture shopping street: traditional shopfronts, temple-fair atmosphere, crafts, snacks and old-brand signs. It should not use unrelated ancient wall paintings.",
@@ -2518,6 +2519,174 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
     experience: {
       en: "A good route links the beach, river-sea viewpoints and town streets, leaving time for seafood, coffee or a coastal walk.",
       zh: "合适路线应把海滩、河海交汇视角和小镇街区串起来，留出吃海鲜、喝咖啡或海边散步的时间。"
+    }
+  },
+  "Shanghai::Shanghai Museum": {
+    image: "/images/destinations/shanghai-shanghai-museum-clean.png",
+    caption: { en: "Shanghai Museum at People's Square", zh: "人民广场上海博物馆" },
+    overview: {
+      en: "Shanghai Museum should be introduced as a major Chinese art museum at People's Square, known for bronzes, ceramics, calligraphy, painting, jade and furniture collections rather than as a generic Shanghai street scene.",
+      zh: "上海博物馆要放在人民广场与中国艺术收藏的背景里介绍：青铜器、陶瓷、书画、玉器和家具是重点，不应再用普通街景或外滩图片代替。"
+    },
+    experience: {
+      en: "A good visit should choose galleries by interest and time, connect objects with dynastic history and leave space for slower looking instead of rushing every floor.",
+      zh: "游览应按兴趣和时间选择展厅，把器物、朝代背景和审美线索讲清楚，留出慢慢看重点展品的时间，而不是匆忙扫完整栋楼。"
+    }
+  },
+  "Shanghai::Yu Garden and Old City": {
+    image: "/images/destinations/shanghai-yu-garden-old-city-clean.png",
+    caption: { en: "Yu Garden and old city pond", zh: "豫园与老城厢水景" },
+    overview: {
+      en: "Yu Garden and the Old City should connect classical garden design, ponds, pavilions, zigzag bridges, bazaar streets and old Shanghai commercial life.",
+      zh: "豫园与老城厢要把江南园林、池水亭台、九曲桥、城隍庙商街和上海老城商业生活连起来看，不能再用古画代替实景。"
+    },
+    experience: {
+      en: "A good route separates quiet garden details from the busy bazaar, then explains how temple fair commerce and old-city lanes shaped this part of Shanghai.",
+      zh: "合适的路线要区分园内细节和园外商街，再解释庙会商业、老城巷道和上海城市记忆如何在这里重叠。"
+    }
+  },
+  "Anhui::Chengkan Village": {
+    image: "/images/destinations/anhui-chengkan-village-clean.png",
+    caption: { en: "Chengkan ancestral architecture", zh: "呈坎古村祠堂建筑" },
+    overview: {
+      en: "Chengkan Village is a Huizhou settlement of ancestral halls, lanes, ponds, white walls and water systems. The page should show village architecture, not a stone inscription close-up.",
+      zh: "呈坎古村要从徽派民居、祠堂、巷道、水塘和村落水系来理解，页面应呈现村落建筑实景，而不是石刻或题字特写。"
+    },
+    experience: {
+      en: "A good walk should read the village layout slowly, linking halls, homes, ponds and clan history with the everyday use of public space.",
+      zh: "游览适合慢走，沿祠堂、民居、水塘和巷道理解村落格局，把宗族历史和今天的公共空间使用放在一起看。"
+    }
+  },
+  "Hubei::Shennongjia Forest": {
+    image: "/images/destinations/hubei-shennongjia-forest-clean.png",
+    caption: { en: "Shennongjia mountain forest", zh: "神农架山地森林" },
+    overview: {
+      en: "Shennongjia Forest should focus on mountain forest, biodiversity, changing weather, highland roads and central China's protected natural landscape.",
+      zh: "神农架森林的重点是山地森林、生物多样性、气候变化、高山道路和华中自然保护地景观，不应只用村镇道路或普通街景表达。"
+    },
+    experience: {
+      en: "A good route should plan viewpoints, forest walks and transfer time by weather and visibility, keeping the pace flexible for mountain conditions.",
+      zh: "路线要根据天气和能见度安排观景点、森林步道和车程时间，给山地路况与天气变化留出弹性。"
+    }
+  },
+  "Chongqing::Ciqikou Old Town": {
+    image: "/images/destinations/chongqing-ciqikou-old-town-clean.png",
+    caption: { en: "Ciqikou old town lanes", zh: "磁器口古镇街巷" },
+    overview: {
+      en: "Ciqikou Old Town should show Chongqing's riverside old-town lanes, teahouses, snack stalls, steep streets and old dock memory, not an unrelated coastal or aerial scene.",
+      zh: "磁器口古镇要呈现重庆江边古镇的街巷、茶馆、小吃、坡地街道和老码头记忆，不能再用无关的海岸或航拍图。"
+    },
+    experience: {
+      en: "A good visit should avoid only chasing the busiest storefronts; it should connect lanes, river context, old shops and Chongqing snack culture.",
+      zh: "游览不应只挤在最热闹的店铺前打卡，而要把巷道、江边位置、老店和重庆小吃文化串起来。"
+    }
+  },
+  "Inner Mongolia::Arxan National Forest": {
+    image: "/images/destinations/inner-mongolia-arxan-national-forest-clean.jpg",
+    caption: { en: "Arxan forest and lake scenery", zh: "阿尔山森林湖泊景观" },
+    overview: {
+      en: "Arxan National Forest is about volcanic landforms, forest lakes, autumn color, mineral springs and cool borderland mountain scenery.",
+      zh: "阿尔山国家森林公园要看火山地貌、森林湖泊、秋色、温泉和边境山地风景，不能用黑白旧照或资料图代替。"
+    },
+    experience: {
+      en: "A good plan should choose lake and forest stops by season and driving distance, leaving time for light, weather and quieter paths.",
+      zh: "行程应按季节、车程和体力选择湖泊与森林停留点，给光线、天气和安静步道留出时间。"
+    }
+  },
+  "Shandong::Zibo Barbecue Streets": {
+    image: "/images/destinations/shandong-zibo-barbecue-streets-clean.png",
+    caption: { en: "Zibo-style barbecue grill", zh: "淄博小炉烧烤" },
+    overview: {
+      en: "Zibo Barbecue Streets should focus on small grills, skewers, wheat wraps, scallions, sauces and the shared table rhythm that made the food culture famous.",
+      zh: "淄博烧烤街区要围绕小炉、肉串、小饼、葱段、蘸料和围桌分享的吃法展开，不能用一栋建筑或展馆图来代替。"
+    },
+    experience: {
+      en: "A good food route should explain how to wrap, season and pace the meal, then connect it with local night dining and hospitality.",
+      zh: "合适的美食路线要讲清怎么卷饼、怎么蘸料、怎么控制节奏，再把它和当地夜间饮食与待客方式联系起来。"
+    }
+  },
+  "Henan::Chenjiagou Taiji Village": {
+    image: "/images/destinations/henan-chenjiagou-taiji-village-clean.png",
+    caption: { en: "Chenjiagou Taiji village", zh: "陈家沟太极村" },
+    overview: {
+      en: "Chenjiagou Taiji Village should be introduced through Chen-style Taijiquan lineage, training spaces, village squares, museums and the living practice of martial arts.",
+      zh: "陈家沟太极村要从陈式太极拳传承、练拳空间、村中广场、太极博物馆和仍在延续的习练传统来介绍，不能再用老照片拼图。"
+    },
+    experience: {
+      en: "A good visit should include practice context, lineage stories and village space, with enough time to watch or join a basic movement session.",
+      zh: "游览应包含习练场景、传承故事和村落空间，有条件时可观看或体验基础动作，而不是只看静态展板。"
+    }
+  },
+  "Jiangxi::Poyang Lake": {
+    image: "/images/destinations/jiangxi-poyang-lake-clean.png",
+    caption: { en: "Poyang Lake wetland", zh: "鄱阳湖湿地" },
+    overview: {
+      en: "Poyang Lake should show China's largest freshwater lake through wetlands, seasonal water levels, bird habitat, fishing villages and open lake scenery, not a satellite map.",
+      zh: "鄱阳湖要从湿地、水位季节变化、候鸟栖息地、渔村和开阔湖面来呈现，不能再用卫星图当主图。"
+    },
+    experience: {
+      en: "A good route should match the season: winter birds, changing wetlands, lakeside villages and viewing points all need different timing.",
+      zh: "路线要按季节安排：冬季看候鸟，丰水和枯水看湿地变化，湖边村落和观景点也需要不同时间。"
+    }
+  },
+  "Fujian::Xiapu Mudflats": {
+    image: "/images/destinations/fujian-xiapu-mudflats-clean.png",
+    caption: { en: "Xiapu mudflats at sunset", zh: "霞浦滩涂日落" },
+    overview: {
+      en: "Xiapu Mudflats are defined by tides, fishing frames, seaweed poles, boats, reflected light and the coastal work rhythm of eastern Fujian.",
+      zh: "霞浦滩涂的重点是潮汐、渔排、紫菜杆、渔船、倒影光线和闽东海岸劳作节奏，不应使用拼图或行政示意图。"
+    },
+    experience: {
+      en: "A good visit depends on tide tables, sunrise or sunset light and the right viewpoint, so timing matters more than checking many stops.",
+      zh: "游览高度依赖潮汐表、日出日落光线和机位选择，时间判断比堆很多景点更重要。"
+    }
+  },
+  "Guangxi::Yangshuo Countryside": {
+    image: "/images/destinations/guangxi-yangshuo-countryside-clean.png",
+    caption: { en: "Yangshuo karst countryside", zh: "阳朔喀斯特乡村" },
+    overview: {
+      en: "Yangshuo Countryside should show karst peaks, riverside villages, fields, small roads and farmhouse life, not an old black-and-white archive image.",
+      zh: "阳朔乡村要呈现喀斯特峰林、河岸村落、田地、小路和农家生活，不能再用黑白旧照。"
+    },
+    experience: {
+      en: "A good day balances walking, cycling or short transfers with farm food and river scenery, keeping the pace relaxed.",
+      zh: "一日安排可结合步行、骑行或短途车程，配合农家饭和河岸风景，节奏要放松。"
+    }
+  },
+  "Guangxi::Beihai Old Street": {
+    image: "/images/destinations/guangxi-beihai-old-street-clean.png",
+    caption: { en: "Beihai Old Street arcade buildings", zh: "北海老街骑楼建筑" },
+    overview: {
+      en: "Beihai Old Street should focus on arcade buildings, trading history, old shopfronts, seafood-city life and the Gulf of Tonkin port atmosphere.",
+      zh: "北海老街要看骑楼建筑、商贸历史、老店铺、海鲜城市生活和北部湾港口气息，不能再用带日期或图库水印的装饰图。"
+    },
+    experience: {
+      en: "A good walk compares facade details, shaded arcades, snack stops and nearby port history rather than treating the street as only a photo backdrop.",
+      zh: "游览适合看立面细节、骑楼阴影、小吃停留和近代港口历史，而不是只把老街当拍照背景。"
+    }
+  },
+  "Guangdong::Shiwan Ceramic Studio": {
+    image: "/images/destinations/guangdong-shiwan-ceramic-studio-clean.png",
+    caption: { en: "Shiwan ceramic workshop street", zh: "石湾陶艺工坊空间" },
+    overview: {
+      en: "Shiwan Ceramic Studio should show Foshan's ceramic-making setting: kiln memory, clay objects, workshop streets and Lingnan folk craft, not only a single isolated object.",
+      zh: "石湾陶艺工坊要呈现佛山陶艺的制作空间：窑火记忆、陶坯器物、工坊街区和岭南民间审美，不能只放一个孤立陶塑。"
+    },
+    experience: {
+      en: "A good visit should follow materials, shaping, firing and display spaces, then explain why Shiwan ceramics look so different from porcelain centers.",
+      zh: "合适的体验应看材料、塑形、烧制和展示空间，再讲清石湾陶塑为什么不同于瓷器产地。"
+    }
+  },
+  "Qinghai::Menyuan Rapeseed Fields": {
+    image: "/images/destinations/qinghai-menyuan-rapeseed-fields-clean.png",
+    caption: { en: "Menyuan rapeseed fields", zh: "门源油菜花田" },
+    overview: {
+      en: "Menyuan Rapeseed Fields should show Qinghai's highland flower fields with mountain backdrops, village belts and broad summer color.",
+      zh: "门源油菜花田要呈现青海高原花海、山地背景、村落带和夏季大色块，而不是用其他省份的花田替代。"
+    },
+    experience: {
+      en: "A good visit should match bloom period, weather and light, leaving time for wide views instead of rushing through one platform.",
+      zh: "游览要配合花期、天气和光线，给开阔视野留时间，而不是只赶一个观景台。"
     }
   }
 };
