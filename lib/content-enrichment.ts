@@ -630,6 +630,18 @@ const genericByKind: Record<RecommendationKind, MediaText> = {
 };
 
 const destinationSpecificText: Record<string, MediaText> = {
+  "Shanxi::Fenyang Fenjiu Culture": {
+    image: "/images/destinations/shanxi-fenyang-fenjiu-culture-clean.png",
+    caption: { en: "Fenyang Fenjiu heritage site", zh: "汾阳杏花村汾酒文化" },
+    overview: {
+      en: "Fenyang Fenjiu Culture is best understood through Xinghua Village, sorghum spirit brewing, old workshop spaces, liquor vessels and the way Fenjiu connects with Shanxi banquet customs.",
+      zh: "汾阳汾酒文化适合从杏花村、汾酒老作坊、高粱酒酿造、酒器陈列和山西宴席习俗来理解。这里看的不是普通餐饮街，而是清香型白酒如何进入地方历史、工艺和待客方式。"
+    },
+    experience: {
+      en: "A good visit should connect the museum or workshop setting with brewing steps, aroma style, local banquet etiquette and the wider story of Shanxi liquor culture.",
+      zh: "建议把博物馆或老作坊空间、酿造流程、清香型风味、山西宴席礼俗和杏花村故事串起来看，重点放在酒文化与地方生活的关系。"
+    }
+  },
   "Hainan::Sanya Coast": {
     image: "/images/destinations/optimized/wiki-hainan-sanya-coast.jpg",
     caption: { en: "Sanya coast and tropical resort shoreline", zh: "三亚热带海岸" },
