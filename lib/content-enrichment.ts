@@ -655,7 +655,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Hainan::Boao Town": {
-    image: "/images/destinations/hainan-boao-town-corrected.png",
+    image: "/images/destinations/hainan-boao-town-clean.png",
     caption: { en: "Boao coastline and town scenery", zh: "博鳌海岸与小镇风景" },
     overview: {
       en: "Boao Town brings together Qionghai's coastal town character: Jade Belt Beach, river-mouth scenery, conference-area landmarks and a slower seaside pace.",
@@ -2411,6 +2411,117 @@ const curatedRecommendationMedia: Record<string, MediaText> = {
   }
 };
 
+const auditedDestinationSpecificText: Record<string, MediaText> = {
+  "Shanxi::Wutai Mountain": {
+    image: "/images/destinations/shanxi-wutai-mountain-clean.png",
+    caption: { en: "Wutai Mountain temples", zh: "五台山寺院群" },
+    overview: {
+      en: "Wutai Mountain should be introduced through Taihuai's monastery cluster, Manjusri belief, mountain terrain and pilgrimage routes. Its identity is the connection between Buddhist practice and the cool highland landscape, not a single pagoda or gate.",
+      zh: "五台山适合从台怀镇寺院群、文殊信仰、山地地形和朝台路线一起理解。它的重点是佛教实践与清凉山地景观如何结合，而不是只看一座白塔或单个山门。"
+    },
+    experience: {
+      en: "A good visit should plan temple order, transport and walking distance carefully, leaving time for etiquette, architecture and the rhythm of worship.",
+      zh: "游览应安排好寺院顺序、交通和步行距离，留出时间看礼仪、建筑和香火节奏，而不是匆忙打卡。"
+    }
+  },
+  "Shanghai::Former French Concession": {
+    image: "/images/destinations/shanghai-former-french-concession-clean.png",
+    caption: { en: "Former French Concession street", zh: "上海原法租界街区" },
+    overview: {
+      en: "The Former French Concession is best read through plane-tree streets, lane houses, old villas, small shops and today's neighborhood life. It is a walkable urban fabric, not a map label.",
+      zh: "上海原法租界要从梧桐街道、里弄住宅、老洋房、小店和今天的社区生活一起看。它是可以步行读懂的街区肌理，不是一张区域地图。"
+    },
+    experience: {
+      en: "A good route compares street scale, building details, cafes, residential lanes and quiet side roads, with context on Shanghai's modern urban history.",
+      zh: "合适的路线应比较街道尺度、建筑细节、咖啡小店、居民弄堂和安静支路，再补充上海近代城市背景。"
+    }
+  },
+  "Anhui::Huangshan": {
+    image: "/images/destinations/anhui-huangshan-clean.png",
+    caption: { en: "Huangshan granite peaks", zh: "黄山峰林与松" },
+    overview: {
+      en: "Huangshan is defined by granite peaks, pines, cloud seas, sunrise light and mountain trails. The experience should follow weather, visibility and walking energy rather than only chasing one famous viewpoint.",
+      zh: "黄山的辨识度来自花岗岩峰林、黄山松、云海、日出光线和山路视角。游览要根据天气、能见度和体力安排，而不是只赶一个有名观景台。"
+    },
+    experience: {
+      en: "A good plan balances cable cars, short walks, ridge viewpoints and quieter sections, with flexibility for rain, mist or winter snow.",
+      zh: "合适的安排应平衡索道、短步道、山脊观景和较安静路段，并为雨雾或冬雪变化留出弹性。"
+    }
+  },
+  "Anhui::Jiuhua Mountain": {
+    image: "/images/destinations/anhui-jiuhua-mountain-clean.png",
+    caption: { en: "Jiuhua Mountain temple route", zh: "九华山寺院路线" },
+    overview: {
+      en: "Jiuhua Mountain should connect Buddhist temples, mountain villages, incense life and the Ksitigarbha pilgrimage tradition. It is a living religious mountain, not just an ornate gate or archway.",
+      zh: "九华山要把佛教寺院、山中聚落、香火生活和地藏信仰朝山传统连起来看。它是仍在延续的宗教名山，不只是一个牌坊或山门。"
+    },
+    experience: {
+      en: "A good visit should keep a respectful pace, choose temple clusters by time and explain how mountain routes, ritual etiquette and local village life fit together.",
+      zh: "游览应保持尊重和节奏，按时间选择寺院片区，讲清山路、礼仪和山村生活如何共同组成九华山。"
+    }
+  },
+  "Anhui::Xuancheng Xuan Paper Workshop": {
+    image: "/images/destinations/anhui-xuancheng-xuan-paper-workshop-clean.png",
+    caption: { en: "Xuan paper making in Xuancheng", zh: "宣城宣纸制作" },
+    overview: {
+      en: "Xuancheng Xuan Paper Workshop should focus on the making process: bark and straw preparation, pulp, sheet forming, drying and the link with calligraphy, painting and scholar tools.",
+      zh: "宣城宣纸工坊要围绕制作过程展开：青檀皮和稻草处理、纸浆、捞纸、晒纸，以及它与书画和文房用具的关系。"
+    },
+    experience: {
+      en: "A good visit follows the workshop steps slowly, watching hands, tools, water and timing instead of treating the paper as only a finished souvenir.",
+      zh: "合适的体验应顺着工序慢慢看手法、工具、水和时间判断，而不是只把宣纸当成成品纪念品。"
+    }
+  },
+  "Jiangxi::Sanqing Mountain": {
+    image: "/images/destinations/jiangxi-sanqing-mountain-clean.png",
+    caption: { en: "Sanqing Mountain paths", zh: "三清山栈道与峰林" },
+    overview: {
+      en: "Sanqing Mountain is about granite peaks, cloud and mist, cliff paths and Daoist mountain imagery. Its scenery needs a real mountain photo and should never be represented by a map.",
+      zh: "三清山适合从花岗岩峰林、云雾、山间栈道和道教山水意象来理解。它需要真实山景图，不能用地图代替现场。"
+    },
+    experience: {
+      en: "A good route plans cable cars and cliff paths by weather and energy, leaving time for changing mist and quieter viewpoints.",
+      zh: "路线应根据天气和体力安排索道与栈道，留时间看云雾变化和相对安静的观景点。"
+    }
+  },
+  "Guizhou::Fanjing Mountain": {
+    image: "/images/destinations/guizhou-fanjing-mountain-clean.png",
+    caption: { en: "Fanjing Mountain peak", zh: "梵净山红云金顶" },
+    overview: {
+      en: "Fanjing Mountain is defined by isolated peaks, Red Cloud Golden Summit, mist, Buddhist sites and eastern Guizhou biodiversity. The image and copy should show mountain atmosphere, not a regional map.",
+      zh: "梵净山的核心是孤峰、红云金顶、云雾、佛教遗迹和黔东山地生态。图片和简介都应呈现山地现场，而不是区域地图。"
+    },
+    experience: {
+      en: "A good visit needs flexibility for weather, queues and visibility, with enough time to understand why this mountain is both ecological and spiritual.",
+      zh: "游览要给天气、排队和能见度留弹性，同时讲清它为什么兼具生态价值和宗教意义。"
+    }
+  },
+  "Hong Kong::Lantau Island": {
+    image: "/images/destinations/hong-kong-lantau-island-clean.png",
+    caption: { en: "Tian Tan Buddha, Lantau Island", zh: "大屿山天坛大佛" },
+    overview: {
+      en: "Lantau Island should connect the Tian Tan Buddha, Ngong Ping, hill trails, beaches, Tai O village and ferry or cable-car transport. It is an island route, not an administrative map.",
+      zh: "大屿山要把天坛大佛、昂坪、山地步道、海滩、大澳村落和轮渡或缆车交通连起来看。它是一条离岛路线，不是一张行政地图。"
+    },
+    experience: {
+      en: "A good plan chooses between Buddha, village, coast and trail time, keeping transfers realistic and weather in mind.",
+      zh: "合适的安排应在大佛、村落、海岸和步道之间取舍，注意交通时间和天气。"
+    }
+  },
+  "Hainan::Boao Town": {
+    image: "/images/destinations/hainan-boao-town-clean.png",
+    caption: { en: "Boao coastline and town", zh: "博鳌海岸与小镇" },
+    overview: {
+      en: "Boao Town should show Qionghai's coast-town character: Jade Belt Beach, the Wanquan River mouth, seaside streets and a slower small-town rhythm. It should not be reduced to a forum logo or conference building.",
+      zh: "博鳌小镇要呈现琼海海岸小镇气质：玉带滩、万泉河口、海岸街区和相对舒缓的小镇节奏。它不应被简化成论坛标志或会议建筑。"
+    },
+    experience: {
+      en: "A good route links the beach, river-sea viewpoints and town streets, leaving time for seafood, coffee or a coastal walk.",
+      zh: "合适路线应把海滩、河海交汇视角和小镇街区串起来，留出吃海鲜、喝咖啡或海边散步的时间。"
+    }
+  }
+};
+
 function localized(lang: Lang, value: Localized) {
   if (lang === "zh-CN") return value.zh;
   if (lang === "zh-TW") return toTraditionalChinese(value.zh);
@@ -2422,7 +2533,7 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   const placeZh = item.nameZh || item.name;
   const kind = genericByKind[item.kind];
   const provinceFallback = provinceName ? provinceFallbackImages[provinceName] : undefined;
-  const destinationSpecific = provinceName ? destinationSpecificText[`${provinceName}::${item.name}`] : undefined;
+  const destinationSpecific = provinceName ? auditedDestinationSpecificText[`${provinceName}::${item.name}`] ?? destinationSpecificText[`${provinceName}::${item.name}`] : undefined;
   if (destinationSpecific) return destinationSpecific;
   const exactImage = safeDestinationImage(provinceName, item);
   const enLead: Record<RecommendationKind, string> = {
