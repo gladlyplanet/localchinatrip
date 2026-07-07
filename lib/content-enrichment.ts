@@ -2716,6 +2716,18 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
 };
 
 const priorityDestinationSpecificText: Record<string, MediaText> = {
+  "Zhejiang::West Lake": {
+    image: "/images/destinations/optimized/wiki-zhejiang-west-lake.jpg",
+    caption: { en: "West Lake, Hangzhou", zh: "杭州西湖" },
+    overview: {
+      en: "West Lake should be introduced through Hangzhou's lake surface, Su Causeway, Bai Causeway, Broken Bridge, Three Pools Mirroring the Moon, Leifeng Pagoda sightlines, lakeside walking, temple gardens and poetry-and-painting tradition. The focus is not a generic lake view, but how these causeways, bridges, islands, towers and shorelines form Hangzhou's classic cultural landscape.",
+      zh: "西湖要从杭州湖面、苏堤、白堤、断桥、三潭印月、雷峰塔视线、湖滨步行、寺院园林和诗画传统来介绍。重点不是泛泛说“湖景”，而是看这些堤、桥、岛、塔和岸线如何共同构成杭州西湖。"
+    },
+    experience: {
+      en: "A good visit should choose one or two walking sections instead of rushing around the whole lake, then connect lakeside views with garden stops, temple context, boat viewpoints, tea time and nearby neighborhood life.",
+      zh: "合适的游览不应匆忙绕完整个湖，而应选择一到两段步行线，把湖面视野、园林停留、寺院背景、船上视角、茶歇和周边街区时间连起来。"
+    }
+  },
   "Liaoning::Liaoyang White Pagoda": {
     image: "/images/destinations/optimized/wiki-liaoning-liaoyang-white-pagoda.jpg",
     caption: { en: "Liaoyang White Pagoda at Guangyou Temple", zh: "辽阳广佑寺白塔" },
