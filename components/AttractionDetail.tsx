@@ -318,7 +318,7 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
       season: "春秋或清晨傍晚更适合慢走、拍照和听讲解",
       pace: "半日到一日，围绕重点街区或核心遗存慢慢看",
       people: "历史、建筑、城市记忆和摄影爱好者",
-      lead: `${nameZh}要围绕${focusZh}来读，重点应落在真实可见的现场细节和地方记忆上，而不是通用古城说明。`
+      lead: `${nameZh}要围绕${focusZh}来读，重点应落在真实可见的现场细节、地方记忆和城市背景上。`
     },
     nature: {
       season: "按花期、水量、雪景或晴朗天气选择",
@@ -330,7 +330,7 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
       season: "早市、午餐或夜间街巷最适合",
       pace: "2-4小时，边走边尝，留出排队和交流时间",
       people: "美食爱好者、好奇型旅行者和本地生活观察者",
-      lead: `${nameZh}要从${focusZh}进入，看食材、做法、点单习惯和街区日常，而不是只写一道代表菜。`
+      lead: `${nameZh}要从${focusZh}进入，看食材、做法、点单习惯和街区日常如何连在一起。`
     },
     village: {
       season: "春秋舒适，节庆或农事季更有现场感",
@@ -366,7 +366,7 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
       season: "清晨或本地采购高峰最有现场感",
       pace: "1-3小时，边看边聊，适合慢慢比较摊位",
       people: "美食、摄影、市场和本地生活爱好者",
-      lead: `${nameZh}要从${focusZh}看摊位、货品、摊主和采购习惯，而不是只看市场外观。`
+      lead: `${nameZh}要从${focusZh}看摊位、货品、摊主、采购习惯和街坊交流。`
     },
     tea: {
       season: "采茶季最有现场感，也可按茶园景色选择",
@@ -390,7 +390,7 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
     people: destinationPhrase(base.people.en, specific.people, base.people.es, base.people.pt, base.people.ar),
     keywords: destinationPhrase(focus, focusZh, `Claves: ${focus}`, `Palavras-chave: ${focus}`, `Keywords: ${focus}`),
     lead: destinationPhrase(
-      `${name} should be read through ${focus}, with the route shaped by real details on site rather than a generic destination template.`,
+      `${name} should be read through ${focus}, with the route shaped by real details, local rhythm and the setting on site.`,
       specific.lead,
       `Usa ${focus} como hilo principal de ${name}, con detalles reales del lugar.`,
       `Use ${focus} como fio principal de ${name}, com detalhes reais do lugar.`,
@@ -568,7 +568,7 @@ const priorityDestinationMeta: typeof destinationMeta = {
     pace: phrase("Half day, with field walking, maker context and tasting time.", "半日体验，留出茶园步行、制茶讲解和品饮时间", "半日體驗，留出茶園步行、製茶講解和品飲時間", "Medio dia con campos, elaboracion y cata.", "Meio dia com campos, preparo e prova.", "Half day with fields, making context and tasting."),
     people: phrase("Tea lovers, slow travelers and Hangzhou repeat visitors.", "茶文化爱好者、慢旅行者和杭州深度游客", "茶文化愛好者、慢旅行者和杭州深度遊客", "Amantes del te y viaje lento.", "Amantes de cha e viagem lenta.", "Tea lovers and slow travelers."),
     keywords: phrase("Dragon Well tea, tea fields, pan-firing, growers, tasting", "龙井茶 · 茶园 · 炒制 · 茶农 · 品鉴", "龍井茶 · 茶園 · 炒製 · 茶農 · 品鑑", "Longjing, campos, tostado, productores, cata", "Longjing, campos, torra, produtores, prova", "Longjing, tea fields, pan-firing, growers, tasting"),
-    lead: phrase("Longjing Village should connect tea fields, hand firing and tasting, not only a green-field photo.", "龙井村要把茶园、手工炒制和品饮连起来，不只是拍一张绿色茶田。", "龍井村要把茶園、手工炒製和品飲連起來，不只是拍一張綠色茶田。", "Longjing conecta campos, tostado y cata.", "Longjing conecta campos, torra e prova.", "Longjing connects tea fields, firing and tasting."),
+    lead: phrase("Longjing Village should connect tea fields, hand firing, growers and tasting.", "龙井村要把茶园、手工炒制、茶农和品饮连起来。", "龍井村要把茶園、手工炒製、茶農和品飲連起來。", "Longjing conecta campos, tostado y cata.", "Longjing conecta campos, torra e prova.", "Longjing connects tea fields, firing and tasting."),
     advice: sharedAdvice("tea"),
     guide: sharedGuide("tea")
   },
@@ -588,7 +588,7 @@ const priorityDestinationMeta: typeof destinationMeta = {
     pace: phrase("One day or overnight, planned around ferry, temple order and walking distance.", "一日或住一晚，按轮渡、寺院顺序和步行距离安排", "一日或住一晚，按輪渡、寺院順序和步行距離安排", "Un dia o una noche, segun ferry y templos.", "Um dia ou uma noite, conforme ferry e templos.", "One day or overnight, around ferry and temples."),
     people: phrase("Pilgrimage travelers, Buddhist-culture visitors and island walkers.", "朝山者、佛教文化游客和海岛步行爱好者", "朝山者、佛教文化遊客和海島步行愛好者", "Peregrinos y caminantes de isla.", "Peregrinos e caminhantes de ilha.", "Pilgrimage travelers and island walkers."),
     keywords: phrase("Puji Temple, Fayu Temple, Huiji Temple, Zizhulin, South Sea Guanyin", "普济寺 · 法雨寺 · 慧济寺 · 紫竹林 · 南海观音", "普濟寺 · 法雨寺 · 慧濟寺 · 紫竹林 · 南海觀音", "Puji, Fayu, Huiji, Zizhulin, Guanyin", "Puji, Fayu, Huiji, Zizhulin, Guanyin", "Puji, Fayu, Huiji, Zizhulin, Guanyin"),
-    lead: phrase("Putuo Mountain is a sea-facing Guanyin pilgrimage route, not a generic temple page.", "普陀山是一条面向大海的观音朝山路线，不是普通寺院页面。", "普陀山是一條面向大海的觀音朝山路線，不是普通寺院頁面。", "Putuo es una ruta de peregrinacion frente al mar.", "Putuo e uma rota de peregrinacao frente ao mar.", "Putuo is a sea-facing Guanyin pilgrimage route."),
+    lead: phrase("Putuo Mountain is a sea-facing Guanyin pilgrimage route with temples, ferry arrival and island paths.", "普陀山是一条面向大海的观音朝山路线，寺院、轮渡和海岛步道要一起看。", "普陀山是一條面向大海的觀音朝山路線，寺院、輪渡和海島步道要一起看。", "Putuo es una ruta de peregrinacion frente al mar.", "Putuo e uma rota de peregrinacao frente ao mar.", "Putuo is a sea-facing Guanyin pilgrimage route."),
     advice: sharedAdvice("spiritual"),
     guide: sharedGuide("spiritual")
   },
@@ -618,7 +618,7 @@ const priorityDestinationMeta: typeof destinationMeta = {
     pace: phrase("Half day to one day, linking mansions, gardens, library and canal walks.", "半日到一日，串联商宅、园林、藏书楼和河道步行", "半日到一日，串聯商宅、園林、藏書樓和河道步行", "Medio dia a un dia.", "Meio dia a um dia.", "Half day to one day."),
     people: phrase("Architecture, gardens, merchant history and Jiangnan culture travelers.", "建筑、园林、商帮历史和江南文化旅行者", "建築、園林、商幫歷史和江南文化旅行者", "Arquitectura, jardines e historia mercantil.", "Arquitetura, jardins e historia mercantil.", "Architecture, gardens and merchant history travelers."),
     keywords: phrase("Xiaolianzhuang, Jiaye Library, canals, merchant mansions", "小莲庄 · 嘉业堂 · 河道 · 商宅", "小蓮莊 · 嘉業堂 · 河道 · 商宅", "Xiaolianzhuang, Jiaye, canales, mansiones", "Xiaolianzhuang, Jiaye, canais, mansoes", "Xiaolianzhuang, Jiaye Library, canals, mansions"),
-    lead: phrase("Nanxun differs from ordinary water towns through silk-merchant mansions, gardens and libraries.", "南浔不同于普通水乡，重点在丝商宅第、园林和藏书楼。", "南潯不同於普通水鄉，重點在絲商宅第、園林和藏書樓。", "Nanxun destaca por mansiones, jardines y biblioteca.", "Nanxun destaca por mansoes, jardins e biblioteca.", "Nanxun stands out through mansions, gardens and libraries."),
+    lead: phrase("Nanxun is shaped by silk-merchant mansions, gardens, libraries and canals.", "南浔的重点在丝商宅第、园林、藏书楼和河道。", "南潯的重點在絲商宅第、園林、藏書樓和河道。", "Nanxun destaca por mansiones, jardines y biblioteca.", "Nanxun destaca por mansoes, jardins e biblioteca.", "Nanxun stands out through mansions, gardens and libraries."),
     advice: sharedAdvice("village"),
     guide: sharedGuide("village")
   },
@@ -628,7 +628,7 @@ const priorityDestinationMeta: typeof destinationMeta = {
     pace: phrase("Half day to one day, planned around harbor timing and seafood stops.", "半日到一日，按港口时间和海鲜停留安排", "半日到一日，按港口時間和海鮮停留安排", "Medio dia a un dia.", "Meio dia a um dia.", "Half day to one day."),
     people: phrase("Seafood lovers, coastal walkers and island-life observers.", "海鲜爱好者、海岸漫步和海岛生活观察者", "海鮮愛好者、海岸漫步和海島生活觀察者", "Amantes del marisco y vida de isla.", "Amantes de frutos do mar e vida de ilha.", "Seafood lovers and island-life observers."),
     keywords: phrase("Harbor, fishing boats, seafood market, island roads, East China Sea", "港口 · 渔船 · 海鲜市场 · 海岛道路 · 东海", "港口 · 漁船 · 海鮮市場 · 海島道路 · 東海", "Puerto, barcos, mercado, islas", "Porto, barcos, mercado, ilhas", "Harbor, boats, seafood market, islands"),
-    lead: phrase("Zhoushan's coast is a working fishing archipelago, not only a blue-sea view.", "舟山海岸是仍在运转的渔业群岛，不只是蓝色海景。", "舟山海岸是仍在運轉的漁業群島，不只是藍色海景。", "Zhoushan es un archipielago pesquero vivo.", "Zhoushan e um arquipelago pesqueiro vivo.", "Zhoushan is a working fishing archipelago."),
+    lead: phrase("Zhoushan's coast is a working fishing archipelago with harbors, boats, seafood markets and island roads.", "舟山海岸是仍在运转的渔业群岛，要看港口、渔船、海鲜市场和海岛道路。", "舟山海岸是仍在運轉的漁業群島，要看港口、漁船、海鮮市場和海島道路。", "Zhoushan es un archipielago pesquero vivo.", "Zhoushan e um arquipelago pesqueiro vivo.", "Zhoushan is a working fishing archipelago."),
     advice: sharedAdvice("coast"),
     guide: sharedGuide("coast")
   },
@@ -674,12 +674,12 @@ const priorityDestinationMeta: typeof destinationMeta = {
       "Canals, black-awning boats, Lu Xun, yellow rice wine, bridges"
     ),
     lead: phrase(
-      "Shaoxing Old City should feel like a lived water city: canals, river steps, wine shops, Lu Xun memory and stone bridges, not just a Jiangnan postcard.",
-      "绍兴老城要像一座仍在生活的水城：河道、河埠头、黄酒铺、鲁迅记忆和古桥都要进入介绍，而不只是江南明信片。",
-      "紹興老城要像一座仍在生活的水城：河道、河埠頭、黃酒鋪、魯迅記憶和古橋都要進入介紹，而不只是江南明信片。",
+      "Shaoxing Old City should feel like a lived water city: canals, river steps, wine shops, Lu Xun memory and stone bridges.",
+      "绍兴老城要像一座仍在生活的水城：河道、河埠头、黄酒铺、鲁迅记忆和古桥都要进入介绍。",
+      "紹興老城要像一座仍在生活的水城：河道、河埠頭、黃酒鋪、魯迅記憶和古橋都要進入介紹。",
       "Shaoxing debe sentirse como una ciudad de agua viva, no solo una postal de Jiangnan.",
       "Shaoxing deve parecer uma cidade de agua viva, nao apenas um postal de Jiangnan.",
-      "Shaoxing Old City should feel like a lived water city, not just a Jiangnan postcard."
+      "Shaoxing Old City should feel like a lived water city."
     ),
     advice: sharedAdvice("heritage"),
     guide: sharedGuide("heritage")
@@ -726,9 +726,9 @@ const priorityDestinationMeta: typeof destinationMeta = {
       "Su Causeway, Bai Causeway, Broken Bridge, Three Pools, Leifeng"
     ),
     lead: phrase(
-      "West Lake should be read through causeways, islands, bridges, temples, gardens and poetic views, not as a generic lake photo.",
-      "西湖要看堤、岛、桥、寺、园林和诗画视线，不是一张普通湖景照。",
-      "西湖要看堤、島、橋、寺、園林和詩畫視線，不是一張普通湖景照。",
+      "West Lake should be read through causeways, islands, bridges, temples, gardens and poetic views.",
+      "西湖要看堤、岛、桥、寺、园林和诗画视线。",
+      "西湖要看堤、島、橋、寺、園林和詩畫視線。",
       "West Lake se lee por calzadas, islas, puentes, templos, jardines y vistas poeticas.",
       "West Lake se entende por calçadas, ilhas, pontes, templos, jardins e vistas poeticas.",
       "West Lake is read through causeways, islands, bridges, temples, gardens and poetic views."
