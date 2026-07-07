@@ -474,6 +474,58 @@ const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: 
 };
 
 const priorityDestinationMeta: typeof destinationMeta = {
+  "West Lake": {
+    subtitle: phrase(
+      "Su Causeway · Bai Causeway · Broken Bridge · Three Pools · Leifeng Pagoda views",
+      "苏堤白堤 · 断桥 · 三潭印月 · 雷峰塔视线 · 湖滨步行",
+      "蘇堤白堤 · 斷橋 · 三潭印月 · 雷峰塔視線 · 湖濱步行",
+      "Calzadas Su y Bai · Puente Roto · Tres Estanques · vistas de Leifeng",
+      "Calçadas Su e Bai · Ponte Quebrada · Tres Lagos · vista da Pagode Leifeng",
+      "Su Causeway · Bai Causeway · Broken Bridge · Three Pools · Leifeng Pagoda"
+    ),
+    season: phrase(
+      "Spring and autumn are most comfortable; early morning and dusk have softer light.",
+      "春秋最舒适，清晨和傍晚光线更柔和",
+      "春秋最舒適，清晨和傍晚光線更柔和",
+      "Primavera y otoño son mas comodas; manana y atardecer tienen luz suave.",
+      "Primavera e outono sao mais confortaveis; manha e fim de tarde tem luz suave.",
+      "Spring and autumn are most comfortable; morning and dusk are softer."
+    ),
+    pace: phrase(
+      "Half day to one day; choose one or two walking sections instead of rushing the whole lake.",
+      "半日到一日，选一到两段步行线，不赶完整绕湖",
+      "半日到一日，選一到兩段步行線，不趕完整繞湖",
+      "Medio dia a un dia; elige una o dos secciones a pie.",
+      "Meio dia a um dia; escolha uma ou duas partes a pe.",
+      "Half day to one day; choose one or two walking sections."
+    ),
+    people: phrase(
+      "First-time Hangzhou visitors, garden lovers and slow walkers.",
+      "初访杭州者、园林爱好者和慢行旅行者",
+      "初訪杭州者、園林愛好者和慢行旅行者",
+      "Primer viaje a Hangzhou, amantes de jardines y caminantes tranquilos.",
+      "Primeira visita a Hangzhou, amantes de jardins e caminhantes lentos.",
+      "First-time Hangzhou visitors, garden lovers and slow walkers."
+    ),
+    keywords: phrase(
+      "Su Causeway, Bai Causeway, Broken Bridge, Three Pools, Leifeng Pagoda",
+      "苏堤 · 白堤 · 断桥 · 三潭印月 · 雷峰塔",
+      "蘇堤 · 白堤 · 斷橋 · 三潭印月 · 雷峰塔",
+      "Su, Bai, Puente Roto, Tres Estanques, Leifeng",
+      "Su, Bai, Ponte Quebrada, Tres Lagos, Leifeng",
+      "Su Causeway, Bai Causeway, Broken Bridge, Three Pools, Leifeng"
+    ),
+    lead: phrase(
+      "West Lake should be read through causeways, islands, bridges, temples, gardens and poetic views, not as a generic lake photo.",
+      "西湖要看堤、岛、桥、寺、园林和诗画视线，不是一张普通湖景照。",
+      "西湖要看堤、島、橋、寺、園林和詩畫視線，不是一張普通湖景照。",
+      "West Lake se lee por calzadas, islas, puentes, templos, jardines y vistas poeticas.",
+      "West Lake se entende por calçadas, ilhas, pontes, templos, jardins e vistas poeticas.",
+      "West Lake is read through causeways, islands, bridges, temples, gardens and poetic views."
+    ),
+    advice: sharedAdvice("heritage"),
+    guide: sharedGuide("heritage")
+  },
   "Liaoyang White Pagoda": {
     subtitle: phrase("Guangyou Temple · Liao brick pagoda · Liaoyang old city memory", "广佑寺白塔 · 辽代砖塔 · 辽阳古城记忆", "廣佑寺白塔 · 遼代磚塔 · 遼陽古城記憶", "Templo Guangyou · pagoda de ladrillo Liao · memoria antigua de Liaoyang", "Templo Guangyou · pagode de tijolo Liao · memória antiga de Liaoyang", "賲毓亘丿 睾賵丕賳睾賷賵 路 亘乇噩 丕賱胤賵亘 賱賷丕賵 路 匕丕賰乇丞 賱賷丕賵賷丕賳睾 丕賱賯丿賷賲丞"),
     season: phrase("Clear mornings or quiet non-peak hours are best for tower details.", "清晨或非高峰时段更适合看塔身细节", "清晨或非高峰時段更適合看塔身細節", "Mañanas despejadas u horas tranquilas para ver detalles.", "Manhãs claras ou horários tranquilos para ver detalhes.", "丕賱氐亘丕丨 丕賱氐丕賮賷 兀賵 丕賱兀賵賯丕鬲 丕賱賴丕丿卅丞 兀賮囟賱 賱鬲賮丕氐賷賱 丕賱亘乇噩"),
