@@ -318,13 +318,13 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
       season: "春秋或清晨傍晚更适合慢走、拍照和听讲解",
       pace: "半日到一日，围绕重点街区或核心遗存慢慢看",
       people: "历史、建筑、城市记忆和摄影爱好者",
-      lead: `${nameZh}要围绕${focusZh}来读，重点应落在真实可见的现场细节、地方记忆和城市背景上。`
+      lead: `${nameZh}适合从${focusZh}进入，把真实可见的现场细节、地方记忆和城市背景串起来。`
     },
     nature: {
       season: "按花期、水量、雪景或晴朗天气选择",
       pace: "半日到一日，预留观景、步行和天气调整时间",
       people: "家庭、摄影爱好者和自然旅行者",
-      lead: `${nameZh}要根据${focusZh}安排节奏，让地形、季节和光线本身说明这里的特点。`
+      lead: `${nameZh}适合顺着${focusZh}安排节奏，让地形、季节和光线本身说明这里的特点。`
     },
     food: {
       season: "早市、午餐或夜间街巷最适合",
@@ -336,25 +336,25 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
       season: "春秋舒适，节庆或农事季更有现场感",
       pace: "半日到一日，在聚落或古镇内部慢走停留",
       people: "家庭、摄影爱好者、古镇和在地文化旅行者",
-      lead: `${nameZh}要通过${focusZh}理解当地空间，把民居、巷道、水系、院落和日常使用方式连起来看。`
+      lead: `${nameZh}适合通过${focusZh}理解当地空间，把民居、巷道、水系、院落和日常使用方式连起来看。`
     },
     craft: {
       season: "工作室开放时段最佳，建议提前确认体验时间",
       pace: "2-3小时，留给工序、材料和手艺人讲解",
       people: "设计、手作、工艺和文化爱好者",
-      lead: `${nameZh}要围绕${focusZh}展开，重点是材料、工具、制作过程和仍在工作的手艺现场。`
+      lead: `${nameZh}适合围绕${focusZh}展开，把材料、工具、制作过程和仍在工作的手艺现场讲清楚。`
     },
     spiritual: {
       season: "清晨或非高峰时段更安静",
       pace: "半日到一日，保持安静节奏",
       people: "文化、建筑、信仰空间和慢行旅行者",
-      lead: `${nameZh}要从${focusZh}理解，同时注意礼仪、空间格局和当地人今天怎样使用这里。`
+      lead: `${nameZh}适合从${focusZh}理解，同时注意礼仪、空间格局和当地人今天怎样使用这里。`
     },
     city: {
       season: "早晚光线柔和，工作日更适合观察日常",
       pace: "2-4小时，按街区和交通节点串联",
       people: "城市漫步、建筑、交通和本地生活爱好者",
-      lead: `${nameZh}要通过${focusZh}看街区如何运转，把建筑、店铺、交通和普通日常放在一起。`
+      lead: `${nameZh}适合通过${focusZh}看街区如何运转，把建筑、店铺、交通和普通日常放在一起。`
     },
     road: {
       season: "按路况、天气和沿途景观季节选择",
