@@ -474,6 +474,16 @@ const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: 
 };
 
 const priorityDestinationMeta: typeof destinationMeta = {
+  "Shiwan Ceramic Studio": {
+    subtitle: phrase("Kiln memory · Clay shaping · Foshan folk craft", "窑火记忆 · 泥塑造型 · 佛山民间工艺", "窯火記憶 · 泥塑造型 · 佛山民間工藝", "Memoria de horno · Modelado de barro · Artesanía popular de Foshan", "Memória de forno · modelagem em barro · artesanato popular de Foshan", "匕丕賰乇丞 丕賱賮乇賳 路 鬲卮賰賷賱 丕賱胤賷賳 路 丨乇賮 賮賵卮丕賳 丕賱卮毓亘賷丞"),
+    season: phrase("Best during workshop opening hours; confirm demonstrations in advance.", "工作坊开放时段最佳，建议提前确认示范时间", "工作坊開放時段最佳，建議提前確認示範時間", "Mejor durante horario de talleres; confirma demostraciones.", "Melhor durante o horário das oficinas; confirme demonstrações.", "兀賮囟賱 禺賱丕賱 爻丕毓丕鬲 丕賱賵乇卮貙 賵賷賮囟賱 鬲兀賰賷丿 丕賱毓乇賵囟 賲爻亘賯丕"),
+    pace: phrase("Two to three hours, with time for kiln space, making steps and craft explanation.", "2-3小时，留给窑址空间、制作工序和工艺讲解", "2-3小時，留給窯址空間、製作工序和工藝講解", "Dos a tres horas para horno, proceso y explicación.", "Duas a três horas para forno, processo e explicação.", "爻丕毓鬲丕賳 廿賱賶 孬賱丕孬 爻丕毓丕鬲 賱賲爻丕丨丞 丕賱賮乇賳 賵丕賱毓賲賱賷丞 賵丕賱卮乇丨"),
+    people: phrase("Design, handcraft and Lingnan culture lovers.", "设计、手作和岭南文化爱好者", "設計、手作和嶺南文化愛好者", "Amantes de diseño, artesanía y cultura Lingnan.", "Amantes de design, artesanato e cultura Lingnan.", "賲丨亘賵 丕賱鬲氐賲賷賲 賵丕賱丨乇賮 丕賱賷丿賵賷丞 賵孬賯丕賮丞 賱賷賳睾賳丕賳"),
+    keywords: phrase("Shiwan kiln, ceramic figures, clay, glaze, Foshan craft", "石湾窑 · 陶塑人物 · 泥料 · 釉色 · 佛山工艺", "石灣窯 · 陶塑人物 · 泥料 · 釉色 · 佛山工藝", "Horno Shiwan, figuras cerámicas, barro, esmalte, artesanía de Foshan", "Forno Shiwan, figuras cerâmicas, barro, esmalte, artesanato de Foshan", "賮乇賳 卮賷賵丕賳貙 卮禺氐賷丕鬲 禺夭賮賷丞貙 胤賷賳貙 鬲夭噩賷噩貙 丨乇賮 賮賵卮丕賳"),
+    lead: phrase("Shiwan ceramic culture should be read through kiln space, clay shaping and Lingnan folk aesthetics, not one isolated artifact.", "石湾陶艺要看窑址空间、泥塑造型和岭南民间审美，不是一件孤立陶塑。", "石灣陶藝要看窯址空間、泥塑造型和嶺南民間審美，不是一件孤立陶塑。", "Shiwan se entiende por hornos, modelado y estética Lingnan, no por una pieza aislada.", "Shiwan se entende por fornos, modelagem e estética Lingnan, não por uma peça isolada.", "賷賮賴賲 禺夭賮 卮賷賵丕賳 毓亘乇 丕賱賮乇賳 賵鬲卮賰賷賱 丕賱胤賷賳 賵噩賲丕賱賷丕鬲 賱賷賳睾賳丕賳貙 賱丕 賯胤毓丞 賲毓夭賵賱丞"),
+    advice: sharedAdvice("craft"),
+    guide: sharedGuide("craft")
+  },
   "Xiqiao Mountain": {
     subtitle: phrase("Lingnan mountain · Nanhai Guanyin · Foshan Buddhist landscape", "岭南山水 · 南海观音 · 佛山佛教空间", "嶺南山水 · 南海觀音 · 佛山佛教空間", "Montaña Lingnan · Guanyin de Nanhai · paisaje budista de Foshan", "Montanha Lingnan · Guanyin de Nanhai · paisagem budista de Foshan", "噩亘賱 賱賷賳睾賳丕賳 路 賳丕賳賴丕賷 睾賵丕賳賷賳 路 賲卮賴丿 亘賵匕賷 賮賵卮丕賳"),
     season: phrase("Spring and autumn are comfortable; clear days suit views and temple walking.", "春秋舒适，晴朗天气适合观景和寺院步行", "春秋舒適，晴朗天氣適合觀景和寺院步行", "Primavera y otoño son cómodos; días despejados sirven para vistas y templos.", "Primavera e outono são agradáveis; dias claros servem para vistas e templos.", "丕賱乇亘賷毓 賵丕賱禺乇賷賮 賲乇賷丨丕賳貙 賵丕賱兀賷丕賲 丕賱氐丕賮賷丞 鬲賳丕爻亘 丕賱賲卮丕賴丿 賵丕賱賲卮賷"),
