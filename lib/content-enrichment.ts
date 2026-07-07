@@ -3,6 +3,7 @@ import type { ExperienceLocation } from "@/lib/experiences";
 import type { ProvinceRecommendation, RecommendationKind } from "@/lib/province-recommendations";
 import { toTraditionalChinese } from "@/lib/chinese-text";
 import { destinationImages } from "@/lib/generated-destination-media";
+import { getAuditedDestinationMedia } from "@/lib/audited-destination-copy";
 
 type Localized = {
   en: string;
@@ -3121,9 +3122,17 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   const placeZh = item.nameZh || item.name;
   const kind = genericByKind[item.kind];
   const provinceFallback = provinceName ? provinceFallbackImages[provinceName] : undefined;
-  const destinationSpecific = provinceName ? priorityDestinationSpecificText[`${provinceName}::${item.name}`] ?? auditedDestinationSpecificText[`${provinceName}::${item.name}`] ?? destinationSpecificText[`${provinceName}::${item.name}`] : undefined;
-  if (destinationSpecific) return destinationSpecific;
+  const prioritySpecific = provinceName ? priorityDestinationSpecificText[`${provinceName}::${item.name}`] : undefined;
+  if (prioritySpecific) return prioritySpecific;
   const exactImage = safeDestinationImage(provinceName, item);
+  return getAuditedDestinationMedia(
+    item,
+    provinceName,
+    exactImage ?? verifiedRecommendationImages[item.name] ?? provinceFallback?.[item.kind] ?? provinceFallback?.default ?? kind.image,
+    kind.fallbackImage
+  );
+  const destinationSpecific = provinceName ? auditedDestinationSpecificText[`${provinceName}::${item.name}`] ?? destinationSpecificText[`${provinceName}::${item.name}`] : undefined;
+  if (destinationSpecific) return destinationSpecific;
   return focusedFallbackText(item, provinceName, exactImage ?? verifiedRecommendationImages[item.name] ?? provinceFallback?.[item.kind] ?? provinceFallback?.default ?? kind.image, kind.fallbackImage);
   const enLead: Record<RecommendationKind, string> = {
     heritage: "The visit should connect visible structures, preserved spaces, inscriptions, street context and the historical layers around the site.",
