@@ -474,6 +474,16 @@ const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: 
 };
 
 const priorityDestinationMeta: typeof destinationMeta = {
+  "Xiqiao Mountain": {
+    subtitle: phrase("Lingnan mountain · Nanhai Guanyin · Foshan Buddhist landscape", "岭南山水 · 南海观音 · 佛山佛教空间", "嶺南山水 · 南海觀音 · 佛山佛教空間", "Montaña Lingnan · Guanyin de Nanhai · paisaje budista de Foshan", "Montanha Lingnan · Guanyin de Nanhai · paisagem budista de Foshan", "噩亘賱 賱賷賳睾賳丕賳 路 賳丕賳賴丕賷 睾賵丕賳賷賳 路 賲卮賴丿 亘賵匕賷 賮賵卮丕賳"),
+    season: phrase("Spring and autumn are comfortable; clear days suit views and temple walking.", "春秋舒适，晴朗天气适合观景和寺院步行", "春秋舒適，晴朗天氣適合觀景和寺院步行", "Primavera y otoño son cómodos; días despejados sirven para vistas y templos.", "Primavera e outono são agradáveis; dias claros servem para vistas e templos.", "丕賱乇亘賷毓 賵丕賱禺乇賷賮 賲乇賷丨丕賳貙 賵丕賱兀賷丕賲 丕賱氐丕賮賷丞 鬲賳丕爻亘 丕賱賲卮丕賴丿 賵丕賱賲卮賷"),
+    pace: phrase("Half day to one day, planned around Guanyin plaza, trails and viewpoints.", "半日到一日，围绕观音广场、步道和观景点安排", "半日到一日，圍繞觀音廣場、步道和觀景點安排", "Medio día a un día, con plaza Guanyin, senderos y miradores.", "Meio dia a um dia, com praça Guanyin, trilhas e mirantes.", "賳氐賮 賷賵賲 廿賱賶 賷賵賲 貙 丨爻亘 爻丕丨丞 睾賵丕賳賷賳 賵丕賱賲爻丕乇丕鬲 賵賳賯丕胤 丕賱賲卮賴丿"),
+    people: phrase("Families, Lingnan culture travelers and Buddhist landscape walkers.", "家庭、岭南文化和佛教山水爱好者", "家庭、嶺南文化和佛教山水愛好者", "Familias y viajeros interesados en cultura Lingnan y paisaje budista.", "Famílias e viajantes de cultura Lingnan e paisagem budista.", "毓丕卅賱丕鬲 賵賲丨亘賵 孬賯丕賮丞 賱賷賳睾賳丕賳 賵丕賱賲卮丕賴丿 丕賱亘賵匕賷丞"),
+    keywords: phrase("Nanhai Guanyin, volcanic landform, forest trails, Foshan mountain scenery", "南海观音 · 古火山地貌 · 林间步道 · 佛山山水", "南海觀音 · 古火山地貌 · 林間步道 · 佛山山水", "Guanyin de Nanhai, relieve volcánico, senderos, paisaje de Foshan", "Guanyin de Nanhai, relevo vulcânico, trilhas, paisagem de Foshan", "賳丕賳賴丕賷 睾賵丕賳賷賳貙 鬲囟丕乇賷爻 亘乇賰丕賳賷丞貙 賲爻丕乇丕鬲 睾丕亘丕鬲貙 賲賳馗乇 賮賵卮丕賳"),
+    lead: phrase("Xiqiao Mountain should connect Foshan's Lingnan mountain scenery, Nanhai Guanyin and Buddhist walking routes, not a city panorama.", "西樵山要看佛山岭南山水、南海观音和佛教步行空间，不是城市俯瞰图。", "西樵山要看佛山嶺南山水、南海觀音和佛教步行空間，不是城市俯瞰圖。", "Xiqiao debe mostrar montaña Lingnan, Guanyin y rutas budistas, no panorama urbano.", "Xiqiao deve mostrar montanha Lingnan, Guanyin e rotas budistas, não panorama urbano.", "噩亘賱 卮賷賯賷丕賵 賷噩亘 兀賳 賷馗賴乇 噩亘丕賱 賱賷賳睾賳丕賳 賵睾賵丕賳賷賳 賵胤乇賯 亘賵匕賷丞貙 賱賷爻 賲賳馗乇丕 丨囟乇賷丕"),
+    advice: sharedAdvice("nature"),
+    guide: sharedGuide("nature")
+  },
   "Liwan Food Market": {
     subtitle: phrase("Cantonese ingredients · Seafood · Soup culture · Neighborhood shopping", "粤菜食材 · 海鲜水产 · 老火汤料 · 街坊采购", "粵菜食材 · 海鮮水產 · 老火湯料 · 街坊採購", "Ingredientes cantoneses · Mariscos · Sopas lentas · Compra vecinal", "Ingredientes cantoneses · frutos do mar · sopas lentas · compras de bairro", "賲賰賵賳丕鬲 賰丕賳鬲賵賳賷丞 路 賲兀賰賵賱丕鬲 亘丨乇賷丞 路 丨爻丕亍 亘胤賷亍 路 鬲爻賵賯 丕賱丨賷"),
     season: phrase("Morning or late afternoon, when stalls and neighborhood shopping feel most alive.", "早市或傍晚最合适，摊位和街坊采购最有现场感", "早市或傍晚最合適，攤位和街坊採購最有現場感", "Mañana o tarde, cuando los puestos y compras vecinales están vivos.", "Manhã ou fim da tarde, quando bancas e compras locais estão vivas.", "丕賱氐亘丕丨 兀賵 丌禺乇 丕賱賳賴丕乇 丨賷孬 鬲賰賵賳 丕賱兀賰卮丕賰 賵鬲爻賵賯 丕賱丨賷 兀賰孬乇 丨賷賵賷丞"),
