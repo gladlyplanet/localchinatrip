@@ -2833,8 +2833,8 @@ function naturalFallbackText(item: ProvinceRecommendation, provinceName: string 
       experience: `A good food walk should compare several stalls or kitchens, explain ordering habits and connect taste with neighborhood rhythm.`
     },
     village: {
-      overview: `${place} is strongest when read through ${focus}. Homes, lanes, fields, water systems and public spaces should be treated as lived places, not only a scenic backdrop.`,
-      experience: `A good visit should slow down inside the settlement and explain how architecture, family life, work and local memory still fit together.`
+      overview: `${place} is strongest when read through ${focus}. Homes, lanes, waterways, courtyards and public spaces should be treated as lived places, not only a scenic backdrop.`,
+      experience: `A good visit should slow down inside the settlement and explain how architecture, daily use, work and local memory still fit together.`
     },
     craft: {
       overview: `${place} should focus on ${focus}, following materials, tools, makers and workshop process. The craft needs a real making context rather than an isolated souvenir or museum object.`,
@@ -2879,8 +2879,8 @@ function naturalFallbackText(item: ProvinceRecommendation, provinceName: string 
       experience: `合适的美食路线应比较几个摊位或店铺，讲清点单习惯、制作方式和街区节奏。`
     },
     village: {
-      overview: `${placeZh}的重点是${focusZh}。民居、巷道、田地、水系和公共空间都应作为仍在使用的生活现场来理解，而不是只当风景背景。`,
-      experience: `合适的游览应在聚落里慢下来，解释建筑、家庭生活、劳作方式和地方记忆如何连在一起。`
+      overview: `${placeZh}的重点是${focusZh}。民居、巷道、水系、院落和公共空间都应作为仍在使用的生活现场来理解，而不是只当风景背景。`,
+      experience: `合适的游览应在聚落或古镇里慢下来，解释建筑、日常使用方式、地方产业和记忆如何连在一起。`
     },
     craft: {
       overview: `${placeZh}要围绕${focusZh}展开，顺着材料、工具、手艺人和制作流程来看。重点是一个真实的制作环境，而不是孤立的纪念品或展品。`,
