@@ -2716,6 +2716,18 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
 };
 
 const priorityDestinationSpecificText: Record<string, MediaText> = {
+  "Zhejiang::Shaoxing Old City": {
+    image: "/images/destinations/zhejiang-shaoxing-old-city-corrected.png",
+    caption: { en: "Shaoxing Old City canals", zh: "绍兴老城河道" },
+    overview: {
+      en: "Shaoxing Old City should be introduced through its black-awning boats, canals, stone bridges, yellow rice wine shops, Lu Xun's neighborhood memory and old waterside houses. The point is not a generic Jiangnan water-town view, but how Shaoxing's lanes, river steps, wine culture and literary memory still sit inside the old city.",
+      zh: "绍兴老城要从乌篷船、河道、石桥、黄酒铺、鲁迅故里记忆和临水老屋来介绍。重点不是泛泛说江南水乡，而是看绍兴的巷弄、河埠头、黄酒生活和文学记忆如何仍然留在老城里。"
+    },
+    experience: {
+      en: "A good walk should slow down along the canals, compare bridges and waterside lanes, leave time for Lu Xun Native Place and yellow-rice-wine context, and read the city through everyday water life rather than only taking a canal photo.",
+      zh: "合适的游览应沿河道慢走，比较古桥、河埠头和临水街巷，留出鲁迅故里与黄酒文化的讲解时间，把绍兴看成一座仍有水城日常的老城，而不是只拍一张河道照片。"
+    }
+  },
   "Zhejiang::West Lake": {
     image: "/images/destinations/optimized/wiki-zhejiang-west-lake.jpg",
     caption: { en: "West Lake, Hangzhou", zh: "杭州西湖" },
@@ -2802,7 +2814,114 @@ const priorityDestinationSpecificText: Record<string, MediaText> = {
   }
 };
 
+function naturalFallbackText(item: ProvinceRecommendation, provinceName: string | undefined, image: string, fallbackImage?: string): MediaText {
+  const place = provinceName ? `${item.name}, ${provinceName}` : item.name;
+  const placeZh = item.nameZh || item.name;
+  const focus = item.focus;
+  const focusZh = item.focusZh || item.focus;
+  const enText: Record<RecommendationKind, { overview: string; experience: string }> = {
+    heritage: {
+      overview: `${place} is best read through ${focus}. The visit should name the actual lanes, bridges, courtyards, monuments or old-town spaces that shape the site, so the story feels anchored in this place instead of like a general historic-area description.`,
+      experience: `A good route should slow down at the details that make ${item.name} recognizable, then connect those details with local memory, daily use and the wider city context.`
+    },
+    nature: {
+      overview: `${place} is about ${focus}. The route should follow the site's own terrain, light, season and walking conditions, so the scenery is explained through what is really there rather than a generic mountain-or-water introduction.`,
+      experience: `A good visit should choose viewpoints and walking sections that show why ${item.name} is distinct, leaving enough time for weather, scale and quiet observation.`
+    },
+    food: {
+      overview: `${place} should be explained through ${focus}: what people buy, cook, order, share and talk about there. The page should feel like a real local food scene, not a single representative dish.`,
+      experience: `A good food walk should compare several stalls or kitchens, explain ordering habits and connect taste with neighborhood rhythm.`
+    },
+    village: {
+      overview: `${place} is strongest when read through ${focus}. Homes, lanes, fields, water systems and public spaces should be treated as lived places, not only a scenic backdrop.`,
+      experience: `A good visit should slow down inside the settlement and explain how architecture, family life, work and local memory still fit together.`
+    },
+    craft: {
+      overview: `${place} should focus on ${focus}, following materials, tools, makers and workshop process. The craft needs a real making context rather than an isolated souvenir or museum object.`,
+      experience: `A good visit should watch how the work is made, then connect technique with local history, materials and the people who keep it alive.`
+    },
+    spiritual: {
+      overview: `${place} should be introduced through ${focus}, with attention to worship routes, temple layout, ritual etiquette and the living use of the site.`,
+      experience: `A good visit should keep a quiet pace, explain what visitors are seeing, and avoid treating ${item.name} as only a photo stop.`
+    },
+    city: {
+      overview: `${place} should be read through ${focus}. Streets, buildings, transport, shops and ordinary routines need to appear together, so the place feels lived-in rather than like a distant skyline.`,
+      experience: `A good city walk should compare blocks, storefronts and street details on the ground, then explain how local life works here.`
+    },
+    road: {
+      overview: `${place} is defined by ${focus}. Movement, stops, transport rhythm and changing views are the experience, not just the places at either end.`,
+      experience: `A good route should plan pauses, meals, transfers and viewpoints together, making the journey itself part of the story.`
+    },
+    market: {
+      overview: `${place} should be explained through ${focus}: stalls, goods, vendors, prices, shopping habits and neighborhood exchange.`,
+      experience: `A good market walk should slow down at specific stalls and explain what local people buy, when they come and how the market connects to daily cooking.`
+    },
+    tea: {
+      overview: `${place} should connect ${focus} with fields or forests, picking season, processing, brewing and local hospitality.`,
+      experience: `A good tea visit should move from landscape to craft to tasting, so ${item.name} feels like a real tea experience rather than a scenic stop.`
+    },
+    coast: {
+      overview: `${place} should connect ${focus} with shore scenery, harbor work, seafood, old streets and the daily rhythm of coastal life.`,
+      experience: `A good coastal route should combine waterfront time with town life and food context, so ${item.name} is more than a generic sea view.`
+    }
+  };
+  const zhText: Record<RecommendationKind, { overview: string; experience: string }> = {
+    heritage: {
+      overview: `${placeZh}的重点是${focusZh}。介绍时要落到这个地点真实可见的街巷、桥梁、院落、纪念空间或老城肌理上，让人知道这里为什么是${placeZh}，而不是一段通用古城说明。`,
+      experience: `合适的游览应在关键细节前慢下来，把现场空间、人物记忆、地方生活和城市背景串起来，让${placeZh}有自己的辨识度。`
+    },
+    nature: {
+      overview: `${placeZh}的重点是${focusZh}。路线应根据这里自己的地形、季节、光线、水量或步行条件来安排，让风景从真实现场长出来，而不是套用普通山水介绍。`,
+      experience: `合适的游览应选择最能说明${placeZh}特点的观景点和步行段，给天气、尺度和安静观察留出时间。`
+    },
+    food: {
+      overview: `${placeZh}要从${focusZh}进入：看当地人买什么、怎么做、怎么点、怎么吃，以及摊主和街区之间的日常关系。它不应只被写成一道代表菜。`,
+      experience: `合适的美食路线应比较几个摊位或店铺，讲清点单习惯、制作方式和街区节奏。`
+    },
+    village: {
+      overview: `${placeZh}的重点是${focusZh}。民居、巷道、田地、水系和公共空间都应作为仍在使用的生活现场来理解，而不是只当风景背景。`,
+      experience: `合适的游览应在聚落里慢下来，解释建筑、家庭生活、劳作方式和地方记忆如何连在一起。`
+    },
+    craft: {
+      overview: `${placeZh}要围绕${focusZh}展开，顺着材料、工具、手艺人和制作流程来看。重点是一个真实的制作环境，而不是孤立的纪念品或展品。`,
+      experience: `合适的体验应看清工序，再把技法、材料、地方历史和仍在做这门手艺的人联系起来。`
+    },
+    spiritual: {
+      overview: `${placeZh}要从${focusZh}来理解，同时注意参拜动线、寺观格局、礼仪方式和这个空间今天仍然被怎样使用。`,
+      experience: `合适的游览应保持安静节奏，讲清看到的殿堂、仪式和地方习惯，而不是只把${placeZh}当拍照点。`
+    },
+    city: {
+      overview: `${placeZh}的重点是${focusZh}。街区、建筑、交通、店铺和日常节奏要一起出现，才会像真实城市现场，而不是远处天际线。`,
+      experience: `合适的城市漫步应在地面比较街巷、店招、建筑和生活细节，说明当地人如何使用这里。`
+    },
+    road: {
+      overview: `${placeZh}的重点是${focusZh}。移动过程、停靠点、交通节奏和沿途变化本身就是体验，不只是两端景点的连接线。`,
+      experience: `合适的路线应把停留、用餐、接驳和观景点一起安排，让行程本身成为${placeZh}的内容。`
+    },
+    market: {
+      overview: `${placeZh}要从${focusZh}来讲：摊位、货品、摊主、价格、采购习惯和街坊交流都应该进入介绍。`,
+      experience: `合适的市场漫步应在具体摊位前慢下来，说明本地人买什么、什么时候来，以及市场如何连接日常饮食。`
+    },
+    tea: {
+      overview: `${placeZh}要把${focusZh}与茶园或茶林环境、采摘季节、制作流程、冲泡品鉴和待客习惯连起来。`,
+      experience: `合适的茶体验应从景观走到工艺，再进入品鉴，让${placeZh}成为真正的茶文化现场，而不是普通观景点。`
+    },
+    coast: {
+      overview: `${placeZh}要把${focusZh}与海岸风景、港口生活、海鲜、老街和地方节奏放在一起看。`,
+      experience: `合适的海岸路线应结合滨水时间、小镇生活和饮食背景，让${placeZh}不只是普通海景。`
+    }
+  };
+  return {
+    image,
+    fallbackImage,
+    caption: { en: place, zh: placeZh },
+    overview: { en: enText[item.kind].overview, zh: zhText[item.kind].overview },
+    experience: { en: enText[item.kind].experience, zh: zhText[item.kind].experience }
+  };
+}
+
 function focusedFallbackText(item: ProvinceRecommendation, provinceName: string | undefined, image: string, fallbackImage?: string): MediaText {
+  return naturalFallbackText(item, provinceName, image, fallbackImage);
   const place = provinceName ? `${item.name}, ${provinceName}` : item.name;
   const placeZh = item.nameZh || item.name;
   const focusZh = item.focusZh || item.focus;
