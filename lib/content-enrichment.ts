@@ -2716,6 +2716,18 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
 };
 
 const priorityDestinationSpecificText: Record<string, MediaText> = {
+  "Liaoning::Liaoyang White Pagoda": {
+    image: "/images/destinations/optimized/wiki-liaoning-liaoyang-white-pagoda.jpg",
+    caption: { en: "Liaoyang White Pagoda at Guangyou Temple", zh: "辽阳广佑寺白塔" },
+    overview: {
+      en: "Liaoyang White Pagoda should be introduced as the brick Liao-dynasty pagoda at Guangyou Temple and a key marker of Liaoyang's old regional-center history. The focus is its dense-eave tower form, brick carving details, temple setting and position in the old city, not only a generic pagoda photo.",
+      zh: "辽阳白塔要作为广佑寺白塔和辽阳古城核心地标来介绍：它的重点是辽代密檐式砖塔形制、塔身砖雕细节、寺院环境和老城位置，而不是只看一座普通塔。"
+    },
+    experience: {
+      en: "A good visit should look from both distance and close range: first read the tower's height and old-city axis, then slow down for the base, niches, brick courses and the relationship between Guangyou Temple, White Pagoda Park and Liaoyang's urban memory.",
+      zh: "合适的游览应先远看塔身比例和老城中轴，再近看塔基、佛龛、砖层与塔身细节，并把广佑寺、白塔公园和辽阳城市记忆联系起来。"
+    }
+  },
   "Guangdong::Shiwan Ceramic Studio": {
     image: "/images/destinations/guangdong-shiwan-ceramic-workshop-real.jpg",
     caption: { en: "Shiwan kiln and ceramic workshop street", zh: "石湾窑址与陶艺工坊" },
