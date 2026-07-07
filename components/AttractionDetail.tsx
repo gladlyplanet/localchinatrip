@@ -562,6 +562,76 @@ const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: 
 };
 
 const priorityDestinationMeta: typeof destinationMeta = {
+  "Longjing Village": {
+    subtitle: phrase("Tea fields · Pan-firing · Growers · Dragon Well tasting", "茶园 · 炒制 · 茶农 · 龙井品鉴", "茶園 · 炒製 · 茶農 · 龍井品鑑", "Campos de te · tostado manual · productores · cata Longjing", "Campos de cha · torra manual · produtores · prova Longjing", "Tea fields · pan-firing · growers · tasting"),
+    season: phrase("Spring tea season is best; clear mornings suit tea-field walking.", "春茶季最有现场感，晴朗清晨适合茶园步行", "春茶季最有現場感，晴朗清晨適合茶園步行", "La primavera del te es mejor; manana clara para caminar.", "A primavera do cha e melhor; manha clara para caminhar.", "Spring tea season is best; clear mornings suit walking."),
+    pace: phrase("Half day, with field walking, maker context and tasting time.", "半日体验，留出茶园步行、制茶讲解和品饮时间", "半日體驗，留出茶園步行、製茶講解和品飲時間", "Medio dia con campos, elaboracion y cata.", "Meio dia com campos, preparo e prova.", "Half day with fields, making context and tasting."),
+    people: phrase("Tea lovers, slow travelers and Hangzhou repeat visitors.", "茶文化爱好者、慢旅行者和杭州深度游客", "茶文化愛好者、慢旅行者和杭州深度遊客", "Amantes del te y viaje lento.", "Amantes de cha e viagem lenta.", "Tea lovers and slow travelers."),
+    keywords: phrase("Dragon Well tea, tea fields, pan-firing, growers, tasting", "龙井茶 · 茶园 · 炒制 · 茶农 · 品鉴", "龍井茶 · 茶園 · 炒製 · 茶農 · 品鑑", "Longjing, campos, tostado, productores, cata", "Longjing, campos, torra, produtores, prova", "Longjing, tea fields, pan-firing, growers, tasting"),
+    lead: phrase("Longjing Village should connect tea fields, hand firing and tasting, not only a green-field photo.", "龙井村要把茶园、手工炒制和品饮连起来，不只是拍一张绿色茶田。", "龍井村要把茶園、手工炒製和品飲連起來，不只是拍一張綠色茶田。", "Longjing conecta campos, tostado y cata.", "Longjing conecta campos, torra e prova.", "Longjing connects tea fields, firing and tasting."),
+    advice: sharedAdvice("tea"),
+    guide: sharedGuide("tea")
+  },
+  "Wuzhen Water Town": {
+    subtitle: phrase("Canals · Stone bridges · Waterside houses · Blue calico · Evening lights", "河道 · 石桥 · 临水民居 · 蓝印花布 · 傍晚灯火", "河道 · 石橋 · 臨水民居 · 藍印花布 · 傍晚燈火", "Canales · puentes · casas junto al agua · luces", "Canais · pontes · casas junto a agua · luzes", "Canals · bridges · waterside houses · evening lights"),
+    season: phrase("Spring and autumn are comfortable; dusk is best for canal atmosphere.", "春秋舒适，傍晚更适合看河道气氛", "春秋舒適，傍晚更適合看河道氣氛", "Primavera y otono; atardecer para canales.", "Primavera e outono; fim de tarde nos canais.", "Spring and autumn; dusk for canal atmosphere."),
+    pace: phrase("Half day to one day, with both workshops and evening canal time.", "半日到一日，兼顾作坊、石桥和傍晚河道", "半日到一日，兼顧作坊、石橋和傍晚河道", "Medio dia a un dia.", "Meio dia a um dia.", "Half day to one day."),
+    people: phrase("Water-town walkers, photographers and Jiangnan culture travelers.", "水乡漫步、摄影和江南文化旅行者", "水鄉漫步、攝影和江南文化旅行者", "Caminantes de pueblos de agua y fotografos.", "Caminhantes de vilas de agua e fotografos.", "Water-town walkers and photographers."),
+    keywords: phrase("Canals, stone bridges, blue calico, workshops, evening lights", "河道 · 石桥 · 蓝印花布 · 作坊 · 灯火", "河道 · 石橋 · 藍印花布 · 作坊 · 燈火", "Canales, puentes, talleres, luces", "Canais, pontes, oficinas, luzes", "Canals, bridges, workshops, lights"),
+    lead: phrase("Wuzhen should feel like a canal route with lanes, workshops and evening water light.", "乌镇要像一条有巷弄、作坊和傍晚水光的河道路线。", "烏鎮要像一條有巷弄、作坊和傍晚水光的河道路線。", "Wuzhen debe sentirse como una ruta de canales.", "Wuzhen deve parecer uma rota de canais.", "Wuzhen should feel like a canal route."),
+    advice: sharedAdvice("village"),
+    guide: sharedGuide("village")
+  },
+  "Putuo Mountain": {
+    subtitle: phrase("Guanyin island · Puji Temple · Fayu Temple · Huiji Temple · South Sea Guanyin", "观音道场海岛 · 普济寺 · 法雨寺 · 慧济寺 · 南海观音", "觀音道場海島 · 普濟寺 · 法雨寺 · 慧濟寺 · 南海觀音", "Isla de Guanyin · templos · Guanyin del Mar del Sur", "Ilha de Guanyin · templos · Guanyin do Mar do Sul", "Guanyin island · temples · South Sea Guanyin"),
+    season: phrase("Clear non-peak days are best; ferry and weather should be checked first.", "晴朗非高峰更合适，先确认轮渡和海上天气", "晴朗非高峰更合適，先確認輪渡和海上天氣", "Dias claros y tranquilos; revisa ferry y clima.", "Dias claros e calmos; confira ferry e clima.", "Clear non-peak days; check ferry and weather."),
+    pace: phrase("One day or overnight, planned around ferry, temple order and walking distance.", "一日或住一晚，按轮渡、寺院顺序和步行距离安排", "一日或住一晚，按輪渡、寺院順序和步行距離安排", "Un dia o una noche, segun ferry y templos.", "Um dia ou uma noite, conforme ferry e templos.", "One day or overnight, around ferry and temples."),
+    people: phrase("Pilgrimage travelers, Buddhist-culture visitors and island walkers.", "朝山者、佛教文化游客和海岛步行爱好者", "朝山者、佛教文化遊客和海島步行愛好者", "Peregrinos y caminantes de isla.", "Peregrinos e caminhantes de ilha.", "Pilgrimage travelers and island walkers."),
+    keywords: phrase("Puji Temple, Fayu Temple, Huiji Temple, Zizhulin, South Sea Guanyin", "普济寺 · 法雨寺 · 慧济寺 · 紫竹林 · 南海观音", "普濟寺 · 法雨寺 · 慧濟寺 · 紫竹林 · 南海觀音", "Puji, Fayu, Huiji, Zizhulin, Guanyin", "Puji, Fayu, Huiji, Zizhulin, Guanyin", "Puji, Fayu, Huiji, Zizhulin, Guanyin"),
+    lead: phrase("Putuo Mountain is a sea-facing Guanyin pilgrimage route, not a generic temple page.", "普陀山是一条面向大海的观音朝山路线，不是普通寺院页面。", "普陀山是一條面向大海的觀音朝山路線，不是普通寺院頁面。", "Putuo es una ruta de peregrinacion frente al mar.", "Putuo e uma rota de peregrinacao frente ao mar.", "Putuo is a sea-facing Guanyin pilgrimage route."),
+    advice: sharedAdvice("spiritual"),
+    guide: sharedGuide("spiritual")
+  },
+  "Xitang Ancient Town": {
+    subtitle: phrase("Covered corridors · Canals · Stone bridges · Narrow lanes · Night water town", "廊棚 · 河道 · 石桥 · 窄巷 · 夜间水乡", "廊棚 · 河道 · 石橋 · 窄巷 · 夜間水鄉", "Corredores cubiertos · canales · puentes · noche", "Corredores cobertos · canais · pontes · noite", "Covered corridors · canals · bridges · night town"),
+    season: phrase("Spring and autumn are comfortable; evening reflections are especially strong.", "春秋舒适，夜间水面倒影更有氛围", "春秋舒適，夜間水面倒影更有氛圍", "Primavera y otono; reflejos nocturnos.", "Primavera e outono; reflexos noturnos.", "Spring and autumn; evening reflections."),
+    pace: phrase("Half day to one day, leaving time under the covered corridors.", "半日到一日，给廊棚下的慢走留时间", "半日到一日，給廊棚下的慢走留時間", "Medio dia a un dia.", "Meio dia a um dia.", "Half day to one day."),
+    people: phrase("Water-town walkers, night-scene photographers and slow travelers.", "水乡漫步、夜景摄影和慢旅行者", "水鄉漫步、夜景攝影和慢旅行者", "Caminantes, fotografos nocturnos y viajeros lentos.", "Caminhantes, fotografos noturnos e viajantes lentos.", "Water-town walkers and night photographers."),
+    keywords: phrase("Covered corridors, canals, stone bridges, night lights", "廊棚 · 河道 · 石桥 · 夜间灯火", "廊棚 · 河道 · 石橋 · 夜間燈火", "Corredores, canales, puentes, luces", "Corredores, canais, pontes, luzes", "Corridors, canals, bridges, lights"),
+    lead: phrase("Xitang is about sheltered riverside walking and changing canal light.", "西塘的重点是廊棚下的临河慢走和河道光影变化。", "西塘的重點是廊棚下的臨河慢走和河道光影變化。", "Xitang trata de caminar junto al canal.", "Xitang trata de caminhar junto ao canal.", "Xitang is about covered canal walking."),
+    advice: sharedAdvice("village"),
+    guide: sharedGuide("village")
+  },
+  "Ningbo Tianyi Pavilion": {
+    subtitle: phrase("Ming library · Book collecting · Courtyards · Fire-prevention layout", "明代藏书楼 · 藏书文化 · 院落 · 防火格局", "明代藏書樓 · 藏書文化 · 院落 · 防火格局", "Biblioteca Ming · libros · patios", "Biblioteca Ming · livros · patios", "Ming library · books · courtyards"),
+    season: phrase("Clear mornings or quiet hours suit courtyard details.", "清晨或安静时段更适合看院落细节", "清晨或安靜時段更適合看院落細節", "Manana o horas tranquilas.", "Manha ou horas tranquilas.", "Morning or quiet hours."),
+    pace: phrase("Two to three hours, with time for library rooms, courtyards and inscriptions.", "2-3小时，留给藏书楼、院落和题刻", "2-3小時，留給藏書樓、院落和題刻", "Dos a tres horas.", "Duas a tres horas.", "Two to three hours."),
+    people: phrase("History, books, gardens and Ningbo culture lovers.", "历史、藏书、园林和宁波文化爱好者", "歷史、藏書、園林和寧波文化愛好者", "Amantes de historia, libros y jardines.", "Amantes de historia, livros e jardins.", "History, books and garden lovers."),
+    keywords: phrase("Tianyi Pavilion, book collecting, courtyards, ponds, Ningbo scholarship", "天一阁 · 藏书 · 院落 · 水池 · 宁波文脉", "天一閣 · 藏書 · 院落 · 水池 · 寧波文脈", "Tianyi, libros, patios, estanques", "Tianyi, livros, patios, tanques", "Tianyi, books, courtyards, ponds"),
+    lead: phrase("Tianyi Pavilion is a library garden about books, water, walls and family scholarship.", "天一阁是一座关于书籍、水池、墙院和家族学术的藏书园林。", "天一閣是一座關於書籍、水池、牆院和家族學術的藏書園林。", "Tianyi es un jardin biblioteca.", "Tianyi e um jardim biblioteca.", "Tianyi is a library garden."),
+    advice: sharedAdvice("heritage"),
+    guide: sharedGuide("heritage")
+  },
+  "Nanxun Ancient Town": {
+    subtitle: phrase("Silk merchants · Canals · Gardens · Jiaye Library · Chinese-Western details", "丝商宅第 · 河道 · 园林 · 嘉业堂 · 中西合璧细节", "絲商宅第 · 河道 · 園林 · 嘉業堂 · 中西合璧細節", "Mercaderes de seda · canales · jardines", "Mercadores de seda · canais · jardins", "Silk merchants · canals · gardens"),
+    season: phrase("Spring and autumn are comfortable; quiet mornings suit mansions and canals.", "春秋舒适，清晨适合看商宅和河道", "春秋舒適，清晨適合看商宅和河道", "Primavera y otono; manana tranquila.", "Primavera e outono; manha tranquila.", "Spring and autumn; quiet mornings."),
+    pace: phrase("Half day to one day, linking mansions, gardens, library and canal walks.", "半日到一日，串联商宅、园林、藏书楼和河道步行", "半日到一日，串聯商宅、園林、藏書樓和河道步行", "Medio dia a un dia.", "Meio dia a um dia.", "Half day to one day."),
+    people: phrase("Architecture, gardens, merchant history and Jiangnan culture travelers.", "建筑、园林、商帮历史和江南文化旅行者", "建築、園林、商幫歷史和江南文化旅行者", "Arquitectura, jardines e historia mercantil.", "Arquitetura, jardins e historia mercantil.", "Architecture, gardens and merchant history travelers."),
+    keywords: phrase("Xiaolianzhuang, Jiaye Library, canals, merchant mansions", "小莲庄 · 嘉业堂 · 河道 · 商宅", "小蓮莊 · 嘉業堂 · 河道 · 商宅", "Xiaolianzhuang, Jiaye, canales, mansiones", "Xiaolianzhuang, Jiaye, canais, mansoes", "Xiaolianzhuang, Jiaye Library, canals, mansions"),
+    lead: phrase("Nanxun differs from ordinary water towns through silk-merchant mansions, gardens and libraries.", "南浔不同于普通水乡，重点在丝商宅第、园林和藏书楼。", "南潯不同於普通水鄉，重點在絲商宅第、園林和藏書樓。", "Nanxun destaca por mansiones, jardines y biblioteca.", "Nanxun destaca por mansoes, jardins e biblioteca.", "Nanxun stands out through mansions, gardens and libraries."),
+    advice: sharedAdvice("village"),
+    guide: sharedGuide("village")
+  },
+  "Zhoushan Fishing Coast": {
+    subtitle: phrase("Island harbors · Fishing boats · Seafood markets · East China Sea weather", "海岛港口 · 渔船 · 海鲜市场 · 东海天气", "海島港口 · 漁船 · 海鮮市場 · 東海天氣", "Puertos insulares · barcos · mercados de marisco", "Portos insulares · barcos · mercados de frutos do mar", "Island harbors · fishing boats · seafood markets"),
+    season: phrase("Clear weather and stable sea conditions are best.", "天气晴朗、海况稳定时最合适", "天氣晴朗、海況穩定時最合適", "Mejor con clima claro y mar estable.", "Melhor com clima claro e mar estavel.", "Clear weather and stable sea conditions."),
+    pace: phrase("Half day to one day, planned around harbor timing and seafood stops.", "半日到一日，按港口时间和海鲜停留安排", "半日到一日，按港口時間和海鮮停留安排", "Medio dia a un dia.", "Meio dia a um dia.", "Half day to one day."),
+    people: phrase("Seafood lovers, coastal walkers and island-life observers.", "海鲜爱好者、海岸漫步和海岛生活观察者", "海鮮愛好者、海岸漫步和海島生活觀察者", "Amantes del marisco y vida de isla.", "Amantes de frutos do mar e vida de ilha.", "Seafood lovers and island-life observers."),
+    keywords: phrase("Harbor, fishing boats, seafood market, island roads, East China Sea", "港口 · 渔船 · 海鲜市场 · 海岛道路 · 东海", "港口 · 漁船 · 海鮮市場 · 海島道路 · 東海", "Puerto, barcos, mercado, islas", "Porto, barcos, mercado, ilhas", "Harbor, boats, seafood market, islands"),
+    lead: phrase("Zhoushan's coast is a working fishing archipelago, not only a blue-sea view.", "舟山海岸是仍在运转的渔业群岛，不只是蓝色海景。", "舟山海岸是仍在運轉的漁業群島，不只是藍色海景。", "Zhoushan es un archipielago pesquero vivo.", "Zhoushan e um arquipelago pesqueiro vivo.", "Zhoushan is a working fishing archipelago."),
+    advice: sharedAdvice("coast"),
+    guide: sharedGuide("coast")
+  },
   "Shaoxing Old City": {
     subtitle: phrase(
       "Canals · Black-awning boats · Yellow rice wine · Lu Xun memory · Stone bridges",
