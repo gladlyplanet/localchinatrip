@@ -53,7 +53,7 @@ export const destinationImages: Record<string, string> = {
   "Guangdong::Kaiping Diaolou": "/images/destinations/optimized/wiki-guangdong-kaiping-diaolou.jpg",
   "Guangdong::Liwan Food Market": "/images/destinations/guangdong-liwan-food-market-real.jpg",
   "Guangdong::Shenzhen Urban Villages": "/images/destinations/optimized/wiki-guangdong-shenzhen-urban-villages.jpg",
-  "Guangdong::Shiwan Ceramic Studio": "/images/destinations/guangdong-shiwan-ceramic-studio-clean.png",
+  "Guangdong::Shiwan Ceramic Studio": "/images/destinations/guangdong-shiwan-ceramic-workshop-real.jpg",
   "Guangdong::Xiqiao Mountain": "/images/destinations/guangdong-xiqiao-mountain-guanyin-real.png",
   "Guangxi::Bama Longevity Villages": "/images/destinations/guangxi-bama-longevity-villages-clean.png",
   "Guangxi::Beihai Old Street": "/images/destinations/guangxi-beihai-old-street-clean.png",

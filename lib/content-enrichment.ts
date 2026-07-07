@@ -158,7 +158,7 @@ const verifiedRecommendationImages: Record<string, string> = {
   "Huaiyang Cuisine Kitchen": realImages.suzhouCuisine,
   "Quanzhou Puppet Workshop": realImages.quanzhouPuppets,
   "Quanzhou Maritime Heritage": realImages.quanzhouPuppets,
-  "Shiwan Ceramic Studio": "/images/destinations/guangdong-shiwan-ceramic-studio-clean.png",
+  "Shiwan Ceramic Studio": "/images/destinations/guangdong-shiwan-ceramic-workshop-real.jpg",
   "Miao Embroidery Workshop": realImages.miaoCraft,
   "Xijiang Miao Village": realImages.miaoCraft,
   "Red Market": "/images/destination-macau-red-market-real.jpg"
@@ -2716,6 +2716,18 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
 };
 
 const priorityDestinationSpecificText: Record<string, MediaText> = {
+  "Guangdong::Shiwan Ceramic Studio": {
+    image: "/images/destinations/guangdong-shiwan-ceramic-workshop-real.jpg",
+    caption: { en: "Shiwan kiln and ceramic workshop street", zh: "石湾窑址与陶艺工坊" },
+    overview: {
+      en: "Shiwan Ceramic Studio should be understood through Foshan's kiln memory, clay shaping, ceramic figures, workshop streets and Lingnan folk craft. The page should show a making environment or kiln setting, not a single isolated museum object.",
+      zh: "石湾陶艺工坊要从佛山石湾的窑火记忆、泥塑造型、陶塑人物、工坊街区和岭南民间工艺来理解。页面应呈现制作空间或窑址环境，而不是单独一件博物馆器物。"
+    },
+    experience: {
+      en: "A good visit should follow clay, shaping, firing, glazing and display spaces, then explain why Shiwan's expressive ceramic figures differ from porcelain-centered ceramic towns.",
+      zh: "合适的体验应沿着泥料、塑形、烧制、釉色和展示空间展开，再讲清石湾陶塑为什么不同于以瓷器为中心的陶瓷产地。"
+    }
+  },
   "Guangdong::Xiqiao Mountain": {
     image: "/images/destinations/guangdong-xiqiao-mountain-guanyin-real.png",
     caption: { en: "Nanhai Guanyin on Xiqiao Mountain", zh: "西樵山南海观音" },
