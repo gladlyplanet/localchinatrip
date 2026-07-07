@@ -2720,20 +2720,20 @@ const priorityDestinationSpecificText: Record<string, MediaText> = {
     image: "/images/experience-longjing-fields.jpg",
     caption: { en: "Longjing tea fields near Hangzhou", zh: "杭州龙井茶园" },
     overview: {
-      en: "Longjing Village should be introduced through tea terraces, Dragon Well green tea, hand pan-firing, growers' courtyards and the hills between West Lake and Meijiawu. The point is not only a green field photo, but how tea planting, picking, firing and tasting shape Hangzhou's local rhythm.",
-      zh: "龙井村要从茶园坡地、龙井茶、手工炒制、茶农院落和西湖到梅家坞一带的山路来介绍。重点不是只看一片绿色茶田，而是看种茶、采茶、炒茶和品茶如何构成杭州本地节奏。"
+      en: "Longjing Village should be introduced through tea terraces, Dragon Well green tea, hand pan-firing, growers' courtyards and the hills between West Lake and Meijiawu. Tea planting, picking, firing and tasting together shape the local rhythm of this part of Hangzhou.",
+      zh: "龙井村要从茶园坡地、龙井茶、手工炒制、茶农院落和西湖到梅家坞一带的山路来介绍。种茶、采茶、炒茶和品茶共同构成这一带杭州山村的本地节奏。"
     },
     experience: {
-      en: "A good visit should leave time for a tea-field walk, a maker's explanation and tasting by aroma, leaf shape and firing style, rather than treating Longjing as a quick photo stop.",
-      zh: "合适的体验应留出茶园步行、茶农讲解和围绕香气、叶形、炒制火候的品饮时间，而不是把龙井村当成快速拍照点。"
+      en: "A good visit should leave time for a tea-field walk, a maker's explanation and tasting by aroma, leaf shape and firing style.",
+      zh: "合适的体验应留出茶园步行、茶农讲解和围绕香气、叶形、炒制火候的品饮时间。"
     }
   },
   "Zhejiang::Wuzhen Water Town": {
     image: "/images/destinations/optimized/wiki-zhejiang-wuzhen-water-town.jpg",
     caption: { en: "Wuzhen canals and waterside houses", zh: "乌镇河道与临水民居" },
     overview: {
-      en: "Wuzhen should be read through Jiangnan canal streets, stone bridges, waterside houses, blue calico, old workshops and evening lights along the river. It needs to feel like a water-town route with lanes and water movement, not a generic ancient-town label.",
-      zh: "乌镇要从江南河道街巷、石桥、临水民居、蓝印花布、老作坊和傍晚沿河灯火来介绍。它应是一条有巷弄和水路动线的水乡路线，而不是一句泛泛的古镇标签。"
+      en: "Wuzhen should be read through Jiangnan canal streets, stone bridges, waterside houses, blue calico, old workshops and evening lights along the river. The route should carry visitors between lanes, bridges, workshops and water movement.",
+      zh: "乌镇要从江南河道街巷、石桥、临水民居、蓝印花布、老作坊和傍晚沿河灯火来介绍。路线应带着游客在巷弄、石桥、作坊和水路动线之间慢慢展开。"
     },
     experience: {
       en: "A good route should compare daytime workshops with quieter evening canal scenes, leaving time for bridges, covered waterside walks and small museums.",
@@ -2744,8 +2744,8 @@ const priorityDestinationSpecificText: Record<string, MediaText> = {
     image: "/images/destinations/zhejiang-putuo-mountain-corrected.png",
     caption: { en: "Putuo Mountain and the South Sea Guanyin", zh: "普陀山与南海观音" },
     overview: {
-      en: "Putuo Mountain should be introduced as Guanyin's island pilgrimage site: Puji Temple, Fayu Temple, Huiji Temple, Zizhulin, the South Sea Guanyin statue, ferry arrival and sea-facing paths all belong in the story. The visit is a coastal pilgrimage route, not just a temple category.",
-      zh: "普陀山要作为观音道场海岛来介绍：普济寺、法雨寺、慧济寺、紫竹林、南海观音像、轮渡上岛和面海步道都应进入叙述。它不是普通寺院分类，而是一条带有海岛气质的朝山路线。"
+      en: "Putuo Mountain should be introduced as Guanyin's island pilgrimage site: Puji Temple, Fayu Temple, Huiji Temple, Zizhulin, the South Sea Guanyin statue, ferry arrival and sea-facing paths all belong in the story. The visit is a coastal pilgrimage route with temple halls, sea wind and mountain paths woven together.",
+      zh: "普陀山要作为观音道场海岛来介绍：普济寺、法雨寺、慧济寺、紫竹林、南海观音像、轮渡上岛和面海步道都应进入叙述。整条路线把寺院殿堂、海风、山路和朝拜节奏连在一起。"
     },
     experience: {
       en: "A good visit should plan the ferry, temple order, walking distance and incense etiquette together, while leaving quiet time for the sea views between halls and paths.",
@@ -2756,8 +2756,8 @@ const priorityDestinationSpecificText: Record<string, MediaText> = {
     image: "/images/destinations/optimized/wiki-zhejiang-xitang-ancient-town.jpg",
     caption: { en: "Xitang covered corridors and canals", zh: "西塘廊棚与河道" },
     overview: {
-      en: "Xitang Ancient Town is defined by covered riverside corridors, stone bridges, narrow lanes, canals and night water-town life. Its appeal is the slow movement between sheltered walkways, river bends and small shops, not a generic Jiangnan old-town sentence.",
-      zh: "西塘古镇要从临河廊棚、石桥、窄巷、河道和夜间水乡生活来介绍。它的重点是人在廊棚、河湾和小店之间慢慢移动的感受，而不是一句普通江南古镇说明。"
+      en: "Xitang Ancient Town is defined by covered riverside corridors, stone bridges, narrow lanes, canals and night water-town life. Its appeal is the slow movement between sheltered walkways, river bends and small shops.",
+      zh: "西塘古镇要从临河廊棚、石桥、窄巷、河道和夜间水乡生活来介绍。它的重点是人在廊棚、河湾和小店之间慢慢移动的感受。"
     },
     experience: {
       en: "A good route should include both daytime lane details and evening reflections, with enough time under the covered corridors when crowds and lights change.",
@@ -2768,8 +2768,8 @@ const priorityDestinationSpecificText: Record<string, MediaText> = {
     image: "/images/destinations/optimized/wiki-zhejiang-ningbo-tianyi-pavilion.jpg",
     caption: { en: "Tianyi Pavilion library garden", zh: "宁波天一阁藏书楼" },
     overview: {
-      en: "Tianyi Pavilion should be introduced as a Ming-dynasty private library and garden complex in Ningbo, with book-collecting culture, fire-prevention layout, courtyards, ponds, carved details and port-city scholarship. It is not just an old building photo.",
-      zh: "天一阁要作为宁波明代私家藏书楼和园林院落来介绍，重点包括藏书文化、防火格局、院落水池、木石细节和港口城市的学术传统。它不是一张普通古建筑照片。"
+      en: "Tianyi Pavilion should be introduced as a Ming-dynasty private library and garden complex in Ningbo, with book-collecting culture, fire-prevention layout, courtyards, ponds, carved details and port-city scholarship.",
+      zh: "天一阁要作为宁波明代私家藏书楼和园林院落来介绍，重点包括藏书文化、防火格局、院落水池、木石细节和港口城市的学术传统。"
     },
     experience: {
       en: "A good visit should slow down through the library courtyards, explain why books, water, walls and family scholarship mattered, and connect the site with Ningbo's local literati history.",
@@ -2780,8 +2780,8 @@ const priorityDestinationSpecificText: Record<string, MediaText> = {
     image: "/images/destinations/optimized/wiki-zhejiang-nanxun-ancient-town.jpg",
     caption: { en: "Nanxun canals and merchant mansions", zh: "南浔河道与商宅" },
     overview: {
-      en: "Nanxun Ancient Town should be read through silk-merchant mansions, canals, gardens, old libraries and Chinese-Western architectural details. The focus is merchant wealth and refined household space along the water, not a generic water-town view.",
-      zh: "南浔古镇要从丝商宅第、河道、园林、藏书楼和中西合璧建筑细节来介绍。重点是水边商人家族的财富、审美和生活空间，而不是泛泛的水乡景色。"
+      en: "Nanxun Ancient Town should be read through silk-merchant mansions, canals, gardens, old libraries and Chinese-Western architectural details. The focus is merchant wealth, refined household space and cultural taste along the water.",
+      zh: "南浔古镇要从丝商宅第、河道、园林、藏书楼和中西合璧建筑细节来介绍。重点是水边商人家族的财富、审美、藏书传统和生活空间。"
     },
     experience: {
       en: "A good route should link Xiaolianzhuang, Jiaye Library, mansion interiors and canal walks, so visitors understand why Nanxun differs from other Jiangnan towns.",
@@ -2792,8 +2792,8 @@ const priorityDestinationSpecificText: Record<string, MediaText> = {
     image: "/images/destinations/zhejiang-zhoushan-fishing-coast-corrected.png",
     caption: { en: "Zhoushan fishing harbor and island coast", zh: "舟山渔港与海岛海岸" },
     overview: {
-      en: "Zhoushan Fishing Coast should be introduced through island harbors, fishing boats, seafood markets, East China Sea weather, temples and working dock life. The coast here is about a fishing archipelago, not only blue sea scenery.",
-      zh: "舟山渔港海岸要从海岛港口、渔船、海鲜市场、东海天气、寺庙和码头作业生活来介绍。这里的海岸重点是渔业群岛的日常，而不只是蓝色海景。"
+      en: "Zhoushan Fishing Coast should be introduced through island harbors, fishing boats, seafood markets, East China Sea weather, temples and working dock life. The coast here belongs to a living fishing archipelago.",
+      zh: "舟山渔港海岸要从海岛港口、渔船、海鲜市场、东海天气、寺庙和码头作业生活来介绍。这里的海岸属于仍在运转的渔业群岛日常。"
     },
     experience: {
       en: "A good visit should connect harbor timing, seafood stalls, island roads and sea views, while respecting working docks and weather changes.",
@@ -2804,8 +2804,8 @@ const priorityDestinationSpecificText: Record<string, MediaText> = {
     image: "/images/destinations/zhejiang-shaoxing-old-city-corrected.png",
     caption: { en: "Shaoxing Old City canals", zh: "绍兴老城河道" },
     overview: {
-      en: "Shaoxing Old City should be introduced through its black-awning boats, canals, stone bridges, yellow rice wine shops, Lu Xun's neighborhood memory and old waterside houses. The point is not a generic Jiangnan water-town view, but how Shaoxing's lanes, river steps, wine culture and literary memory still sit inside the old city.",
-      zh: "绍兴老城要从乌篷船、河道、石桥、黄酒铺、鲁迅故里记忆和临水老屋来介绍。重点不是泛泛说江南水乡，而是看绍兴的巷弄、河埠头、黄酒生活和文学记忆如何仍然留在老城里。"
+      en: "Shaoxing Old City should be introduced through its black-awning boats, canals, stone bridges, yellow rice wine shops, Lu Xun's neighborhood memory and old waterside houses. Shaoxing's lanes, river steps, wine culture and literary memory still sit inside the old city.",
+      zh: "绍兴老城要从乌篷船、河道、石桥、黄酒铺、鲁迅故里记忆和临水老屋来介绍。绍兴的巷弄、河埠头、黄酒生活和文学记忆仍然留在老城里。"
     },
     experience: {
       en: "A good walk should slow down along the canals, compare bridges and waterside lanes, leave time for Lu Xun Native Place and yellow-rice-wine context, and read the city through everyday water life rather than only taking a canal photo.",
@@ -2816,8 +2816,8 @@ const priorityDestinationSpecificText: Record<string, MediaText> = {
     image: "/images/destinations/optimized/wiki-zhejiang-west-lake.jpg",
     caption: { en: "West Lake, Hangzhou", zh: "杭州西湖" },
     overview: {
-      en: "West Lake should be introduced through Hangzhou's lake surface, Su Causeway, Bai Causeway, Broken Bridge, Three Pools Mirroring the Moon, Leifeng Pagoda sightlines, lakeside walking, temple gardens and poetry-and-painting tradition. The focus is not a generic lake view, but how these causeways, bridges, islands, towers and shorelines form Hangzhou's classic cultural landscape.",
-      zh: "西湖要从杭州湖面、苏堤、白堤、断桥、三潭印月、雷峰塔视线、湖滨步行、寺院园林和诗画传统来介绍。重点不是泛泛说“湖景”，而是看这些堤、桥、岛、塔和岸线如何共同构成杭州西湖。"
+      en: "West Lake should be introduced through Hangzhou's lake surface, Su Causeway, Bai Causeway, Broken Bridge, Three Pools Mirroring the Moon, Leifeng Pagoda sightlines, lakeside walking, temple gardens and poetry-and-painting tradition. These causeways, bridges, islands, towers and shorelines together form Hangzhou's classic cultural landscape.",
+      zh: "西湖要从杭州湖面、苏堤、白堤、断桥、三潭印月、雷峰塔视线、湖滨步行、寺院园林和诗画传统来介绍。这些堤、桥、岛、塔和岸线共同构成杭州西湖的经典文化景观。"
     },
     experience: {
       en: "A good visit should choose one or two walking sections instead of rushing around the whole lake, then connect lakeside views with garden stops, temple context, boat viewpoints, tea time and nearby neighborhood life.",
@@ -2905,11 +2905,11 @@ function naturalFallbackText(item: ProvinceRecommendation, provinceName: string 
   const focusZh = item.focusZh || item.focus;
   const enText: Record<RecommendationKind, { overview: string; experience: string }> = {
     heritage: {
-      overview: `${place} is best read through ${focus}. The visit should name the actual lanes, bridges, courtyards, monuments or old-town spaces that shape the site, so the story feels anchored in this place instead of like a general historic-area description.`,
+      overview: `${place} is best read through ${focus}. The visit should name the actual lanes, bridges, courtyards, monuments or old-town spaces that shape the site, so the story feels anchored in this place.`,
       experience: `A good route should slow down at the details that make ${item.name} recognizable, then connect those details with local memory, daily use and the wider city context.`
     },
     nature: {
-      overview: `${place} is about ${focus}. The route should follow the site's own terrain, light, season and walking conditions, so the scenery is explained through what is really there rather than a generic mountain-or-water introduction.`,
+      overview: `${place} is about ${focus}. The route should follow the site's own terrain, light, season and walking conditions, so the scenery is explained through what is really there.`,
       experience: `A good visit should choose viewpoints and walking sections that show why ${item.name} is distinct, leaving enough time for weather, scale and quiet observation.`
     },
     food: {
@@ -2917,7 +2917,7 @@ function naturalFallbackText(item: ProvinceRecommendation, provinceName: string 
       experience: `A good food walk should compare several stalls or kitchens, explain ordering habits and connect taste with neighborhood rhythm.`
     },
     village: {
-      overview: `${place} is strongest when read through ${focus}. Homes, lanes, waterways, courtyards and public spaces should be treated as lived places, not only a scenic backdrop.`,
+      overview: `${place} is strongest when read through ${focus}. Homes, lanes, waterways, courtyards and public spaces should be treated as lived places with their own rhythm.`,
       experience: `A good visit should slow down inside the settlement and explain how architecture, daily use, work and local memory still fit together.`
     },
     craft: {
@@ -2933,7 +2933,7 @@ function naturalFallbackText(item: ProvinceRecommendation, provinceName: string 
       experience: `A good city walk should compare blocks, storefronts and street details on the ground, then explain how local life works here.`
     },
     road: {
-      overview: `${place} is defined by ${focus}. Movement, stops, transport rhythm and changing views are the experience, not just the places at either end.`,
+      overview: `${place} is defined by ${focus}. Movement, stops, transport rhythm and changing views are the main experience.`,
       experience: `A good route should plan pauses, meals, transfers and viewpoints together, making the journey itself part of the story.`
     },
     market: {
@@ -2946,16 +2946,16 @@ function naturalFallbackText(item: ProvinceRecommendation, provinceName: string 
     },
     coast: {
       overview: `${place} should connect ${focus} with shore scenery, harbor work, seafood, old streets and the daily rhythm of coastal life.`,
-      experience: `A good coastal route should combine waterfront time with town life and food context, so ${item.name} is more than a generic sea view.`
+      experience: `A good coastal route should combine waterfront time with town life, harbor rhythm and food context.`
     }
   };
   const zhText: Record<RecommendationKind, { overview: string; experience: string }> = {
     heritage: {
-      overview: `${placeZh}的重点是${focusZh}。介绍时要落到这个地点真实可见的街巷、桥梁、院落、纪念空间或老城肌理上，让人知道这里为什么是${placeZh}，而不是一段通用古城说明。`,
+      overview: `${placeZh}的重点是${focusZh}。介绍时要落到这个地点真实可见的街巷、桥梁、院落、纪念空间或老城肌理上，让人知道这里为什么是${placeZh}。`,
       experience: `合适的游览应在关键细节前慢下来，把现场空间、人物记忆、地方生活和城市背景串起来，让${placeZh}有自己的辨识度。`
     },
     nature: {
-      overview: `${placeZh}的重点是${focusZh}。路线应根据这里自己的地形、季节、光线、水量或步行条件来安排，让风景从真实现场长出来，而不是套用普通山水介绍。`,
+      overview: `${placeZh}的重点是${focusZh}。路线应根据这里自己的地形、季节、光线、水量或步行条件来安排，让风景从真实现场长出来。`,
       experience: `合适的游览应选择最能说明${placeZh}特点的观景点和步行段，给天气、尺度和安静观察留出时间。`
     },
     food: {
@@ -2963,23 +2963,23 @@ function naturalFallbackText(item: ProvinceRecommendation, provinceName: string 
       experience: `合适的美食路线应比较几个摊位或店铺，讲清点单习惯、制作方式和街区节奏。`
     },
     village: {
-      overview: `${placeZh}的重点是${focusZh}。民居、巷道、水系、院落和公共空间都应作为仍在使用的生活现场来理解，而不是只当风景背景。`,
+      overview: `${placeZh}的重点是${focusZh}。民居、巷道、水系、院落和公共空间都应作为仍在使用的生活现场来理解。`,
       experience: `合适的游览应在聚落或古镇里慢下来，解释建筑、日常使用方式、地方产业和记忆如何连在一起。`
     },
     craft: {
-      overview: `${placeZh}要围绕${focusZh}展开，顺着材料、工具、手艺人和制作流程来看。重点是一个真实的制作环境，而不是孤立的纪念品或展品。`,
+      overview: `${placeZh}要围绕${focusZh}展开，顺着材料、工具、手艺人和制作流程来看，让工艺回到真实制作环境里。`,
       experience: `合适的体验应看清工序，再把技法、材料、地方历史和仍在做这门手艺的人联系起来。`
     },
     spiritual: {
       overview: `${placeZh}要从${focusZh}来理解，同时注意参拜动线、寺观格局、礼仪方式和这个空间今天仍然被怎样使用。`,
-      experience: `合适的游览应保持安静节奏，讲清看到的殿堂、仪式和地方习惯，而不是只把${placeZh}当拍照点。`
+      experience: `合适的游览应保持安静节奏，讲清看到的殿堂、仪式和地方习惯。`
     },
     city: {
-      overview: `${placeZh}的重点是${focusZh}。街区、建筑、交通、店铺和日常节奏要一起出现，才会像真实城市现场，而不是远处天际线。`,
+      overview: `${placeZh}的重点是${focusZh}。街区、建筑、交通、店铺和日常节奏要一起出现，才会像真实城市现场。`,
       experience: `合适的城市漫步应在地面比较街巷、店招、建筑和生活细节，说明当地人如何使用这里。`
     },
     road: {
-      overview: `${placeZh}的重点是${focusZh}。移动过程、停靠点、交通节奏和沿途变化本身就是体验，不只是两端景点的连接线。`,
+      overview: `${placeZh}的重点是${focusZh}。移动过程、停靠点、交通节奏和沿途变化本身就是体验。`,
       experience: `合适的路线应把停留、用餐、接驳和观景点一起安排，让行程本身成为${placeZh}的内容。`
     },
     market: {
@@ -2988,11 +2988,11 @@ function naturalFallbackText(item: ProvinceRecommendation, provinceName: string 
     },
     tea: {
       overview: `${placeZh}要把${focusZh}与茶园或茶林环境、采摘季节、制作流程、冲泡品鉴和待客习惯连起来。`,
-      experience: `合适的茶体验应从景观走到工艺，再进入品鉴，让${placeZh}成为真正的茶文化现场，而不是普通观景点。`
+      experience: `合适的茶体验应从景观走到工艺，再进入品鉴，让${placeZh}成为真正的茶文化现场。`
     },
     coast: {
       overview: `${placeZh}要把${focusZh}与海岸风景、港口生活、海鲜、老街和地方节奏放在一起看。`,
-      experience: `合适的海岸路线应结合滨水时间、小镇生活和饮食背景，让${placeZh}不只是普通海景。`
+      experience: `合适的海岸路线应结合滨水时间、小镇生活、港口节奏和饮食背景。`
     }
   };
   return {
