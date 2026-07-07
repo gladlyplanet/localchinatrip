@@ -368,7 +368,7 @@ const specificRecommendationText: Record<string, MediaText> = {
   "Kuqa Grand Canyon": {
     image: realImages.qinghaiZhangye,
     caption: { en: "Kuqa red canyon landscape", zh: "库车红色峡谷地貌" },
-    overview: { en: "Kuqa Grand Canyon is about dry red-rock valleys, narrow passages and the desert edge of southern Xinjiang, not a generic mountain view.", zh: "库车大峡谷应围绕南疆红色峡谷、干旱山体、狭窄谷道和天山南麓地貌来理解，而不是普通山景。" },
+    overview: { en: "Kuqa Grand Canyon is about dry red-rock valleys, narrow passages and the desert edge of southern Xinjiang, not a generic mountain view.", zh: "库车大峡谷应从南疆红色峡谷、干旱山体、狭窄谷道和天山南麓地貌来理解，而不是普通山景。" },
     experience: { en: "A good route should follow light, walking safety and canyon sections, while explaining how wind, water and desert climate shaped the rock walls.", zh: "游览应根据光线、步行安全和峡谷段落安排，讲清风、水和干旱气候如何塑造红色岩壁。" }
   },
   "Kanas Lake": {
@@ -380,7 +380,7 @@ const specificRecommendationText: Record<string, MediaText> = {
   "Yabuli": {
     image: "/images/destinations/heilongjiang-yabuli.jpg",
     caption: { en: "Yabuli winter mountain area", zh: "亚布力冬季山地" },
-    overview: { en: "Yabuli is known for Heilongjiang winter sports, snow-covered mountain terrain and ski facilities southeast of Harbin.", zh: "亚布力应围绕黑龙江冬季运动、哈尔滨东南方向的雪山地形和滑雪设施来介绍。" },
+    overview: { en: "Yabuli is known for Heilongjiang winter sports, snow-covered mountain terrain and ski facilities southeast of Harbin.", zh: "亚布力的重点是黑龙江冬季运动、哈尔滨东南方向的雪山地形和滑雪设施。" },
     experience: { en: "The route is best understood through snow season, mountain views, winter clothing preparation and the wider northeast winter-travel atmosphere.", zh: "体验应聚焦雪季、山地视野、防寒准备，以及东北冬季旅行的整体氛围。" }
   },
   "Wuzhishan Rainforest": {
@@ -404,7 +404,7 @@ const specificRecommendationText: Record<string, MediaText> = {
   "Hainan Family Kitchen": {
     image: "/images/about-me-dinner-table.jpg",
     caption: { en: "Shared local meal in China", zh: "本地家庭式餐桌" },
-    overview: { en: "A Hainan family-kitchen experience should center on tropical island ingredients, seafood, coconut, local sauces and the relaxed rhythm of eating together.", zh: "海南家庭厨房应围绕热带岛屿食材、海鲜、椰子、本地酱料和轻松的围桌用餐节奏展开。" },
+    overview: { en: "A Hainan family-kitchen experience should center on tropical island ingredients, seafood, coconut, local sauces and the relaxed rhythm of eating together.", zh: "海南家庭厨房应从热带岛屿食材、海鲜、椰子、本地酱料和轻松的围桌用餐节奏展开。" },
     experience: { en: "The meal should explain ingredients, home-style preparation and how Hainan's climate and sea shape everyday food.", zh: "体验应讲清食材、家常做法，以及海南气候和海洋如何影响日常饮食。" }
   }
 };
@@ -416,7 +416,7 @@ function fallbackRecommendationText(item: ProvinceRecommendation, provinceName?:
   const actionByKind: Record<RecommendationKind, Localized> = {
     heritage: { en: `Use ${place} to read local history through architecture, streets, objects and the people who still live around the site.`, zh: `${placeZh}适合从建筑、街巷、遗存和周边生活读懂当地历史，而不是只停留在打卡。` },
     nature: { en: `${place} should be introduced through its specific terrain, season, weather and the way local life adapts to that landscape.`, zh: `${placeZh}应结合具体地貌、季节天气和当地生活如何适应自然环境来介绍。` },
-    food: { en: `${place} is a food stop where ingredients, local habits and table culture matter more than simply eating one famous dish.`, zh: `${placeZh}应围绕食材、吃法和地方餐桌习惯展开，而不是只介绍一道名菜。` },
+    food: { en: `${place} is a food stop where ingredients, local habits and table culture matter more than simply eating one famous dish.`, zh: `${placeZh}应从食材、吃法和地方餐桌习惯展开，而不是只介绍一道名菜。` },
     village: { en: `${place} is best experienced as a living community shaped by homes, lanes, work, food and family memory.`, zh: `${placeZh}应作为仍在生活的社区来理解，重点是民居、巷道、劳作、饮食和家族记忆。` },
     craft: { en: `${place} is best understood through makers, materials, tools and the local aesthetic behind the craft.`, zh: `${placeZh}应聚焦手艺人、材料、工具和背后的地方审美。` },
     spiritual: { en: `${place} needs respectful pacing, with context on belief, ritual space, architecture and living practice.`, zh: `${placeZh}需要以尊重的节奏参观，讲清信仰、仪式空间、建筑和现实生活。` },
@@ -514,7 +514,7 @@ const recommendationMedia: Record<string, Partial<MediaText>> = {
 
 const locationMedia: Record<string, MediaText> = {
   hongcun: { image: "/images/experience-hongcun.jpg", caption: { en: "Hongcun, Anhui", zh: "安徽宏村" }, overview: { en: "Hongcun is a Huizhou village known for waterways, ancestral halls and white-walled courtyard homes.", zh: "宏村以水系、祠堂和白墙黛瓦的徽派院落闻名。" }, experience: { en: "The village-life visit focuses on lanes, family halls, water planning and how Huizhou households organized daily life.", zh: "村落体验重点放在街巷、宗族祠堂、水系规划和徽州人家的日常结构。" } },
-  "beiji-village": { image: realImages.beijiVillage, caption: { en: "Far-north village life", zh: "中国北方边境村落生活" }, overview: { en: "Beiji Village near Mohe represents China's far north, with forest climate, border culture and strong seasonal contrast.", zh: "漠河北极村代表中国极北地区，森林气候、边境文化和强烈季节变化是核心特点。" }, experience: { en: "The experience should emphasize local homes, northern food, winter and summer rhythms, and life along the Heilong River.", zh: "体验应围绕当地人家、东北饮食、冬夏节奏和黑龙江沿岸生活展开。" } },
+  "beiji-village": { image: realImages.beijiVillage, caption: { en: "Far-north village life", zh: "中国北方边境村落生活" }, overview: { en: "Beiji Village near Mohe represents China's far north, with forest climate, border culture and strong seasonal contrast.", zh: "漠河北极村代表中国极北地区，森林气候、边境文化和强烈季节变化是核心特点。" }, experience: { en: "The experience should emphasize local homes, northern food, winter and summer rhythms, and life along the Heilong River.", zh: "体验应从当地人家、东北饮食、冬夏节奏和黑龙江沿岸生活展开。" } },
   guoliang: { image: realImages.guoliangVillage, caption: { en: "Taihang cliff village", zh: "太行山悬崖村落" }, overview: { en: "Guoliang is associated with Taihang stone houses and the cliff road carved through the mountain.", zh: "郭亮村与太行山石头民居和人工开凿的挂壁公路相关。" }, experience: { en: "The visit should explain mountain survival, stone architecture and why the cliff road changed village mobility.", zh: "体验重点是山地生活、石头建筑，以及挂壁公路如何改变村落交通。" } },
   azheke: { image: realImages.yuanyangTerraces, caption: { en: "Hani terrace village", zh: "哈尼梯田村落" }, overview: { en: "Azheke sits within the Yuanyang Hani rice terrace landscape, where forests, water channels and villages form one system.", zh: "阿者科位于元阳哈尼梯田景观中，森林、水渠、村落和梯田构成完整系统。" }, experience: { en: "The day should connect mushroom-shaped houses, terrace farming, irrigation and Hani community life.", zh: "体验应串联蘑菇房、梯田农耕、水利系统和哈尼社区生活。" } },
   pingan: { image: realImages.longjiTerraces, caption: { en: "Longji rice terraces", zh: "龙脊梯田" }, overview: { en: "Ping'an Village is part of the Longji terrace area, shaped by Zhuang mountain farming and layered rice fields.", zh: "平安寨属于龙脊梯田区域，由壮族山地农耕和层叠稻田塑造。" }, experience: { en: "The route should pair terrace viewpoints with village lanes, seasonal farming and local mountain meals.", zh: "路线应结合梯田观景、村寨街巷、季节农事和山地饭菜。" } },
@@ -531,7 +531,7 @@ const locationMedia: Record<string, MediaText> = {
   "shanghai-caoyang": { image: realImages.shanghaiWetMarket, caption: { en: "Shanghai community market", zh: "上海社区市场" }, overview: { en: "Caoyang-style community markets show ordinary Shanghai life through produce, freshwater foods and prepared dishes.", zh: "上海社区市场通过蔬菜、河鲜和熟食呈现城市日常生活。" }, experience: { en: "The visit should read local shopping habits, seasonal foods and how old neighborhoods still function.", zh: "体验应观察本地采购习惯、季节食材和老社区的运转方式。" } },
   "guangzhou-liwan": { image: realImages.guangzhouFreshMarket, caption: { en: "Liwan fresh seafood and market stalls", zh: "荔湾鲜活食材摊位" }, overview: { en: "Liwan markets show Cantonese freshness, roast meats, soups, seafood and preserved foods through everyday shopping.", zh: "荔湾市场通过鲜活海鲜、烧味、汤料、腌制品和街坊采购呈现广府饮食。" }, experience: { en: "The route should explain why Cantonese cooking values freshness, light seasoning, slow soup and the original taste of ingredients.", zh: "路线应讲清广府菜为何重视鲜、清、慢火汤和食材本味。" } },
 
-  "suzhou-embroidery": { image: realImages.suzhouEmbroidery, fallbackImage: "/images/experience-suzhou-craft.jpg", caption: { en: "Suzhou embroidery craft", zh: "苏州刺绣工艺" }, overview: { en: "Suzhou embroidery is known for fine silk threads, delicate color transitions and patient hand technique.", zh: "苏绣以细丝线、微妙色阶和耐心手工针法著称。" }, experience: { en: "The workshop is best understood through needle technique, silk materials and how Jiangnan aesthetics appear in craft.", zh: "工坊体验应围绕针法、丝线材料和江南审美如何体现在手艺中。" } },
+  "suzhou-embroidery": { image: realImages.suzhouEmbroidery, fallbackImage: "/images/experience-suzhou-craft.jpg", caption: { en: "Suzhou embroidery craft", zh: "苏州刺绣工艺" }, overview: { en: "Suzhou embroidery is known for fine silk threads, delicate color transitions and patient hand technique.", zh: "苏绣以细丝线、微妙色阶和耐心手工针法著称。" }, experience: { en: "The workshop is best understood through needle technique, silk materials and how Jiangnan aesthetics appear in craft.", zh: "工坊体验应从针法、丝线材料和江南审美如何体现在手艺中。" } },
   "jingdezhen-ceramics": { image: realImages.jingdezhenPorcelain, fallbackImage: "/images/experience-suzhou-craft.jpg", caption: { en: "Jingdezhen porcelain studio", zh: "景德镇瓷器工坊" }, overview: { en: "Jingdezhen is China's historic porcelain center, with studios for forming, glazing, painting and firing.", zh: "景德镇是中国历史瓷都，工坊涵盖拉坯、施釉、绘制和烧成。" }, experience: { en: "The session should compare clay, glaze, kiln and hand-painting rather than treating ceramics as a souvenir stop.", zh: "体验应比较泥料、釉色、窑火和手绘，而不是把瓷器当普通纪念品。" } },
   "kaili-miao": { image: realImages.miaoCraft, caption: { en: "Miao textile and silver craft", zh: "苗族织绣与银饰" }, overview: { en: "Kaili and nearby Miao villages are associated with embroidery, indigo dye, weaving and silver ornaments.", zh: "凯里及周边苗寨与刺绣、蓝染、织造和银饰工艺相关。" }, experience: { en: "The visit should explain how patterns, silver and textiles carry identity, family memory and festival meaning.", zh: "体验应说明纹样、银饰和织物如何承载身份、家族记忆和节庆意义。" } },
   "quanzhou-puppets": { image: realImages.quanzhouPuppets, fallbackImage: "/images/experience-suzhou-craft.jpg", caption: { en: "Quanzhou puppet tradition", zh: "泉州木偶传统" }, overview: { en: "Quanzhou puppet craft sits inside a maritime Silk Road city with layered religious and performance traditions.", zh: "泉州木偶工艺处在海丝城市、多元信仰和表演传统的背景中。" }, experience: { en: "The experience should connect carving, manipulation and local opera with Quanzhou's port-city culture.", zh: "体验应把雕刻、操偶、地方戏和泉州港口文化联系起来。" } },
@@ -2057,7 +2057,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     },
     experience: {
       en: "A good visit should be paced around tea season, field walking, maker explanation and tasting, with enough time to understand how mountain moisture shapes the cup.",
-      zh: "合适的体验应围绕茶季、茶园步行、制茶讲解和品饮安排。重点是看茶山环境、采摘与制作步骤，再理解蒙顶山茶为什么和雅安潮湿山地、川茶历史联系紧密。"
+      zh: "合适的体验应从茶季、茶园步行、制茶讲解和品饮安排。重点是看茶山环境、采摘与制作步骤，再理解蒙顶山茶为什么和雅安潮湿山地、川茶历史联系紧密。"
     }
   },
   "Sichuan::Chengdu Market Cooking": {
@@ -2293,7 +2293,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     caption: { en: "Yellow River Scenic Area, Zhengzhou", zh: "郑州黄河风景名胜区" },
     overview: {
       en: "Zhengzhou Yellow River Scenic Area is about the Yellow River at the edge of the Central Plains: river terraces, loess landforms, flood-control memory, the Yan and Huang Emperors sculpture and the cultural idea of the river as a Chinese origin landscape.",
-      zh: "郑州黄河风景区应围绕中原边缘的黄河来理解：黄河河岸、黄土地貌、花园口水患记忆、炎黄二帝塑像和“母亲河”文化共同构成这里。它不是航空或军事展品，也不是普通山水公园，而是郑州理解黄河与中原文明关系的重要地点。"
+      zh: "郑州黄河风景区应从中原边缘的黄河来理解：黄河河岸、黄土地貌、花园口水患记忆、炎黄二帝塑像和“母亲河”文化共同构成这里。它不是航空或军事展品，也不是普通山水公园，而是郑州理解黄河与中原文明关系的重要地点。"
     },
     experience: {
       en: "The route should connect the river-view platforms, loess slopes, the Yan-Huang monument and nearby river-history context, with timing chosen for clearer light and enough space to understand the scale of the river plain.",
@@ -2360,7 +2360,7 @@ const curatedRecommendationMedia: Record<string, MediaText> = {
     },
     experience: {
       en: "The route is best understood through snow season timing, clothing preparation, mountain views and a realistic pace for winter temperatures.",
-      zh: "行程应围绕雪季时间、防寒准备、山地视野和冬季气温下的合理节奏来安排。"
+      zh: "行程应从雪季时间、防寒准备、山地视野和冬季气温下的合理节奏来安排。"
     }
   },
   "Wuzhishan Rainforest": {
@@ -2404,7 +2404,7 @@ const curatedRecommendationMedia: Record<string, MediaText> = {
     caption: { en: "Hainan family-style meal", zh: "海南家庭式餐桌" },
     overview: {
       en: "A Hainan family-kitchen experience should center on island ingredients, seafood, coconut, local sauces and the relaxed rhythm of eating together.",
-      zh: "海南家庭厨房体验应围绕岛屿食材、海鲜、椰子、本地酱料和围桌用餐的轻松节奏展开。"
+      zh: "海南家庭厨房体验应从岛屿食材、海鲜、椰子、本地酱料和围桌用餐的轻松节奏展开。"
     },
     experience: {
       en: "The meal should explain ingredients, home-style preparation and how Hainan's climate and sea shape everyday food.",
@@ -2443,7 +2443,7 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
     caption: { en: "Xiling Gorge and the Hubei Three Gorges section", zh: "西陵峡与湖北三峡段" },
     overview: {
       en: "The Hubei section of the Three Gorges should be read through Xiling Gorge, Yangtze River bends, cliff walls, shipping lanes, bridge views and the river towns around Yichang. Its character is a working river gorge, not a lake park or a generic mountain canyon.",
-      zh: "湖北三峡段要围绕西陵峡、长江弯道、两岸峭壁、船运航道、桥梁视角和宜昌周边江边城镇来理解。它的重点是真实的长江峡谷与航运景观，不是东湖式湖景，也不是普通山谷。"
+      zh: "湖北三峡段的辨识度在西陵峡、长江弯道、两岸峭壁、船运航道、桥梁视角和宜昌周边江边城镇。它是真实的长江峡谷与航运景观，不是东湖式湖景，也不是普通山谷。"
     },
     experience: {
       en: "A good route should plan viewpoints by river visibility, boat movement and weather, then connect gorge scenery with Three Gorges Dam context, old river towns and the changing relationship between water level and cliffs.",
@@ -2491,7 +2491,7 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
     caption: { en: "Xuan paper making in Xuancheng", zh: "宣城宣纸制作" },
     overview: {
       en: "Xuancheng Xuan Paper Workshop should focus on the making process: bark and straw preparation, pulp, sheet forming, drying and the link with calligraphy, painting and scholar tools.",
-      zh: "宣城宣纸工坊要围绕制作过程展开：青檀皮和稻草处理、纸浆、捞纸、晒纸，以及它与书画和文房用具的关系。"
+      zh: "宣城宣纸工坊的重点在制作现场：青檀皮和稻草处理、纸浆、捞纸、晒纸，以及它与书画和文房用具的关系。"
     },
     experience: {
       en: "A good visit follows the workshop steps slowly, watching hands, tools, water and timing instead of treating the paper as only a finished souvenir.",
@@ -2623,7 +2623,7 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
     caption: { en: "Zibo-style barbecue grill", zh: "淄博小炉烧烤" },
     overview: {
       en: "Zibo Barbecue Streets should focus on small grills, skewers, wheat wraps, scallions, sauces and the shared table rhythm that made the food culture famous.",
-      zh: "淄博烧烤街区要围绕小炉、肉串、小饼、葱段、蘸料和围桌分享的吃法展开，不能用一栋建筑或展馆图来代替。"
+      zh: "淄博烧烤街区的吸引力在小炉、肉串、小饼、葱段、蘸料和围桌分享的吃法，不能用一栋建筑或展馆图来代替。"
     },
     experience: {
       en: "A good food route should explain how to wrap, season and pace the meal, then connect it with local night dining and hospitality.",
@@ -2873,12 +2873,24 @@ const priorityDestinationSpecificText: Record<string, MediaText> = {
       zh: "合适的游览应在摊位前慢下来，看季节蔬果、鲜活海鲜、汤料组合和街坊购买习惯，讲清广府菜为什么重视鲜、清、慢火汤和食材本味。"
     }
   },
+  "Jiangsu::Suzhou Silk Embroidery": {
+    image: "/images/experience-suzhou-embroidery.jpg",
+    caption: { en: "Suzhou embroidery workshop", zh: "苏州刺绣工坊" },
+    overview: {
+      en: "Suzhou Silk Embroidery should show the working table: silk threads, needles, color gradation, stretched fabric and the maker's hand control. The page should feel like a craft studio, not a display cabinet of finished screens.",
+      zh: "苏州丝绣工坊应呈现真正的制作现场：丝线、针法、色阶、绷架和绣娘手上的控制。这里看的不是成品屏风陈列，而是苏绣怎样一针一线形成江南细腻审美。"
+    },
+    experience: {
+      en: "A good visit should pause at stitching details, compare thread thickness and color transitions, and explain why patience, light and hand rhythm matter to Suzhou embroidery.",
+      zh: "合适的体验应停在针脚细节前，比较丝线粗细、色彩过渡和绣面层次，再讲清耐心、光线和手上节奏为什么决定苏绣的质感。"
+    }
+  },
   "Jiangsu::Huaiyang Cuisine Kitchen": {
     image: "/images/destinations/jiangsu-huaiyang-cuisine-kitchen-real.png",
     caption: { en: "Huaiyang cuisine banquet table", zh: "淮扬菜宴席与厨房" },
     overview: {
       en: "Huaiyang Cuisine Kitchen should focus on Jiangsu's refined cooking language: precise knife work, gentle seasoning, river fish and shrimp, dried tofu threads, clear soups and banquet pacing. It should not be represented by one random heavy dish.",
-      zh: "淮扬菜厨房要围绕江苏精致烹饪来理解：刀工、清鲜调味、河鲜虾蟹、干丝、清汤和宴席节奏。它不应只用一盘厚重菜肴来代表。"
+      zh: "淮扬菜厨房应呈现江苏精致烹饪的现场：刀工、清鲜调味、河鲜虾蟹、干丝、清汤和宴席节奏。它不应只用一盘厚重菜肴来代表。"
     },
     experience: {
       en: "A good visit should read the kitchen through ingredients, cutting technique, stock and soup, plating restraint and the rhythm of a Yangzhou or Huai'an meal, so the cuisine feels specific rather than generic Chinese food.",
@@ -2952,7 +2964,7 @@ function naturalFallbackText(item: ProvinceRecommendation, provinceName: string 
   };
   const zhText: Record<RecommendationKind, { overview: string; experience: string }> = {
     heritage: {
-      overview: `${placeZh}适合从${focusZh}进入。介绍时要落到这里真实可见的街巷、桥梁、院落、纪念空间或老城肌理上，让人知道这个地点自己的来龙去脉。`,
+      overview: `${placeZh}的历史信息来自${focusZh}。说明应落到这里真实可见的空间、遗存、展陈、纪念节点或老城肌理上。`,
       experience: `合适的游览应在关键细节前慢下来，把现场空间、人物记忆、地方生活和城市背景串起来，让${placeZh}有自己的辨识度。`
     },
     nature: {
@@ -2968,7 +2980,7 @@ function naturalFallbackText(item: ProvinceRecommendation, provinceName: string 
       experience: `合适的游览应在聚落或古镇里慢下来，解释建筑、日常使用方式、地方产业和记忆如何连在一起。`
     },
     craft: {
-      overview: `${placeZh}要围绕${focusZh}展开，顺着材料、工具、手艺人和制作流程来看，让工艺回到真实制作环境里。`,
+      overview: `${placeZh}应从${focusZh}展开，顺着材料、工具、手艺人和制作流程来看，让工艺回到真实制作环境里。`,
       experience: `合适的体验应看清工序，再把技法、材料、地方历史和仍在做这门手艺的人联系起来。`
     },
     spiritual: {
@@ -3058,47 +3070,47 @@ function focusedFallbackText(item: ProvinceRecommendation, provinceName: string 
   };
   const zhByKind: Record<RecommendationKind, { overview: string; experience: string }> = {
     heritage: {
-      overview: `${placeZh}要围绕${focusZh}来介绍，把建筑、街巷、碑刻、现场空间和地方故事放在一起看，让这个地点有清楚的历史层次。`,
-      experience: `合适的游览应把看得见的细节和历史背景串起来，让${placeZh}成为具体地点，而不是泛泛的古迹打卡。`
+      overview: `${placeZh}应从${focusZh}来介绍，把建筑、街巷、碑刻、现场空间和地方故事放在一起看，让这个地点有清楚的历史层次。`,
+      experience: `合适的游览应把可见细节和历史背景串起来，让${placeZh}成为有具体位置和故事的地点。`
     },
     nature: {
-      overview: `${placeZh}要围绕${focusZh}来介绍，根据这里自己的地形、季节、步行条件和主要观景点安排节奏。`,
-      experience: `合适的游览应给现场山水留出停留时间，讲清${placeZh}的辨识度，而不是套用普通自然景观介绍。`
+      overview: `${placeZh}应从${focusZh}来介绍，根据这里自己的地形、季节、步行条件和主要观景点安排节奏。`,
+      experience: `合适的游览应给现场山水留出停留时间，讲清${placeZh}的辨识度，避免写成千篇一律的风景说明。`
     },
     food: {
-      overview: `${placeZh}要围绕${focusZh}来介绍，把食材、摊位或厨房、地方口味和当地人的吃法放在一起讲。`,
+      overview: `${placeZh}应从${focusZh}来介绍，把食材、摊位或厨房、地方口味和当地人的吃法放在一起讲。`,
       experience: `合适的美食路线应比较几个本地停留点，说明点单习惯、制作方式和街区背景，而不是只用一道菜概括${placeZh}。`
     },
     village: {
-      overview: `${placeZh}要围绕${focusZh}来介绍，从民居、巷道、田地、水系、公共空间和仍在发生的日常生活进入。`,
+      overview: `${placeZh}应从${focusZh}来介绍，从民居、巷道、田地、水系、公共空间和仍在发生的日常生活进入。`,
       experience: `合适的游览应在聚落里慢下来，把建筑、使用方式和地方记忆连起来，而不是把${placeZh}当成背景照。`
     },
     craft: {
-      overview: `${placeZh}要围绕${focusZh}来介绍，从材料、工具、手艺人和制作流程看清这门地方工艺。`,
+      overview: `${placeZh}应从${focusZh}来介绍，从材料、工具、手艺人和制作流程看清这门地方工艺。`,
       experience: `合适的体验应跟着工序走，理解技法和地方环境的关系，而不是只把${placeZh}当成纪念品展示。`
     },
     spiritual: {
-      overview: `${placeZh}要围绕${focusZh}来介绍，注意礼仪空间、建筑布局、参拜动线和仍在延续的信仰生活。`,
+      overview: `${placeZh}应从${focusZh}来介绍，注意礼仪空间、建筑布局、参拜动线和仍在延续的信仰生活。`,
       experience: `合适的游览应保持安静节奏，讲清礼仪、建筑和本地实践，而不是把${placeZh}当作普通拍照点。`
     },
     city: {
-      overview: `${placeZh}要围绕${focusZh}来介绍，把街区、建筑、交通、店铺和日常生活连成一个具体的城市现场。`,
+      overview: `${placeZh}应从${focusZh}来介绍，把街区、建筑、交通、店铺和日常生活连成一个具体的城市现场。`,
       experience: `合适的城市漫步应在地面比较街巷和细节，让${placeZh}呈现真实生活，而不是只看远处天际线。`
     },
     road: {
-      overview: `${placeZh}要围绕${focusZh}来介绍，移动过程、停靠点、交通节奏和沿途变化本身就是体验重点。`,
+      overview: `${placeZh}应从${focusZh}来介绍，移动过程、停靠点、交通节奏和沿途变化本身就是体验重点。`,
       experience: `合适的路线应把停留、用餐、接驳和观景点一起安排，让${placeZh}的行程感本身成立。`
     },
     market: {
-      overview: `${placeZh}要围绕${focusZh}来介绍，重点看摊位、货品、摊主、价格、采购习惯和街坊交流。`,
+      overview: `${placeZh}应从${focusZh}来介绍，重点看摊位、货品、摊主、价格、采购习惯和街坊交流。`,
       experience: `合适的市场漫步应在具体摊位前慢下来，说明本地人买什么、什么时候来、市场如何连接日常饮食。`
     },
     tea: {
-      overview: `${placeZh}要围绕${focusZh}来介绍，把茶园或茶林环境、采摘季节、制作流程、冲泡品鉴和待客习惯连起来。`,
+      overview: `${placeZh}应从${focusZh}来介绍，把茶园或茶林环境、采摘季节、制作流程、冲泡品鉴和待客习惯连起来。`,
       experience: `合适的茶体验应连接景观、工艺和品鉴步骤，让${placeZh}成为真正的茶文化现场，而不是普通观景点。`
     },
     coast: {
-      overview: `${placeZh}要围绕${focusZh}来介绍，把海岸风景、港口生活、海鲜、老街和地方节奏放在一起看。`,
+      overview: `${placeZh}应从${focusZh}来介绍，把海岸风景、港口生活、海鲜、老街和地方节奏放在一起看。`,
       experience: `合适的海岸路线应把滨水时间、小镇生活和饮食背景结合起来，让${placeZh}不只是普通海景。`
     }
   };
