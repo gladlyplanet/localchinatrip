@@ -2951,19 +2951,19 @@ function naturalFallbackText(item: ProvinceRecommendation, provinceName: string 
   };
   const zhText: Record<RecommendationKind, { overview: string; experience: string }> = {
     heritage: {
-      overview: `${placeZh}的重点是${focusZh}。介绍时要落到这个地点真实可见的街巷、桥梁、院落、纪念空间或老城肌理上，让人知道这里为什么是${placeZh}。`,
+      overview: `${placeZh}适合从${focusZh}进入。介绍时要落到这里真实可见的街巷、桥梁、院落、纪念空间或老城肌理上，让人知道这个地点自己的来龙去脉。`,
       experience: `合适的游览应在关键细节前慢下来，把现场空间、人物记忆、地方生活和城市背景串起来，让${placeZh}有自己的辨识度。`
     },
     nature: {
-      overview: `${placeZh}的重点是${focusZh}。路线应根据这里自己的地形、季节、光线、水量或步行条件来安排，让风景从真实现场长出来。`,
+      overview: `${placeZh}适合顺着${focusZh}来安排。这里的地形、季节、光线、水量和步行条件会决定游览节奏，也会决定风景最有层次的观看方式。`,
       experience: `合适的游览应选择最能说明${placeZh}特点的观景点和步行段，给天气、尺度和安静观察留出时间。`
     },
     food: {
-      overview: `${placeZh}要从${focusZh}进入：看当地人买什么、怎么做、怎么点、怎么吃，以及摊主和街区之间的日常关系。它不应只被写成一道代表菜。`,
+      overview: `${placeZh}要从${focusZh}进入：看当地人买什么、怎么做、怎么点、怎么吃，以及摊主和街区之间的日常关系。`,
       experience: `合适的美食路线应比较几个摊位或店铺，讲清点单习惯、制作方式和街区节奏。`
     },
     village: {
-      overview: `${placeZh}的重点是${focusZh}。民居、巷道、水系、院落和公共空间都应作为仍在使用的生活现场来理解。`,
+      overview: `${placeZh}适合通过${focusZh}慢慢展开。民居、巷道、水系、院落和公共空间都应作为仍在使用的生活现场来理解。`,
       experience: `合适的游览应在聚落或古镇里慢下来，解释建筑、日常使用方式、地方产业和记忆如何连在一起。`
     },
     craft: {
@@ -2975,11 +2975,11 @@ function naturalFallbackText(item: ProvinceRecommendation, provinceName: string 
       experience: `合适的游览应保持安静节奏，讲清看到的殿堂、仪式和地方习惯。`
     },
     city: {
-      overview: `${placeZh}的重点是${focusZh}。街区、建筑、交通、店铺和日常节奏要一起出现，才会像真实城市现场。`,
+      overview: `${placeZh}要从${focusZh}切入。街区、建筑、交通、店铺和日常节奏需要一起出现，才会像真实城市现场。`,
       experience: `合适的城市漫步应在地面比较街巷、店招、建筑和生活细节，说明当地人如何使用这里。`
     },
     road: {
-      overview: `${placeZh}的重点是${focusZh}。移动过程、停靠点、交通节奏和沿途变化本身就是体验。`,
+      overview: `${placeZh}适合沿着${focusZh}来组织。移动过程、停靠点、交通节奏和沿途变化本身就是体验。`,
       experience: `合适的路线应把停留、用餐、接驳和观景点一起安排，让行程本身成为${placeZh}的内容。`
     },
     market: {
