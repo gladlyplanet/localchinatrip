@@ -474,6 +474,16 @@ const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: 
 };
 
 const priorityDestinationMeta: typeof destinationMeta = {
+  "Liwan Food Market": {
+    subtitle: phrase("Cantonese ingredients · Seafood · Soup culture · Neighborhood shopping", "粤菜食材 · 海鲜水产 · 老火汤料 · 街坊采购", "粵菜食材 · 海鮮水產 · 老火湯料 · 街坊採購", "Ingredientes cantoneses · Mariscos · Sopas lentas · Compra vecinal", "Ingredientes cantoneses · frutos do mar · sopas lentas · compras de bairro", "賲賰賵賳丕鬲 賰丕賳鬲賵賳賷丞 路 賲兀賰賵賱丕鬲 亘丨乇賷丞 路 丨爻丕亍 亘胤賷亍 路 鬲爻賵賯 丕賱丨賷"),
+    season: phrase("Morning or late afternoon, when stalls and neighborhood shopping feel most alive.", "早市或傍晚最合适，摊位和街坊采购最有现场感", "早市或傍晚最合適，攤位和街坊採購最有現場感", "Mañana o tarde, cuando los puestos y compras vecinales están vivos.", "Manhã ou fim da tarde, quando bancas e compras locais estão vivas.", "丕賱氐亘丕丨 兀賵 丌禺乇 丕賱賳賴丕乇 丨賷孬 鬲賰賵賳 丕賱兀賰卮丕賰 賵鬲爻賵賯 丕賱丨賷 兀賰孬乇 丨賷賵賷丞"),
+    pace: phrase("One to two hours, moving slowly through stalls, ingredients and local conversations.", "1-2小时，围绕摊位、食材和本地交流慢慢看", "1-2小時，圍繞攤位、食材和本地交流慢慢看", "Una a dos horas entre puestos, ingredientes y conversaciones locales.", "Uma a duas horas entre bancas, ingredientes e conversas locais.", "爻丕毓丞 廿賱賶 爻丕毓鬲賷賳 亘賷賳 丕賱兀賰卮丕賰 賵丕賱賲賰賵賳丕鬲 賵丕賱丨賵丕乇丕鬲 丕賱賲丨賱賷丞"),
+    people: phrase("Food lovers, market walkers and travelers curious about Cantonese home cooking.", "美食爱好者、市场漫步者和广府家常菜文化爱好者", "美食愛好者、市場漫步者和廣府家常菜文化愛好者", "Amantes de comida, mercados y cocina casera cantonesa.", "Quem gosta de comida, mercados e cozinha caseira cantonesa.", "賲丨亘賵 丕賱胤毓丕賲 賵丕賱兀爻賵丕賯 賵丕賱胤亘禺 丕賱賲賳夭賱賷 丕賱賰丕賳鬲賵賳賷"),
+    keywords: phrase("Fresh seafood, soup ingredients, roast meats, dried goods, neighborhood market", "鲜活海鲜 · 老火汤料 · 烧味腊味 · 干货 · 街坊市场", "鮮活海鮮 · 老火湯料 · 燒味臘味 · 乾貨 · 街坊市場", "Marisco fresco, ingredientes de sopa, asados, secos, mercado vecinal", "Frutos do mar frescos, ingredientes de sopa, assados, secos, mercado local", "賲兀賰賵賱丕鬲 亘丨乇賷丞 胤丕夭噩丞貙 賲賰賵賳丕鬲 丨爻丕亍貙 賱丨賵賲 賲卮賵賷丞貙 賲噩賮賮丕鬲貙 爻賵賯 丕賱丨賷"),
+    lead: phrase("Liwan Food Market should show Cantonese freshness and everyday shopping habits, not Guangzhou night scenery.", "荔湾食材市场要看广府人怎样买鲜活食材、配汤料和选烧味干货，不是看广州夜景。", "荔灣食材市場要看廣府人怎樣買鮮活食材、配湯料和選燒味乾貨，不是看廣州夜景。", "El mercado de Liwan trata de frescura cantonesa y compra diaria, no de vistas nocturnas.", "O mercado de Liwan trata de frescor cantonês e compras diárias, não de vista noturna.", "爻賵賯 賱賷賵丕賳 毓賳 賳囟丕乇丞 丕賱胤毓丕賲 丕賱賰丕賳鬲賵賳賷 賵毓丕丿丕鬲 丕賱鬲爻賵賯 丕賱賷賵賲賷丞 賵賱賷爻 賲賳馗乇丕 賱賷賱賷丕"),
+    advice: sharedAdvice("market"),
+    guide: sharedGuide("market")
+  },
   "Huaiyang Cuisine Kitchen": {
     subtitle: phrase("Knife skills · Fresh river flavors · Refined Jiangsu cooking", "刀工 · 清鲜河鲜 · 江苏精致烹饪", "刀工 · 清鮮河鮮 · 江蘇精緻烹飪", "Corte fino · Sabores frescos de río · Cocina refinada de Jiangsu", "Corte fino · sabores frescos de rio · culinária refinada de Jiangsu", "賲賴丕乇丕鬲 丕賱爻賰賷賳 路 賳賰賴丕鬲 賳賴乇賷丞 胤丕夭噩丞 路 胤賴賷 噩賷丕賳睾爻賵 丕賱賲賴匕亘"),
     season: phrase("Best for lunch or dinner when the kitchen pace is complete.", "午餐或晚餐最合适，能看到完整厨房与宴席节奏", "午餐或晚餐最合適，能看到完整廚房與宴席節奏", "Mejor en almuerzo o cena, cuando se entiende el ritmo de cocina y mesa.", "Melhor no almoço ou jantar, com ritmo completo de cozinha e mesa.", "丕賱睾丿丕亍 兀賵 丕賱毓卮丕亍 兀賮囟賱 賱乇丐賷丞 廿賷賯丕毓 丕賱賲胤亘禺 賵丕賱賲丕卅丿丞"),
