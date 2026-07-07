@@ -97,8 +97,8 @@ export function getAuditedDestinationMedia(
 
   const zh: Record<RecommendationKind, { overview: string; experience: string }> = {
     heritage: {
-      overview: `${placeZh}适合从${focusZh}进入。介绍时要落到现场真实可看的街巷、院落、城门、殿堂、碑刻、旧路线和城市记忆上，让这个地点有自己的来龙去脉。`,
-      experience: `合适的游览应在关键细节前慢下来，把看得见的空间、人物记忆、地方生活和今天的城市关系串起来。`
+      overview: `${placeZh}适合从${focusZh}进入。介绍时要扣住这个地点自己的核心空间、可见细节、历史背景和周边城市关系，让它不再像一段通用古迹说明。`,
+      experience: `合适的游览应在最能代表这里的建筑、动线、展陈或景观点前慢下来，把看得见的细节和地方记忆串起来。`
     },
     nature: {
       overview: `${placeZh}的重点在${focusZh}。路线要跟着这里真实的地形、季节、天气、光线和步行条件走，让风景从现场本身展开。`,
@@ -126,7 +126,7 @@ export function getAuditedDestinationMedia(
     },
     road: {
       overview: `${placeZh}适合沿着${focusZh}组织。移动过程、停靠点、交通节奏和沿途变化本身就是体验。`,
-      experience: `合适的路线应把停留、用餐、接驳和观景点一起安排，让行程本身成为这个地点的内容。`
+      experience: `合适的路线应把乘坐或行车时段、换乘接驳、观景停留和前后街区一起安排，让移动本身成为这个地点的内容。`
     },
     market: {
       overview: `${placeZh}要从${focusZh}来讲：摊位、货品、摊主、价格、采购习惯和街坊交流都应进入介绍。`,
