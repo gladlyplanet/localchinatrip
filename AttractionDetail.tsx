@@ -474,6 +474,108 @@ const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: 
 };
 
 const priorityDestinationMeta: typeof destinationMeta = {
+  "West Lake": {
+    subtitle: phrase(
+      "Su Causeway · Bai Causeway · Broken Bridge · Three Pools · Leifeng Pagoda views",
+      "苏堤白堤 · 断桥 · 三潭印月 · 雷峰塔视线 · 湖滨步行",
+      "蘇堤白堤 · 斷橋 · 三潭印月 · 雷峰塔視線 · 湖濱步行",
+      "Calzadas Su y Bai · Puente Roto · Tres Estanques · vistas de Leifeng",
+      "Calçadas Su e Bai · Ponte Quebrada · Tres Lagos · vista da Pagode Leifeng",
+      "Su Causeway · Bai Causeway · Broken Bridge · Three Pools · Leifeng Pagoda"
+    ),
+    season: phrase(
+      "Spring and autumn are most comfortable; early morning and dusk have softer light.",
+      "春秋最舒适，清晨和傍晚光线更柔和",
+      "春秋最舒適，清晨和傍晚光線更柔和",
+      "Primavera y otoño son mas comodas; manana y atardecer tienen luz suave.",
+      "Primavera e outono sao mais confortaveis; manha e fim de tarde tem luz suave.",
+      "Spring and autumn are most comfortable; morning and dusk are softer."
+    ),
+    pace: phrase(
+      "Half day to one day; choose one or two walking sections instead of rushing the whole lake.",
+      "半日到一日，选一到两段步行线，不赶完整绕湖",
+      "半日到一日，選一到兩段步行線，不趕完整繞湖",
+      "Medio dia a un dia; elige una o dos secciones a pie.",
+      "Meio dia a um dia; escolha uma ou duas partes a pe.",
+      "Half day to one day; choose one or two walking sections."
+    ),
+    people: phrase(
+      "First-time Hangzhou visitors, garden lovers and slow walkers.",
+      "初访杭州者、园林爱好者和慢行旅行者",
+      "初訪杭州者、園林愛好者和慢行旅行者",
+      "Primer viaje a Hangzhou, amantes de jardines y caminantes tranquilos.",
+      "Primeira visita a Hangzhou, amantes de jardins e caminhantes lentos.",
+      "First-time Hangzhou visitors, garden lovers and slow walkers."
+    ),
+    keywords: phrase(
+      "Su Causeway, Bai Causeway, Broken Bridge, Three Pools, Leifeng Pagoda",
+      "苏堤 · 白堤 · 断桥 · 三潭印月 · 雷峰塔",
+      "蘇堤 · 白堤 · 斷橋 · 三潭印月 · 雷峰塔",
+      "Su, Bai, Puente Roto, Tres Estanques, Leifeng",
+      "Su, Bai, Ponte Quebrada, Tres Lagos, Leifeng",
+      "Su Causeway, Bai Causeway, Broken Bridge, Three Pools, Leifeng"
+    ),
+    lead: phrase(
+      "West Lake should be read through causeways, islands, bridges, temples, gardens and poetic views, not as a generic lake photo.",
+      "西湖要看堤、岛、桥、寺、园林和诗画视线，不是一张普通湖景照。",
+      "西湖要看堤、島、橋、寺、園林和詩畫視線，不是一張普通湖景照。",
+      "West Lake se lee por calzadas, islas, puentes, templos, jardines y vistas poeticas.",
+      "West Lake se entende por calçadas, ilhas, pontes, templos, jardins e vistas poeticas.",
+      "West Lake is read through causeways, islands, bridges, temples, gardens and poetic views."
+    ),
+    advice: sharedAdvice("heritage"),
+    guide: sharedGuide("heritage")
+  },
+  "Liaoyang White Pagoda": {
+    subtitle: phrase("Guangyou Temple · Liao brick pagoda · Liaoyang old city memory", "广佑寺白塔 · 辽代砖塔 · 辽阳古城记忆", "廣佑寺白塔 · 遼代磚塔 · 遼陽古城記憶", "Templo Guangyou · pagoda de ladrillo Liao · memoria antigua de Liaoyang", "Templo Guangyou · pagode de tijolo Liao · memória antiga de Liaoyang", "賲毓亘丿 睾賵丕賳睾賷賵 路 亘乇噩 丕賱胤賵亘 賱賷丕賵 路 匕丕賰乇丞 賱賷丕賵賷丕賳睾 丕賱賯丿賷賲丞"),
+    season: phrase("Clear mornings or quiet non-peak hours are best for tower details.", "清晨或非高峰时段更适合看塔身细节", "清晨或非高峰時段更適合看塔身細節", "Mañanas despejadas u horas tranquilas para ver detalles.", "Manhãs claras ou horários tranquilos para ver detalhes.", "丕賱氐亘丕丨 丕賱氐丕賮賷 兀賵 丕賱兀賵賯丕鬲 丕賱賴丕丿卅丞 兀賮囟賱 賱鬲賮丕氐賷賱 丕賱亘乇噩"),
+    pace: phrase("Half day, leaving time for the tower, Guangyou Temple and White Pagoda Park.", "半日，留给白塔、广佑寺和白塔公园", "半日，留給白塔、廣佑寺和白塔公園", "Medio día para la pagoda, Guangyou y el parque.", "Meio dia para a pagode, Guangyou e o parque.", "賳氐賮 賷賵賲 賱賱亘乇噩 賵賲毓亘丿 睾賵丕賳睾賷賵 賵丕賱丨丿賷賯丞"),
+    people: phrase("History, Buddhist architecture and old-city walkers.", "历史、佛教建筑和老城漫步爱好者", "歷史、佛教建築和老城漫步愛好者", "Amantes de historia, arquitectura budista y ciudad antigua.", "Quem gosta de história, arquitetura budista e cidade antiga.", "賲丨亘賵 丕賱鬲丕乇賷禺 賵丕賱毓賲丕乇丞 丕賱亘賵匕賷丞 賵丕賱賲丿賳 丕賱賯丿賷賲丞"),
+    keywords: phrase("Guangyou Temple, Liao brick pagoda, dense eaves, old city axis", "广佑寺 · 辽代砖塔 · 密檐结构 · 老城中轴", "廣佑寺 · 遼代磚塔 · 密簷結構 · 老城中軸", "Guangyou, pagoda Liao, aleros densos, eje antiguo", "Guangyou, pagode Liao, beirais densos, eixo antigo", "睾賵丕賳睾賷賵貙 亘乇噩 胤賵亘 賱賷丕賵貙 兀賮丕乇賷夭 賰孬賷賮丞貙 賲丨賵乇 丕賱賲丿賷賳丞 丕賱賯丿賷賲丞"),
+    lead: phrase("Liaoyang White Pagoda should be read through Guangyou Temple, Liao-dynasty brickwork, tower proportions and old-city memory, not only as a generic pagoda.", "辽阳白塔要从广佑寺、辽代砖塔形制、塔身比例和老城记忆来理解，不只是普通佛塔照片。", "遼陽白塔要從廣佑寺、遼代磚塔形制、塔身比例和老城記憶來理解，不只是普通佛塔照片。", "La pagoda se entiende por Guangyou, ladrillo Liao y memoria urbana, no como una torre genérica.", "A pagode se entende por Guangyou, tijolo Liao e memória urbana, não como torre genérica.", "賷賮賴賲 亘乇噩 賱賷丕賵賷丕賳睾 毓亘乇 睾賵丕賳睾賷賵 賵胤賵亘 賱賷丕賵 賵匕丕賰乇丞 丕賱賲丿賷賳丞 賵賱賷爻 賰亘乇噩 毓丕賲"),
+    advice: sharedAdvice("spiritual"),
+    guide: sharedGuide("spiritual")
+  },
+  "Shiwan Ceramic Studio": {
+    subtitle: phrase("Kiln memory · Clay shaping · Foshan folk craft", "窑火记忆 · 泥塑造型 · 佛山民间工艺", "窯火記憶 · 泥塑造型 · 佛山民間工藝", "Memoria de horno · Modelado de barro · Artesanía popular de Foshan", "Memória de forno · modelagem em barro · artesanato popular de Foshan", "匕丕賰乇丞 丕賱賮乇賳 路 鬲卮賰賷賱 丕賱胤賷賳 路 丨乇賮 賮賵卮丕賳 丕賱卮毓亘賷丞"),
+    season: phrase("Best during workshop opening hours; confirm demonstrations in advance.", "工作坊开放时段最佳，建议提前确认示范时间", "工作坊開放時段最佳，建議提前確認示範時間", "Mejor durante horario de talleres; confirma demostraciones.", "Melhor durante o horário das oficinas; confirme demonstrações.", "兀賮囟賱 禺賱丕賱 爻丕毓丕鬲 丕賱賵乇卮貙 賵賷賮囟賱 鬲兀賰賷丿 丕賱毓乇賵囟 賲爻亘賯丕"),
+    pace: phrase("Two to three hours, with time for kiln space, making steps and craft explanation.", "2-3小时，留给窑址空间、制作工序和工艺讲解", "2-3小時，留給窯址空間、製作工序和工藝講解", "Dos a tres horas para horno, proceso y explicación.", "Duas a três horas para forno, processo e explicação.", "爻丕毓鬲丕賳 廿賱賶 孬賱丕孬 爻丕毓丕鬲 賱賲爻丕丨丞 丕賱賮乇賳 賵丕賱毓賲賱賷丞 賵丕賱卮乇丨"),
+    people: phrase("Design, handcraft and Lingnan culture lovers.", "设计、手作和岭南文化爱好者", "設計、手作和嶺南文化愛好者", "Amantes de diseño, artesanía y cultura Lingnan.", "Amantes de design, artesanato e cultura Lingnan.", "賲丨亘賵 丕賱鬲氐賲賷賲 賵丕賱丨乇賮 丕賱賷丿賵賷丞 賵孬賯丕賮丞 賱賷賳睾賳丕賳"),
+    keywords: phrase("Shiwan kiln, ceramic figures, clay, glaze, Foshan craft", "石湾窑 · 陶塑人物 · 泥料 · 釉色 · 佛山工艺", "石灣窯 · 陶塑人物 · 泥料 · 釉色 · 佛山工藝", "Horno Shiwan, figuras cerámicas, barro, esmalte, artesanía de Foshan", "Forno Shiwan, figuras cerâmicas, barro, esmalte, artesanato de Foshan", "賮乇賳 卮賷賵丕賳貙 卮禺氐賷丕鬲 禺夭賮賷丞貙 胤賷賳貙 鬲夭噩賷噩貙 丨乇賮 賮賵卮丕賳"),
+    lead: phrase("Shiwan ceramic culture should be read through kiln space, clay shaping and Lingnan folk aesthetics, not one isolated artifact.", "石湾陶艺要看窑址空间、泥塑造型和岭南民间审美，不是一件孤立陶塑。", "石灣陶藝要看窯址空間、泥塑造型和嶺南民間審美，不是一件孤立陶塑。", "Shiwan se entiende por hornos, modelado y estética Lingnan, no por una pieza aislada.", "Shiwan se entende por fornos, modelagem e estética Lingnan, não por uma peça isolada.", "賷賮賴賲 禺夭賮 卮賷賵丕賳 毓亘乇 丕賱賮乇賳 賵鬲卮賰賷賱 丕賱胤賷賳 賵噩賲丕賱賷丕鬲 賱賷賳睾賳丕賳貙 賱丕 賯胤毓丞 賲毓夭賵賱丞"),
+    advice: sharedAdvice("craft"),
+    guide: sharedGuide("craft")
+  },
+  "Xiqiao Mountain": {
+    subtitle: phrase("Lingnan mountain · Nanhai Guanyin · Foshan Buddhist landscape", "岭南山水 · 南海观音 · 佛山佛教空间", "嶺南山水 · 南海觀音 · 佛山佛教空間", "Montaña Lingnan · Guanyin de Nanhai · paisaje budista de Foshan", "Montanha Lingnan · Guanyin de Nanhai · paisagem budista de Foshan", "噩亘賱 賱賷賳睾賳丕賳 路 賳丕賳賴丕賷 睾賵丕賳賷賳 路 賲卮賴丿 亘賵匕賷 賮賵卮丕賳"),
+    season: phrase("Spring and autumn are comfortable; clear days suit views and temple walking.", "春秋舒适，晴朗天气适合观景和寺院步行", "春秋舒適，晴朗天氣適合觀景和寺院步行", "Primavera y otoño son cómodos; días despejados sirven para vistas y templos.", "Primavera e outono são agradáveis; dias claros servem para vistas e templos.", "丕賱乇亘賷毓 賵丕賱禺乇賷賮 賲乇賷丨丕賳貙 賵丕賱兀賷丕賲 丕賱氐丕賮賷丞 鬲賳丕爻亘 丕賱賲卮丕賴丿 賵丕賱賲卮賷"),
+    pace: phrase("Half day to one day, planned around Guanyin plaza, trails and viewpoints.", "半日到一日，围绕观音广场、步道和观景点安排", "半日到一日，圍繞觀音廣場、步道和觀景點安排", "Medio día a un día, con plaza Guanyin, senderos y miradores.", "Meio dia a um dia, com praça Guanyin, trilhas e mirantes.", "賳氐賮 賷賵賲 廿賱賶 賷賵賲 貙 丨爻亘 爻丕丨丞 睾賵丕賳賷賳 賵丕賱賲爻丕乇丕鬲 賵賳賯丕胤 丕賱賲卮賴丿"),
+    people: phrase("Families, Lingnan culture travelers and Buddhist landscape walkers.", "家庭、岭南文化和佛教山水爱好者", "家庭、嶺南文化和佛教山水愛好者", "Familias y viajeros interesados en cultura Lingnan y paisaje budista.", "Famílias e viajantes de cultura Lingnan e paisagem budista.", "毓丕卅賱丕鬲 賵賲丨亘賵 孬賯丕賮丞 賱賷賳睾賳丕賳 賵丕賱賲卮丕賴丿 丕賱亘賵匕賷丞"),
+    keywords: phrase("Nanhai Guanyin, volcanic landform, forest trails, Foshan mountain scenery", "南海观音 · 古火山地貌 · 林间步道 · 佛山山水", "南海觀音 · 古火山地貌 · 林間步道 · 佛山山水", "Guanyin de Nanhai, relieve volcánico, senderos, paisaje de Foshan", "Guanyin de Nanhai, relevo vulcânico, trilhas, paisagem de Foshan", "賳丕賳賴丕賷 睾賵丕賳賷賳貙 鬲囟丕乇賷爻 亘乇賰丕賳賷丞貙 賲爻丕乇丕鬲 睾丕亘丕鬲貙 賲賳馗乇 賮賵卮丕賳"),
+    lead: phrase("Xiqiao Mountain should connect Foshan's Lingnan mountain scenery, Nanhai Guanyin and Buddhist walking routes, not a city panorama.", "西樵山要看佛山岭南山水、南海观音和佛教步行空间，不是城市俯瞰图。", "西樵山要看佛山嶺南山水、南海觀音和佛教步行空間，不是城市俯瞰圖。", "Xiqiao debe mostrar montaña Lingnan, Guanyin y rutas budistas, no panorama urbano.", "Xiqiao deve mostrar montanha Lingnan, Guanyin e rotas budistas, não panorama urbano.", "噩亘賱 卮賷賯賷丕賵 賷噩亘 兀賳 賷馗賴乇 噩亘丕賱 賱賷賳睾賳丕賳 賵睾賵丕賳賷賳 賵胤乇賯 亘賵匕賷丞貙 賱賷爻 賲賳馗乇丕 丨囟乇賷丕"),
+    advice: sharedAdvice("nature"),
+    guide: sharedGuide("nature")
+  },
+  "Liwan Food Market": {
+    subtitle: phrase("Cantonese ingredients · Seafood · Soup culture · Neighborhood shopping", "粤菜食材 · 海鲜水产 · 老火汤料 · 街坊采购", "粵菜食材 · 海鮮水產 · 老火湯料 · 街坊採購", "Ingredientes cantoneses · Mariscos · Sopas lentas · Compra vecinal", "Ingredientes cantoneses · frutos do mar · sopas lentas · compras de bairro", "賲賰賵賳丕鬲 賰丕賳鬲賵賳賷丞 路 賲兀賰賵賱丕鬲 亘丨乇賷丞 路 丨爻丕亍 亘胤賷亍 路 鬲爻賵賯 丕賱丨賷"),
+    season: phrase("Morning or late afternoon, when stalls and neighborhood shopping feel most alive.", "早市或傍晚最合适，摊位和街坊采购最有现场感", "早市或傍晚最合適，攤位和街坊採購最有現場感", "Mañana o tarde, cuando los puestos y compras vecinales están vivos.", "Manhã ou fim da tarde, quando bancas e compras locais estão vivas.", "丕賱氐亘丕丨 兀賵 丌禺乇 丕賱賳賴丕乇 丨賷孬 鬲賰賵賳 丕賱兀賰卮丕賰 賵鬲爻賵賯 丕賱丨賷 兀賰孬乇 丨賷賵賷丞"),
+    pace: phrase("One to two hours, moving slowly through stalls, ingredients and local conversations.", "1-2小时，围绕摊位、食材和本地交流慢慢看", "1-2小時，圍繞攤位、食材和本地交流慢慢看", "Una a dos horas entre puestos, ingredientes y conversaciones locales.", "Uma a duas horas entre bancas, ingredientes e conversas locais.", "爻丕毓丞 廿賱賶 爻丕毓鬲賷賳 亘賷賳 丕賱兀賰卮丕賰 賵丕賱賲賰賵賳丕鬲 賵丕賱丨賵丕乇丕鬲 丕賱賲丨賱賷丞"),
+    people: phrase("Food lovers, market walkers and travelers curious about Cantonese home cooking.", "美食爱好者、市场漫步者和广府家常菜文化爱好者", "美食愛好者、市場漫步者和廣府家常菜文化愛好者", "Amantes de comida, mercados y cocina casera cantonesa.", "Quem gosta de comida, mercados e cozinha caseira cantonesa.", "賲丨亘賵 丕賱胤毓丕賲 賵丕賱兀爻賵丕賯 賵丕賱胤亘禺 丕賱賲賳夭賱賷 丕賱賰丕賳鬲賵賳賷"),
+    keywords: phrase("Fresh seafood, soup ingredients, roast meats, dried goods, neighborhood market", "鲜活海鲜 · 老火汤料 · 烧味腊味 · 干货 · 街坊市场", "鮮活海鮮 · 老火湯料 · 燒味臘味 · 乾貨 · 街坊市場", "Marisco fresco, ingredientes de sopa, asados, secos, mercado vecinal", "Frutos do mar frescos, ingredientes de sopa, assados, secos, mercado local", "賲兀賰賵賱丕鬲 亘丨乇賷丞 胤丕夭噩丞貙 賲賰賵賳丕鬲 丨爻丕亍貙 賱丨賵賲 賲卮賵賷丞貙 賲噩賮賮丕鬲貙 爻賵賯 丕賱丨賷"),
+    lead: phrase("Liwan Food Market should show Cantonese freshness and everyday shopping habits, not Guangzhou night scenery.", "荔湾食材市场要看广府人怎样买鲜活食材、配汤料和选烧味干货，不是看广州夜景。", "荔灣食材市場要看廣府人怎樣買鮮活食材、配湯料和選燒味乾貨，不是看廣州夜景。", "El mercado de Liwan trata de frescura cantonesa y compra diaria, no de vistas nocturnas.", "O mercado de Liwan trata de frescor cantonês e compras diárias, não de vista noturna.", "爻賵賯 賱賷賵丕賳 毓賳 賳囟丕乇丞 丕賱胤毓丕賲 丕賱賰丕賳鬲賵賳賷 賵毓丕丿丕鬲 丕賱鬲爻賵賯 丕賱賷賵賲賷丞 賵賱賷爻 賲賳馗乇丕 賱賷賱賷丕"),
+    advice: sharedAdvice("market"),
+    guide: sharedGuide("market")
+  },
+  "Huaiyang Cuisine Kitchen": {
+    subtitle: phrase("Knife skills · Fresh river flavors · Refined Jiangsu cooking", "刀工 · 清鲜河鲜 · 江苏精致烹饪", "刀工 · 清鮮河鮮 · 江蘇精緻烹飪", "Corte fino · Sabores frescos de río · Cocina refinada de Jiangsu", "Corte fino · sabores frescos de rio · culinária refinada de Jiangsu", "賲賴丕乇丕鬲 丕賱爻賰賷賳 路 賳賰賴丕鬲 賳賴乇賷丞 胤丕夭噩丞 路 胤賴賷 噩賷丕賳睾爻賵 丕賱賲賴匕亘"),
+    season: phrase("Best for lunch or dinner when the kitchen pace is complete.", "午餐或晚餐最合适，能看到完整厨房与宴席节奏", "午餐或晚餐最合適，能看到完整廚房與宴席節奏", "Mejor en almuerzo o cena, cuando se entiende el ritmo de cocina y mesa.", "Melhor no almoço ou jantar, com ritmo completo de cozinha e mesa.", "丕賱睾丿丕亍 兀賵 丕賱毓卮丕亍 兀賮囟賱 賱乇丐賷丞 廿賷賯丕毓 丕賱賲胤亘禺 賵丕賱賲丕卅丿丞"),
+    pace: phrase("Two to three hours, with dishes, technique and explanation paced together.", "2-3小时，菜品、刀工和讲解一起安排", "2-3小時，菜品、刀工和講解一起安排", "Dos a tres horas, combinando platos, técnica y explicación.", "Duas a três horas, combinando pratos, técnica e explicação.", "爻丕毓鬲丕賳 廿賱賶 孬賱丕孬 爻丕毓丕鬲 賲毓 丕賱兀胤亘丕賯 賵丕賱鬲賯賳賷丞 賵丕賱卮乇丨"),
+    people: phrase("Food culture travelers, cooking learners and Jiangsu culture lovers.", "美食文化、烹饪体验和江苏地方文化爱好者", "美食文化、烹飪體驗和江蘇地方文化愛好者", "Viajeros de cultura gastronómica y cocina de Jiangsu.", "Viajantes de cultura gastronômica e culinária de Jiangsu.", "賲丨亘賵 孬賯丕賮丞 丕賱胤毓丕賲 賵鬲噩丕乇亘 丕賱胤賴賷 賵孬賯丕賮丞 噩賷丕賳睾爻賵"),
+    keywords: phrase("Gansi, clear soup, river fish, shrimp, Yangzhou banquet rhythm", "干丝 · 清汤 · 河鲜 · 虾蟹 · 扬州宴席节奏", "乾絲 · 清湯 · 河鮮 · 蝦蟹 · 揚州宴席節奏", "Gansi, sopa clara, pescado de río, camarón, ritmo de banquete", "Gansi, sopa clara, peixe de rio, camarão, ritmo de banquete", "睾丕賳爻賷貙 丨爻丕亍 氐丕賮貙 兀爻賲丕賰 賳賴乇賷丞貙 乇賵亘賷丕賳貙 廿賷賯丕毓 賵賱賷賲丞 賷丕賳睾夭賵"),
+    lead: phrase("Huaiyang cuisine is about precision and restraint: knife work, fresh river ingredients, clear soups and elegant pacing, not one random heavy dish.", "淮扬菜看的是精细与克制：刀工、河鲜、清汤和雅致宴席节奏，不是一盘随意的厚重菜。", "淮揚菜看的是精細與克制：刀工、河鮮、清湯和雅緻宴席節奏，不是一盤隨意的厚重菜。", "La cocina Huaiyang trata de precisión, ingredientes de río, sopas claras y ritmo elegante.", "A cozinha Huaiyang trata de precisão, ingredientes de rio, sopas claras e ritmo elegante.", "賲胤亘禺 賴賵丕賷賷丕賳睾 毓賳 丕賱丿賯丞 賵丕賱賴丿賵亍 賵賲賰賵賳丕鬲 丕賱賳賴乇 賵丕賱丨爻丕亍 丕賱氐丕賮賷"),
+    advice: sharedAdvice("food"),
+    guide: sharedGuide("food")
+  },
   "Shennongjia Forest": {
     subtitle: phrase("Primeval forest · Shennong Peak · Dajiuhu wetlands", "原始森林 · 神农顶 · 大九湖湿地", "原始森林 · 神農頂 · 大九湖濕地", "Bosque primario · Pico Shennong · Humedales Dajiuhu", "Floresta primária · Pico Shennong · pântanos Dajiuhu", "睾丕亘丞 兀賵賱賷丞 路 賯賲丞 卮賳賳賵賳睾 路 兀乇丕囟 賵胤亘丞 丿丕噩賷賵賴賵"),
     season: phrase("Spring and autumn are comfortable; summer is cool; misty days need visibility checks.", "春秋舒适，夏季清凉，雨雾天需看能见度", "春秋舒適，夏季清涼，雨霧天需看能見度", "Primavera y otoño son cómodos; el verano es fresco; con niebla hay que revisar visibilidad.", "Primavera e outono são agradáveis; o verão é fresco; em neblina, confira a visibilidade.", "丕賱乇亘賷毓 賵丕賱禺乇賷賮 賲乇賷丨丕賳貙 丕賱氐賷賮 亘丕乇丿貙 賵賷噩亘 賮丨氐 丕賱乇丐賷丞 賮賷 丕賱囟亘丕亘"),
