@@ -474,6 +474,16 @@ const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: 
 };
 
 const priorityDestinationMeta: typeof destinationMeta = {
+  "Huaiyang Cuisine Kitchen": {
+    subtitle: phrase("Knife skills · Fresh river flavors · Refined Jiangsu cooking", "刀工 · 清鲜河鲜 · 江苏精致烹饪", "刀工 · 清鮮河鮮 · 江蘇精緻烹飪", "Corte fino · Sabores frescos de río · Cocina refinada de Jiangsu", "Corte fino · sabores frescos de rio · culinária refinada de Jiangsu", "賲賴丕乇丕鬲 丕賱爻賰賷賳 路 賳賰賴丕鬲 賳賴乇賷丞 胤丕夭噩丞 路 胤賴賷 噩賷丕賳睾爻賵 丕賱賲賴匕亘"),
+    season: phrase("Best for lunch or dinner when the kitchen pace is complete.", "午餐或晚餐最合适，能看到完整厨房与宴席节奏", "午餐或晚餐最合適，能看到完整廚房與宴席節奏", "Mejor en almuerzo o cena, cuando se entiende el ritmo de cocina y mesa.", "Melhor no almoço ou jantar, com ritmo completo de cozinha e mesa.", "丕賱睾丿丕亍 兀賵 丕賱毓卮丕亍 兀賮囟賱 賱乇丐賷丞 廿賷賯丕毓 丕賱賲胤亘禺 賵丕賱賲丕卅丿丞"),
+    pace: phrase("Two to three hours, with dishes, technique and explanation paced together.", "2-3小时，菜品、刀工和讲解一起安排", "2-3小時，菜品、刀工和講解一起安排", "Dos a tres horas, combinando platos, técnica y explicación.", "Duas a três horas, combinando pratos, técnica e explicação.", "爻丕毓鬲丕賳 廿賱賶 孬賱丕孬 爻丕毓丕鬲 賲毓 丕賱兀胤亘丕賯 賵丕賱鬲賯賳賷丞 賵丕賱卮乇丨"),
+    people: phrase("Food culture travelers, cooking learners and Jiangsu culture lovers.", "美食文化、烹饪体验和江苏地方文化爱好者", "美食文化、烹飪體驗和江蘇地方文化愛好者", "Viajeros de cultura gastronómica y cocina de Jiangsu.", "Viajantes de cultura gastronômica e culinária de Jiangsu.", "賲丨亘賵 孬賯丕賮丞 丕賱胤毓丕賲 賵鬲噩丕乇亘 丕賱胤賴賷 賵孬賯丕賮丞 噩賷丕賳睾爻賵"),
+    keywords: phrase("Gansi, clear soup, river fish, shrimp, Yangzhou banquet rhythm", "干丝 · 清汤 · 河鲜 · 虾蟹 · 扬州宴席节奏", "乾絲 · 清湯 · 河鮮 · 蝦蟹 · 揚州宴席節奏", "Gansi, sopa clara, pescado de río, camarón, ritmo de banquete", "Gansi, sopa clara, peixe de rio, camarão, ritmo de banquete", "睾丕賳爻賷貙 丨爻丕亍 氐丕賮貙 兀爻賲丕賰 賳賴乇賷丞貙 乇賵亘賷丕賳貙 廿賷賯丕毓 賵賱賷賲丞 賷丕賳睾夭賵"),
+    lead: phrase("Huaiyang cuisine is about precision and restraint: knife work, fresh river ingredients, clear soups and elegant pacing, not one random heavy dish.", "淮扬菜看的是精细与克制：刀工、河鲜、清汤和雅致宴席节奏，不是一盘随意的厚重菜。", "淮揚菜看的是精細與克制：刀工、河鮮、清湯和雅緻宴席節奏，不是一盤隨意的厚重菜。", "La cocina Huaiyang trata de precisión, ingredientes de río, sopas claras y ritmo elegante.", "A cozinha Huaiyang trata de precisão, ingredientes de rio, sopas claras e ritmo elegante.", "賲胤亘禺 賴賵丕賷賷丕賳睾 毓賳 丕賱丿賯丞 賵丕賱賴丿賵亍 賵賲賰賵賳丕鬲 丕賱賳賴乇 賵丕賱丨爻丕亍 丕賱氐丕賮賷"),
+    advice: sharedAdvice("food"),
+    guide: sharedGuide("food")
+  },
   "Shennongjia Forest": {
     subtitle: phrase("Primeval forest · Shennong Peak · Dajiuhu wetlands", "原始森林 · 神农顶 · 大九湖湿地", "原始森林 · 神農頂 · 大九湖濕地", "Bosque primario · Pico Shennong · Humedales Dajiuhu", "Floresta primária · Pico Shennong · pântanos Dajiuhu", "睾丕亘丞 兀賵賱賷丞 路 賯賲丞 卮賳賳賵賳睾 路 兀乇丕囟 賵胤亘丞 丿丕噩賷賵賴賵"),
     season: phrase("Spring and autumn are comfortable; summer is cool; misty days need visibility checks.", "春秋舒适，夏季清凉，雨雾天需看能见度", "春秋舒適，夏季清涼，雨霧天需看能見度", "Primavera y otoño son cómodos; el verano es fresco; con niebla hay que revisar visibilidad.", "Primavera e outono são agradáveis; o verão é fresco; em neblina, confira a visibilidade.", "丕賱乇亘賷毓 賵丕賱禺乇賷賮 賲乇賷丨丕賳貙 丕賱氐賷賮 亘丕乇丿貙 賵賷噩亘 賮丨氐 丕賱乇丐賷丞 賮賷 丕賱囟亘丕亘"),
