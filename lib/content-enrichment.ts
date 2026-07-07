@@ -659,12 +659,12 @@ const destinationSpecificText: Record<string, MediaText> = {
     image: "/images/destinations/hainan-boao-town-clean.png",
     caption: { en: "Boao coastline and town scenery", zh: "博鳌海岸与小镇风景" },
     overview: {
-      en: "Boao Town brings together Qionghai's coastal town character: Jade Belt Beach, river-mouth scenery, conference-area landmarks and a slower seaside pace.",
-      zh: "博鳌小镇要呈现琼海海岸小镇气质：玉带滩、河海交汇、论坛地标和相对舒缓的海边生活。"
+      en: "Boao Town brings together Qionghai's coastal town character: Jade Belt Beach, river-mouth scenery, quiet streets and a slower seaside pace.",
+      zh: "博鳌小镇要呈现琼海海岸小镇气质：玉带滩、河海交汇、安静街区和相对舒缓的海边生活。"
     },
     experience: {
       en: "A good route links the beach, river-mouth viewpoints and town streets, leaving time for seafood or coffee rather than reducing Boao to one conference building.",
-      zh: "游览可把海滩、河口视角和小镇街区串起来，留出吃海鲜或喝咖啡的时间，不要只把博鳌理解成一座会议建筑。"
+      zh: "游览可把海滩、河口视角和小镇街区串起来，留出吃海鲜或喝咖啡的时间，让博鳌呈现出海边小镇的日常节奏。"
     }
   },
   "Hainan::Tanmen Fishing Port": {
@@ -2537,8 +2537,8 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
     image: "/images/destinations/hainan-boao-town-clean.png",
     caption: { en: "Boao coastline and town", zh: "博鳌海岸与小镇" },
     overview: {
-      en: "Boao Town should show Qionghai's coast-town character: Jade Belt Beach, the Wanquan River mouth, seaside streets and a slower small-town rhythm. It should not be reduced to a forum logo or conference building.",
-      zh: "博鳌小镇要呈现琼海海岸小镇气质：玉带滩、万泉河口、海岸街区和相对舒缓的小镇节奏。它不应被简化成论坛标志或会议建筑。"
+      en: "Boao Town should show Qionghai's coast-town character: Jade Belt Beach, the Wanquan River mouth, seaside streets and a slower small-town rhythm.",
+      zh: "博鳌小镇要呈现琼海海岸小镇气质：玉带滩、万泉河口、海岸街区和相对舒缓的小镇节奏。"
     },
     experience: {
       en: "A good route links the beach, river-sea viewpoints and town streets, leaving time for seafood, coffee or a coastal walk.",
