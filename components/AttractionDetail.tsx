@@ -429,12 +429,13 @@ function auditedDestinationMeta(attraction: ProvinceRecommendation) {
   const focus = attraction.focus;
   const focusZh = attraction.focusZh || attraction.focus;
   const kind = attraction.kind;
+  const isShortTransport = /Ferry|Cableway|Light Rail|Walk|Mid-Levels|Escalator/i.test(name);
   const tone: Record<RecommendationKind, { season: string; pace: string; people: string; lead: string }> = {
     heritage: {
       season: "春秋和清晨、傍晚更适合慢走、拍照和听讲解",
       pace: "半日到一日，围绕核心遗存、街巷和现场细节慢慢看",
       people: "历史、建筑、城市记忆和摄影爱好者",
-      lead: `${nameZh}要从${focusZh}进入，把现场可见的建筑、空间、故事和地方生活串起来。`
+      lead: `${nameZh}要从${focusZh}进入，把这个地点自己的核心空间、可见细节和历史背景讲清楚。`
     },
     nature: {
       season: "按花期、水量、雪景或晴朗天气选择",
@@ -473,9 +474,9 @@ function auditedDestinationMeta(attraction: ProvinceRecommendation) {
       lead: `${nameZh}适合通过${focusZh}看街区如何运转，把建筑、店铺、交通和普通日常放在一起。`
     },
     road: {
-      season: "按路况、天气和沿途景观季节选择",
-      pace: "一日或多日，按停靠点和交通距离安排",
-      people: "自驾、摄影和深度路线旅行者",
+      season: isShortTransport ? "晴朗或傍晚更适合，需注意运营时间和天气" : "按路况、天气和沿途景观季节选择",
+      pace: isShortTransport ? "30分钟到2小时，可与前后街区或观景点串联" : "一日或多日，按停靠点和交通距离安排",
+      people: isShortTransport ? "城市交通、港口景观和慢旅行爱好者" : "自驾、摄影和深度路线旅行者",
       lead: `${nameZh}的重点是${focusZh}，移动过程、停靠点和沿途变化本身就是体验。`
     },
     market: {
