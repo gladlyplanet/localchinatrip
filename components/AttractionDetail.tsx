@@ -334,9 +334,9 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
     },
     village: {
       season: "春秋舒适，节庆或农事季更有现场感",
-      pace: "半日到一日，在聚落内部慢走停留",
-      people: "家庭、摄影爱好者和乡村文化旅行者",
-      lead: `${nameZh}要通过${focusZh}理解村落生活，把民居、巷道、水系和日常使用方式连起来看。`
+      pace: "半日到一日，在聚落或古镇内部慢走停留",
+      people: "家庭、摄影爱好者、古镇和在地文化旅行者",
+      lead: `${nameZh}要通过${focusZh}理解当地空间，把民居、巷道、水系、院落和日常使用方式连起来看。`
     },
     craft: {
       season: "工作室开放时段最佳，建议提前确认体验时间",
