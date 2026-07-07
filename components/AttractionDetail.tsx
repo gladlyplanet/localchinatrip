@@ -98,7 +98,7 @@ const kindMeta: Record<RecommendationKind, { subtitle: Phrase; season: Phrase; p
     pace: phrase("Half day to full day with scenic pauses", "半日到一日，预留观景停留", "半日到一日，預留觀景停留", "De medio día a un día con pausas escénicas", "De meio dia a um dia com pausas para paisagem", "نصف يوم إلى يوم مع توقفات للمنظر"),
     people: phrase("Families, photographers and nature lovers", "家庭、摄影爱好者与自然爱好者", "家庭、攝影愛好者與自然愛好者", "Familias, fotógrafos y amantes de la naturaleza", "Famílias, fotógrafos e amantes da natureza", "العائلات والمصورون ومحبو الطبيعة"),
     keywords: phrase("Light, terrain, timing, quiet views", "光线 · 地形 · 节奏 · 安静观景", "光線 · 地形 · 節奏 · 安靜觀景", "Luz, terreno, horario, vistas tranquilas", "Luz, terreno, tempo e vistas tranquilas", "ضوء، تضاريس، توقيت، مشاهد هادئة"),
-    lead: phrase("Let the landscape set the rhythm instead of rushing between viewpoints.", "让山水本身决定节奏，不为赶景点错过真正舒适的观看方式。", "讓山水本身決定節奏，不為趕景點錯過真正舒適的觀看方式。", "Deja que el paisaje marque el ritmo, sin correr entre miradores.", "Deixe a paisagem definir o ritmo, sem correr entre mirantes.", "دع المشهد يحدد الإيقاع بدلا من الإسراع بين النقاط."),
+    lead: phrase("Read the landscape through terrain, light, season and walking conditions.", "从地形、光线、季节和步行条件来读山水，行程要给真正好看的位置留时间。", "從地形、光線、季節和步行條件來讀山水，行程要給真正好看的位置留時間。", "Lee el paisaje por terreno, luz, temporada y caminata.", "Leia a paisagem por relevo, luz, estação e caminhada.", "اقرأ المشهد من التضاريس والضوء والموسم وظروف المشي."),
     advice: sharedAdvice("nature"),
     guide: sharedGuide("nature")
   },
@@ -213,18 +213,18 @@ function sharedAdvice(kind: RecommendationKind) {
     : ["Best moment", "最佳体验时段", "最佳體驗時段", "Use morning or late afternoon when light, crowds and pace are usually softer.", "清晨或傍晚通常光线更柔和，人也更少，适合慢慢看。", "清晨或傍晚通常光線更柔和，人也更少，適合慢慢看。"];
   return [
     { icon: "camera" as IconName, title: simplePhrase(first[0], first[1], first[2]), body: simplePhrase(first[3], first[4], first[5]) },
-    { icon: "shoe" as IconName, title: simplePhrase("Walk and observe", "步行与观察结合", "步行與觀察結合"), body: simplePhrase("Keep the route comfortable, with pauses for details and local scenes.", "路线不赶，给细节、街巷和本地生活留出停留时间。", "路線不趕，給細節、街巷和在地生活留出停留時間。") },
-    { icon: "mountain" as IconName, title: simplePhrase("Understand the setting", "理解现场背景", "理解現場背景"), body: simplePhrase("Connect scenery, history, daily life and local habits instead of only taking photos.", "把风景、历史、日常生活和当地习惯联系起来，不只是拍照打卡。", "把風景、歷史、日常生活和當地習慣聯繫起來，不只是拍照打卡。") },
-    { icon: "hat" as IconName, title: simplePhrase("Stay flexible", "保持从容", "保持從容"), body: simplePhrase("Leave space for weather, energy and small discoveries along the way.", "给天气、体力和路上的小发现留出调整空间。", "給天氣、體力和路上的小發現留出調整空間。") }
+    { icon: "shoe" as IconName, title: simplePhrase("Walk and observe", "步行细看", "步行細看"), body: simplePhrase("Keep pauses for materials, routes, local use and visible details.", "路线不赶，给材质、动线、现场使用方式和可见细节留出时间。", "路線不趕，給材質、動線、現場使用方式和可見細節留出時間。") },
+    { icon: "mountain" as IconName, title: simplePhrase("Understand the setting", "理解地点关系", "理解地點關係"), body: simplePhrase("Explain why this place belongs here through terrain, craft, foodways, buildings or community use.", "从地形、工艺、饮食、建筑或社区使用方式说明这个地点为什么在这里成立。", "從地形、工藝、飲食、建築或社區使用方式說明這個地點為什麼在這裡成立。") },
+    { icon: "hat" as IconName, title: simplePhrase("Stay flexible", "留出调整空间", "留出調整空間"), body: simplePhrase("Leave room for opening hours, weather, crowds and actual walking conditions.", "给开放时间、天气、人流和实际步行条件留出调整空间。", "給開放時間、天氣、人流和實際步行條件留出調整空間。") }
   ];
 }
 
 function sharedGuide(kind: RecommendationKind) {
   const routeTitle = kind === "road" ? ["Private route", "私人路线", "私人路線"] : ["Route by rhythm", "按节奏游览", "按節奏遊覽"];
   return [
-    { icon: "route" as IconName, title: simplePhrase(routeTitle[0], routeTitle[1], routeTitle[2]), body: simplePhrase("Plan the order around season, distance, light and the group's energy.", "根据季节、距离、光线和团队体力安排顺序。", "根據季節、距離、光線和團隊體力安排順序。") },
-    { icon: "book" as IconName, title: simplePhrase("Local interpretation", "在地文化讲解", "在地文化講解"), body: simplePhrase("Use stories, maps and details to explain why the place matters.", "通过故事、地图和细节说明这个地点为什么重要。", "通過故事、地圖和細節說明這個地點為什麼重要。") },
-    { icon: "car" as IconName, title: simplePhrase("Flexible transport", "灵活交通安排", "靈活交通安排"), body: simplePhrase("Add private transfers when entrances, viewpoints or villages are far apart.", "入口、观景点或村镇分散时，可安排包车或接驳。", "入口、觀景點或村鎮分散時，可安排包車或接駁。") }
+    { icon: "route" as IconName, title: simplePhrase(routeTitle[0], routeTitle[1], routeTitle[2]), body: simplePhrase("Plan the order by what the place actually needs: access, viewing points, openings and walking time.", "按地点实际需要安排顺序：入口、看点、开放时间和步行时间都要说清。", "按地點實際需要安排順序：入口、看點、開放時間和步行時間都要說清。") },
+    { icon: "book" as IconName, title: simplePhrase("Specific interpretation", "针对性讲解", "針對性講解"), body: simplePhrase("Explain the site's own topic, visible details and local use instead of generic background.", "讲清地点自己的主题、可见细节和本地使用方式，避免空泛背景。", "講清地點自己的主題、可見細節和在地使用方式，避免空泛背景。") },
+    { icon: "car" as IconName, title: simplePhrase("Access support", "交通与预约协助", "交通與預約協助"), body: simplePhrase("Add transfer, reservation or timing support only when the site needs it.", "根据地点距离、开放时间、预约和返程条件安排接送或协助。", "根據地點距離、開放時間、預約和返程條件安排接送或協助。") }
   ];
 }
 
@@ -316,7 +316,7 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
   const byKind: Record<RecommendationKind, { season: string; pace: string; people: string; lead: string }> = {
     heritage: {
       season: "春秋或清晨傍晚更适合慢走、拍照和听讲解",
-      pace: "半日到一日，围绕重点街区或核心遗存慢慢看",
+      pace: "半日到一日，按重点街区或核心遗存慢慢看",
       people: "历史、建筑、城市记忆和摄影爱好者",
       lead: `${nameZh}适合从${focusZh}进入，把真实可见的现场细节、地方记忆和城市背景串起来。`
     },
@@ -342,7 +342,7 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
       season: "工作室开放时段最佳，建议提前确认体验时间",
       pace: "2-3小时，留给工序、材料和手艺人讲解",
       people: "设计、手作、工艺和文化爱好者",
-      lead: `${nameZh}适合围绕${focusZh}展开，把材料、工具、制作过程和仍在工作的手艺现场讲清楚。`
+      lead: `${nameZh}适合从${focusZh}展开，把材料、工具、制作过程和仍在工作的手艺现场讲清楚。`
     },
     spiritual: {
       season: "清晨或非高峰时段更安静",
@@ -433,7 +433,7 @@ function auditedDestinationMeta(attraction: ProvinceRecommendation) {
   const tone: Record<RecommendationKind, { season: string; pace: string; people: string; lead: string }> = {
     heritage: {
       season: "春秋和清晨、傍晚更适合慢走、拍照和听讲解",
-      pace: "半日到一日，围绕核心遗存、街巷和现场细节慢慢看",
+      pace: "半日到一日，按核心遗存、街巷和现场细节慢慢看",
       people: "历史、建筑、城市记忆和摄影爱好者",
       lead: `${nameZh}要从${focusZh}进入，把这个地点自己的核心空间、可见细节和历史背景讲清楚。`
     },
@@ -459,7 +459,7 @@ function auditedDestinationMeta(attraction: ProvinceRecommendation) {
       season: "工作室开放时段最佳，建议提前确认体验时间",
       pace: "2-3小时，留给工序、材料和手艺人讲解",
       people: "设计、手作、工艺和文化爱好者",
-      lead: `${nameZh}要围绕${focusZh}展开，把材料、工具、制作过程和仍在工作的手艺现场讲清楚。`
+      lead: `${nameZh}要从${focusZh}进入，把材料、工具、制作过程和仍在工作的手艺现场讲清楚。`
     },
     spiritual: {
       season: "清晨或非高峰时段更安静",
@@ -512,9 +512,152 @@ function auditedDestinationMeta(attraction: ProvinceRecommendation) {
       `Use ${focus} como fio principal de ${name}, com detalhes reais do lugar.`,
       `${name} should be read through ${focus}.`
     ),
-    advice: sharedAdvice(kind),
-    guide: sharedGuide(kind)
+    advice: destinationAdvice(attraction),
+    guide: destinationGuide(attraction)
   };
+}
+
+function destinationAdvice(attraction: ProvinceRecommendation) {
+  const name = attraction.name;
+  const nameZh = attraction.nameZh || attraction.name;
+  const focus = attraction.focus;
+  const focusZh = attraction.focusZh || attraction.focus;
+  const card = (icon: IconName, enTitle: string, zhTitle: string, enBody: string, zhBody: string) => ({
+    icon,
+    title: destinationPhrase(enTitle, zhTitle),
+    body: destinationPhrase(enBody, zhBody)
+  });
+
+  if (attraction.kind === "heritage") {
+    return [
+      card("camera", "Read the core space", "看核心空间", `Start ${name} from the spaces tied to ${focus}.`, `${nameZh}先看${focusZh}能落到哪几个具体空间，入口、主体建筑、遗存或街区关系不要跳过。`),
+      card("shoe", "Slow down for details", "放慢看细部", `Use material, scale and visible traces to understand ${name}.`, `把材质、尺度、碑刻、屋顶线条或遗存边界逐项讲清，避免只说“历史悠久”。`),
+      card("book", "Connect the city", "连接城市记忆", `${name} is stronger when its old layers are linked with today's city.`, `说明${nameZh}和今天的道路、社区、商业或城市记忆怎样相互叠加。`),
+      card("hat", "Choose quiet light", "选择安静时段", `Pick calmer light and fewer crowds for the main details of ${name}.`, `清晨、傍晚或非高峰更适合观察重点细节，也方便讲解和拍照。`)
+    ];
+  }
+
+  if (attraction.kind === "nature") {
+    return [
+      card("camera", "Watch the defining view", "看标志景观", `Read ${name} through ${focus}, not as a generic landscape stop.`, `${nameZh}先抓住${focusZh}，再看地形、水系、植被、云雾或季节颜色如何形成辨识度。`),
+      card("shoe", "Match the walking route", "匹配步行路线", `Choose paths and viewpoints that fit the terrain of ${name}.`, `步道、观景台和停留点要按实际地形安排，给上下坡、排队和返回留余量。`),
+      card("mountain", "Wait for light and weather", "等光线与天气", `Light and weather often decide how ${name} reads.`, `山水类地点不要赶，云雾、日照、水量和能见度会直接影响观看体验。`),
+      card("hat", "Keep safety margins", "保留安全余量", `Keep time for weather, visibility and group energy at ${name}.`, `雨雪、雾气、海拔或湿滑路面都要预留调整空间，不把行程压得太满。`)
+    ];
+  }
+
+  if (attraction.kind === "food" || attraction.kind === "market") {
+    return [
+      card("camera", "Start with ingredients", "从食材摊位开始", `Begin ${name} with ingredients, vendors and ordering habits.`, `${nameZh}先看${focusZh}对应的食材、摊位、厨房或排队方式，再决定怎么吃。`),
+      card("shoe", "Taste in small steps", "边走边少量尝", `Taste across a few stops instead of compressing ${name} into one dish.`, `适合小份试吃，比较做法、调味、火候和本地人的选择，不把体验压缩成一道菜。`),
+      card("book", "Ask about local habits", "问清本地吃法", `Local habits explain why ${name} matters.`, `讲清什么时候吃、怎么点、配什么、为什么这样做，体验才不会只剩拍照。`),
+      card("hat", "Respect market rhythm", "尊重市场节奏", `Crowds, vendors and table turnover shape the visit at ${name}.`, `早市、饭点或夜市人流不同，拍摄和停留要避开摊主忙碌时刻。`)
+    ];
+  }
+
+  if (attraction.kind === "village") {
+    return [
+      card("camera", "Observe lived spaces", "看真实生活空间", `Read ${name} through homes, lanes and public spaces tied to ${focus}.`, `${nameZh}重点看${focusZh}如何出现在民居、巷道、水系、田地或公共空间里。`),
+      card("shoe", "Walk without rushing", "慢走村巷", `A slower walk keeps ${name} from becoming a quick photo stop.`, `路线不必求全，给转角、门前、河边和村民日常留出停顿。`),
+      card("book", "Understand local use", "理解当地使用方式", `Explain how people still use the spaces of ${name}.`, `讲清这些空间今天怎样被居住、买卖、祭祀、劳动或休闲使用。`),
+      card("hat", "Keep quiet manners", "保持安静分寸", `Visit ${name} respectfully because it is also someone's home.`, `遇到住宅、老人、孩子或私人院落时放低声音，先确认再拍摄。`)
+    ];
+  }
+
+  if (attraction.kind === "craft") {
+    return [
+      card("camera", "Watch the making", "看制作现场", `At ${name}, the process behind ${focus} matters more than display shelves.`, `${nameZh}重点不是陈列成品，而是看${focusZh}怎样落实到材料、工具、手上动作和工序判断。`),
+      card("shoe", "Compare close details", "比较细节差异", `Look closely at texture, color, tools and hand movement at ${name}.`, `把针脚、泥性、火候、纹样、色阶或刀工放近看，差别才会变得清楚。`),
+      card("book", "Ask about standards", "问清判断标准", `The maker's criteria explain the value of ${name}.`, `让师傅讲什么算好作品、哪里最难、为什么需要时间，而不只听成品价格。`),
+      card("hat", "Book the right time", "提前确认时段", `Demonstrations at ${name} may depend on workshop hours.`, `工坊开放、示范和可体验内容经常不同，适合提前确认，不临时硬闯。`)
+    ];
+  }
+
+  if (attraction.kind === "spiritual") {
+    return [
+      card("camera", "Respect the ritual space", "先尊重礼仪空间", `Read ${name} through etiquette, route and the living faith behind ${focus}.`, `${nameZh}先看礼仪、动线和${focusZh}，再进入殿堂、院落或山路。`),
+      card("shoe", "Follow the temple rhythm", "跟着寺院节奏", `The sequence of halls, paths and courtyards matters at ${name}.`, `不要只拍大门或主殿，适合按山门、院落、殿堂、香火和周边空间慢慢走。`),
+      card("book", "Separate history and belief", "区分历史与信仰", `Explain ${name} through both history and present-day practice.`, `讲解要分清历史背景、建筑格局、传说故事和今天仍在延续的信仰生活。`),
+      card("hat", "Choose quieter hours", "选择清静时段", `Quiet hours make ${name} easier to understand respectfully.`, `清晨或非高峰更适合安静参观，也减少对礼佛、诵经或本地香客的打扰。`)
+    ];
+  }
+
+  if (attraction.kind === "city") {
+    return [
+      card("camera", "Read the street level", "从街面看城市", `Understand ${name} from the street level tied to ${focus}.`, `${nameZh}不要只看远景，要把${focusZh}放到街面、店铺、交通、人流和建筑尺度里看。`),
+      card("shoe", "Walk between nodes", "串联关键节点", `A city route works best when ${name} links several real nodes.`, `选择几个真实节点慢慢串联，转角、天桥、老店、车站或社区入口都可能是重点。`),
+      card("book", "Explain daily routines", "讲清日常运转", `Daily routines make ${name} more than a skyline.`, `说明当地人怎样通勤、购物、休闲、吃饭，这比单看地标更能理解城市。`),
+      card("hat", "Leave room for detours", "留出转弯时间", `Small detours often reveal the character of ${name}.`, `城市漫步要给临时发现留时间，不把路线排成连续拍照点。`)
+    ];
+  }
+
+  if (attraction.kind === "road") {
+    return [
+      card("camera", "Treat movement as the view", "把移动当体验", `${name} is understood through movement, stops and changing views.`, `${nameZh}的重点是${focusZh}，车程、船程、步行段或索道视角本身就是内容。`),
+      card("shoe", "Choose real stops", "选择有效停靠", `Stops should explain the route, not only interrupt the drive at ${name}.`, `停靠点要能看到地形、港口、桥梁、村镇或城市边界的变化，不随便停。`),
+      card("book", "Explain the route logic", "讲清路线逻辑", `The route at ${name} needs context for why it exists.`, `说明这条路、船线或交通方式为什么形成，和本地生活、贸易、通勤或观景有什么关系。`),
+      card("hat", "Check timing and operations", "核对时间与运营", `Timing, weather and operations matter for ${name}.`, `提前看运营时间、潮汐、路况、天气和返程方式，避免只到现场碰运气。`)
+    ];
+  }
+
+  if (attraction.kind === "tea") {
+    return [
+      card("camera", "Start in the tea field", "从茶园开始", `Read ${name} from fields and terrain before tasting.`, `${nameZh}先看${focusZh}里的茶园位置、坡度、树种和采摘环境，再进入品饮。`),
+      card("shoe", "Follow the process", "看完整工序", `The process from leaf to cup explains ${name}.`, `把采摘、摊晾、杀青、揉捻、烘焙或冲泡顺序讲清，茶味才有来处。`),
+      card("book", "Compare aroma and season", "比较香气与季节", `Season and processing shape the flavor at ${name}.`, `春茶、秋茶、焙火、山场或树龄都会影响口感，适合边闻边问。`),
+      card("hat", "Leave tasting time", "留足品饮时间", `Good tea visits at ${name} should not rush the cup.`, `品茶要留时间，不要把茶园、制茶和喝茶压成几分钟拍照。`)
+    ];
+  }
+
+  return [
+    card("camera", "Read the coast itself", "看海岸本身", `Read ${name} through ${focus}, harbor life and shoreline details.`, `${nameZh}要把${focusZh}和海岸线、港口、渔船、市场或老街一起看。`),
+    card("shoe", "Walk by tide and wind", "按潮汐海风安排", `Tide, wind and light decide the rhythm at ${name}.`, `海边路线要看潮汐、风力、日照和安全边界，别只按地图距离走。`),
+    card("book", "Connect seafood and work", "连接海味与劳作", `Food and harbor work explain the coast at ${name}.`, `如果有海鲜市场、码头或渔船，应讲清捕捞、交易、做法和本地吃法。`),
+    card("hat", "Keep weather flexibility", "保留天气弹性", `Coastal visits need room for weather changes at ${name}.`, `海雾、强风、雨天或晒热都会影响体验，行程要预留调整空间。`)
+  ];
+}
+
+function destinationGuide(attraction: ProvinceRecommendation) {
+  const name = attraction.name;
+  const nameZh = attraction.nameZh || attraction.name;
+  const focus = attraction.focus;
+  const focusZh = attraction.focusZh || attraction.focus;
+  const card = (icon: IconName, enTitle: string, zhTitle: string, enBody: string, zhBody: string) => ({
+    icon,
+    title: destinationPhrase(enTitle, zhTitle),
+    body: destinationPhrase(enBody, zhBody)
+  });
+
+  const routeByKind: Record<RecommendationKind, [string, string, string, string]> = {
+    heritage: ["Layered heritage route", "历史层次导览", `Arrange ${name} from arrival space to core remains and surrounding context.`, `${nameZh}按入口、核心遗存、细部观察和周边城市关系来走。`],
+    nature: ["Viewpoint and trail route", "观景与步道导览", `Match ${name} to viewpoints, trail difficulty and weather windows.`, `${nameZh}按观景点、步道难度、天气窗口和返程时间安排。`],
+    food: ["Market-to-table walk", "从食材到餐桌", `Use vendors, kitchens and tasting stops to explain ${name}.`, `${nameZh}从摊位、厨房、点单和品尝串起来讲，不只安排吃饭。`],
+    village: ["Lived-village walk", "村落生活导览", `Read ${name} through homes, lanes, water, fields and public spaces.`, `${nameZh}按民居、巷道、水系、田地和公共空间慢慢走。`],
+    craft: ["Workshop process route", "工序导览", `Explain ${name} from materials and tools to handwork and finished judgment.`, `${nameZh}从材料、工具、制作步骤到成品判断标准逐步讲清。`],
+    spiritual: ["Ritual-space route", "礼仪空间导览", `Visit ${name} through etiquette, courtyards, halls and belief context.`, `${nameZh}按礼仪、院落、殿堂、山路或信仰背景安排顺序。`],
+    city: ["Street-level route", "街面城市导览", `Read ${name} through streets, transport, storefronts and everyday routines.`, `${nameZh}从街面、交通、店铺、人流和日常使用方式看城市。`],
+    road: ["Flexible private route", "灵活私人路线", `Plan ${name} by operating time, stops, road or water conditions and return options.`, `${nameZh}按运营时间、停靠点、路况或水况和返程方式安排。`],
+    market: ["Market rhythm walk", "市场节奏导览", `Follow buying times, vendor sections and tasting stops at ${name}.`, `${nameZh}按采购时间、摊位分区、试吃点和人流节奏来走。`],
+    tea: ["Field-to-cup route", "从茶园到杯中", `Connect fields, making, tasting and season at ${name}.`, `${nameZh}把茶园、采制、冲泡、品鉴和季节差异连起来。`],
+    coast: ["Harbor and shore route", "港口海岸导览", `Connect shore views, harbor work, seafood and old streets at ${name}.`, `${nameZh}把海岸视野、码头劳作、海鲜市场和老街生活串起来。`]
+  };
+  const route = routeByKind[attraction.kind];
+  return [
+    card("route", route[0], route[1], route[2], route[3]),
+    card("book", "Site-specific interpretation", "针对性讲解", `Use ${focus} to explain why ${name} is worth seeing.`, `讲解要紧扣${focusZh}，说明${nameZh}自己的来历、看点和现场细节。`),
+    card("car", "Service matched to the site", "按地点匹配服务", `Choose walking, transfer, reservation or translation support according to ${name}.`, `根据${nameZh}的距离、开放时间、人流、预约和交通条件安排步行、接送或翻译协助。`)
+  ];
+}
+
+function destinationHowToVisitLead(attraction: ProvinceRecommendation) {
+  const name = attraction.name;
+  const nameZh = attraction.nameZh || attraction.name;
+  const focus = attraction.focus;
+  const focusZh = attraction.focusZh || attraction.focus;
+  return destinationPhrase(
+    `Guiding for ${name} should be arranged around ${focus}, on-site details and practical access.`,
+    `${nameZh}的导览应根据${focusZh}、现场细节和实际交通来安排。`
+  );
 }
 
 function Icon({ name }: { name: IconName }) {
@@ -853,7 +996,7 @@ const priorityDestinationMeta: typeof destinationMeta = {
   "Xiqiao Mountain": {
     subtitle: phrase("Lingnan mountain · Nanhai Guanyin · Foshan Buddhist landscape", "岭南山水 · 南海观音 · 佛山佛教空间", "嶺南山水 · 南海觀音 · 佛山佛教空間", "Montaña Lingnan · Guanyin de Nanhai · paisaje budista de Foshan", "Montanha Lingnan · Guanyin de Nanhai · paisagem budista de Foshan", "噩亘賱 賱賷賳睾賳丕賳 路 賳丕賳賴丕賷 睾賵丕賳賷賳 路 賲卮賴丿 亘賵匕賷 賮賵卮丕賳"),
     season: phrase("Spring and autumn are comfortable; clear days suit views and temple walking.", "春秋舒适，晴朗天气适合观景和寺院步行", "春秋舒適，晴朗天氣適合觀景和寺院步行", "Primavera y otoño son cómodos; días despejados sirven para vistas y templos.", "Primavera e outono são agradáveis; dias claros servem para vistas e templos.", "丕賱乇亘賷毓 賵丕賱禺乇賷賮 賲乇賷丨丕賳貙 賵丕賱兀賷丕賲 丕賱氐丕賮賷丞 鬲賳丕爻亘 丕賱賲卮丕賴丿 賵丕賱賲卮賷"),
-    pace: phrase("Half day to one day, planned around Guanyin plaza, trails and viewpoints.", "半日到一日，围绕观音广场、步道和观景点安排", "半日到一日，圍繞觀音廣場、步道和觀景點安排", "Medio día a un día, con plaza Guanyin, senderos y miradores.", "Meio dia a um dia, com praça Guanyin, trilhas e mirantes.", "賳氐賮 賷賵賲 廿賱賶 賷賵賲 貙 丨爻亘 爻丕丨丞 睾賵丕賳賷賳 賵丕賱賲爻丕乇丕鬲 賵賳賯丕胤 丕賱賲卮賴丿"),
+    pace: phrase("Half day to one day, planned around Guanyin plaza, trails and viewpoints.", "半日到一日，按观音广场、步道和观景点安排", "半日到一日，按觀音廣場、步道和觀景點安排", "Medio día a un día, con plaza Guanyin, senderos y miradores.", "Meio dia a um dia, com praça Guanyin, trilhas e mirantes.", "賳氐賮 賷賵賲 廿賱賶 賷賵賲 貙 丨爻亘 爻丕丨丞 睾賵丕賳賷賳 賵丕賱賲爻丕乇丕鬲 賵賳賯丕胤 丕賱賲卮賴丿"),
     people: phrase("Families, Lingnan culture travelers and Buddhist landscape walkers.", "家庭、岭南文化和佛教山水爱好者", "家庭、嶺南文化和佛教山水愛好者", "Familias y viajeros interesados en cultura Lingnan y paisaje budista.", "Famílias e viajantes de cultura Lingnan e paisagem budista.", "毓丕卅賱丕鬲 賵賲丨亘賵 孬賯丕賮丞 賱賷賳睾賳丕賳 賵丕賱賲卮丕賴丿 丕賱亘賵匕賷丞"),
     keywords: phrase("Nanhai Guanyin, volcanic landform, forest trails, Foshan mountain scenery", "南海观音 · 古火山地貌 · 林间步道 · 佛山山水", "南海觀音 · 古火山地貌 · 林間步道 · 佛山山水", "Guanyin de Nanhai, relieve volcánico, senderos, paisaje de Foshan", "Guanyin de Nanhai, relevo vulcânico, trilhas, paisagem de Foshan", "賳丕賳賴丕賷 睾賵丕賳賷賳貙 鬲囟丕乇賷爻 亘乇賰丕賳賷丞貙 賲爻丕乇丕鬲 睾丕亘丕鬲貙 賲賳馗乇 賮賵卮丕賳"),
     lead: phrase("Xiqiao Mountain should connect Foshan's Lingnan mountain scenery, Nanhai Guanyin and Buddhist walking routes, not a city panorama.", "西樵山要看佛山岭南山水、南海观音和佛教步行空间，不是城市俯瞰图。", "西樵山要看佛山嶺南山水、南海觀音和佛教步行空間，不是城市俯瞰圖。", "Xiqiao debe mostrar montaña Lingnan, Guanyin y rutas budistas, no panorama urbano.", "Xiqiao deve mostrar montanha Lingnan, Guanyin e rotas budistas, não panorama urbano.", "噩亘賱 卮賷賯賷丕賵 賷噩亘 兀賳 賷馗賴乇 噩亘丕賱 賱賷賳睾賳丕賳 賵睾賵丕賳賷賳 賵胤乇賯 亘賵匕賷丞貙 賱賷爻 賲賳馗乇丕 丨囟乇賷丕"),
@@ -863,7 +1006,7 @@ const priorityDestinationMeta: typeof destinationMeta = {
   "Liwan Food Market": {
     subtitle: phrase("Cantonese ingredients · Seafood · Soup culture · Neighborhood shopping", "粤菜食材 · 海鲜水产 · 老火汤料 · 街坊采购", "粵菜食材 · 海鮮水產 · 老火湯料 · 街坊採購", "Ingredientes cantoneses · Mariscos · Sopas lentas · Compra vecinal", "Ingredientes cantoneses · frutos do mar · sopas lentas · compras de bairro", "賲賰賵賳丕鬲 賰丕賳鬲賵賳賷丞 路 賲兀賰賵賱丕鬲 亘丨乇賷丞 路 丨爻丕亍 亘胤賷亍 路 鬲爻賵賯 丕賱丨賷"),
     season: phrase("Morning or late afternoon, when stalls and neighborhood shopping feel most alive.", "早市或傍晚最合适，摊位和街坊采购最有现场感", "早市或傍晚最合適，攤位和街坊採購最有現場感", "Mañana o tarde, cuando los puestos y compras vecinales están vivos.", "Manhã ou fim da tarde, quando bancas e compras locais estão vivas.", "丕賱氐亘丕丨 兀賵 丌禺乇 丕賱賳賴丕乇 丨賷孬 鬲賰賵賳 丕賱兀賰卮丕賰 賵鬲爻賵賯 丕賱丨賷 兀賰孬乇 丨賷賵賷丞"),
-    pace: phrase("One to two hours, moving slowly through stalls, ingredients and local conversations.", "1-2小时，围绕摊位、食材和本地交流慢慢看", "1-2小時，圍繞攤位、食材和本地交流慢慢看", "Una a dos horas entre puestos, ingredientes y conversaciones locales.", "Uma a duas horas entre bancas, ingredientes e conversas locais.", "爻丕毓丞 廿賱賶 爻丕毓鬲賷賳 亘賷賳 丕賱兀賰卮丕賰 賵丕賱賲賰賵賳丕鬲 賵丕賱丨賵丕乇丕鬲 丕賱賲丨賱賷丞"),
+    pace: phrase("One to two hours, moving slowly through stalls, ingredients and local conversations.", "1-2小时，按摊位、食材和本地交流慢慢看", "1-2小時，按攤位、食材和本地交流慢慢看", "Una a dos horas entre puestos, ingredientes y conversaciones locales.", "Uma a duas horas entre bancas, ingredientes e conversas locais.", "爻丕毓丞 廿賱賶 爻丕毓鬲賷賳 亘賷賳 丕賱兀賰卮丕賰 賵丕賱賲賰賵賳丕鬲 賵丕賱丨賵丕乇丕鬲 丕賱賲丨賱賷丞"),
     people: phrase("Food lovers, market walkers and travelers curious about Cantonese home cooking.", "美食爱好者、市场漫步者和广府家常菜文化爱好者", "美食愛好者、市場漫步者和廣府家常菜文化愛好者", "Amantes de comida, mercados y cocina casera cantonesa.", "Quem gosta de comida, mercados e cozinha caseira cantonesa.", "賲丨亘賵 丕賱胤毓丕賲 賵丕賱兀爻賵丕賯 賵丕賱胤亘禺 丕賱賲賳夭賱賷 丕賱賰丕賳鬲賵賳賷"),
     keywords: phrase("Fresh seafood, soup ingredients, roast meats, dried goods, neighborhood market", "鲜活海鲜 · 老火汤料 · 烧味腊味 · 干货 · 街坊市场", "鮮活海鮮 · 老火湯料 · 燒味臘味 · 乾貨 · 街坊市場", "Marisco fresco, ingredientes de sopa, asados, secos, mercado vecinal", "Frutos do mar frescos, ingredientes de sopa, assados, secos, mercado local", "賲兀賰賵賱丕鬲 亘丨乇賷丞 胤丕夭噩丞貙 賲賰賵賳丕鬲 丨爻丕亍貙 賱丨賵賲 賲卮賵賷丞貙 賲噩賮賮丕鬲貙 爻賵賯 丕賱丨賷"),
     lead: phrase("Liwan Food Market should show Cantonese freshness and everyday shopping habits, not Guangzhou night scenery.", "荔湾食材市场要看广府人怎样买鲜活食材、配汤料和选烧味干货，不是看广州夜景。", "荔灣食材市場要看廣府人怎樣買鮮活食材、配湯料和選燒味乾貨，不是看廣州夜景。", "El mercado de Liwan trata de frescura cantonesa y compra diaria, no de vistas nocturnas.", "O mercado de Liwan trata de frescor cantonês e compras diárias, não de vista noturna.", "爻賵賯 賱賷賵丕賳 毓賳 賳囟丕乇丞 丕賱胤毓丕賲 丕賱賰丕賳鬲賵賳賷 賵毓丕丿丕鬲 丕賱鬲爻賵賯 丕賱賷賵賲賷丞 賵賱賷爻 賲賳馗乇丕 賱賷賱賷丕"),
@@ -898,7 +1041,9 @@ export function AttractionDetail({ province, attraction }: { province: Province;
   const provinceLabel = getProvinceName(province.slug, lang);
   const itemCopy = getRecommendationCopy(lang, attraction);
   const enrichment = getRecommendationEnrichment(lang, attraction, province.name);
-  const meta = priorityDestinationMeta[attraction.name] ?? destinationMeta[attraction.name] ?? auditedDestinationMeta(attraction);
+  const baseMeta = priorityDestinationMeta[attraction.name] ?? destinationMeta[attraction.name] ?? auditedDestinationMeta(attraction);
+  const meta = { ...baseMeta, advice: destinationAdvice(attraction), guide: destinationGuide(attraction) };
+  const howToVisitLead = destinationHowToVisitLead(attraction);
   const facts = [
     { icon: "leaf" as IconName, title: text.bestSeason, value: meta.season },
     { icon: "clock" as IconName, title: text.pace, value: meta.pace },
@@ -984,7 +1129,7 @@ export function AttractionDetail({ province, attraction }: { province: Province;
                 <span className="text-moss"><Icon name="people" /></span>
                 <div>
                   <h2 className="font-serif text-3xl font-semibold">{l(lang, text.howToVisit)}</h2>
-                  <p className="mt-2 text-base leading-7 text-mist">{l(lang, text.howToVisitLead)}</p>
+                  <p className="mt-2 text-base leading-7 text-mist">{l(lang, howToVisitLead)}</p>
                 </div>
               </div>
               <div className="mt-6 grid gap-3">
