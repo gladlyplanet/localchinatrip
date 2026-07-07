@@ -97,7 +97,7 @@ const verifiedRecommendationImages: Record<string, string> = {
   "Kaifeng Old City": realImages.kaifengNightMarket,
   "Kunming Zhuanxin Market": realImages.kunmingZhuanxinMarket,
   "Stone Forest Kunming": "/images/destinations/yunnan-stone-forest.jpg",
-  "Liwan Food Market": "/images/experience-guangzhou-market.jpg",
+  "Liwan Food Market": "/images/destinations/guangdong-liwan-food-market-real.jpg",
   "Nanning Morning Market": realImages.guangzhouFreshMarket,
   "Kaili Market": "/images/destinations/guizhou-kaili-market-clean.png",
   "Red Market Macau": "/images/destination-macau-red-market-real.jpg",
@@ -2716,6 +2716,18 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
 };
 
 const priorityDestinationSpecificText: Record<string, MediaText> = {
+  "Guangdong::Liwan Food Market": {
+    image: "/images/destinations/guangdong-liwan-food-market-real.jpg",
+    caption: { en: "Liwan neighborhood fresh market", zh: "荔湾街坊食材市场" },
+    overview: {
+      en: "Liwan Food Market should be read through neighborhood shopping, fresh Cantonese ingredients, seafood tanks, soup ingredients, roast meats, preserved goods and vendor conversations. It is a lived market scene, not a Pearl River night skyline.",
+      zh: "荔湾食材市场要从街坊采购、粤菜鲜活食材、海鲜水产、老火汤料、烧味腊味、干货腌制品和摊主交流来理解。它是日常市场现场，不是珠江夜景或城市外观。"
+    },
+    experience: {
+      en: "A good walk should slow down at stalls, read seasonal produce and seafood choices, and explain why Cantonese cooking values freshness, clear flavors, slow soup and the original taste of ingredients.",
+      zh: "合适的游览应在摊位前慢下来，看季节蔬果、鲜活海鲜、汤料组合和街坊购买习惯，讲清广府菜为什么重视鲜、清、慢火汤和食材本味。"
+    }
+  },
   "Jiangsu::Huaiyang Cuisine Kitchen": {
     image: "/images/destinations/jiangsu-huaiyang-cuisine-kitchen-real.png",
     caption: { en: "Huaiyang cuisine banquet table", zh: "淮扬菜宴席与厨房" },

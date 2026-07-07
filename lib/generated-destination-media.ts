@@ -51,7 +51,7 @@ export const destinationImages: Record<string, string> = {
   "Guangdong::Foshan Ancestral Temple": "/images/destinations/optimized/wiki-guangdong-foshan-ancestral-temple.jpg",
   "Guangdong::Guangzhou Old City": "/images/destinations/guangdong-guangzhou-old-city-clean.png",
   "Guangdong::Kaiping Diaolou": "/images/destinations/optimized/wiki-guangdong-kaiping-diaolou.jpg",
-  "Guangdong::Liwan Food Market": "/images/experience-guangzhou-market.jpg",
+  "Guangdong::Liwan Food Market": "/images/destinations/guangdong-liwan-food-market-real.jpg",
   "Guangdong::Shenzhen Urban Villages": "/images/destinations/optimized/wiki-guangdong-shenzhen-urban-villages.jpg",
   "Guangdong::Shiwan Ceramic Studio": "/images/destinations/guangdong-shiwan-ceramic-studio-clean.png",
   "Guangdong::Xiqiao Mountain": "/images/destinations/optimized/wiki-guangdong-xiqiao-mountain.jpg",
