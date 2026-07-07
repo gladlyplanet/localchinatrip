@@ -2716,6 +2716,18 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
 };
 
 const priorityDestinationSpecificText: Record<string, MediaText> = {
+  "Jiangsu::Huaiyang Cuisine Kitchen": {
+    image: "/images/destinations/jiangsu-huaiyang-cuisine-kitchen-real.png",
+    caption: { en: "Huaiyang cuisine banquet table", zh: "淮扬菜宴席与厨房" },
+    overview: {
+      en: "Huaiyang Cuisine Kitchen should focus on Jiangsu's refined cooking language: precise knife work, gentle seasoning, river fish and shrimp, dried tofu threads, clear soups and banquet pacing. It should not be represented by one random heavy dish.",
+      zh: "淮扬菜厨房要围绕江苏精致烹饪来理解：刀工、清鲜调味、河鲜虾蟹、干丝、清汤和宴席节奏。它不应只用一盘厚重菜肴来代表。"
+    },
+    experience: {
+      en: "A good visit should read the kitchen through ingredients, cutting technique, stock and soup, plating restraint and the rhythm of a Yangzhou or Huai'an meal, so the cuisine feels specific rather than generic Chinese food.",
+      zh: "合适的体验应从食材、切配刀工、高汤与汤羹、摆盘克制和扬州或淮安宴席节奏进入，让淮扬菜呈现自己的清雅与细致，而不是泛泛地变成“中国菜”。"
+    }
+  },
   "Hubei::Shennongjia Forest": {
     image: "/images/destinations/hubei-shennongjia-virgin-forest-real.png",
     caption: { en: "Shennongjia primeval forest", zh: "神农架原始森林" },

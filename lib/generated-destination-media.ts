@@ -146,7 +146,7 @@ export const destinationImages: Record<string, string> = {
   "Inner Mongolia::Wudangzhao Monastery": "/images/destinations/optimized/wiki-inner-mongolia-wudangzhao-monastery.jpg",
   "Inner Mongolia::Xilamuren Grassland": "/images/destinations/optimized/wiki-inner-mongolia-xilamuren-grassland.jpg",
   "Jiangsu::Grand Canal Suzhou Section": "/images/destinations/optimized/wiki-jiangsu-grand-canal-suzhou-section.jpg",
-  "Jiangsu::Huaiyang Cuisine Kitchen": "/images/experience-suzhou-cuisine.jpg",
+  "Jiangsu::Huaiyang Cuisine Kitchen": "/images/destinations/jiangsu-huaiyang-cuisine-kitchen-real.png",
   "Jiangsu::Nanjing City Wall": "/images/destinations/jiangsu-nanjing-city-wall-corrected.png",
   "Jiangsu::Nanjing Confucius Temple Area": "/images/destinations/optimized/wiki-jiangsu-nanjing-confucius-temple-area.jpg",
   "Jiangsu::Suzhou Classical Gardens": "/images/destinations/optimized/wiki-jiangsu-suzhou-classical-gardens.jpg",
