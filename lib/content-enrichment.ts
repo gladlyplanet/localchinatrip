@@ -2716,6 +2716,90 @@ const auditedDestinationSpecificText: Record<string, MediaText> = {
 };
 
 const priorityDestinationSpecificText: Record<string, MediaText> = {
+  "Zhejiang::Longjing Village": {
+    image: "/images/experience-longjing-fields.jpg",
+    caption: { en: "Longjing tea fields near Hangzhou", zh: "杭州龙井茶园" },
+    overview: {
+      en: "Longjing Village should be introduced through tea terraces, Dragon Well green tea, hand pan-firing, growers' courtyards and the hills between West Lake and Meijiawu. The point is not only a green field photo, but how tea planting, picking, firing and tasting shape Hangzhou's local rhythm.",
+      zh: "龙井村要从茶园坡地、龙井茶、手工炒制、茶农院落和西湖到梅家坞一带的山路来介绍。重点不是只看一片绿色茶田，而是看种茶、采茶、炒茶和品茶如何构成杭州本地节奏。"
+    },
+    experience: {
+      en: "A good visit should leave time for a tea-field walk, a maker's explanation and tasting by aroma, leaf shape and firing style, rather than treating Longjing as a quick photo stop.",
+      zh: "合适的体验应留出茶园步行、茶农讲解和围绕香气、叶形、炒制火候的品饮时间，而不是把龙井村当成快速拍照点。"
+    }
+  },
+  "Zhejiang::Wuzhen Water Town": {
+    image: "/images/destinations/optimized/wiki-zhejiang-wuzhen-water-town.jpg",
+    caption: { en: "Wuzhen canals and waterside houses", zh: "乌镇河道与临水民居" },
+    overview: {
+      en: "Wuzhen should be read through Jiangnan canal streets, stone bridges, waterside houses, blue calico, old workshops and evening lights along the river. It needs to feel like a water-town route with lanes and water movement, not a generic ancient-town label.",
+      zh: "乌镇要从江南河道街巷、石桥、临水民居、蓝印花布、老作坊和傍晚沿河灯火来介绍。它应是一条有巷弄和水路动线的水乡路线，而不是一句泛泛的古镇标签。"
+    },
+    experience: {
+      en: "A good route should compare daytime workshops with quieter evening canal scenes, leaving time for bridges, covered waterside walks and small museums.",
+      zh: "合适的游览应比较白天作坊与傍晚河道的不同气氛，给石桥、临水廊道和小型展馆留出停留时间。"
+    }
+  },
+  "Zhejiang::Putuo Mountain": {
+    image: "/images/destinations/zhejiang-putuo-mountain-corrected.png",
+    caption: { en: "Putuo Mountain and the South Sea Guanyin", zh: "普陀山与南海观音" },
+    overview: {
+      en: "Putuo Mountain should be introduced as Guanyin's island pilgrimage site: Puji Temple, Fayu Temple, Huiji Temple, Zizhulin, the South Sea Guanyin statue, ferry arrival and sea-facing paths all belong in the story. The visit is a coastal pilgrimage route, not just a temple category.",
+      zh: "普陀山要作为观音道场海岛来介绍：普济寺、法雨寺、慧济寺、紫竹林、南海观音像、轮渡上岛和面海步道都应进入叙述。它不是普通寺院分类，而是一条带有海岛气质的朝山路线。"
+    },
+    experience: {
+      en: "A good visit should plan the ferry, temple order, walking distance and incense etiquette together, while leaving quiet time for the sea views between halls and paths.",
+      zh: "合适的游览应把轮渡、寺院顺序、步行距离和敬香礼仪一起安排，并给殿堂之间的海景、山路和安静停留留出时间。"
+    }
+  },
+  "Zhejiang::Xitang Ancient Town": {
+    image: "/images/destinations/optimized/wiki-zhejiang-xitang-ancient-town.jpg",
+    caption: { en: "Xitang covered corridors and canals", zh: "西塘廊棚与河道" },
+    overview: {
+      en: "Xitang Ancient Town is defined by covered riverside corridors, stone bridges, narrow lanes, canals and night water-town life. Its appeal is the slow movement between sheltered walkways, river bends and small shops, not a generic Jiangnan old-town sentence.",
+      zh: "西塘古镇要从临河廊棚、石桥、窄巷、河道和夜间水乡生活来介绍。它的重点是人在廊棚、河湾和小店之间慢慢移动的感受，而不是一句普通江南古镇说明。"
+    },
+    experience: {
+      en: "A good route should include both daytime lane details and evening reflections, with enough time under the covered corridors when crowds and lights change.",
+      zh: "合适的路线应兼顾白天巷弄细节和夜间水面倒影，在廊棚下留出时间，观察人流、灯光和河道气氛的变化。"
+    }
+  },
+  "Zhejiang::Ningbo Tianyi Pavilion": {
+    image: "/images/destinations/optimized/wiki-zhejiang-ningbo-tianyi-pavilion.jpg",
+    caption: { en: "Tianyi Pavilion library garden", zh: "宁波天一阁藏书楼" },
+    overview: {
+      en: "Tianyi Pavilion should be introduced as a Ming-dynasty private library and garden complex in Ningbo, with book-collecting culture, fire-prevention layout, courtyards, ponds, carved details and port-city scholarship. It is not just an old building photo.",
+      zh: "天一阁要作为宁波明代私家藏书楼和园林院落来介绍，重点包括藏书文化、防火格局、院落水池、木石细节和港口城市的学术传统。它不是一张普通古建筑照片。"
+    },
+    experience: {
+      en: "A good visit should slow down through the library courtyards, explain why books, water, walls and family scholarship mattered, and connect the site with Ningbo's local literati history.",
+      zh: "合适的游览应在藏书楼院落里慢下来，讲清书籍、水池、墙院和家族学术为什么重要，并把天一阁放进宁波本地文脉中理解。"
+    }
+  },
+  "Zhejiang::Nanxun Ancient Town": {
+    image: "/images/destinations/optimized/wiki-zhejiang-nanxun-ancient-town.jpg",
+    caption: { en: "Nanxun canals and merchant mansions", zh: "南浔河道与商宅" },
+    overview: {
+      en: "Nanxun Ancient Town should be read through silk-merchant mansions, canals, gardens, old libraries and Chinese-Western architectural details. The focus is merchant wealth and refined household space along the water, not a generic water-town view.",
+      zh: "南浔古镇要从丝商宅第、河道、园林、藏书楼和中西合璧建筑细节来介绍。重点是水边商人家族的财富、审美和生活空间，而不是泛泛的水乡景色。"
+    },
+    experience: {
+      en: "A good route should link Xiaolianzhuang, Jiaye Library, mansion interiors and canal walks, so visitors understand why Nanxun differs from other Jiangnan towns.",
+      zh: "合适的路线应串联小莲庄、嘉业堂藏书楼、商宅内部和河道步行，让人明白南浔为什么不同于普通江南古镇。"
+    }
+  },
+  "Zhejiang::Zhoushan Fishing Coast": {
+    image: "/images/destinations/zhejiang-zhoushan-fishing-coast-corrected.png",
+    caption: { en: "Zhoushan fishing harbor and island coast", zh: "舟山渔港与海岛海岸" },
+    overview: {
+      en: "Zhoushan Fishing Coast should be introduced through island harbors, fishing boats, seafood markets, East China Sea weather, temples and working dock life. The coast here is about a fishing archipelago, not only blue sea scenery.",
+      zh: "舟山渔港海岸要从海岛港口、渔船、海鲜市场、东海天气、寺庙和码头作业生活来介绍。这里的海岸重点是渔业群岛的日常，而不只是蓝色海景。"
+    },
+    experience: {
+      en: "A good visit should connect harbor timing, seafood stalls, island roads and sea views, while respecting working docks and weather changes.",
+      zh: "合适的游览应把港口时间、海鲜摊档、海岛道路和海景串起来，同时注意码头作业边界和海上天气变化。"
+    }
+  },
   "Zhejiang::Shaoxing Old City": {
     image: "/images/destinations/zhejiang-shaoxing-old-city-corrected.png",
     caption: { en: "Shaoxing Old City canals", zh: "绍兴老城河道" },
