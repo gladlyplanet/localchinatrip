@@ -309,6 +309,94 @@ function destinationPhrase(en: string, zhCN: string, es?: string, pt?: string, a
 }
 
 function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof kindMeta)[RecommendationKind]) {
+  const focus = attraction.focus;
+  const focusZh = attraction.focusZh;
+  const name = attraction.name;
+  const nameZh = attraction.nameZh;
+  const byKind: Record<RecommendationKind, { season: string; pace: string; people: string; lead: string }> = {
+    heritage: {
+      season: "春秋或清晨傍晚更适合慢走、拍照和听讲解",
+      pace: "半日到一日，围绕重点街区或核心遗存慢慢看",
+      people: "历史、建筑、城市记忆和摄影爱好者",
+      lead: `${nameZh}要围绕${focusZh}来读，重点应落在真实可见的现场细节和地方记忆上，而不是通用古城说明。`
+    },
+    nature: {
+      season: "按花期、水量、雪景或晴朗天气选择",
+      pace: "半日到一日，预留观景、步行和天气调整时间",
+      people: "家庭、摄影爱好者和自然旅行者",
+      lead: `${nameZh}要根据${focusZh}安排节奏，让地形、季节和光线本身说明这里的特点。`
+    },
+    food: {
+      season: "早市、午餐或夜间街巷最适合",
+      pace: "2-4小时，边走边尝，留出排队和交流时间",
+      people: "美食爱好者、好奇型旅行者和本地生活观察者",
+      lead: `${nameZh}要从${focusZh}进入，看食材、做法、点单习惯和街区日常，而不是只写一道代表菜。`
+    },
+    village: {
+      season: "春秋舒适，节庆或农事季更有现场感",
+      pace: "半日到一日，在聚落内部慢走停留",
+      people: "家庭、摄影爱好者和乡村文化旅行者",
+      lead: `${nameZh}要通过${focusZh}理解村落生活，把民居、巷道、水系和日常使用方式连起来看。`
+    },
+    craft: {
+      season: "工作室开放时段最佳，建议提前确认体验时间",
+      pace: "2-3小时，留给工序、材料和手艺人讲解",
+      people: "设计、手作、工艺和文化爱好者",
+      lead: `${nameZh}要围绕${focusZh}展开，重点是材料、工具、制作过程和仍在工作的手艺现场。`
+    },
+    spiritual: {
+      season: "清晨或非高峰时段更安静",
+      pace: "半日到一日，保持安静节奏",
+      people: "文化、建筑、信仰空间和慢行旅行者",
+      lead: `${nameZh}要从${focusZh}理解，同时注意礼仪、空间格局和当地人今天怎样使用这里。`
+    },
+    city: {
+      season: "早晚光线柔和，工作日更适合观察日常",
+      pace: "2-4小时，按街区和交通节点串联",
+      people: "城市漫步、建筑、交通和本地生活爱好者",
+      lead: `${nameZh}要通过${focusZh}看街区如何运转，把建筑、店铺、交通和普通日常放在一起。`
+    },
+    road: {
+      season: "按路况、天气和沿途景观季节选择",
+      pace: "一日或多日，按停靠点和交通距离安排",
+      people: "自驾、摄影和深度路线旅行者",
+      lead: `${nameZh}的重点是${focusZh}，移动过程、停靠点和沿途变化本身就是体验。`
+    },
+    market: {
+      season: "清晨或本地采购高峰最有现场感",
+      pace: "1-3小时，边看边聊，适合慢慢比较摊位",
+      people: "美食、摄影、市场和本地生活爱好者",
+      lead: `${nameZh}要从${focusZh}看摊位、货品、摊主和采购习惯，而不是只看市场外观。`
+    },
+    tea: {
+      season: "采茶季最有现场感，也可按茶园景色选择",
+      pace: "半日体验，留出步行、制茶和品饮时间",
+      people: "茶文化、自然和慢旅行爱好者",
+      lead: `${nameZh}要把${focusZh}与茶园环境、采摘、制作和品饮连起来。`
+    },
+    coast: {
+      season: "天气晴朗、海风舒适时最佳",
+      pace: "半日游，可结合用餐、港口或日落",
+      people: "家庭、海鲜爱好者和慢旅行者",
+      lead: `${nameZh}要通过${focusZh}连接海岸景色、港口生活、老街和地方海味。`
+    }
+  };
+  const specific = byKind[attraction.kind];
+  return {
+    ...base,
+    subtitle: destinationPhrase(focus, focusZh, `Enfoque: ${focus}`, `Foco: ${focus}`, `Focus: ${focus}`),
+    season: destinationPhrase(base.season.en, specific.season, base.season.es, base.season.pt, base.season.ar),
+    pace: destinationPhrase(base.pace.en, specific.pace, base.pace.es, base.pace.pt, base.pace.ar),
+    people: destinationPhrase(base.people.en, specific.people, base.people.es, base.people.pt, base.people.ar),
+    keywords: destinationPhrase(focus, focusZh, `Claves: ${focus}`, `Palavras-chave: ${focus}`, `Keywords: ${focus}`),
+    lead: destinationPhrase(
+      `${name} should be read through ${focus}, with the route shaped by real details on site rather than a generic destination template.`,
+      specific.lead,
+      `Usa ${focus} como hilo principal de ${name}, con detalles reales del lugar.`,
+      `Use ${focus} como fio principal de ${name}, com detalhes reais do lugar.`,
+      `${name} should be read through ${focus}.`
+    )
+  };
   return {
     ...base,
     subtitle: destinationPhrase(
@@ -474,6 +562,58 @@ const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: 
 };
 
 const priorityDestinationMeta: typeof destinationMeta = {
+  "Shaoxing Old City": {
+    subtitle: phrase(
+      "Canals · Black-awning boats · Yellow rice wine · Lu Xun memory · Stone bridges",
+      "河道 · 乌篷船 · 黄酒 · 鲁迅故里 · 古桥",
+      "河道 · 烏篷船 · 黃酒 · 魯迅故里 · 古橋",
+      "Canales · barcas negras · vino de arroz · memoria de Lu Xun · puentes",
+      "Canais · barcos de toldo preto · vinho de arroz · memoria de Lu Xun · pontes",
+      "Canals · black-awning boats · yellow rice wine · Lu Xun memory · bridges"
+    ),
+    season: phrase(
+      "Spring and autumn are comfortable; morning canal light is best for walking.",
+      "春秋舒适，清晨河道光线最适合慢走",
+      "春秋舒適，清晨河道光線最適合慢走",
+      "Primavera y otoño son comodos; la manana junto al canal es mejor.",
+      "Primavera e outono sao confortaveis; a manha nos canais e melhor.",
+      "Spring and autumn are comfortable; morning canal light is best."
+    ),
+    pace: phrase(
+      "Half day to one day, linking canals, bridges, Lu Xun Native Place and wine culture.",
+      "半日到一日，串联河道、古桥、鲁迅故里和黄酒文化",
+      "半日到一日，串聯河道、古橋、魯迅故里和黃酒文化",
+      "Medio dia a un dia, con canales, puentes, Lu Xun y vino de arroz.",
+      "Meio dia a um dia, com canais, pontes, Lu Xun e vinho de arroz.",
+      "Half day to one day, linking canals, bridges, Lu Xun and wine culture."
+    ),
+    people: phrase(
+      "Old-town walkers, literature lovers, food travelers and photographers.",
+      "老城漫步、文学、黄酒美食和摄影爱好者",
+      "老城漫步、文學、黃酒美食和攝影愛好者",
+      "Caminantes de casco antiguo, literatura, comida y fotografia.",
+      "Caminhantes de cidade antiga, literatura, comida e fotografia.",
+      "Old-town walkers, literature lovers, food travelers and photographers."
+    ),
+    keywords: phrase(
+      "Canals, black-awning boats, Lu Xun Native Place, yellow rice wine, stone bridges",
+      "河道 · 乌篷船 · 鲁迅故里 · 黄酒 · 古桥",
+      "河道 · 烏篷船 · 魯迅故里 · 黃酒 · 古橋",
+      "Canales, barcas negras, Lu Xun, vino de arroz, puentes",
+      "Canais, barcos de toldo preto, Lu Xun, vinho de arroz, pontes",
+      "Canals, black-awning boats, Lu Xun, yellow rice wine, bridges"
+    ),
+    lead: phrase(
+      "Shaoxing Old City should feel like a lived water city: canals, river steps, wine shops, Lu Xun memory and stone bridges, not just a Jiangnan postcard.",
+      "绍兴老城要像一座仍在生活的水城：河道、河埠头、黄酒铺、鲁迅记忆和古桥都要进入介绍，而不只是江南明信片。",
+      "紹興老城要像一座仍在生活的水城：河道、河埠頭、黃酒鋪、魯迅記憶和古橋都要進入介紹，而不只是江南明信片。",
+      "Shaoxing debe sentirse como una ciudad de agua viva, no solo una postal de Jiangnan.",
+      "Shaoxing deve parecer uma cidade de agua viva, nao apenas um postal de Jiangnan.",
+      "Shaoxing Old City should feel like a lived water city, not just a Jiangnan postcard."
+    ),
+    advice: sharedAdvice("heritage"),
+    guide: sharedGuide("heritage")
+  },
   "West Lake": {
     subtitle: phrase(
       "Su Causeway · Bai Causeway · Broken Bridge · Three Pools · Leifeng Pagoda views",
