@@ -749,7 +749,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     },
     experience: {
       en: "A good experience should move through markets, ingredients, cooking habits and table culture, making Hainan flavors feel specific rather than generic tropical food.",
-      zh: "体验应从市场、食材、烹饪习惯和餐桌文化展开，让海南味道具体起来，而不是泛泛写成热带食物。"
+      zh: "体验应从市场、食材、烹饪习惯和餐桌文化展开，让海南味道具体到文昌鸡、椰子、海鲜、蘸料和岛上家庭餐桌。"
     }
   },
   "Jilin::Changbai Mountain": {
@@ -1673,7 +1673,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     },
     experience: {
       en: "A good visit starts in the morning, follows food stalls and textile sections, explains sour-soup flavors, festival clothing and buying habits, and keeps enough room for respectful conversation rather than staged photos.",
-      zh: "合适的游览应放在清晨或上午，从食材摊、织物摊和小吃摊慢慢走起，讲清酸汤口味、节庆服饰、赶集习惯和摊主与顾客的互动。重点是看真实市集节奏，而不是把凯里市集拍成一张泛泛的街景。"
+      zh: "合适的游览应放在清晨或上午，从食材摊、织物摊和小吃摊慢慢走起，讲清酸汤口味、节庆服饰、赶集习惯和摊主与顾客的互动。重点是看真实市集节奏，而不是只拍街面外观。"
     }
   },
   "Guangxi::Chengyang Wind and Rain Bridge": {
@@ -2185,7 +2185,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     caption: { en: "Dongjiang Lake, Chenzhou", zh: "郴州东江湖" },
     overview: {
       en: "Dongjiang Lake is best introduced through the morning mist over Xiaodongjiang, the reservoir water, boat routes and the green mountain scenery of southern Hunan. Its character comes from water vapor, light and quiet lake-valley views, not from a generic mountain-and-water label.",
-      zh: "东江湖适合从小东江清晨雾气、水库湖面、行船视角和湘南山地一起写。这里最有辨识度的是水汽升起时的湖面层次、两岸青山和安静的湖谷气氛，不是泛泛一句“山水景观”就能说明。"
+      zh: "东江湖适合从小东江清晨雾气、水库湖面、行船视角和湘南山地一起写。这里最有辨识度的是水汽升起时的湖面层次、两岸青山和安静的湖谷气氛。"
     },
     experience: {
       en: "A good visit should start early for mist and soft light, then connect the lake viewpoints, short boat or riverside sections and Chenzhou's southern Hunan landscape context.",
@@ -2317,7 +2317,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     caption: { en: "Zhoushan island coast and fishing life", zh: "舟山海岛海岸与渔港生活" },
     overview: {
       en: "Zhoushan Fishing Coast is best read through island harbors, fishing boats, seafood markets, old port streets and East China Sea island life around places such as Shenjiamen and the outer islands.",
-      zh: "舟山渔港海岸适合从群岛、渔船、码头、海鲜市场和东海岛民生活一起看。沈家门一带的渔港气息、出海与靠岸节奏、海鲜交易和岛城街巷，构成了这里比普通海景更鲜活的地方感。"
+      zh: "舟山渔港海岸适合从群岛、渔船、码头、海鲜市场和东海岛民生活一起看。沈家门一带的渔港气息、出海与靠岸节奏、海鲜交易和岛城街巷，构成这里鲜活的地方感。"
     },
     experience: {
       en: "A good visit follows harbor timing: watch boats, walk port streets, pair a seafood meal with market context and leave time for weather, tide and ferry connections between island viewpoints.",
@@ -2894,7 +2894,7 @@ const priorityDestinationSpecificText: Record<string, MediaText> = {
     },
     experience: {
       en: "A good visit should read the kitchen through ingredients, cutting technique, stock and soup, plating restraint and the rhythm of a Yangzhou or Huai'an meal, so the cuisine feels specific rather than generic Chinese food.",
-      zh: "合适的体验应从食材、切配刀工、高汤与汤羹、摆盘克制和扬州或淮安宴席节奏进入，让淮扬菜呈现自己的清雅与细致，而不是泛泛地变成“中国菜”。"
+      zh: "合适的体验应从食材、切配刀工、高汤与汤羹、摆盘克制和扬州或淮安宴席节奏进入，让淮扬菜呈现自己的清雅与细致。"
     }
   },
   "Hubei::Shennongjia Forest": {
@@ -3070,32 +3070,32 @@ function focusedFallbackText(item: ProvinceRecommendation, provinceName: string 
   };
   const zhByKind: Record<RecommendationKind, { overview: string; experience: string }> = {
     heritage: {
-      overview: `${placeZh}应从${focusZh}来介绍，把建筑、街巷、碑刻、现场空间和地方故事放在一起看，让这个地点有清楚的历史层次。`,
-      experience: `合适的游览应把可见细节和历史背景串起来，让${placeZh}成为有具体位置和故事的地点。`
+      overview: `${placeZh}应从${focusZh}来介绍，写清核心空间、可见细节、地方故事和它在城市或乡土环境中的位置。`,
+      experience: `合适的游览应把材料、尺度、动线、碑刻或遗存边界讲清，让${placeZh}成为有具体位置和故事的地点。`
     },
     nature: {
-      overview: `${placeZh}应从${focusZh}来介绍，根据这里自己的地形、季节、步行条件和主要观景点安排节奏。`,
-      experience: `合适的游览应给现场山水留出停留时间，讲清${placeZh}的辨识度，避免写成千篇一律的风景说明。`
+      overview: `${placeZh}应从${focusZh}来介绍，说明这里自己的地形、季节、步行条件和主要观景点。`,
+      experience: `合适的游览应给现场山水留出停留时间，讲清${placeZh}的地貌、水系、光线和季节辨识度。`
     },
     food: {
-      overview: `${placeZh}应从${focusZh}来介绍，把食材、摊位或厨房、地方口味和当地人的吃法放在一起讲。`,
-      experience: `合适的美食路线应比较几个本地停留点，说明点单习惯、制作方式和街区背景，而不是只用一道菜概括${placeZh}。`
+      overview: `${placeZh}应从${focusZh}来介绍，写清食材来源、摊位或厨房场景、地方口味和当地人的吃法。`,
+      experience: `合适的美食路线应比较几个本地停留点，说明点单习惯、制作方式和街区背景。`
     },
     village: {
       overview: `${placeZh}应从${focusZh}来介绍，从民居、巷道、田地、水系、公共空间和仍在发生的日常生活进入。`,
-      experience: `合适的游览应在聚落里慢下来，把建筑、使用方式和地方记忆连起来，而不是把${placeZh}当成背景照。`
+      experience: `合适的游览应在聚落里慢下来，把建筑、使用方式和地方记忆连起来。`
     },
     craft: {
       overview: `${placeZh}应从${focusZh}来介绍，从材料、工具、手艺人和制作流程看清这门地方工艺。`,
-      experience: `合适的体验应跟着工序走，理解技法和地方环境的关系，而不是只把${placeZh}当成纪念品展示。`
+      experience: `合适的体验应跟着工序走，理解技法、材料判断和地方环境的关系。`
     },
     spiritual: {
       overview: `${placeZh}应从${focusZh}来介绍，注意礼仪空间、建筑布局、参拜动线和仍在延续的信仰生活。`,
-      experience: `合适的游览应保持安静节奏，讲清礼仪、建筑和本地实践，而不是把${placeZh}当作普通拍照点。`
+      experience: `合适的游览应保持安静节奏，讲清礼仪、建筑和本地实践。`
     },
     city: {
       overview: `${placeZh}应从${focusZh}来介绍，把街区、建筑、交通、店铺和日常生活连成一个具体的城市现场。`,
-      experience: `合适的城市漫步应在地面比较街巷和细节，让${placeZh}呈现真实生活，而不是只看远处天际线。`
+      experience: `合适的城市漫步应在地面比较街巷、店招、交通节点和生活细节。`
     },
     road: {
       overview: `${placeZh}应从${focusZh}来介绍，移动过程、停靠点、交通节奏和沿途变化本身就是体验重点。`,
@@ -3107,11 +3107,11 @@ function focusedFallbackText(item: ProvinceRecommendation, provinceName: string 
     },
     tea: {
       overview: `${placeZh}应从${focusZh}来介绍，把茶园或茶林环境、采摘季节、制作流程、冲泡品鉴和待客习惯连起来。`,
-      experience: `合适的茶体验应连接景观、工艺和品鉴步骤，让${placeZh}成为真正的茶文化现场，而不是普通观景点。`
+      experience: `合适的茶体验应连接景观、工艺、品鉴步骤和茶农待客方式。`
     },
     coast: {
       overview: `${placeZh}应从${focusZh}来介绍，把海岸风景、港口生活、海鲜、老街和地方节奏放在一起看。`,
-      experience: `合适的海岸路线应把滨水时间、小镇生活和饮食背景结合起来，让${placeZh}不只是普通海景。`
+      experience: `合适的海岸路线应把滨水时间、小镇生活、码头劳作和饮食背景结合起来。`
     }
   };
   return {
