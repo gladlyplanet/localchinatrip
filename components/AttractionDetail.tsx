@@ -474,6 +474,16 @@ const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: 
 };
 
 const priorityDestinationMeta: typeof destinationMeta = {
+  "Liaoyang White Pagoda": {
+    subtitle: phrase("Guangyou Temple · Liao brick pagoda · Liaoyang old city memory", "广佑寺白塔 · 辽代砖塔 · 辽阳古城记忆", "廣佑寺白塔 · 遼代磚塔 · 遼陽古城記憶", "Templo Guangyou · pagoda de ladrillo Liao · memoria antigua de Liaoyang", "Templo Guangyou · pagode de tijolo Liao · memória antiga de Liaoyang", "賲毓亘丿 睾賵丕賳睾賷賵 路 亘乇噩 丕賱胤賵亘 賱賷丕賵 路 匕丕賰乇丞 賱賷丕賵賷丕賳睾 丕賱賯丿賷賲丞"),
+    season: phrase("Clear mornings or quiet non-peak hours are best for tower details.", "清晨或非高峰时段更适合看塔身细节", "清晨或非高峰時段更適合看塔身細節", "Mañanas despejadas u horas tranquilas para ver detalles.", "Manhãs claras ou horários tranquilos para ver detalhes.", "丕賱氐亘丕丨 丕賱氐丕賮賷 兀賵 丕賱兀賵賯丕鬲 丕賱賴丕丿卅丞 兀賮囟賱 賱鬲賮丕氐賷賱 丕賱亘乇噩"),
+    pace: phrase("Half day, leaving time for the tower, Guangyou Temple and White Pagoda Park.", "半日，留给白塔、广佑寺和白塔公园", "半日，留給白塔、廣佑寺和白塔公園", "Medio día para la pagoda, Guangyou y el parque.", "Meio dia para a pagode, Guangyou e o parque.", "賳氐賮 賷賵賲 賱賱亘乇噩 賵賲毓亘丿 睾賵丕賳睾賷賵 賵丕賱丨丿賷賯丞"),
+    people: phrase("History, Buddhist architecture and old-city walkers.", "历史、佛教建筑和老城漫步爱好者", "歷史、佛教建築和老城漫步愛好者", "Amantes de historia, arquitectura budista y ciudad antigua.", "Quem gosta de história, arquitetura budista e cidade antiga.", "賲丨亘賵 丕賱鬲丕乇賷禺 賵丕賱毓賲丕乇丞 丕賱亘賵匕賷丞 賵丕賱賲丿賳 丕賱賯丿賷賲丞"),
+    keywords: phrase("Guangyou Temple, Liao brick pagoda, dense eaves, old city axis", "广佑寺 · 辽代砖塔 · 密檐结构 · 老城中轴", "廣佑寺 · 遼代磚塔 · 密簷結構 · 老城中軸", "Guangyou, pagoda Liao, aleros densos, eje antiguo", "Guangyou, pagode Liao, beirais densos, eixo antigo", "睾賵丕賳睾賷賵貙 亘乇噩 胤賵亘 賱賷丕賵貙 兀賮丕乇賷夭 賰孬賷賮丞貙 賲丨賵乇 丕賱賲丿賷賳丞 丕賱賯丿賷賲丞"),
+    lead: phrase("Liaoyang White Pagoda should be read through Guangyou Temple, Liao-dynasty brickwork, tower proportions and old-city memory, not only as a generic pagoda.", "辽阳白塔要从广佑寺、辽代砖塔形制、塔身比例和老城记忆来理解，不只是普通佛塔照片。", "遼陽白塔要從廣佑寺、遼代磚塔形制、塔身比例和老城記憶來理解，不只是普通佛塔照片。", "La pagoda se entiende por Guangyou, ladrillo Liao y memoria urbana, no como una torre genérica.", "A pagode se entende por Guangyou, tijolo Liao e memória urbana, não como torre genérica.", "賷賮賴賲 亘乇噩 賱賷丕賵賷丕賳睾 毓亘乇 睾賵丕賳睾賷賵 賵胤賵亘 賱賷丕賵 賵匕丕賰乇丞 丕賱賲丿賷賳丞 賵賱賷爻 賰亘乇噩 毓丕賲"),
+    advice: sharedAdvice("spiritual"),
+    guide: sharedGuide("spiritual")
+  },
   "Shiwan Ceramic Studio": {
     subtitle: phrase("Kiln memory · Clay shaping · Foshan folk craft", "窑火记忆 · 泥塑造型 · 佛山民间工艺", "窯火記憶 · 泥塑造型 · 佛山民間工藝", "Memoria de horno · Modelado de barro · Artesanía popular de Foshan", "Memória de forno · modelagem em barro · artesanato popular de Foshan", "匕丕賰乇丞 丕賱賮乇賳 路 鬲卮賰賷賱 丕賱胤賷賳 路 丨乇賮 賮賵卮丕賳 丕賱卮毓亘賷丞"),
     season: phrase("Best during workshop opening hours; confirm demonstrations in advance.", "工作坊开放时段最佳，建议提前确认示范时间", "工作坊開放時段最佳，建議提前確認示範時間", "Mejor durante horario de talleres; confirma demostraciones.", "Melhor durante o horário das oficinas; confirme demonstrações.", "兀賮囟賱 禺賱丕賱 爻丕毓丕鬲 丕賱賵乇卮貙 賵賷賮囟賱 鬲兀賰賷丿 丕賱毓乇賵囟 賲爻亘賯丕"),
