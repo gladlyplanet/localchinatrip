@@ -150,7 +150,7 @@ export const destinationImages: Record<string, string> = {
   "Jiangsu::Nanjing City Wall": "/images/destinations/jiangsu-nanjing-city-wall-corrected.png",
   "Jiangsu::Nanjing Confucius Temple Area": "/images/destinations/optimized/wiki-jiangsu-nanjing-confucius-temple-area.jpg",
   "Jiangsu::Suzhou Classical Gardens": "/images/destinations/optimized/wiki-jiangsu-suzhou-classical-gardens.jpg",
-  "Jiangsu::Suzhou Silk Embroidery": "/images/destinations/optimized/wiki-jiangsu-suzhou-silk-embroidery.jpg",
+  "Jiangsu::Suzhou Silk Embroidery": "/images/experience-suzhou-embroidery.jpg",
   "Jiangsu::Yangzhou Slender West Lake": "/images/destinations/optimized/wiki-jiangsu-yangzhou-slender-west-lake.jpg",
   "Jiangsu::Yixing Zisha Teapot Studio": "/images/destinations/optimized/wiki-jiangsu-yixing-zisha-teapot-studio.jpg",
   "Jiangsu::Zhouzhuang Water Town": "/images/destinations/optimized/wiki-jiangsu-zhouzhuang-water-town.jpg",
