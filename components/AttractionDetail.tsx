@@ -1000,6 +1000,25 @@ const destinationMeta: Record<string, { subtitle: Phrase; season: Phrase; pace: 
 };
 
 const priorityDestinationMeta: typeof destinationMeta = {
+  "Chengdu Panda Base": {
+    subtitle: phrase("Giant pandas · Bamboo habitats · Conservation education · Morning viewing", "大熊猫 · 竹林环境 · 保护科普 · 清晨观察", "大熊貓 · 竹林環境 · 保護科普 · 清晨觀察", "Pandas gigantes · bambu · conservacion", "Pandas gigantes · bambu · conservacao", "Giant pandas · bamboo habitats · conservation"),
+    season: phrase("Cool mornings are best, especially when pandas are active around feeding time.", "清晨开园后更适合观察，凉爽时段和饲喂前后熊猫更活跃", "清晨開園後更適合觀察，涼爽時段和餵食前後熊貓更活躍", "La manana fresca es mejor.", "Manha fresca e melhor.", "Cool mornings are best."),
+    pace: phrase("Half day, leaving time for panda houses, bamboo paths and crowd flow.", "半日游，留出熊猫馆舍、竹林步道和排队调整时间", "半日遊，留出熊貓館舍、竹林步道和排隊調整時間", "Medio dia con pabellones y senderos.", "Meio dia com pavilhoes e caminhos.", "Half day with panda houses and paths."),
+    people: phrase("Families, photographers, animal lovers and nature-education travelers.", "家庭、摄影爱好者、动物爱好者和自然教育旅行者", "家庭、攝影愛好者、動物愛好者和自然教育旅行者", "Familias, fotografos y amantes de animales.", "Familias, fotografos e amantes de animais.", "Families, photographers and animal lovers."),
+    keywords: phrase("Giant pandas, bamboo forest, feeding time, nursery, conservation", "大熊猫 · 竹林 · 饲喂时段 · 幼年熊猫 · 保护科普", "大熊貓 · 竹林 · 餵食時段 · 幼年熊貓 · 保護科普", "Pandas, bambu, alimentacion, conservacion", "Pandas, bambu, alimentacao, conservacao", "Pandas, bamboo, feeding, conservation"),
+    lead: phrase("Chengdu Panda Base is best read through real panda habitats, feeding routines, nursery care and conservation education rather than only an entrance photo.", "成都大熊猫基地要看真实熊猫生活环境、饲喂节奏、幼年熊猫照护和保护科普，而不是只拍入口或排队打卡。", "成都大熊貓基地要看真實熊貓生活環境、餵食節奏、幼年熊貓照護和保護科普，而不是只拍入口或排隊打卡。", "Lee la base por habitat, alimentacion y conservacion.", "Veja a base por habitat, alimentacao e conservacao.", "Read the base through habitat, feeding and conservation."),
+    advice: [
+      { icon: "camera", title: phrase("Arrive early", "清晨入园", "清晨入園"), body: phrase("Pandas are usually more active in the cooler morning, so start with the key panda areas before crowds build.", "凉爽清晨更容易看到熊猫进食和活动，应先安排核心馆区，再根据人流调整路线。", "涼爽清晨更容易看到熊貓進食和活動，應先安排核心館區，再根據人流調整路線。") },
+      { icon: "shoe", title: phrase("Follow bamboo paths", "顺着竹林动线", "順著竹林動線"), body: phrase("Use the walking route between panda houses, outdoor yards and bamboo groves instead of treating the visit as one photo stop.", "把熊猫馆舍、室外活动场和竹林步道串起来看，而不是只停在一个拍照点。", "把熊貓館舍、室外活動場和竹林步道串起來看，而不是只停在一個拍照點。") },
+      { icon: "book", title: phrase("Read conservation context", "理解保护背景", "理解保護背景"), body: phrase("Connect what visitors see with breeding research, habitat protection, public education and animal welfare rules.", "把现场看到的熊猫行为和繁育研究、栖息地保护、公众教育及动物福利规则联系起来。", "把現場看到的熊貓行為和繁育研究、棲息地保護、公眾教育及動物福利規則聯繫起來。") },
+      { icon: "hat", title: phrase("Keep quiet space", "安静观察", "安靜觀察"), body: phrase("Leave time for waiting and observation, and avoid noise or rushed viewing around animal areas.", "给等待和观察留时间，在动物活动区保持安静，不催促、不喧哗。", "給等待和觀察留時間，在動物活動區保持安靜，不催促、不喧嘩。") }
+    ],
+    guide: [
+      { icon: "route", title: phrase("Route by activity time", "按活动时段走", "按活動時段走"), body: phrase("Arrange the route around morning activity, feeding windows, panda houses and crowd conditions.", "根据清晨活动、饲喂窗口、熊猫馆舍位置和现场人流安排顺序。", "根據清晨活動、餵食窗口、熊貓館舍位置和現場人流安排順序。") },
+      { icon: "book", title: phrase("Conservation explanation", "保护科普讲解", "保護科普講解"), body: phrase("Explain behavior, diet, nursery care, research work and habitat protection in simple language.", "用容易理解的方式讲清熊猫行为、食性、幼崽照护、科研繁育和栖息地保护。", "用容易理解的方式講清熊貓行為、食性、幼崽照護、科研繁育和棲息地保護。") },
+      { icon: "car", title: phrase("Smooth transfer", "轻松接送安排", "輕鬆接送安排"), body: phrase("Use private transfer for early arrival, family groups and flexible return after the visit.", "适合安排清晨接送、家庭同行和参观后灵活返程。", "適合安排清晨接送、家庭同行和參觀後靈活返程。") }
+    ]
+  },
   "Longjing Village": {
     subtitle: phrase("Tea fields · Pan-firing · Growers · Dragon Well tasting", "茶园 · 炒制 · 茶农 · 龙井品鉴", "茶園 · 炒製 · 茶農 · 龍井品鑑", "Campos de te · tostado manual · productores · cata Longjing", "Campos de cha · torra manual · produtores · prova Longjing", "Tea fields · pan-firing · growers · tasting"),
     season: phrase("Spring tea season is best; clear mornings suit tea-field walking.", "春茶季最有现场感，晴朗清晨适合茶园步行", "春茶季最有現場感，晴朗清晨適合茶園步行", "La primavera del te es mejor; manana clara para caminar.", "A primavera do cha e melhor; manha clara para caminhar.", "Spring tea season is best; clear mornings suit walking."),
