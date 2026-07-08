@@ -41,7 +41,7 @@ const text = {
   },
   howToVisitLead: {
     en: "Choose the guiding style and service level that fit your group.",
-    "zh-CN": "根据您的需求，选择合适的陪同与服务方式。",
+    "zh-CN": "导览会围绕地点本身、现场动线和实际交通安排。",
     "zh-TW": "根據您的需求，選擇合適的陪同與服務方式。",
     es: "Elige el estilo de guía y servicio que encaja con tu grupo.",
     pt: "Escolha o estilo de guia e serviço que combina com seu grupo.",
@@ -220,7 +220,7 @@ function sharedAdvice(kind: RecommendationKind) {
 }
 
 function sharedGuide(kind: RecommendationKind) {
-  const routeTitle = kind === "road" ? ["Private route", "私人路线", "私人路線"] : ["Route by rhythm", "按节奏游览", "按節奏遊覽"];
+  const routeTitle = kind === "road" ? ["Private route", "私人路线", "私人路線"] : ["Site route", "按现场动线游览", "按現場動線遊覽"];
   return [
     { icon: "route" as IconName, title: simplePhrase(routeTitle[0], routeTitle[1], routeTitle[2]), body: simplePhrase("Plan the order by what the place actually needs: access, viewing points, openings and walking time.", "按地点实际需要安排顺序：入口、看点、开放时间和步行时间都要说清。", "按地點實際需要安排順序：入口、看點、開放時間和步行時間都要說清。") },
     { icon: "book" as IconName, title: simplePhrase("Specific interpretation", "针对性讲解", "針對性講解"), body: simplePhrase("Explain the site's own topic, visible details and local use instead of generic background.", "讲清地点自己的主题、可见细节和本地使用方式，避免空泛背景。", "講清地點自己的主題、可見細節和在地使用方式，避免空泛背景。") },
@@ -336,7 +336,7 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
       season: "春秋舒适，节庆或农事季更有现场感",
       pace: "半日到一日，在聚落或古镇内部慢走停留",
       people: "家庭、摄影爱好者、古镇和在地文化旅行者",
-      lead: `${nameZh}适合通过${focusZh}理解当地空间，把民居、巷道、水系、院落和日常使用方式连起来看。`
+      lead: `${nameZh}需要把${focusZh}放回真实聚落现场，连同民居、巷道、水系、院落和日常使用方式一起看。`
     },
     craft: {
       season: "工作室开放时段最佳，建议提前确认体验时间",
@@ -354,7 +354,7 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
       season: "早晚光线柔和，工作日更适合观察日常",
       pace: "2-4小时，按街区和交通节点串联",
       people: "城市漫步、建筑、交通和本地生活爱好者",
-      lead: `${nameZh}适合通过${focusZh}看街区如何运转，把建筑、店铺、交通和普通日常放在一起。`
+      lead: `${nameZh}需要从${focusZh}看街区如何运转，把建筑、店铺、交通和普通日常放在一起。`
     },
     road: {
       season: "按路况、天气和沿途景观季节选择",
@@ -453,7 +453,7 @@ function auditedDestinationMeta(attraction: ProvinceRecommendation) {
       season: "春秋舒适，节庆或农事季更有现场感",
       pace: "半日到一日，在聚落、古镇或村路内部慢走停留",
       people: "家庭、摄影爱好者、古镇和在地文化旅行者",
-      lead: `${nameZh}适合通过${focusZh}理解当地空间，把民居、巷道、水系和日常使用方式连起来看。`
+      lead: `${nameZh}需要把${focusZh}放回真实聚落现场，把民居、巷道、水系和日常使用方式连起来看。`
     },
     craft: {
       season: "工作室开放时段最佳，建议提前确认体验时间",
@@ -471,7 +471,7 @@ function auditedDestinationMeta(attraction: ProvinceRecommendation) {
       season: "早晚光线柔和，工作日更适合观察日常",
       pace: "2-4小时，按街区和交通节点串联",
       people: "城市漫步、建筑、交通和本地生活爱好者",
-      lead: `${nameZh}适合通过${focusZh}看街区如何运转，把建筑、店铺、交通和普通日常放在一起。`
+      lead: `${nameZh}需要从${focusZh}看街区如何运转，把建筑、店铺、交通和普通日常放在一起。`
     },
     road: {
       season: isShortTransport ? "晴朗或傍晚更适合，需注意运营时间和天气" : "按路况、天气和沿途景观季节选择",
@@ -657,6 +657,187 @@ function destinationHowToVisitLead(attraction: ProvinceRecommendation) {
   return destinationPhrase(
     `Guiding for ${name} should be arranged around ${focus}, on-site details and practical access.`,
     `${nameZh}的导览应根据${focusZh}、现场细节和实际交通来安排。`
+  );
+}
+
+function reviewedDestinationTone(attraction: ProvinceRecommendation) {
+  const nameZh = attraction.nameZh || attraction.name;
+  const focusZh = attraction.focusZh || attraction.focus;
+  const isShortTransport = /Ferry|Cableway|Light Rail|Walk|Mid-Levels|Escalator/i.test(attraction.name);
+  const custom: Record<string, { lead: string; notesLead: string; guideLead: string }> = {
+    "婺源村落": {
+      lead: "婺源村落需要把白墙黑瓦、溪流巷道、田野花期和晒秋场景放回真实村落现场，看徽派民居、祠堂、水口和田埂怎样组成仍在使用的乡村生活。",
+      notesLead: "婺源村落要从村口、水系、巷道、祠堂、田地和季节活动慢慢进入，把风景、居住、农事和地方记忆连起来看。",
+      guideLead: "婺源村落的导览要按村口进入、巷道转折、水系、祠堂、田地和季节活动来安排，不只是介绍几处拍照点。"
+    },
+    "布达拉宫": {
+      lead: "布达拉宫要放在拉萨红山和老城的关系中看：白宫、红宫、佛殿、台阶动线和城市天际线共同构成它的宫堡层次。",
+      notesLead: "布达拉宫游览要按预约时段和高原体力慢慢上行，把楼梯、殿堂、壁画、宫殿功能和回望拉萨城的视角串起来。",
+      guideLead: "布达拉宫的导览要结合预约、海拔体力、殿堂顺序和参观礼仪来安排，重点是空间层次而不是只看外观。"
+    }
+  };
+  const byKind: Record<RecommendationKind, { season: string; pace: string; people: string; lead: string; notesLead: string; guideLead: string }> = {
+    heritage: {
+      season: "春秋或清晨傍晚更适合慢走、拍照和听讲解",
+      pace: "半日到一日，按核心遗存、街巷和现场细节慢慢看",
+      people: "历史、建筑、城市记忆和摄影爱好者",
+      lead: `${nameZh}要把${focusZh}落到真实参观现场：入口、院落、碑刻、展陈、街区或城墙怎样组织动线，它和周边城市或村落是什么关系。`,
+      notesLead: `${nameZh}游览要停在最能代表它的几个可见细节前，把建筑形制、人物故事、城市位置和今天的使用方式讲清楚。`,
+      guideLead: `${nameZh}的导览要按入口空间、核心遗存、细部观察和周边城市关系来安排，让历史背景落到现场。`
+    },
+    nature: {
+      season: "按花期、水量、雪景或晴朗天气选择",
+      pace: "半日到一日，预留观景、步行和天气调整时间",
+      people: "家庭、摄影爱好者和自然旅行者",
+      lead: `${nameZh}的辨识度来自${focusZh}。山体、水面、植被、季节和光线会直接改变观感，说明时要落到真实可见的地貌和动线。`,
+      notesLead: `${nameZh}游览应挑选能说明特点的观景点、步道或水边停留，给天气变化、空间尺度和安静观察留出时间。`,
+      guideLead: `${nameZh}的导览要结合观景点、步道难度、天气窗口和返程时间，不把自然景观写成一句泛泛的风景。`
+    },
+    food: {
+      season: "早市、午餐或夜间街巷最适合",
+      pace: "2-4小时，边走边尝，留出排队和交流时间",
+      people: "美食爱好者、好奇型旅行者和本地生活观察者",
+      lead: `${nameZh}要写到${focusZh}背后的具体食材、摊位或厨房、点单方式、口味层次和当地人日常怎么吃。`,
+      notesLead: `${nameZh}应选择几个真实停留点，比较做法、火候、调味和街区节奏，让它不只是菜名或市场名。`,
+      guideLead: `${nameZh}的导览要按摊位、厨房、点单和品尝顺序展开，讲清味道和街区日常。`
+    },
+    village: {
+      season: "春秋舒适，节庆或农事季更有现场感",
+      pace: "半日到一日，在聚落、古镇或村路内部慢走停留",
+      people: "家庭、摄影爱好者、古镇和在地文化旅行者",
+      lead: `${nameZh}需要把${focusZh}放回真实聚落现场：民居沿什么水系和巷道展开，田地、院落、祠堂或公共空间今天如何被使用。`,
+      notesLead: `${nameZh}游览要在村落内部慢下来，看建筑如何被使用，地方产业、家庭记忆、农事节奏和日常生活如何连在一起。`,
+      guideLead: `${nameZh}的导览要按村口、巷道、水系、公共空间和季节活动组织，不只停留在外观照片。`
+    },
+    craft: {
+      season: "工作室开放时段最佳，建议提前确认体验时间",
+      pace: "2-3小时，留给工序、材料和手艺人讲解",
+      people: "设计、手作、工艺和文化爱好者",
+      lead: `${nameZh}要写出${focusZh}背后的制作现场：材料从哪里来，工具怎么用，手艺人怎样判断火候、针法、泥性、纹样或色阶。`,
+      notesLead: `${nameZh}体验要看见工序和手上动作，再把技法、材料、地方审美和仍在做这门手艺的人联系起来。`,
+      guideLead: `${nameZh}的导览要从材料、工具、制作步骤到成品判断标准逐步讲清。`
+    },
+    spiritual: {
+      season: "清晨或非高峰时段更安静",
+      pace: "半日到一日，保持安静节奏",
+      people: "文化、建筑、信仰空间和慢行旅行者",
+      lead: `${nameZh}的核心不只是建筑外观，而是${focusZh}与参拜动线、殿堂格局、礼仪方式和今天仍在延续的信仰生活。`,
+      notesLead: `${nameZh}游览应保持安静节奏，讲清殿堂顺序、仪式含义、地方习惯和游客需要遵守的礼貌。`,
+      guideLead: `${nameZh}的导览要按礼仪、院落、殿堂、山路或信仰背景安排顺序。`
+    },
+    city: {
+      season: "早晚光线柔和，工作日更适合观察日常",
+      pace: "2-4小时，按街区和交通节点串联",
+      people: "城市漫步、建筑、交通和本地生活爱好者",
+      lead: `${nameZh}的城市性体现在${focusZh}。街区、建筑、交通、店铺和普通日常要同时出现，页面才会像真实的地面现场。`,
+      notesLead: `${nameZh}城市漫步应比较街巷、店招、建筑立面和生活细节，说明当地人如何使用这个地方。`,
+      guideLead: `${nameZh}的导览要从街面、交通、店铺、人流和日常使用方式看城市。`
+    },
+    road: {
+      season: isShortTransport ? "晴朗或傍晚更适合，需注意运营时间和天气" : "按路况、天气和沿途景观季节选择",
+      pace: isShortTransport ? "30分钟到2小时，可与前后街区或观景点串联" : "一日或多日，按停靠点和交通距离安排",
+      people: isShortTransport ? "城市交通、港口景观和慢旅行爱好者" : "自驾、摄影和深度路线旅行者",
+      lead: `${nameZh}的重点在${focusZh}带来的移动过程、停靠点、交通节奏和沿途变化，移动本身就是体验的一部分。`,
+      notesLead: `${nameZh}路线应把乘坐或行车时段、接驳方式、观景停留和前后街区一起安排。`,
+      guideLead: `${nameZh}的导览要按运营时间、停靠点、路况或水况和返程方式安排。`
+    },
+    market: {
+      season: "清晨或本地采购高峰最有现场感",
+      pace: "1-3小时，边看边聊，适合慢慢比较摊位",
+      people: "美食、摄影、市场和本地生活爱好者",
+      lead: `${nameZh}的现场感来自${focusZh}。摊位、货品、摊主、价格、采购习惯和街坊交流都要写进页面。`,
+      notesLead: `${nameZh}市场漫步应在具体摊位前慢下来，说明本地人买什么、什么时候来，以及市场如何连接日常饮食。`,
+      guideLead: `${nameZh}的导览要按采购时间、摊位分区、试吃点和人流节奏来走。`
+    },
+    tea: {
+      season: "采茶季最有现场感，也可按茶园景色选择",
+      pace: "半日体验，留出步行、制茶和品饮时间",
+      people: "茶文化、自然和慢旅行爱好者",
+      lead: `${nameZh}要把${focusZh}与茶园或茶林环境、采摘季节、制作流程、冲泡方式和待客习惯连起来。`,
+      notesLead: `${nameZh}茶体验应从景观走到工艺，再进入品鉴，说明山场、手法和杯中风味之间的关系。`,
+      guideLead: `${nameZh}的导览要把茶园、采制、冲泡、品鉴和季节差异连起来。`
+    },
+    coast: {
+      season: "天气晴朗、海风舒适时最佳",
+      pace: "半日游，可结合用餐、港口或日落",
+      people: "家庭、海鲜爱好者和慢旅行者",
+      lead: `${nameZh}的海岸气质来自${focusZh}，也来自港口生活、海鲜处理、老街空间和当地人的日常节奏。`,
+      notesLead: `${nameZh}海岸路线应结合潮水时间、小镇生活、港口节奏和饮食背景，让海景和生活现场同时成立。`,
+      guideLead: `${nameZh}的导览要把海岸视野、码头劳作、海鲜市场和老街生活串起来。`
+    }
+  };
+  return { ...byKind[attraction.kind], ...custom[nameZh] };
+}
+
+function reviewedDestinationMeta(attraction: ProvinceRecommendation, base: (typeof kindMeta)[RecommendationKind]) {
+  const name = attraction.name;
+  const nameZh = attraction.nameZh || attraction.name;
+  const focus = attraction.focus;
+  const focusZh = attraction.focusZh || attraction.focus;
+  const tone = reviewedDestinationTone(attraction);
+  return {
+    ...base,
+    subtitle: destinationPhrase(focus, focusZh, `Enfoque: ${focus}`, `Foco: ${focus}`, `Focus: ${focus}`),
+    season: destinationPhrase(base.season.en, tone.season, base.season.es, base.season.pt, base.season.ar),
+    pace: destinationPhrase(base.pace.en, tone.pace, base.pace.es, base.pace.pt, base.pace.ar),
+    people: destinationPhrase(base.people.en, tone.people, base.people.es, base.people.pt, base.people.ar),
+    keywords: destinationPhrase(focus, focusZh, `Claves: ${focus}`, `Palavras-chave: ${focus}`, `Keywords: ${focus}`),
+    lead: destinationPhrase(
+      `${name} should be interpreted through ${focus}, with visible site details, local use and route context explained together.`,
+      tone.notesLead,
+      `Usa ${focus} como hilo principal de ${name}, con detalles reales del lugar.`,
+      `Use ${focus} como fio principal de ${name}, com detalhes reais do lugar.`,
+      `${name} should be interpreted through ${focus}.`
+    ),
+    advice: reviewedDestinationAdvice(attraction),
+    guide: reviewedDestinationGuide(attraction)
+  };
+}
+
+function reviewedDestinationAdvice(attraction: ProvinceRecommendation) {
+  const name = attraction.name;
+  const nameZh = attraction.nameZh || attraction.name;
+  const focus = attraction.focus;
+  const focusZh = attraction.focusZh || attraction.focus;
+  const tone = reviewedDestinationTone(attraction);
+  const card = (icon: IconName, enTitle: string, zhTitle: string, enBody: string, zhBody: string) => ({
+    icon,
+    title: destinationPhrase(enTitle, zhTitle),
+    body: destinationPhrase(enBody, zhBody)
+  });
+  return [
+    card("camera", "Best viewing moments", "最佳体验时段", `Choose light, crowd level and opening time around ${name}.`, `${tone.season}，并结合开放时间和现场人流安排。`),
+    card("shoe", "Walk with the site", "步行与观察结合", `Keep time for the real route, not only the headline sight.`, `${nameZh}要留出现场停步时间，把${focusZh}和可见细节连起来看。`),
+    card("mountain", "Read the local context", "理解现场背景", `Connect ${focus} with streets, terrain, daily use or local memory.`, `讲解要把${focusZh}和道路、空间、日常使用或地方记忆联系起来。`),
+    card("hat", "Leave room for rhythm", "保持从容", `Adjust the visit to weather, access and the way ${name} actually works.`, `根据天气、交通、开放条件和${nameZh}本身的节奏调整停留。`)
+  ];
+}
+
+function reviewedDestinationGuide(attraction: ProvinceRecommendation) {
+  const name = attraction.name;
+  const nameZh = attraction.nameZh || attraction.name;
+  const focus = attraction.focus;
+  const focusZh = attraction.focusZh || attraction.focus;
+  const tone = reviewedDestinationTone(attraction);
+  const card = (icon: IconName, enTitle: string, zhTitle: string, enBody: string, zhBody: string) => ({
+    icon,
+    title: destinationPhrase(enTitle, zhTitle),
+    body: destinationPhrase(enBody, zhBody)
+  });
+  return [
+    card("route", "Route built for this place", "按现场动线游览", `Arrange ${name} by arrival, route order, stops and return options.`, tone.guideLead),
+    card("book", "Site-specific interpretation", "针对性讲解", `Use ${focus} to explain why ${name} is worth seeing.`, `讲解要紧扣${focusZh}，说明${nameZh}自己的来历、看点和现场细节。`),
+    card("car", "Practical service match", "按地点匹配服务", `Choose walking, transfer, reservation or translation support according to ${name}.`, `根据${nameZh}的距离、开放时间、人流、预约和交通条件安排步行、接送或翻译协助。`)
+  ];
+}
+
+function reviewedHowToVisitLead(attraction: ProvinceRecommendation) {
+  const name = attraction.name;
+  const focus = attraction.focus;
+  const tone = reviewedDestinationTone(attraction);
+  return destinationPhrase(
+    `Guiding for ${name} should follow ${focus}, the route on site and practical access.`,
+    tone.guideLead
   );
 }
 
@@ -1042,8 +1223,8 @@ export function AttractionDetail({ province, attraction }: { province: Province;
   const itemCopy = getRecommendationCopy(lang, attraction);
   const enrichment = getRecommendationEnrichment(lang, attraction, province.name);
   const baseMeta = priorityDestinationMeta[attraction.name] ?? destinationMeta[attraction.name] ?? auditedDestinationMeta(attraction);
-  const meta = { ...baseMeta, advice: destinationAdvice(attraction), guide: destinationGuide(attraction) };
-  const howToVisitLead = destinationHowToVisitLead(attraction);
+  const meta = reviewedDestinationMeta(attraction, baseMeta);
+  const howToVisitLead = reviewedHowToVisitLead(attraction);
   const facts = [
     { icon: "leaf" as IconName, title: text.bestSeason, value: meta.season },
     { icon: "clock" as IconName, title: text.pace, value: meta.pace },
