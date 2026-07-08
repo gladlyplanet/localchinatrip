@@ -197,7 +197,28 @@ export function getExperience(slug: string) {
   return experiences.find((item) => item.slug === slug);
 }
 
+type ExperienceLocationCopy = { name: string; region: string; project: string; description: string };
+
+const translatedExperienceLocationCopy: Partial<Record<Lang, Record<string, ExperienceLocationCopy>>> = {
+  es: {
+    "xian-muslim-quarter": { name: "Barrio Musulman, Xi'an", region: "Shaanxi", project: "Sabores nocturnos del noroeste", description: "Prueba carnes a la parrilla, panes, fideos y dulces mientras recorres la tradicion culinaria de la comunidad musulmana historica de Xi'an." },
+    "chengdu-kuixinglou": { name: "Zona de Kuixinglou, Chengdu", region: "Sichuan", project: "Chengdu de noche", description: "Muévete entre tiendas fiables de snacks para probar brochetas, wontons y especialidades de Sichuan, equilibrando picante e historias del barrio." },
+    "changsha-dongguashan": { name: "Dongguashan, Changsha", region: "Hunan", project: "Paseo de comida nocturna en Changsha", description: "Descubre los sabores intensos de Hunan a traves de parrillas, fideos de arroz y favoritos de barrio a altas horas." },
+    "kaifeng-drum-tower": { name: "Mercado nocturno de la Torre del Tambor, Kaifeng", region: "Henan", project: "Mercado nocturno de antigua capital", description: "Prueba bocados de Henan en un entorno de antigua capital, con historias que conectan la comida del mercado con la larga historia urbana de Kaifeng." },
+    "guangzhou-xihua": { name: "Xihua Road, Guangzhou", region: "Guangdong", project: "Bocados cantoneses de noche", description: "Visita tiendas de barrio de larga trayectoria para probar rollos de arroz, fideos wonton, postres y otros sabores cotidianos cantoneses." }
+  },
+  pt: {
+    "xian-muslim-quarter": { name: "Bairro Muculmano, Xi'an", region: "Shaanxi", project: "Sabores noturnos do noroeste", description: "Prove carnes grelhadas, paes, massas e doces enquanto conhece as tradicoes culinarias da comunidade muculmana historica de Xi'an." },
+    "chengdu-kuixinglou": { name: "Area de Kuixinglou, Chengdu", region: "Sichuan", project: "Chengdu depois do anoitecer", description: "Passe por lojas confiaveis de petiscos para provar espetinhos, wontons e especialidades de Sichuan, equilibrando picancia e historias do bairro." },
+    "changsha-dongguashan": { name: "Dongguashan, Changsha", region: "Hunan", project: "Passeio de comida noturna em Changsha", description: "Descubra sabores intensos de Hunan por meio de grelhados, macarrao de arroz e favoritos de bairro tarde da noite." },
+    "kaifeng-drum-tower": { name: "Mercado noturno da Torre do Tambor, Kaifeng", region: "Henan", project: "Mercado noturno de antiga capital", description: "Prove petiscos de Henan em um ambiente de antiga capital, com historias que conectam a comida do mercado a longa historia urbana de Kaifeng." },
+    "guangzhou-xihua": { name: "Xihua Road, Guangzhou", region: "Guangdong", project: "Bocados cantoneses a noite", description: "Visite lojas de bairro tradicionais para provar rolinhos de arroz, macarrao wonton, sobremesas e outros sabores cotidianos cantoneses." }
+  }
+};
+
 export function getExperienceLocationCopy(lang: Lang, location: ExperienceLocation) {
+  const translated = translatedExperienceLocationCopy[lang]?.[location.slug];
+  if (translated) return translated;
   if (lang === "zh-CN" || lang === "zh-TW") return { name: location.nameZh, region: location.regionZh, project: location.projectZh, description: location.descriptionZh };
   if (lang === "es" || lang === "pt" || lang === "ar") return { name: location.name, region: location.region, project: location.project, description: location.description };
   return { name: location.name, region: location.region, project: location.project, description: location.description };
