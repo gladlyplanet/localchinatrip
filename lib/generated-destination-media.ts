@@ -236,7 +236,7 @@ export const destinationImages: Record<string, string> = {
   "Shanghai::The Bund": "/images/destinations/optimized/wiki-shanghai-the-bund.jpg",
   "Shanghai::Yu Garden and Old City": "/images/destinations/shanghai-yu-garden-old-city-clean.png",
   "Shanxi::Datong Ancient City": "/images/destinations/optimized/wiki-shanxi-datong-ancient-city.jpg",
-  "Shanxi::Fenyang Fenjiu Culture": "/images/destinations/shanxi-fenyang-fenjiu-culture-clean.png",
+  "Shanxi::Fenyang Fenjiu Culture": "/images/destinations/optimized/wiki-shanxi-fenyang-fenjiu-culture.jpg",
   "Shanxi::Hanging Temple": "/images/destinations/optimized/wiki-shanxi-hanging-temple.jpg",
   "Shanxi::Hukou Waterfall Shanxi Side": "/images/destinations/optimized/wiki-shanxi-hukou-waterfall-shanxi-side.jpg",
   "Shanxi::Mianshan": "/images/destinations/optimized/wiki-shanxi-mianshan.jpg",
