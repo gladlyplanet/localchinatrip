@@ -633,7 +633,7 @@ const genericByKind: Record<RecommendationKind, MediaText> = {
 
 const destinationSpecificText: Record<string, MediaText> = {
   "Shanxi::Fenyang Fenjiu Culture": {
-    image: "/images/destinations/shanxi-fenyang-fenjiu-culture-clean.png",
+    image: "/images/destinations/optimized/wiki-shanxi-fenyang-fenjiu-culture.jpg",
     caption: { en: "Fenyang Fenjiu heritage site", zh: "汾阳杏花村汾酒文化" },
     overview: {
       en: "Fenyang Fenjiu Culture is best understood through Xinghua Village, sorghum spirit brewing, old workshop spaces, liquor vessels and the way Fenjiu connects with Shanxi banquet customs.",
