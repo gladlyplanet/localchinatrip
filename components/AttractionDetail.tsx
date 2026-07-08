@@ -807,7 +807,7 @@ function reviewedDestinationAdvice(attraction: ProvinceRecommendation) {
   });
   return [
     card("camera", "Best viewing moments", "最佳体验时段", `Choose light, crowd level and opening time around ${name}.`, `${tone.season}，并结合开放时间和现场人流安排。`),
-    card("shoe", "Walk with the site", "步行与观察结合", `Keep time for the real route, not only the headline sight.`, `${nameZh}要留出现场停步时间，把${focusZh}和可见细节连起来看。`),
+    card("shoe", "Walk with the site", "步行与观察结合", `Keep time for the real route, not only the headline sight.`, `${nameZh}要留出现场停步时间，把${focusZh}、可见细节和实际动线连起来看。`),
     card("mountain", "Read the local context", "理解现场背景", `Connect ${focus} with streets, terrain, daily use or local memory.`, `讲解要把${focusZh}和道路、空间、日常使用或地方记忆联系起来。`),
     card("hat", "Leave room for rhythm", "保持从容", `Adjust the visit to weather, access and the way ${name} actually works.`, `根据天气、交通、开放条件和${nameZh}本身的节奏调整停留。`)
   ];
