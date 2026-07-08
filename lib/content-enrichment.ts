@@ -3104,17 +3104,18 @@ function strengthenMediaText(media: MediaText, item: ProvinceRecommendation): Me
   const templatePattern = /适合通过|需要围绕.*理解|这里的重点不是|根据季节、天气、光线和体力|而不是只/;
   const normalizedOverviewZh = normalizeZh(media.overview.zh);
   const normalizedExperienceZh = normalizeZh(media.experience.zh);
+  const hasReviewedSpecificZh = Boolean(reviewedSpecificZh[placeZh]);
   const overviewZh = reviewedSpecificZh[placeZh]?.overview ?? (templatePattern.test(normalizedOverviewZh) ? reviewedOverviewByKind[item.kind] : normalizedOverviewZh);
   const experienceZh = reviewedSpecificZh[placeZh]?.experience ?? (templatePattern.test(normalizedExperienceZh) ? reviewedExperienceByKind[item.kind] : normalizedExperienceZh);
   return {
     ...media,
     overview: {
       en: media.overview.en.length < 150 ? `${media.overview.en} ${enAdditions[item.kind]}` : media.overview.en,
-      zh: overviewZh.length < 90 ? `${overviewZh}${overviewZh.endsWith("。") ? "" : "。"}${zhAdditions[item.kind]}` : overviewZh
+      zh: !hasReviewedSpecificZh && overviewZh.length < 90 ? `${overviewZh}${overviewZh.endsWith("。") ? "" : "。"}${zhAdditions[item.kind]}` : overviewZh
     },
     experience: {
       en: media.experience.en.length < 130 ? `${media.experience.en} ${enAdditions[item.kind]}` : media.experience.en,
-      zh: experienceZh.length < 70 ? `${experienceZh}${experienceZh.endsWith("。") ? "" : "。"}${zhAdditions[item.kind]}` : experienceZh
+      zh: !hasReviewedSpecificZh && experienceZh.length < 70 ? `${experienceZh}${experienceZh.endsWith("。") ? "" : "。"}${zhAdditions[item.kind]}` : experienceZh
     },
     caption: {
       en: media.caption.en,
