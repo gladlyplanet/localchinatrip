@@ -199,8 +199,6 @@ export function getExperience(slug: string) {
 
 export function getExperienceLocationCopy(lang: Lang, location: ExperienceLocation) {
   if (lang === "zh-CN" || lang === "zh-TW") return { name: location.nameZh, region: location.regionZh, project: location.projectZh, description: location.descriptionZh };
-  if (lang === "es") return { name: location.name, region: location.region, project: `Experiencia local en ${location.name}`, description: `Un proyecto privado seleccionado para conocer el paisaje, la cultura y la vida cotidiana de ${location.name}, con guía local y un ritmo flexible.` };
-  if (lang === "pt") return { name: location.name, region: location.region, project: `Experiência local em ${location.name}`, description: `Um projeto privado selecionado para conhecer a paisagem, a cultura e a vida cotidiana de ${location.name}, com guia local e ritmo flexível.` };
-  if (lang === "ar") return { name: location.name, region: location.region, project: `تجربة محلية في ${location.name}`, description: `برنامج خاص مختار للتعرف على طبيعة ${location.name} وثقافتها وحياتها اليومية، مع دليل محلي وإيقاع مرن.` };
+  if (lang === "es" || lang === "pt" || lang === "ar") return { name: location.name, region: location.region, project: location.project, description: location.description };
   return { name: location.name, region: location.region, project: location.project, description: location.description };
 }
