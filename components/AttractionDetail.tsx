@@ -795,22 +795,23 @@ function reviewedDestinationMeta(attraction: ProvinceRecommendation, base: (type
   const focus = attraction.focus;
   const focusZh = attraction.focusZh || attraction.focus;
   const tone = reviewedDestinationTone(attraction);
+  const hasSpecificMeta = Boolean(destinationMeta[name] || priorityDestinationMeta[name]);
   return {
     ...base,
-    subtitle: destinationPhrase(focus, focusZh, `Enfoque: ${focus}`, `Foco: ${focus}`, `Focus: ${focus}`),
-    season: destinationPhrase(base.season.en, tone.season, base.season.es, base.season.pt, base.season.ar),
-    pace: destinationPhrase(base.pace.en, tone.pace, base.pace.es, base.pace.pt, base.pace.ar),
-    people: destinationPhrase(base.people.en, tone.people, base.people.es, base.people.pt, base.people.ar),
-    keywords: destinationPhrase(focus, focusZh, `Claves: ${focus}`, `Palavras-chave: ${focus}`, `Keywords: ${focus}`),
-    lead: destinationPhrase(
+    subtitle: hasSpecificMeta ? base.subtitle : destinationPhrase(focus, focusZh, `Enfoque: ${focus}`, `Foco: ${focus}`, `Focus: ${focus}`),
+    season: hasSpecificMeta ? base.season : destinationPhrase(base.season.en, tone.season, base.season.es, base.season.pt, base.season.ar),
+    pace: hasSpecificMeta ? base.pace : destinationPhrase(base.pace.en, tone.pace, base.pace.es, base.pace.pt, base.pace.ar),
+    people: hasSpecificMeta ? base.people : destinationPhrase(base.people.en, tone.people, base.people.es, base.people.pt, base.people.ar),
+    keywords: hasSpecificMeta ? base.keywords : destinationPhrase(focus, focusZh, `Claves: ${focus}`, `Palavras-chave: ${focus}`, `Keywords: ${focus}`),
+    lead: hasSpecificMeta ? base.lead : destinationPhrase(
       `${name} should be interpreted through ${focus}, with visible site details, local use and route context explained together.`,
       tone.notesLead,
       `Usa ${focus} como hilo principal de ${name}, con detalles reales del lugar.`,
       `Use ${focus} como fio principal de ${name}, com detalhes reais do lugar.`,
       `${name} should be interpreted through ${focus}.`
     ),
-    advice: reviewedDestinationAdvice(attraction),
-    guide: reviewedDestinationGuide(attraction)
+    advice: hasSpecificMeta ? base.advice : reviewedDestinationAdvice(attraction),
+    guide: hasSpecificMeta ? base.guide : reviewedDestinationGuide(attraction)
   };
 }
 
