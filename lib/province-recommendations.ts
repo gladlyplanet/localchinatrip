@@ -177,7 +177,7 @@ export const provinceRecommendations: Record<string, ProvinceRecommendation[]> =
   shandong: [
     spot("Mount Tai","泰山","spiritual","sacred mountain pilgrimage, inscriptions and imperial ceremony","名山朝拜、摩崖题刻和帝王封禅传统"),
     spot("Qufu Confucius Sites","曲阜三孔","heritage","Confucius Temple, Mansion and Cemetery in their hometown context","孔庙、孔府、孔林与儒家故里背景"),
-    spot("Qingdao Old Town","青岛老城","coast","red-roof architecture, coastlines and German-era urban memory","红瓦建筑、海岸线和德式城市记忆"),
+    spot("Qingdao Old Town","青岛老城","heritage","red-roof architecture, German-era streets and old-city coastal memory","红瓦建筑、德式街区和老城海岸记忆"),
     spot("Laoshan","崂山","nature","coastal mountains, Daoist temples and sea-facing trails","滨海山地、道教宫观和面海步道"),
     spot("Jinan Springs","济南泉水","nature","Baotu Spring, city spring pools, old moat water and Jinan's spring-fed urban life","趵突泉、城中泉池、护城河水系和泉城生活"),
     spot("Weifang Kite Culture","潍坊风筝文化","craft","kite making, folk images and spring festival traditions","风筝制作、民间图像和春季民俗"),
