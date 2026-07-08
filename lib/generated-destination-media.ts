@@ -79,7 +79,7 @@ export const destinationImages: Record<string, string> = {
   "Hainan::Haikou Qilou Old Street": "/images/destinations/optimized/wiki-hainan-haikou-qilou-old-street.jpg",
   "Hainan::Hainan Family Kitchen": "/images/destinations/hainan-family-kitchen-corrected.png",
   "Hainan::Sanya Coast": "/images/destinations/optimized/wiki-hainan-sanya-coast.jpg",
-  "Hainan::Tanmen Fishing Port": "/images/about-me-boat-seafood.jpg",
+  "Hainan::Tanmen Fishing Port": "/images/destinations/hainan-tanmen-fishing-port-corrected.png",
   "Hainan::Wuzhishan Rainforest": "/images/destinations/optimized/wiki-hainan-wuzhishan-rainforest.jpg",
   "Hainan::Yalong Bay Tropical Forest": "/images/destinations/optimized/wiki-hainan-yalong-bay-tropical-forest.jpg",
   "Hebei::Baiyangdian Wetland": "/images/destinations/optimized/wiki-hebei-baiyangdian-wetland.jpg",
