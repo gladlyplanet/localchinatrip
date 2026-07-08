@@ -3144,7 +3144,9 @@ function cleanRecommendationText(item: ProvinceRecommendation, provinceName?: st
   const kind = genericByKind[item.kind];
   const provinceFallback = provinceName ? provinceFallbackImages[provinceName] : undefined;
   const prioritySpecific = provinceName ? priorityDestinationSpecificText[`${provinceName}::${item.name}`] : undefined;
+  const destinationSpecific = provinceName ? destinationSpecificText[`${provinceName}::${item.name}`] : undefined;
   if (prioritySpecific) return strengthenMediaText(prioritySpecific, item);
+  if (destinationSpecific) return strengthenMediaText(destinationSpecific, item);
   const exactImage = safeDestinationImage(provinceName, item);
   return strengthenMediaText(getAuditedDestinationMedia(
     item,
