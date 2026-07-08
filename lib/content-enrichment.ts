@@ -3030,6 +3030,16 @@ function localized(lang: Lang, value: Localized) {
 function strengthenMediaText(media: MediaText, item: ProvinceRecommendation): MediaText {
   const placeZh = item.nameZh || item.name;
   const focusZh = item.focusZh || item.focus;
+  const reviewedSpecificZh: Record<string, { overview: string; experience: string }> = {
+    "婺源村落": {
+      overview: "婺源村落的重点不是把白墙黑瓦当成背景，而是看徽派民居、溪流巷道、祠堂水口、田埂花期和晒秋场景怎样组成仍在使用的乡村生活。",
+      experience: "游览应从村口、水系和巷道慢慢进入，停在祠堂、民居立面、田埂和晒秋场景前，讲清村落如何被居住、耕作、祭祖和季节活动继续使用。"
+    },
+    "布达拉宫": {
+      overview: "布达拉宫矗立在拉萨红山上，白宫与红宫层层叠起，把宫堡建筑、佛殿空间、旧拉萨政治记忆和高原城市天际线压在同一个视野里。",
+      experience: "参观要提前确认预约时段，按高原体力慢慢上行，把楼梯动线、壁画、佛殿、宫殿功能和回望拉萨城的视角串起来。"
+    }
+  };
   const zhAdditions: Record<RecommendationKind, string> = {
     heritage: `游览时要具体看${focusZh}落在哪些空间、遗存、动线和城市关系里。`,
     nature: `游览时要把${focusZh}放到地形、水系、季节、光线和实际步道中看。`,
@@ -3057,14 +3067,45 @@ function strengthenMediaText(media: MediaText, item: ProvinceRecommendation): Me
     coast: `The coastal route should place ${item.focus} in tides, harbor work, seafood, old streets and local rhythm.`
   };
   const normalizeZh = (value: string) => value
+    .replace(/适合通过/g, "需要围绕")
+    .replace(/适合围绕/g, "需要围绕")
     .replace(/适合从/g, "重点看")
     .replace(/要从/g, "重点看")
     .replace(/应从/g, "应写清")
     .replace(/来理解/g, "")
     .replace(/来介绍/g, "")
     .replace(new RegExp("打" + "卡", "g"), "快速拍照");
-  const overviewZh = normalizeZh(media.overview.zh);
-  const experienceZh = normalizeZh(media.experience.zh);
+  const reviewedOverviewByKind: Record<RecommendationKind, string> = {
+    heritage: `${placeZh}要把${focusZh}落到真实参观现场：入口、院落、碑刻、展陈、街区或城墙怎样组织动线，它和周边城市或村落是什么关系。`,
+    nature: `${placeZh}的辨识度来自${focusZh}。山体、水面、植被、季节和光线会直接改变观感，说明时要落到真实可见的地貌和动线。`,
+    food: `${placeZh}要写到${focusZh}背后的具体食材、摊位或厨房、点单方式、口味层次和当地人日常怎么吃。`,
+    village: `${placeZh}需要把${focusZh}放回真实聚落现场：民居沿什么水系和巷道展开，田地、院落、祠堂或公共空间今天如何被使用。`,
+    craft: `${placeZh}要写出${focusZh}背后的制作现场：材料从哪里来，工具怎么用，手艺人怎样判断火候、针法、泥性、纹样或色阶。`,
+    spiritual: `${placeZh}的核心不只是建筑外观，而是${focusZh}与参拜动线、殿堂格局、礼仪方式和今天仍在延续的信仰生活。`,
+    city: `${placeZh}的城市性体现在${focusZh}。街区、建筑、交通、店铺和普通日常要同时出现，页面才会像真实的地面现场。`,
+    road: `${placeZh}的重点在${focusZh}带来的移动过程、停靠点、交通节奏和沿途变化，移动本身就是体验的一部分。`,
+    market: `${placeZh}的现场感来自${focusZh}。摊位、货品、摊主、价格、采购习惯和街坊交流都要写进页面。`,
+    tea: `${placeZh}要把${focusZh}与茶园或茶林环境、采摘季节、制作流程、冲泡方式和待客习惯连起来。`,
+    coast: `${placeZh}的海岸气质来自${focusZh}，也来自港口生活、海鲜处理、老街空间和当地人的日常节奏。`
+  };
+  const reviewedExperienceByKind: Record<RecommendationKind, string> = {
+    heritage: `游览时应停在最能代表${placeZh}的几个可见细节前，把建筑形制、人物故事、城市位置和今天的使用方式讲清楚。`,
+    nature: `游览应挑选能说明${placeZh}特点的观景点、步道或水边停留，给天气变化、空间尺度和安静观察留出时间。`,
+    food: `美食路线应选择几个真实停留点，比较做法、火候、调味和街区节奏，让${placeZh}不只是菜名或市场名。`,
+    village: `游览要在村落内部慢下来，看建筑如何被使用，地方产业、家庭记忆、农事节奏和日常生活如何连在一起。`,
+    craft: `体验要看见工序和手上动作，再把技法、材料、地方审美和仍在做这门手艺的人联系起来。`,
+    spiritual: `游览应保持安静节奏，讲清殿堂顺序、仪式含义、地方习惯和游客需要遵守的礼貌。`,
+    city: `城市漫步应比较街巷、店招、建筑立面和生活细节，说明当地人如何使用${placeZh}。`,
+    road: `路线应把乘坐或行车时段、接驳方式、观景停留和前后街区一起安排，让移动本身成为体验的一部分。`,
+    market: `市场漫步应在具体摊位前慢下来，说明本地人买什么、什么时候来，以及市场如何连接日常饮食。`,
+    tea: `茶体验应从景观走到工艺，再进入品鉴，说明山场、手法和杯中风味之间的关系。`,
+    coast: `海岸路线应结合潮水时间、小镇生活、港口节奏和饮食背景，让海景和生活现场同时成立。`
+  };
+  const templatePattern = /适合通过|需要围绕.*理解|这里的重点不是|根据季节、天气、光线和体力|而不是只/;
+  const normalizedOverviewZh = normalizeZh(media.overview.zh);
+  const normalizedExperienceZh = normalizeZh(media.experience.zh);
+  const overviewZh = reviewedSpecificZh[placeZh]?.overview ?? (templatePattern.test(normalizedOverviewZh) ? reviewedOverviewByKind[item.kind] : normalizedOverviewZh);
+  const experienceZh = reviewedSpecificZh[placeZh]?.experience ?? (templatePattern.test(normalizedExperienceZh) ? reviewedExperienceByKind[item.kind] : normalizedExperienceZh);
   return {
     ...media,
     overview: {
