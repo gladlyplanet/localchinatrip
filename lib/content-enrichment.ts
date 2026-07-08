@@ -1977,7 +1977,7 @@ const destinationSpecificText: Record<string, MediaText> = {
     }
   },
   "Sichuan::Chengdu Panda Base": {
-    image: "/images/destinations/optimized/wiki-sichuan-chengdu-panda-base.jpg",
+    image: "/images/destinations/optimized/sichuan-chengdu-panda-base-real.jpg",
     caption: { en: "Chengdu Research Base of Giant Panda Breeding", zh: "成都大熊猫繁育研究基地" },
     overview: {
       en: "Chengdu Panda Base should be introduced as a conservation and research setting, not only as a place to see cute animals. The visit connects panda habitats, nursery areas, bamboo feeding routines and public education about giant panda protection.",
