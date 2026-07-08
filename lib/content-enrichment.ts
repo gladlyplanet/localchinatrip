@@ -8,6 +8,9 @@ import { getAuditedDestinationMedia } from "@/lib/audited-destination-copy";
 type Localized = {
   en: string;
   zh: string;
+  es?: string;
+  pt?: string;
+  ar?: string;
 };
 
 type MediaText = {
@@ -3024,6 +3027,9 @@ function focusedFallbackText(item: ProvinceRecommendation, provinceName: string 
 function localized(lang: Lang, value: Localized) {
   if (lang === "zh-CN") return value.zh;
   if (lang === "zh-TW") return toTraditionalChinese(value.zh);
+  if (lang === "es") return value.es ?? value.en;
+  if (lang === "pt") return value.pt ?? value.en;
+  if (lang === "ar") return value.ar ?? value.en;
   return value.en;
 }
 
@@ -3166,6 +3172,63 @@ export function getRecommendationEnrichment(lang: Lang, item: ProvinceRecommenda
   };
 }
 
+const translatedExperienceLocationMedia: Partial<Record<Lang, Record<string, { caption: string; overview: string; experience: string }>>> = {
+  es: {
+    "xian-muslim-quarter": {
+      caption: "Calles nocturnas de comida en Xi'an",
+      overview: "El Barrio Musulman de Xi'an muestra la historia de la Ruta de la Seda y la cocina del noroeste a traves de panes, fideos, carnes a la parrilla y dulces.",
+      experience: "La ruta compara puestos fiables y explica como las tradiciones culinarias hui forman parte de la vida diaria de Xi'an."
+    },
+    "chengdu-kuixinglou": {
+      caption: "Comida nocturna de Chengdu",
+      overview: "Kuixinglou y las calles de comida cercanas son buenas para probar brochetas, fideos, wontons y pequenos platos informales de Sichuan.",
+      experience: "La degustacion debe equilibrar picante, salsas, calma de casa de te e historias del barrio, no solo comer platos muy picantes."
+    },
+    "changsha-dongguashan": {
+      caption: "Comida de madrugada en Changsha",
+      overview: "Dongguashan esta ligado a la cultura de comer tarde en Changsha, con parrillas, bocados callejeros y sabores intensos de Hunan.",
+      experience: "La ruta debe explicar el picante de Hunan, los fideos de arroz, los bocados a la parrilla y como la gente local socializa de noche."
+    },
+    "kaifeng-drum-tower": {
+      caption: "Mercado nocturno de la antigua capital Kaifeng",
+      overview: "Los mercados nocturnos de Kaifeng conectan los bocados de Henan con la tradicion urbana de una antigua capital.",
+      experience: "La experiencia debe relacionar los platos con la memoria urbana de la dinastia Song, el ritmo del mercado y la cultura local de los snacks."
+    },
+    "guangzhou-xihua": {
+      caption: "Tiendas de snacks en Xihua Road, Guangzhou",
+      overview: "Xihua Road permite entender la comida cotidiana cantonesa: desayunos, dulces, postres y pequenas tiendas de barrio.",
+      experience: "La degustacion debe ser tranquila y variada, pasando de rollos de arroz y fideos a sopas, postres y cultura de tiendas locales."
+    }
+  },
+  pt: {
+    "xian-muslim-quarter": {
+      caption: "Ruas noturnas de comida em Xi'an",
+      overview: "O Bairro Muculmano de Xi'an revela a historia da Rota da Seda e a comida do noroeste por meio de paes, massas, carnes grelhadas e doces.",
+      experience: "A rota compara bancas confiaveis e explica como as tradicoes culinarias hui entraram no cotidiano de Xi'an."
+    },
+    "chengdu-kuixinglou": {
+      caption: "Comida noturna de Chengdu",
+      overview: "Kuixinglou e as ruas de comida proximas sao boas para provar espetinhos, massas, wontons e petiscos informais de Sichuan.",
+      experience: "A degustacao deve equilibrar picancia, molhos, calma de casa de cha e historias do bairro, nao apenas pratos muito apimentados."
+    },
+    "changsha-dongguashan": {
+      caption: "Comida de madrugada em Changsha",
+      overview: "Dongguashan esta ligado a cultura de comer tarde em Changsha, com grelhados, petiscos e sabores marcantes de Hunan.",
+      experience: "A rota deve explicar a picancia de Hunan, o macarrao de arroz, os petiscos grelhados e como os moradores socializam a noite."
+    },
+    "kaifeng-drum-tower": {
+      caption: "Mercado noturno da antiga capital Kaifeng",
+      overview: "Os mercados noturnos de Kaifeng conectam os petiscos de Henan a tradicao alimentar urbana de uma antiga capital.",
+      experience: "A experiencia deve ligar os pratos a memoria urbana da dinastia Song, ao ritmo do mercado e a cultura local dos petiscos."
+    },
+    "guangzhou-xihua": {
+      caption: "Lojas de petiscos na Xihua Road, Guangzhou",
+      overview: "A Xihua Road ajuda a entender a comida cotidiana cantonesa: cafe da manha, doces, sobremesas e pequenas lojas de bairro.",
+      experience: "A degustacao deve ser tranquila e variada, passando de rolinhos de arroz e massas a sopas, sobremesas e cultura de lojas locais."
+    }
+  }
+};
+
 export function getExperienceLocationEnrichment(lang: Lang, location: ExperienceLocation) {
   const media = locationMedia[location.slug] ?? {
     ...genericByKind.village,
@@ -3174,11 +3237,12 @@ export function getExperienceLocationEnrichment(lang: Lang, location: Experience
     overview: { en: location.description, zh: location.descriptionZh },
     experience: { en: location.project, zh: location.projectZh }
   };
+  const translated = translatedExperienceLocationMedia[lang]?.[location.slug];
   return {
     image: media.image,
     fallbackImage: media.fallbackImage,
-    caption: localized(lang, media.caption),
-    overview: localized(lang, media.overview),
-    experience: localized(lang, media.experience)
+    caption: translated?.caption ?? localized(lang, media.caption),
+    overview: translated?.overview ?? localized(lang, media.overview),
+    experience: translated?.experience ?? localized(lang, media.experience)
   };
 }
