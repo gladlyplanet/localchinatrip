@@ -55,13 +55,15 @@ export function ExperienceDetail({ slug }: { slug: string }) {
                   {item.locations.map((location, index) => {
                     const locationText = getExperienceLocationCopy(lang, location);
                     const enrichment = getExperienceLocationEnrichment(lang, location);
+                    const locationContentDir = lang === "ar" ? "ltr" : dir;
+                    const locationContentLang = lang === "ar" ? "en" : lang;
 
                     return (
                       <details key={location.slug} className="group overflow-hidden rounded-lg border hairline bg-white open:shadow-card">
                         <summary className="flex min-h-20 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 marker:hidden">
                           <span className="flex min-w-0 items-center gap-4">
                             <span className="font-serif text-lg text-gold">{String(index + 1).padStart(2, "0")}</span>
-                            <span>
+                            <span dir={locationContentDir} lang={locationContentLang}>
                               <strong className="block font-serif text-xl leading-7">{locationText.name}</strong>
                               <span className="text-sm text-mist">{locationText.region}</span>
                             </span>
@@ -86,10 +88,10 @@ export function ExperienceDetail({ slug }: { slug: string }) {
                                   className="h-full w-full object-cover"
                                 />
                               </div>
-                              <figcaption className="px-4 py-3 text-xs leading-5 text-mist">{enrichment.caption}</figcaption>
+                              <figcaption dir={locationContentDir} lang={locationContentLang} className="px-4 py-3 text-xs leading-5 text-mist">{enrichment.caption}</figcaption>
                             </figure>
 
-                            <div>
+                            <div dir={locationContentDir} lang={locationContentLang}>
                               <h3 className="font-serif text-2xl font-semibold">{locationText.project}</h3>
                               <p className="mt-3 max-w-2xl leading-7 text-mist">{enrichment.overview}</p>
                               <p className="mt-3 max-w-2xl leading-7 text-mist">{enrichment.experience}</p>
