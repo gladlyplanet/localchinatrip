@@ -48,6 +48,17 @@ export function getAuditedDestinationMedia(
   const focus = item.focus;
   const focusZh = item.focusZh || item.focus;
 
+  const specificZh: Record<string, { overview: string; experience: string }> = {
+    "布达拉宫": {
+      overview: "布达拉宫矗立在拉萨红山上，白宫与红宫层层叠起，把宫堡建筑、佛殿空间、旧拉萨政治记忆和高原城市天际线压在同一个视野里。页面应写出它的高差、体量、殿堂层次和拉萨老城之间的关系。",
+      experience: "参观要提前确认预约时段，按高原体力慢慢上行。进入后应把楼梯动线、壁画、佛殿、宫殿功能和回望拉萨城的视角串起来，重点是进入空间后的层次和动线。"
+    },
+    "婺源村落": {
+      overview: "婺源村落的重点不是把白墙黑瓦当成背景，而是看徽派民居、溪流巷道、祠堂水口、田埂花期和晒秋场景怎样组成仍在使用的乡村生活。",
+      experience: "游览应从村口、水系和巷道慢慢进入，停在祠堂、民居立面、田埂和晒秋场景前，讲清村落如何被居住、耕作、祭祖和季节活动继续使用。"
+    }
+  };
+
   const en: Record<RecommendationKind, { overview: string; experience: string }> = {
     heritage: {
       overview: `${place} is best introduced through ${focus}. The story should stay close to the visible site: its streets, courtyards, gates, halls, inscriptions, old routes and the city memory around them.`,
@@ -97,7 +108,7 @@ export function getAuditedDestinationMedia(
 
   const zh: Record<RecommendationKind, { overview: string; experience: string }> = {
     heritage: {
-      overview: `${placeZh}的看点集中在${focusZh}。页面应写清它具体是哪一类历史空间：城墙、寺院、街区、院落、碑刻、展厅或老城位置各自承担什么作用。`,
+      overview: `${placeZh}的历史价值要落到${focusZh}对应的真实参观现场：核心建筑或遗存在哪里，入口、院落、碑刻、展陈、街区或城墙怎样组织动线，它和周边城市或村落是什么关系。`,
       experience: `行程应停在最能代表${placeZh}的几个可见细节前，把建筑形制、人物故事、城市位置和今天的使用方式讲清楚。`
     },
     nature: {
@@ -117,8 +128,8 @@ export function getAuditedDestinationMedia(
       experience: `体验应看见工序和手上动作，再把技法、材料、地方审美和仍在做这门手艺的人联系起来。`
     },
     spiritual: {
-      overview: `${placeZh}的核心在${focusZh}。说明应包含参拜动线、殿堂或塔院格局、礼仪方式，以及这个信仰空间今天仍怎样被使用。`,
-      experience: `游览应保持安静节奏，分清建筑、仪式、地方习惯和参观礼貌，不把${placeZh}当成普通拍照背景。`
+      overview: `${placeZh}的核心不只是建筑外观，而是${focusZh}与参拜动线、殿堂格局、礼仪方式和今天仍在延续的信仰生活。`,
+      experience: `游览应保持安静节奏，讲清殿堂顺序、仪式含义、地方习惯和游客需要遵守的礼貌。`
     },
     city: {
       overview: `${placeZh}的城市性体现在${focusZh}。街区、建筑、交通、店铺和普通日常要同时出现，页面才会像真实的地面现场。`,
@@ -146,7 +157,7 @@ export function getAuditedDestinationMedia(
     image: imageFor(item, provinceName, fallbackImage),
     fallbackImage: secondaryFallbackImage,
     caption: { en: place, zh: placeZh },
-    overview: { en: en[item.kind].overview, zh: zh[item.kind].overview },
-    experience: { en: en[item.kind].experience, zh: zh[item.kind].experience }
+    overview: { en: en[item.kind].overview, zh: specificZh[placeZh]?.overview ?? zh[item.kind].overview },
+    experience: { en: en[item.kind].experience, zh: specificZh[placeZh]?.experience ?? zh[item.kind].experience }
   };
 }
