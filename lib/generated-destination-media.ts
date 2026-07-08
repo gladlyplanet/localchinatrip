@@ -220,7 +220,7 @@ export const destinationImages: Record<string, string> = {
   "Shandong::Jinan Springs": "/images/destinations/shandong-jinan-springs-corrected.png",
   "Shandong::Laoshan": "/images/destinations/optimized/wiki-shandong-laoshan.jpg",
   "Shandong::Mount Tai": "/images/destinations/optimized/wiki-shandong-mount-tai.jpg",
-  "Shandong::Qingdao Old Town": "/images/destinations/optimized/wiki-shandong-qingdao-old-town.jpg",
+  "Shandong::Qingdao Old Town": "/images/destinations/optimized/wiki-shandong-qingdao-old-town.png",
   "Shandong::Qufu Confucius Sites": "/images/destinations/optimized/wiki-shandong-qufu-confucius-sites.jpg",
   "Shandong::Rongcheng Swan Lake": "/images/destinations/shandong-rongcheng-swan-lake-corrected.png",
   "Shandong::Weifang Kite Culture": "/images/destinations/shandong-weifang-kite-culture-corrected.png",
