@@ -245,7 +245,7 @@ export const destinationImages: Record<string, string> = {
   "Shanxi::Wutai Mountain": "/images/destinations/shanxi-wutai-mountain-clean.png",
   "Shanxi::Yungang Grottoes": "/images/destinations/optimized/wiki-shanxi-yungang-grottoes.jpg",
   "Sichuan::Chengdu Market Cooking": "/images/experience-chengdu-market.jpg",
-  "Sichuan::Chengdu Panda Base": "/images/destinations/optimized/wiki-sichuan-chengdu-panda-base.jpg",
+  "Sichuan::Chengdu Panda Base": "/images/destinations/optimized/sichuan-chengdu-panda-base-real.jpg",
   "Sichuan::Chengdu Teahouses": "/images/destinations/optimized/wiki-sichuan-chengdu-teahouses.jpg",
   "Sichuan::Danba Tibetan Villages": "/images/destinations/sichuan-danba-tibetan-villages-real.jpg",
   "Sichuan::Dujiangyan Irrigation System": "/images/destinations/optimized/wiki-sichuan-dujiangyan-irrigation-system.jpg",
