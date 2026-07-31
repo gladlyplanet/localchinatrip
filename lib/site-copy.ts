@@ -107,7 +107,7 @@ type SiteCopy = {
 
 export const siteCopy: Record<Lang, SiteCopy> = {
   en: {
-    nav: ["Experiences", "Private Car", "Local Life", "Destinations", "About Me", "Contact"],
+    nav: ["Experiences", "Private Car", "Travel Planning", "Destinations", "About Me", "Contact"],
     tagline: "Travel like a local",
     plan: "Plan My Journey",
     footer: "Local China. Real moments, thoughtful routes, private comfort.",
@@ -231,7 +231,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     }
   },
   "zh-CN": {
-    nav: ["体验", "私人用车", "本地生活", "目的地", "关于我", "联系"],
+    nav: ["体验", "私人用车", "旅行计划", "目的地", "关于我", "联系"],
     tagline: "像本地人一样旅行",
     plan: "定制我的旅程",
     footer: "Local China。真实时刻，用心路线，舒适私享。",
@@ -355,7 +355,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     }
   },
   "zh-TW": {
-    nav: ["體驗", "私人用車", "在地生活", "目的地", "關於我", "聯絡"],
+    nav: ["體驗", "私人用車", "旅行計畫", "目的地", "關於我", "聯絡"],
     tagline: "像在地人一樣旅行",
     plan: "訂製我的旅程",
     footer: "Local China。真實時刻，用心路線，舒適私享。",
@@ -479,7 +479,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     }
   },
   es: {
-    nav: ["Experiencias", "Coche privado", "Vida local", "Destinos", "Sobre mí", "Contacto"],
+    nav: ["Experiencias", "Coche privado", "Plan de viaje", "Destinos", "Sobre mí", "Contacto"],
     tagline: "Viaja como una persona local",
     plan: "Diseñar mi viaje",
     footer: "Local China. Momentos reales, rutas cuidadas y comodidad privada.",
@@ -603,7 +603,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     }
   },
   pt: {
-    nav: ["Experiências", "Carro privado", "Vida local", "Destinos", "Sobre mim", "Contato"],
+    nav: ["Experiências", "Carro privado", "Planejamento", "Destinos", "Sobre mim", "Contato"],
     tagline: "Viaje como uma pessoa local",
     plan: "Criar minha viagem",
     footer: "Local China. Momentos reais, rotas cuidadosas e conforto privado.",
@@ -727,7 +727,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     }
   },
   ar: {
-    nav: ["التجارب", "سيارة خاصة", "الحياة المحلية", "الوجهات", "عنّي", "اتصل بنا"],
+    nav: ["التجارب", "سيارة خاصة", "خطة الرحلة", "الوجهات", "عنّي", "اتصل بنا"],
     tagline: "سافر مثل السكان المحليين",
     plan: "خطط رحلتي",
     footer: "Local China. لحظات حقيقية، مسارات مدروسة وراحة خاصة.",
