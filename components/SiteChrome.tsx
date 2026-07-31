@@ -4,7 +4,7 @@ import Link from "next/link";
 import { languageOptions, useLanguage, type Lang } from "@/components/LanguageProvider";
 import { getSiteCopy } from "@/lib/site-copy";
 
-const navHrefs = ["/experiences", "/private-car", "/#local-life", "/destinations", "/about", "/contact"];
+const navHrefs = ["/experiences", "/private-car", "/travel-planning", "/destinations", "/about", "/contact"];
 
 const socialLinks = [
   { label: "YouTube", href: "https://www.youtube.com/@WusorCHINAexp", color: "bg-[#ff0000] text-white" },
@@ -25,7 +25,7 @@ function SocialLogo({ name }: { name: string }) {
 function LanguageSwitcher() {
   const { lang, setLang } = useLanguage();
   return (
-    <select value={lang} onChange={(event) => setLang(event.target.value as Lang)} className="h-10 w-[118px] rounded-full border hairline bg-cream px-3 text-sm font-semibold text-ink outline-none transition-colors focus:border-moss sm:w-auto" aria-label="Select language">
+    <select value={lang} onChange={(event) => setLang(event.target.value as Lang)} className="h-10 w-[112px] max-w-full rounded-full border hairline bg-cream px-3 text-sm font-semibold text-ink outline-none transition-colors focus:border-moss sm:w-auto" aria-label="Select language">
       {languageOptions.map((option) => <option key={option.code} value={option.code}>{option.label}</option>)}
     </select>
   );
@@ -37,20 +37,20 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b hairline bg-cream/95 backdrop-blur-xl" dir={dir}>
       <nav className="mx-auto flex h-20 max-w-[1680px] items-center justify-between gap-3 px-4 sm:px-8 lg:px-24">
-        <Link href="/" className="min-w-0 leading-none text-ink">
-          <span className="script-title block text-2xl font-semibold sm:text-4xl">Local China</span>
-          <span className="mt-1 hidden text-[11px] tracking-[0.08em] text-mist sm:block">{text.tagline}</span>
+        <Link href="/" className="min-w-0 shrink leading-none text-ink">
+          <span className="script-title block whitespace-nowrap text-2xl font-semibold sm:text-3xl lg:text-4xl">Local China</span>
+          <span className="safe-wrap mt-1 hidden max-w-48 text-[11px] leading-4 tracking-[0.08em] text-mist sm:block">{text.tagline}</span>
         </Link>
         <div className="hidden items-center gap-7 text-[15px] font-medium text-ink xl:flex">
           {text.nav.map((label, index) => <Link key={navHrefs[index]} href={navHrefs[index]} className="whitespace-nowrap transition-colors hover:text-moss">{label}</Link>)}
         </div>
         <div className="flex shrink-0 items-center gap-2 sm:gap-4">
-          <Link href="/contact" className="hidden rounded-full bg-moss px-5 py-3 text-sm font-semibold text-cream transition-colors hover:bg-ink sm:inline-flex">{text.plan}</Link>
+          <Link href="/contact" className="safe-wrap hidden max-w-44 items-center justify-center rounded-full bg-moss px-5 py-3 text-center text-sm font-semibold leading-5 text-cream transition-colors hover:bg-ink lg:inline-flex">{text.plan}</Link>
           <LanguageSwitcher />
         </div>
       </nav>
       <div className="no-scrollbar flex h-11 items-center gap-5 overflow-x-auto border-t hairline px-4 text-sm font-medium xl:hidden">
-        {text.nav.map((label, index) => <Link key={navHrefs[index]} href={navHrefs[index]} className="shrink-0">{label}</Link>)}
+        {text.nav.map((label, index) => <Link key={navHrefs[index]} href={navHrefs[index]} className="shrink-0 leading-5">{label}</Link>)}
       </div>
     </header>
   );
@@ -63,12 +63,12 @@ export function Footer() {
     <footer className="border-t hairline bg-cream px-5 py-10 sm:px-8" dir={dir}>
       <div className="mx-auto max-w-[1680px]">
         <div className="flex flex-col gap-6 text-sm text-mist md:flex-row md:items-center md:justify-between">
-          <p>{text.footer}</p>
+          <p className="safe-wrap">{text.footer}</p>
           <div className="flex flex-wrap gap-5">{text.nav.map((label, index) => <Link key={navHrefs[index]} href={navHrefs[index]} className="hover:text-ink">{label}</Link>)}</div>
         </div>
         <div className="mt-8 grid gap-6 border-t hairline pt-6 md:grid-cols-[1fr_auto] md:items-center">
           <div className="flex flex-col gap-3 text-sm text-mist sm:flex-row sm:gap-6">
-            <a href="mailto:ly13845267281@sina.com" className="inline-flex items-center gap-2 hover:text-moss"><span aria-hidden="true">✉</span>{text.email}: ly13845267281@sina.com</a>
+            <a href="mailto:ly13845267281@sina.com" className="safe-wrap inline-flex items-start gap-2 hover:text-moss"><span className="shrink-0" aria-hidden="true">✉</span><span>{text.email}: ly13845267281@sina.com</span></a>
             <a href="https://wa.me/8618871477084" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-[#25D366]"><span className="font-bold text-[#25D366]" aria-hidden="true">●</span>{text.whatsapp}: +86 188 7147 7084</a>
           </div>
           <div className="flex flex-wrap items-center gap-3">
