@@ -5,14 +5,18 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { Footer, Header } from "@/components/SiteChrome";
 import { useLanguage, type Lang } from "@/components/LanguageProvider";
-import { travelRoutes } from "@/lib/travel-planning-routes";
+import {
+  cityNames,
+  travelRoutes,
+  type CityId,
+  type Interest,
+  type Region,
+  type TravelRoute
+} from "@/lib/travel-planning-routes";
+import { getEditorialText, getRouteEditorial } from "@/lib/travel-planning-editorial";
 
 type Localized = Record<Lang, string>;
 type FilterMode = "duration" | "region" | "interest";
-type Region = "north" | "east" | "south" | "central" | "southwest" | "northwest" | "northeast";
-type Interest = "history" | "food" | "nature" | "village" | "craft" | "city" | "firstTrip";
-type Season = "allYear" | "springAutumn" | "summerAutumn" | "winter";
-type Pace = "easy" | "balanced" | "active";
 
 const localized = (en: string, zhCN: string, zhTW: string, es: string, pt: string, ar: string): Localized => ({
   en,
@@ -23,68 +27,7 @@ const localized = (en: string, zhCN: string, zhTW: string, es: string, pt: strin
   ar
 });
 
-const cityNames = {
-  beijing: ["Beijing", "北京", "بكين"],
-  greatWall: ["Great Wall", "长城", "سور الصين العظيم"],
-  chengdu: ["Chengdu", "成都", "تشنغدو"],
-  dujiangyan: ["Dujiangyan", "都江堰", "دوجيانغيان"],
-  shanghai: ["Shanghai", "上海", "شنغهاي"],
-  suzhou: ["Suzhou", "苏州", "سوتشو"],
-  hangzhou: ["Hangzhou", "杭州", "هانغتشو"],
-  xian: ["Xi'an", "西安", "شيآن"],
-  guangzhou: ["Guangzhou", "广州", "قوانغتشو"],
-  foshan: ["Foshan", "佛山", "فوشان"],
-  guilin: ["Guilin", "桂林", "قويلين"],
-  yangshuo: ["Yangshuo", "阳朔", "يانغشو"],
-  quanzhou: ["Quanzhou", "泉州", "تشيوانتشو"],
-  xiamen: ["Xiamen", "厦门", "شيامن"],
-  qingdao: ["Qingdao", "青岛", "تشينغداو"],
-  qufu: ["Qufu", "曲阜", "تشوفو"],
-  danba: ["Danba", "丹巴", "دانبا"],
-  siguniang: ["Mount Siguniang", "四姑娘山", "جبل سيقونيانغ"],
-  dali: ["Dali", "大理", "دالي"],
-  shaxi: ["Shaxi", "沙溪", "شاشي"],
-  lijiang: ["Lijiang", "丽江", "ليجيانغ"],
-  kunming: ["Kunming", "昆明", "كونمينغ"],
-  shangrila: ["Shangri-La", "香格里拉", "شانغريلا"],
-  lanzhou: ["Lanzhou", "兰州", "لانتشو"],
-  zhangye: ["Zhangye", "张掖", "تشانغيه"],
-  jiayuguan: ["Jiayuguan", "嘉峪关", "جيايوغوان"],
-  dunhuang: ["Dunhuang", "敦煌", "دونهوانغ"],
-  kaili: ["Kaili", "凯里", "كايلي"],
-  zhaoxing: ["Zhaoxing", "肇兴", "تشاوشينغ"],
-  harbin: ["Harbin", "哈尔滨", "هاربين"],
-  yabuli: ["Yabuli", "亚布力", "يابولي"],
-  ili: ["Ili", "伊犁", "إيلي"],
-  nalati: ["Nalati", "那拉提", "نالاتي"],
-  wuhan: ["Wuhan", "武汉", "ووهان"],
-  changsha: ["Changsha", "长沙", "تشانغشا"],
-  jingdezhen: ["Jingdezhen", "景德镇", "جينغدتشن"],
-  xining: ["Xining", "西宁", "شينينغ"],
-  qinghaiLake: ["Qinghai Lake", "青海湖", "بحيرة تشينغهاي"],
-  chaozhou: ["Chaozhou", "潮州", "تشانغتشو"],
-  datong: ["Datong", "大同", "داتونغ"],
-  pingyao: ["Pingyao", "平遥", "بينغياو"],
-  luoyang: ["Luoyang", "洛阳", "لويانغ"],
-  turpan: ["Turpan", "吐鲁番", "توربان"],
-  urumqi: ["Urumqi", "乌鲁木齐", "أورومتشي"],
-  kashgar: ["Kashgar", "喀什", "كاشغر"]
-} as const;
-
-type CityId = keyof typeof cityNames;
-
-type Route = {
-  id: string;
-  duration: 3 | 5 | 7 | 10 | 15 | 21;
-  region: Region;
-  interests: Interest[];
-  season: Season;
-  pace: Pace;
-  stops: CityId[];
-  image: string;
-};
-
-const routes: Route[] = travelRoutes;
+const routes: TravelRoute[] = travelRoutes;
 
 const pageCopy = {
   en: {
@@ -99,6 +42,7 @@ const pageCopy = {
     modes: { duration: "By duration", region: "By region", interest: "By interest" },
     all: "All",
     dayUnit: "days",
+    dayRange: (start: number, end: number) => start === end ? `Day ${start}` : `Days ${start}–${end}`,
     regions: { north: "North China", east: "East China", south: "South China", central: "Central China", southwest: "Southwest", northwest: "Northwest", northeast: "Northeast" },
     interests: { history: "History", food: "Food & local life", nature: "Nature", village: "Villages", craft: "Crafts", city: "City life", firstTrip: "First China trip" },
     seasons: { allYear: "All year", springAutumn: "Spring / autumn", summerAutumn: "Summer / autumn", winter: "Winter" },
@@ -133,6 +77,7 @@ const pageCopy = {
     modes: { duration: "按天数", region: "按地区", interest: "按兴趣" },
     all: "全部",
     dayUnit: "天",
+    dayRange: (start: number, end: number) => start === end ? `第${start}天` : `第${start}–${end}天`,
     regions: { north: "华北", east: "华东", south: "华南", central: "华中", southwest: "西南", northwest: "西北", northeast: "东北" },
     interests: { history: "历史文化", food: "美食生活", nature: "自然山水", village: "村落", craft: "手工艺", city: "城市生活", firstTrip: "第一次来中国" },
     seasons: { allYear: "全年", springAutumn: "春秋", summerAutumn: "夏秋", winter: "冬季" },
@@ -167,6 +112,7 @@ const pageCopy = {
     modes: { duration: "按天數", region: "按地區", interest: "按興趣" },
     all: "全部",
     dayUnit: "天",
+    dayRange: (start: number, end: number) => start === end ? `第${start}天` : `第${start}–${end}天`,
     regions: { north: "華北", east: "華東", south: "華南", central: "華中", southwest: "西南", northwest: "西北", northeast: "東北" },
     interests: { history: "歷史文化", food: "美食生活", nature: "自然山水", village: "村落", craft: "手工藝", city: "城市生活", firstTrip: "第一次來中國" },
     seasons: { allYear: "全年", springAutumn: "春秋", summerAutumn: "夏秋", winter: "冬季" },
@@ -201,6 +147,7 @@ const pageCopy = {
     modes: { duration: "Por duración", region: "Por región", interest: "Por interés" },
     all: "Todas",
     dayUnit: "días",
+    dayRange: (start: number, end: number) => start === end ? `Día ${start}` : `Días ${start}–${end}`,
     regions: { north: "Norte", east: "Este", south: "Sur", central: "Centro", southwest: "Suroeste", northwest: "Noroeste", northeast: "Noreste" },
     interests: { history: "Historia", food: "Comida y vida local", nature: "Naturaleza", village: "Pueblos", craft: "Artesanía", city: "Vida urbana", firstTrip: "Primer viaje a China" },
     seasons: { allYear: "Todo el año", springAutumn: "Primavera / otoño", summerAutumn: "Verano / otoño", winter: "Invierno" },
@@ -235,6 +182,7 @@ const pageCopy = {
     modes: { duration: "Por duração", region: "Por região", interest: "Por interesse" },
     all: "Todos",
     dayUnit: "dias",
+    dayRange: (start: number, end: number) => start === end ? `Dia ${start}` : `Dias ${start}–${end}`,
     regions: { north: "Norte", east: "Leste", south: "Sul", central: "Centro", southwest: "Sudoeste", northwest: "Noroeste", northeast: "Nordeste" },
     interests: { history: "História", food: "Comida e vida local", nature: "Natureza", village: "Vilarejos", craft: "Artesanato", city: "Vida urbana", firstTrip: "Primeira viagem à China" },
     seasons: { allYear: "Ano inteiro", springAutumn: "Primavera / outono", summerAutumn: "Verão / outono", winter: "Inverno" },
@@ -269,6 +217,7 @@ const pageCopy = {
     modes: { duration: "حسب المدة", region: "حسب المنطقة", interest: "حسب الاهتمام" },
     all: "الكل",
     dayUnit: "أيام",
+    dayRange: (start: number, end: number) => start === end ? `اليوم ${start}` : `الأيام ${start}–${end}`,
     regions: { north: "شمال الصين", east: "شرق الصين", south: "جنوب الصين", central: "وسط الصين", southwest: "الجنوب الغربي", northwest: "الشمال الغربي", northeast: "الشمال الشرقي" },
     interests: { history: "التاريخ", food: "الطعام والحياة المحلية", nature: "الطبيعة", village: "القرى", craft: "الحرف", city: "حياة المدن", firstTrip: "الزيارة الأولى للصين" },
     seasons: { allYear: "طوال العام", springAutumn: "الربيع / الخريف", summerAutumn: "الصيف / الخريف", winter: "الشتاء" },
@@ -326,14 +275,38 @@ export default function TravelPlanningPage() {
     { id: "interest", label: t.modes.interest }
   ];
 
-  const routeName = (route: Route) => {
+  const routeName = (route: TravelRoute) => {
     const first = getCityName(route.stops[0], lang);
     const last = getCityName(route.stops[route.stops.length - 1], lang);
     const place = first === last ? first : `${first} — ${last}`;
     return `${place} · ${route.duration} ${t.dayUnit}`;
   };
 
-  const routeFlow = (route: Route) => route.stops.map((city) => getCityName(city, lang)).join(" — ");
+  const routeFlow = (route: TravelRoute) => route.stops.map((city) => getCityName(city, lang)).join(" — ");
+
+  const routeRhythm = (route: TravelRoute) => {
+    const spans = getRouteEditorial(route.id)?.daySpans;
+    if (!spans || spans.length !== route.stops.length || spans.reduce((sum, days) => sum + days, 0) !== route.duration) {
+      return [];
+    }
+
+    let cursor = 1;
+    return route.stops.map((city, index) => {
+      const start = cursor;
+      const end = cursor + spans[index] - 1;
+      cursor = end + 1;
+      return {
+        city,
+        label: `${t.dayRange(start, end)} · ${getCityName(city, lang)}`
+      };
+    });
+  };
+
+  const routeCardSummary = (route: TravelRoute) => {
+    const editorial = getRouteEditorial(route.id);
+    if (!editorial || (lang !== "en" && lang !== "zh-CN" && lang !== "zh-TW")) return null;
+    return getEditorialText(editorial.summary, lang);
+  };
 
   return (
     <>
@@ -403,6 +376,7 @@ export default function TravelPlanningPage() {
 
             <div className="mt-9 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
               {visibleRoutes.map((route) => {
+                const summary = routeCardSummary(route);
                 return (
                   <article key={route.id} className="group min-w-0 overflow-hidden rounded-md border bg-white shadow-card transition duration-300 hairline hover:-translate-y-1 hover:border-moss">
                     <Link href={`/travel-planning/${route.id}`} className="block h-full w-full text-start">
@@ -412,6 +386,14 @@ export default function TravelPlanningPage() {
                       <div className="p-5">
                         <h3 className="safe-wrap font-serif text-2xl font-semibold leading-tight">{routeName(route)}</h3>
                         <p className="safe-wrap mt-3 text-sm leading-6 text-mist">{routeFlow(route)}</p>
+                        {summary ? <p className="safe-wrap mt-3 line-clamp-3 text-sm leading-6 text-mist">{summary}</p> : null}
+                        <ol className="mt-4 flex flex-wrap gap-2" aria-label={t.routeFlow}>
+                          {routeRhythm(route).map((stop) => (
+                            <li key={stop.city} className="safe-wrap rounded border hairline bg-cream px-2.5 py-1.5 text-xs font-semibold leading-5 text-moss">
+                              {stop.label}
+                            </li>
+                          ))}
+                        </ol>
                         <div className="mt-4 flex flex-wrap gap-2">
                           {route.interests.slice(0, 3).map((tag) => <span key={tag} className="rounded border hairline bg-cream px-2 py-1 text-[11px] font-semibold text-moss">{t.interests[tag]}</span>)}
                         </div>
