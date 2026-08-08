@@ -1,0 +1,140 @@
+{
+  "beijing-3": {
+    "file": "/images/travel-planning/beijing-3.jpg",
+    "subject": "Forbidden City panorama",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Forbidden_City_Panorama_1.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Tojan76"
+  },
+  "chengdu-3": {
+    "file": "/images/travel-planning/chengdu-3.jpg",
+    "subject": "Chengdu giant panda",
+    "localSource": "/images/destinations/optimized/sichuan-chengdu-panda-base-real.jpg"
+  },
+  "shanghai-3": {
+    "file": "/images/travel-planning/shanghai-3.jpg",
+    "subject": "Shanghai Bund skyline",
+    "localSource": "/images/destinations/optimized/wiki-shanghai-the-bund.jpg"
+  },
+  "xian-3": {
+    "file": "/images/travel-planning/xian-3.jpg",
+    "subject": "Terracotta Army Xi'an",
+    "localSource": "/images/destinations/optimized/wiki-shaanxi-terracotta-army.jpg"
+  },
+  "beijing-wall-5": {
+    "file": "/images/travel-planning/beijing-wall-5.jpg",
+    "subject": "Mutianyu Great Wall",
+    "localSource": "/images/destinations/optimized/wiki-beijing-mutianyu-great-wall.jpg"
+  },
+  "shanghai-suzhou-5": {
+    "file": "/images/travel-planning/shanghai-suzhou-5.jpg",
+    "subject": "Suzhou classical garden",
+    "localSource": "/images/destinations/optimized/wiki-jiangsu-suzhou-classical-gardens.jpg"
+  },
+  "chengdu-dujiangyan-5": {
+    "file": "/images/travel-planning/chengdu-dujiangyan-5.jpg",
+    "subject": "Dujiangyan irrigation system",
+    "localSource": "/images/destinations/optimized/wiki-sichuan-dujiangyan-irrigation-system.jpg"
+  },
+  "guilin-yangshuo-5": {
+    "file": "/images/travel-planning/guilin-yangshuo-5.jpg",
+    "subject": "Yangshuo karst landscape",
+    "localSource": "/images/experience-guilin-ride.jpg"
+  },
+  "jiangnan-7": {
+    "file": "/images/travel-planning/jiangnan-7.jpg",
+    "subject": "Suzhou canal",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Kanal_in_Suzhou.jpg",
+    "license": "Public domain",
+    "artist": "Almbauer"
+  },
+  "west-sichuan-7": {
+    "file": "/images/travel-planning/west-sichuan-7.jpg",
+    "subject": "Danba Tibetan village, western Sichuan",
+    "localSource": "/images/experience-western-sichuan-danba-real.jpg"
+  },
+  "yunnan-villages-7": {
+    "file": "/images/travel-planning/yunnan-villages-7.jpg",
+    "subject": "Lijiang old town",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Lijiang_Yunnan_Old-town-01.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "CEphoto / Uwe Aranas"
+  },
+  "hexi-7": {
+    "file": "/images/travel-planning/hexi-7.jpg",
+    "subject": "Jiayuguan Pass Gansu",
+    "localSource": "/images/destinations/optimized/wiki-gansu-jiayuguan-pass.jpg"
+  },
+  "guizhou-7": {
+    "file": "/images/travel-planning/guizhou-7.jpg",
+    "subject": "Zhaoxing Dong village Guizhou",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Zhaoxing_-_panoramio.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "ogwen"
+  },
+  "northeast-winter-7": {
+    "file": "/images/travel-planning/northeast-winter-7.jpg",
+    "subject": "Harbin ice snow festival",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Snow_and_Ice_World_festival_in_Harbin,_China_(3238480178).jpg",
+    "license": "CC BY 2.0",
+    "artist": "Rincewind42"
+  },
+  "ili-7": {
+    "file": "/images/travel-planning/ili-7.jpg",
+    "subject": "Sayram Lake",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Lake_Sailimu,_aka_Sayram.jpg",
+    "license": "CC BY 2.0",
+    "artist": "George Lu"
+  },
+  "central-7": {
+    "file": "/images/travel-planning/central-7.jpg",
+    "subject": "Jingdezhen porcelain workshop",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Porcelain_Workshop,_Jingdezhen,_Jiangxi,_China.jpg",
+    "license": "CC BY-SA 3.0",
+    "artist": "Ariel Steiner"
+  },
+  "yunnan-10": {
+    "file": "/images/travel-planning/yunnan-10.jpg",
+    "subject": "Shangri-La Yunnan old town",
+    "localSource": "/images/destinations/optimized/wiki-yunnan-shangri-la-dukezong.jpg"
+  },
+  "south-coast-10": {
+    "file": "/images/travel-planning/south-coast-10.jpg",
+    "subject": "Chaozhou old town",
+    "localSource": "/images/destinations/optimized/wiki-guangdong-chaozhou-old-town.jpg"
+  },
+  "qinghai-gansu-10": {
+    "file": "/images/travel-planning/qinghai-gansu-10.jpg",
+    "subject": "Qinghai Lake landscape",
+    "localSource": "/images/destinations/qinghai-qinghai-lake-corrected.png"
+  },
+  "classic-15": {
+    "file": "/images/travel-planning/classic-15.jpg",
+    "subject": "Forbidden City Beijing",
+    "localSource": "/images/destinations/optimized/wiki-beijing-forbidden-city.jpg"
+  },
+  "history-north-15": {
+    "file": "/images/travel-planning/history-north-15.jpg",
+    "subject": "Pingyao ancient city",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Pingyao-oldtown.jpg",
+    "license": "Public domain",
+    "artist": "Benzh"
+  },
+  "food-coast-15": {
+    "file": "/images/travel-planning/food-coast-15.jpg",
+    "subject": "Guangzhou dim sum open kitchen",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:GZ_China_Hotel_Dim_Sum_Open_Kitchen.jpg",
+    "license": "CC BY-SA 2.5",
+    "artist": "MingAi"
+  },
+  "grand-china-21": {
+    "file": "/images/travel-planning/grand-china-21.jpg",
+    "subject": "Longji rice terraces Guangxi",
+    "localSource": "/images/destinations/optimized/wiki-guangxi-longji-rice-terraces.jpg"
+  },
+  "silk-road-21": {
+    "file": "/images/travel-planning/silk-road-21.jpg",
+    "subject": "Id Kah Mosque, Kashgar old city, Xinjiang",
+    "localSource": "/images/destinations/optimized/wiki-xinjiang-kashgar-old-city.jpg"
+  }
+}
