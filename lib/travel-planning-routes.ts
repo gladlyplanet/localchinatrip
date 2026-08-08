@@ -1,4 +1,5 @@
 import type { Lang } from "@/components/LanguageProvider";
+import { toTraditionalChinese } from "@/lib/chinese-text";
 
 export type FilterMode = "duration" | "region" | "interest";
 export type Region = "north" | "east" | "south" | "central" | "southwest" | "northwest" | "northeast";
@@ -37,6 +38,9 @@ export const cityNames = {
   harbin: ["Harbin", "哈尔滨", "هاربين"],
   yabuli: ["Yabuli", "亚布力", "يابولي"],
   ili: ["Ili", "伊犁", "إيلي"],
+  yining: ["Yining", "伊宁", "يينينغ"],
+  sayramLake: ["Sayram Lake", "赛里木湖", "بحيرة سايرام"],
+  tekes: ["Tekes", "特克斯", "تيكيس"],
   nalati: ["Nalati", "那拉提", "نالاتي"],
   wuhan: ["Wuhan", "武汉", "ووهان"],
   changsha: ["Changsha", "长沙", "تشانغشا"],
@@ -82,13 +86,13 @@ export const travelRoutes: TravelRoute[] = [
   { id: "hexi-7", duration: 7, region: "northwest", interests: ["history", "nature"], season: "summerAutumn", pace: "balanced", stops: ["lanzhou", "zhangye", "jiayuguan", "dunhuang"], image: image("hexi-7") },
   { id: "guizhou-7", duration: 7, region: "southwest", interests: ["village", "craft", "nature"], season: "springAutumn", pace: "balanced", stops: ["kaili", "zhaoxing"], image: image("guizhou-7") },
   { id: "northeast-winter-7", duration: 7, region: "northeast", interests: ["nature", "city"], season: "winter", pace: "balanced", stops: ["harbin", "yabuli"], image: image("northeast-winter-7") },
-  { id: "ili-7", duration: 7, region: "northwest", interests: ["nature", "village"], season: "summerAutumn", pace: "active", stops: ["ili", "nalati"], image: image("ili-7") },
+  { id: "ili-7", duration: 7, region: "northwest", interests: ["nature", "village"], season: "summerAutumn", pace: "active", stops: ["yining", "sayramLake", "tekes", "nalati"], image: image("ili-7") },
   { id: "central-7", duration: 7, region: "central", interests: ["food", "city", "craft"], season: "springAutumn", pace: "balanced", stops: ["wuhan", "changsha", "jingdezhen"], image: image("central-7") },
   { id: "yunnan-10", duration: 10, region: "southwest", interests: ["village", "nature", "craft"], season: "allYear", pace: "balanced", stops: ["kunming", "dali", "shaxi", "lijiang", "shangrila"], image: image("yunnan-10") },
   { id: "south-coast-10", duration: 10, region: "south", interests: ["food", "history", "craft"], season: "allYear", pace: "balanced", stops: ["guangzhou", "foshan", "chaozhou", "xiamen", "quanzhou"], image: image("south-coast-10") },
   { id: "qinghai-gansu-10", duration: 10, region: "northwest", interests: ["nature", "history"], season: "summerAutumn", pace: "active", stops: ["xining", "qinghaiLake", "zhangye", "dunhuang"], image: image("qinghai-gansu-10") },
   { id: "classic-15", duration: 15, region: "north", interests: ["firstTrip", "history", "food", "city"], season: "springAutumn", pace: "balanced", stops: ["beijing", "xian", "chengdu", "shanghai"], image: image("classic-15") },
-  { id: "history-north-15", duration: 15, region: "north", interests: ["history", "craft"], season: "springAutumn", pace: "balanced", stops: ["beijing", "datong", "pingyao", "xian", "luoyang"], image: image("history-north-15") },
+  { id: "history-north-15", duration: 15, region: "north", interests: ["history", "craft"], season: "springAutumn", pace: "balanced", stops: ["beijing", "datong", "pingyao", "luoyang", "xian"], image: image("history-north-15") },
   { id: "food-coast-15", duration: 15, region: "south", interests: ["food", "city", "craft"], season: "allYear", pace: "easy", stops: ["guangzhou", "foshan", "chaozhou", "xiamen", "quanzhou"], image: image("food-coast-15") },
   { id: "grand-china-21", duration: 21, region: "east", interests: ["firstTrip", "history", "food", "nature"], season: "springAutumn", pace: "balanced", stops: ["beijing", "xian", "chengdu", "guilin", "shanghai", "hangzhou"], image: image("grand-china-21") },
   { id: "silk-road-21", duration: 21, region: "northwest", interests: ["history", "nature", "village"], season: "summerAutumn", pace: "active", stops: ["xian", "lanzhou", "zhangye", "dunhuang", "turpan", "urumqi", "kashgar"], image: image("silk-road-21") }
@@ -100,7 +104,8 @@ export const interests: Interest[] = ["history", "food", "nature", "village", "c
 
 export function getCityName(city: CityId, lang: Lang) {
   const [en, zh, ar] = cityNames[city];
-  if (lang === "zh-CN" || lang === "zh-TW") return zh;
+  if (lang === "zh-CN") return zh;
+  if (lang === "zh-TW") return toTraditionalChinese(zh);
   if (lang === "ar") return ar;
   return en;
 }
