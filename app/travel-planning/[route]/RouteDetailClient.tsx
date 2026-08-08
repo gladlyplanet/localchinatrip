@@ -13,6 +13,14 @@ import {
   type Pace,
   type Season
 } from "@/lib/travel-planning-routes";
+import {
+  getCityEditorial,
+  getEditorialText,
+  getRouteEditorial,
+  getRouteLogistics,
+  getRouteTransfers,
+  type TransferMode
+} from "@/lib/travel-planning-editorial";
 
 type Copy = {
   back: string;
@@ -26,6 +34,8 @@ type Copy = {
   interestsTitle: string;
   itineraryTitle: string;
   itineraryIntro: string;
+  logisticsTitle: string;
+  logisticsFallback: (first: string, last: string) => string;
   day: string;
   days: string;
   stopText: (city: string) => string;
@@ -52,6 +62,8 @@ const copy: Record<Lang, Copy> = {
     interestsTitle: "Main interests",
     itineraryTitle: "Suggested route rhythm",
     itineraryIntro: "The day ranges below show a comfortable starting rhythm. Exact trains, flights and driving time are arranged after your dates are confirmed.",
+    logisticsTitle: "Arrival and departure",
+    logisticsFallback: (first, last) => `Enter through ${first} and leave from ${last}. Exact airports, stations and transfer time are confirmed after the travel dates are known.`,
     day: "Day",
     days: "Days",
     stopText: (city) => `Use ${city} as a real base, with time for its defining sights and everyday neighborhoods.`,
@@ -76,6 +88,8 @@ const copy: Record<Lang, Copy> = {
     interestsTitle: "主要体验",
     itineraryTitle: "建议路线节奏",
     itineraryIntro: "下面的停留天数是一版舒适的起点。确认日期后，再根据高铁、航班和用车时间细化每天安排。",
+    logisticsTitle: "抵达与离开",
+    logisticsFallback: (first, last) => `经${first}进入，从${last}离开。确认日期后再核对具体机场、车站和接驳时间。`,
     day: "第",
     days: "天",
     stopText: (city) => `以${city}为真实停留点，不只看代表景点，也为街区和本地生活保留时间。`,
@@ -100,6 +114,8 @@ const copy: Record<Lang, Copy> = {
     interestsTitle: "主要體驗",
     itineraryTitle: "建議路線節奏",
     itineraryIntro: "下面的停留天數是一版舒適的起點。確認日期後，再依照高鐵、航班和用車時間細化每天安排。",
+    logisticsTitle: "抵達與離開",
+    logisticsFallback: (first, last) => `經${first}進入，從${last}離開。確認日期後再核對具體機場、車站和接駁時間。`,
     day: "第",
     days: "天",
     stopText: (city) => `以${city}為真實停留點，不只看代表景點，也為街區和在地生活保留時間。`,
@@ -124,6 +140,8 @@ const copy: Record<Lang, Copy> = {
     interestsTitle: "Intereses principales",
     itineraryTitle: "Ritmo sugerido",
     itineraryIntro: "Estos rangos son un punto de partida cómodo. Trenes, vuelos y traslados se concretan al confirmar las fechas.",
+    logisticsTitle: "Llegada y salida",
+    logisticsFallback: (first, last) => `La ruta entra por ${first} y sale desde ${last}. Aeropuertos, estaciones y traslados se confirman al conocer las fechas.`,
     day: "Día",
     days: "Días",
     stopText: (city) => `Usa ${city} como base real, con tiempo para sus lugares esenciales y barrios cotidianos.`,
@@ -148,6 +166,8 @@ const copy: Record<Lang, Copy> = {
     interestsTitle: "Interesses principais",
     itineraryTitle: "Ritmo sugerido",
     itineraryIntro: "Estes períodos são um ponto de partida confortável. Trens, voos e traslados são definidos após confirmar as datas.",
+    logisticsTitle: "Chegada e saída",
+    logisticsFallback: (first, last) => `O roteiro entra por ${first} e termina em ${last}. Aeroportos, estações e traslados são confirmados após definir as datas.`,
     day: "Dia",
     days: "Dias",
     stopText: (city) => `Use ${city} como base real, com tempo para os pontos essenciais e os bairros do cotidiano.`,
@@ -172,6 +192,8 @@ const copy: Record<Lang, Copy> = {
     interestsTitle: "الاهتمامات الرئيسية",
     itineraryTitle: "إيقاع المسار المقترح",
     itineraryIntro: "فترات الإقامة أدناه نقطة بداية مريحة. نحدد القطارات والرحلات والقيادة بعد تأكيد التواريخ.",
+    logisticsTitle: "الوصول والمغادرة",
+    logisticsFallback: (first, last) => `يبدأ المسار عبر ${first} وينتهي في ${last}. نؤكد المطارات والمحطات ووقت النقل بعد تحديد التواريخ.`,
     day: "اليوم",
     days: "الأيام",
     stopText: (city) => `اجعل ${city} محطة إقامة حقيقية مع وقت لمعالمها الأساسية وأحيائها اليومية.`,
@@ -186,12 +208,102 @@ const copy: Record<Lang, Copy> = {
   }
 };
 
-function dayRanges(duration: number, stops: number) {
+const transferCopy: Record<Lang, { next: string; modes: Record<TransferMode, string> }> = {
+  en: {
+    next: "Continue to",
+    modes: {
+      rail: "High-speed rail",
+      privateCar: "Private car",
+      railOrCar: "Rail or private car",
+      boatOrCar: "Li River cruise or private car",
+      railAndCar: "High-speed rail and local car",
+      carAndRail: "Private car and high-speed rail",
+      flight: "Flight",
+      flightOrRail: "Flight or high-speed rail",
+      overnightRailOrFlight: "Overnight rail or flight"
+    }
+  },
+  "zh-CN": {
+    next: "下一站",
+    modes: {
+      rail: "高铁",
+      privateCar: "私人用车",
+      railOrCar: "城际铁路或私人用车",
+      boatOrCar: "漓江游船或私人用车",
+      railAndCar: "高铁衔接当地用车",
+      carAndRail: "私人用车衔接高铁",
+      flight: "航班",
+      flightOrRail: "航班或高铁",
+      overnightRailOrFlight: "夜间列车或航班"
+    }
+  },
+  "zh-TW": {
+    next: "下一站",
+    modes: {
+      rail: "高鐵",
+      privateCar: "私人用車",
+      railOrCar: "城際鐵路或私人用車",
+      boatOrCar: "灕江遊船或私人用車",
+      railAndCar: "高鐵銜接當地用車",
+      carAndRail: "私人用車銜接高鐵",
+      flight: "航班",
+      flightOrRail: "航班或高鐵",
+      overnightRailOrFlight: "夜間列車或航班"
+    }
+  },
+  es: {
+    next: "Siguiente parada",
+    modes: {
+      rail: "Tren de alta velocidad",
+      privateCar: "Coche privado",
+      railOrCar: "Tren o coche privado",
+      boatOrCar: "Crucero por el río Li o coche privado",
+      railAndCar: "Tren de alta velocidad y coche local",
+      carAndRail: "Coche privado y tren de alta velocidad",
+      flight: "Vuelo",
+      flightOrRail: "Vuelo o tren de alta velocidad",
+      overnightRailOrFlight: "Tren nocturno o vuelo"
+    }
+  },
+  pt: {
+    next: "Próxima parada",
+    modes: {
+      rail: "Trem de alta velocidade",
+      privateCar: "Carro privado",
+      railOrCar: "Trem ou carro privado",
+      boatOrCar: "Cruzeiro pelo rio Li ou carro privado",
+      railAndCar: "Trem de alta velocidade e carro local",
+      carAndRail: "Carro privado e trem de alta velocidade",
+      flight: "Voo",
+      flightOrRail: "Voo ou trem de alta velocidade",
+      overnightRailOrFlight: "Trem noturno ou voo"
+    }
+  },
+  ar: {
+    next: "المحطة التالية",
+    modes: {
+      rail: "قطار فائق السرعة",
+      privateCar: "سيارة خاصة",
+      railOrCar: "قطار أو سيارة خاصة",
+      boatOrCar: "رحلة نهر لي أو سيارة خاصة",
+      railAndCar: "قطار فائق السرعة ثم سيارة محلية",
+      carAndRail: "سيارة خاصة ثم قطار فائق السرعة",
+      flight: "رحلة جوية",
+      flightOrRail: "رحلة جوية أو قطار فائق السرعة",
+      overnightRailOrFlight: "قطار ليلي أو رحلة جوية"
+    }
+  }
+};
+
+function dayRanges(duration: number, stops: number, spans?: number[]) {
+  const validSpans = spans?.length === stops && spans.reduce((total, value) => total + value, 0) === duration
+    ? spans
+    : null;
   const base = Math.floor(duration / stops);
   const remainder = duration % stops;
   let cursor = 1;
   return Array.from({ length: stops }, (_, index) => {
-    const count = base + (index < remainder ? 1 : 0);
+    const count = validSpans?.[index] ?? base + (index < remainder ? 1 : 0);
     const start = cursor;
     const end = cursor + count - 1;
     cursor = end + 1;
@@ -208,7 +320,20 @@ export function RouteDetailClient({ routeId }: { routeId: string }) {
 
   const flow = getRouteFlow(route, lang);
   const title = getRouteName(route, lang, t.dayUnit);
-  const ranges = dayRanges(route.duration, route.stops.length);
+  const editorial = getRouteEditorial(route.id);
+  const ranges = dayRanges(route.duration, route.stops.length, editorial?.daySpans);
+  const transfers = getRouteTransfers(route.id);
+  const routeSummary = editorial && (lang === "en" || lang === "zh-CN" || lang === "zh-TW")
+    ? getEditorialText(editorial.summary, lang)
+    : t.routeSummary(flow, route.duration);
+  const whyBody = editorial && (lang === "en" || lang === "zh-CN" || lang === "zh-TW")
+    ? getEditorialText(editorial.why, lang)
+    : t.whyBody(route.stops.length);
+  const firstCity = getCityName(route.stops[0], lang);
+  const lastCity = getCityName(route.stops[route.stops.length - 1], lang);
+  const logisticsBody = lang === "en" || lang === "zh-CN" || lang === "zh-TW"
+    ? getRouteLogistics(route.id, lang) ?? t.logisticsFallback(firstCity, lastCity)
+    : t.logisticsFallback(firstCity, lastCity);
 
   return (
     <>
@@ -223,7 +348,7 @@ export function RouteDetailClient({ routeId }: { routeId: string }) {
               <div className="min-w-0">
                 <p className="safe-wrap text-xs font-semibold uppercase leading-5 tracking-[0.18em] text-gold">{t.eyebrow}</p>
                 <h1 className="safe-wrap mt-5 font-serif text-4xl font-semibold leading-[1.08] sm:text-6xl">{title}</h1>
-                <p className="safe-wrap mt-6 max-w-2xl text-lg leading-8 text-mist">{t.routeSummary(flow, route.duration)}</p>
+                <p className="safe-wrap mt-6 max-w-2xl text-lg leading-8 text-mist">{routeSummary}</p>
                 <p className="safe-wrap mt-5 border-s-2 border-gold ps-4 text-sm leading-6 text-moss">{t.flexible}</p>
               </div>
               <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-bone shadow-card">
@@ -255,6 +380,11 @@ export function RouteDetailClient({ routeId }: { routeId: string }) {
               {route.stops.map((city, index) => {
                 const cityName = getCityName(city, lang);
                 const range = ranges[index];
+                const cityDescription = lang === "en" || lang === "zh-CN" || lang === "zh-TW"
+                  ? getCityEditorial(city, lang)
+                  : null;
+                const transfer = transfers[index];
+                const nextCity = route.stops[index + 1];
                 const dayLabel = range.start === range.end
                   ? `${t.day} ${range.start}`
                   : `${t.days} ${range.start}–${range.end}`;
@@ -263,7 +393,12 @@ export function RouteDetailClient({ routeId }: { routeId: string }) {
                     <span className="text-sm font-semibold text-gold">{dayLabel}</span>
                     <div className="min-w-0">
                       <h3 className="safe-wrap font-serif text-2xl font-semibold">{cityName}</h3>
-                      <p className="safe-wrap mt-2 leading-7 text-mist">{t.stopText(cityName)}</p>
+                      <p className="safe-wrap mt-2 leading-7 text-mist">{cityDescription ?? t.stopText(cityName)}</p>
+                      {transfer && nextCity ? (
+                        <p className="safe-wrap mt-4 border-s-2 border-gold/60 ps-3 text-sm font-semibold leading-6 text-moss">
+                          {transferCopy[lang].next}: {getCityName(nextCity, lang)} · {transferCopy[lang].modes[transfer]}
+                        </p>
+                      ) : null}
                     </div>
                   </li>
                 );
@@ -272,11 +407,18 @@ export function RouteDetailClient({ routeId }: { routeId: string }) {
           </div>
         </section>
 
+        <section className="border-y hairline bg-white px-5 py-12 sm:px-8 lg:px-24">
+          <div className="mx-auto grid max-w-[1488px] gap-4 lg:grid-cols-[0.7fr_1.3fr] lg:gap-12">
+            <h2 className="safe-wrap font-serif text-3xl font-semibold sm:text-4xl">{t.logisticsTitle}</h2>
+            <p className="safe-wrap max-w-4xl leading-8 text-mist">{logisticsBody}</p>
+          </div>
+        </section>
+
         <section className="border-y hairline bg-bone px-5 py-14 sm:px-8 lg:px-24">
           <div className="mx-auto grid max-w-[1488px] gap-10 lg:grid-cols-2">
             <div>
               <h2 className="safe-wrap font-serif text-3xl font-semibold">{t.whyTitle}</h2>
-              <p className="safe-wrap mt-4 max-w-2xl leading-7 text-mist">{t.whyBody(route.stops.length)}</p>
+              <p className="safe-wrap mt-4 max-w-2xl leading-7 text-mist">{whyBody}</p>
             </div>
             <div>
               <h2 className="safe-wrap font-serif text-3xl font-semibold">{t.adjustTitle}</h2>
