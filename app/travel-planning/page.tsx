@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { Footer, Header } from "@/components/SiteChrome";
 import { useLanguage, type Lang } from "@/components/LanguageProvider";
+import { featuredPlans, getPlanText } from "@/lib/featured-travel-plans";
 import {
   cityNames,
   travelRoutes,
@@ -242,6 +243,85 @@ const pageCopy = {
   }
 } satisfies Record<Lang, Record<string, unknown>>;
 
+const featuredCopy: Record<Lang, {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  duration: string;
+  nights: string;
+  route: string;
+  idealFor: string;
+  view: string;
+  note: string;
+}> = {
+  en: {
+    eyebrow: "FEATURED CUSTOMISABLE PLANS",
+    title: "Two complete journeys, ready to become yours.",
+    intro: "These plans show the real daily rhythm, transport logic and service scope. Keep the structure, or rebuild it around your dates and interests.",
+    duration: "days",
+    nights: "nights",
+    route: "Route",
+    idealFor: "Best for",
+    view: "View the complete plan",
+    note: "Reference plans, not fixed group tours. The first customised proposal is free."
+  },
+  "zh-CN": {
+    eyebrow: "精选可定制方案",
+    title: "两套完整行程，先看清楚每天怎么走。",
+    intro: "方案展示真实的每日节奏、交通逻辑和服务范围。可以沿用完整框架，也可以根据日期、兴趣和体力重新设计。",
+    duration: "天",
+    nights: "晚",
+    route: "行程动线",
+    idealFor: "适合人群",
+    view: "查看完整方案",
+    note: "这是可调整的参考方案，不是固定旅行团；首次定制方案免费。"
+  },
+  "zh-TW": {
+    eyebrow: "精選可訂製方案",
+    title: "兩套完整行程，先看清楚每天怎麼走。",
+    intro: "方案展示真實的每日節奏、交通邏輯和服務範圍。可以沿用完整框架，也可以根據日期、興趣和體力重新設計。",
+    duration: "天",
+    nights: "晚",
+    route: "行程動線",
+    idealFor: "適合人群",
+    view: "查看完整方案",
+    note: "這是可調整的參考方案，不是固定旅行團；首次訂製方案免費。"
+  },
+  es: {
+    eyebrow: "PLANES DESTACADOS Y PERSONALIZABLES",
+    title: "Dos viajes completos listos para adaptarse a ti.",
+    intro: "Cada plan muestra el ritmo diario, la lógica de transporte y el alcance del servicio. Puedes conservar la estructura o rediseñarla según tus fechas e intereses.",
+    duration: "días",
+    nights: "noches",
+    route: "Ruta",
+    idealFor: "Ideal para",
+    view: "Ver el plan completo",
+    note: "Son planes de referencia, no circuitos cerrados. La primera propuesta personalizada es gratuita."
+  },
+  pt: {
+    eyebrow: "PLANOS PERSONALIZÁVEIS EM DESTAQUE",
+    title: "Duas viagens completas prontas para se adaptar a você.",
+    intro: "Cada plano mostra o ritmo diário, a lógica de transporte e o escopo do serviço. Mantenha a estrutura ou redesenhe conforme suas datas e interesses.",
+    duration: "dias",
+    nights: "noites",
+    route: "Roteiro",
+    idealFor: "Ideal para",
+    view: "Ver o plano completo",
+    note: "São planos de referência, não excursões fixas. A primeira proposta personalizada é gratuita."
+  },
+  ar: {
+    eyebrow: "خطط مختارة قابلة للتخصيص",
+    title: "رحلتان متكاملتان يمكن تكييفهما معك.",
+    intro: "توضح كل خطة إيقاع الأيام ومنطق التنقل ونطاق الخدمة. يمكنك الاحتفاظ بالهيكل أو إعادة تصميمه حسب مواعيدك واهتماماتك.",
+    duration: "أيام",
+    nights: "ليال",
+    route: "المسار",
+    idealFor: "مناسب لـ",
+    view: "عرض الخطة الكاملة",
+    note: "هذه خطط مرجعية وليست جولات جماعية ثابتة، والمقترح المخصص الأول مجاني."
+  }
+};
+
 const durations = [3, 5, 7, 10, 15, 21] as const;
 const regions: Region[] = ["north", "east", "south", "central", "southwest", "northwest", "northeast"];
 const interests: Interest[] = ["history", "food", "nature", "village", "craft", "city", "firstTrip"];
@@ -256,6 +336,7 @@ function getCityName(city: CityId, lang: Lang) {
 export default function TravelPlanningPage() {
   const { lang, dir } = useLanguage();
   const t = pageCopy[lang];
+  const featured = featuredCopy[lang];
   const [mode, setMode] = useState<FilterMode>("duration");
   const [duration, setDuration] = useState<(typeof durations)[number]>(7);
   const [region, setRegion] = useState<Region | "all">("all");
@@ -335,6 +416,55 @@ export default function TravelPlanningPage() {
               ))}
             </div>
             <p className="safe-wrap mt-7 text-center text-sm leading-6 text-mist">{t.processNote}</p>
+          </div>
+        </section>
+
+        <section className="bg-white px-5 py-16 sm:px-8 lg:px-24 lg:py-24">
+          <div className="mx-auto max-w-[1488px]">
+            <div className="max-w-4xl">
+              <p className="safe-wrap text-xs font-semibold uppercase leading-5 tracking-[0.18em] text-gold">{featured.eyebrow}</p>
+              <h2 className="safe-wrap mt-4 font-serif text-4xl font-semibold leading-tight sm:text-5xl">{featured.title}</h2>
+              <p className="safe-wrap mt-5 text-lg leading-8 text-mist">{featured.intro}</p>
+            </div>
+
+            <div className="mt-10 grid gap-6 lg:grid-cols-2">
+              {featuredPlans.map((plan) => (
+                <article key={plan.id} className="group min-w-0 overflow-hidden rounded-md border bg-cream shadow-card hairline">
+                  <Link href={`/travel-planning/${plan.id}`} className="block h-full text-start">
+                    <div className="relative aspect-[16/9] overflow-hidden bg-bone">
+                      <Image
+                        src={plan.heroImage}
+                        alt={getPlanText(plan.cardTitle, lang)}
+                        fill
+                        sizes="(min-width:1024px) 50vw, 100vw"
+                        className="object-cover transition duration-500 group-hover:scale-[1.025]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
+                      <p className="safe-wrap absolute bottom-4 start-4 rounded bg-cream px-3 py-2 text-xs font-semibold text-ink shadow-sm">
+                        {plan.duration} {featured.duration} · {plan.nights} {featured.nights}
+                      </p>
+                    </div>
+                    <div className="p-5 sm:p-7">
+                      <p className="safe-wrap text-xs font-semibold uppercase leading-5 tracking-[0.14em] text-gold">{getPlanText(plan.eyebrow, lang)}</p>
+                      <h3 className="safe-wrap mt-3 font-serif text-3xl font-semibold leading-tight sm:text-4xl">{getPlanText(plan.cardTitle, lang)}</h3>
+                      <p className="safe-wrap mt-4 leading-7 text-mist">{getPlanText(plan.summary, lang)}</p>
+                      <dl className="mt-6 grid gap-4 border-t hairline pt-5 sm:grid-cols-2">
+                        <div className="min-w-0">
+                          <dt className="text-xs font-semibold text-gold">{featured.route}</dt>
+                          <dd className="safe-wrap mt-2 text-sm leading-6 text-mist">{getPlanText(plan.route, lang)}</dd>
+                        </div>
+                        <div className="min-w-0">
+                          <dt className="text-xs font-semibold text-gold">{featured.idealFor}</dt>
+                          <dd className="safe-wrap mt-2 text-sm leading-6 text-mist">{getPlanText(plan.idealFor, lang)}</dd>
+                        </div>
+                      </dl>
+                      <span className="safe-wrap mt-6 inline-flex text-sm font-semibold text-moss">{featured.view}<span className="ms-2 shrink-0">→</span></span>
+                    </div>
+                  </Link>
+                </article>
+              ))}
+            </div>
+            <p className="safe-wrap mt-7 border-t hairline pt-5 text-sm leading-6 text-mist">{featured.note}</p>
           </div>
         </section>
 
