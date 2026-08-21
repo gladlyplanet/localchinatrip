@@ -36,12 +36,12 @@ export function Header() {
   const text = getSiteCopy(lang);
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b hairline bg-cream/95 backdrop-blur-xl" dir={dir}>
-      <nav className="mx-auto flex h-20 max-w-[1680px] items-center justify-between gap-3 px-4 sm:px-8 lg:px-24">
-        <Link href="/" className="min-w-0 shrink leading-none text-ink">
+      <nav className="mx-auto flex h-20 max-w-[1680px] items-center justify-between gap-3 px-4 sm:px-8 2xl:px-24">
+        <Link href="/" className="min-w-0 shrink-0 leading-none text-ink">
           <span className="script-title block whitespace-nowrap text-2xl font-semibold sm:text-3xl lg:text-4xl">Local China</span>
           <span className="safe-wrap mt-1 hidden max-w-48 text-[11px] leading-4 tracking-[0.08em] text-mist sm:block">{text.tagline}</span>
         </Link>
-        <div className="hidden items-center gap-7 text-[15px] font-medium text-ink xl:flex">
+        <div className="hidden items-center gap-5 text-sm font-medium text-ink xl:flex 2xl:gap-7 2xl:text-[15px]">
           {text.nav.map((label, index) => <Link key={navHrefs[index]} href={navHrefs[index]} className="whitespace-nowrap transition-colors hover:text-moss">{label}</Link>)}
         </div>
         <div className="flex shrink-0 items-center gap-2 sm:gap-4">
