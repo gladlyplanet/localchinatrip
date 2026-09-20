@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { Footer, Header } from "@/components/SiteChrome";
+import { StructuredData } from "@/components/StructuredData";
 import { useLanguage } from "@/components/LanguageProvider";
+import { breadcrumbSchema } from "@/lib/seo";
 import { getSiteCopy } from "@/lib/site-copy";
 
 export default function FaqPage() {
@@ -10,6 +12,18 @@ export default function FaqPage() {
   const t = getSiteCopy(lang).faq;
   return (
     <>
+      <StructuredData data={[
+        breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Travel FAQ", path: "/faq-for-foreign-travelers" }]),
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: t.items.map(([question, answer]) => ({
+            "@type": "Question",
+            name: question,
+            acceptedAnswer: { "@type": "Answer", text: answer },
+          })),
+        },
+      ]} />
       <Header />
       <main className="min-h-screen bg-ink px-5 pb-24 pt-44 text-bone sm:px-8 xl:pt-36" dir={dir}>
         <div className="mx-auto max-w-4xl">

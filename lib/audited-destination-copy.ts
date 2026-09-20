@@ -50,7 +50,7 @@ export function getAuditedDestinationMedia(
 
   const specificZh: Record<string, { overview: string; experience: string }> = {
     "布达拉宫": {
-      overview: "布达拉宫矗立在拉萨红山上，白宫与红宫层层叠起，把宫堡建筑、佛殿空间、旧拉萨政治记忆和高原城市天际线压在同一个视野里。页面应写出它的高差、体量、殿堂层次和拉萨老城之间的关系。",
+      overview: "布达拉宫矗立在拉萨红山上，白宫与红宫层层叠起，把宫堡建筑、佛殿空间、旧拉萨政治记忆和高原城市天际线压在同一个视野里。现场最值得留意的是它的高差、体量、殿堂层次和与拉萨老城之间的关系。",
       experience: "参观要提前确认预约时段，按高原体力慢慢上行。进入后应把楼梯动线、壁画、佛殿、宫殿功能和回望拉萨城的视角串起来，重点是进入空间后的层次和动线。"
     },
     "婺源村落": {
@@ -73,7 +73,7 @@ export function getAuditedDestinationMedia(
       experience: `A good visit should choose viewpoints and walking sections carefully, leaving enough time for scale, weather changes and quiet observation.`
     },
     food: {
-      overview: `${place} should be read through ${focus}: ingredients, vendors, kitchens, ordering habits and the way local people eat there.`,
+      overview: `${place} comes into focus through ${focus}: ingredients, vendors, kitchens, ordering habits and the way local people eat there.`,
       experience: `A good food walk should compare several real stops, explaining taste, preparation and neighborhood rhythm instead of reducing the place to one dish.`
     },
     village: {
@@ -81,15 +81,15 @@ export function getAuditedDestinationMedia(
       experience: `A good visit should slow down inside the settlement and explain how architecture, work, daily routines and local memory still fit together.`
     },
     craft: {
-      overview: `${place} should be understood through ${focus}. Materials, tools, makers, workshop space and process all need to appear so the craft has a real local setting.`,
+      overview: `${place} comes alive through ${focus}. Materials, tools, makers, workshop space and process give the craft a real local setting.`,
       experience: `A good visit should watch how the work is made and connect technique with local history, materials and the people who keep the craft alive.`
     },
     spiritual: {
-      overview: `${place} should be introduced through ${focus}, with attention to ritual routes, temple layout, etiquette, worship practice and the living use of the site.`,
+      overview: `${place} opens through ${focus}, with ritual routes, temple layout, etiquette, worship practice and the living use of the site.`,
       experience: `A good visit should keep a quiet pace, explain what visitors are seeing and leave room for respect rather than treating the site as a quick photo stop.`
     },
     city: {
-      overview: `${place} should be read through ${focus}. Streets, buildings, transport, shops and ordinary routines need to appear together so the place feels lived-in from ground level.`,
+      overview: `${place} comes into focus through ${focus}. Streets, buildings, transport, shops and ordinary routines make the place feel lived-in from ground level.`,
       experience: `A good city walk should compare blocks, storefronts and street details, then explain how local life works here today.`
     },
     road: {
@@ -97,7 +97,7 @@ export function getAuditedDestinationMedia(
       experience: `A good route should plan pauses, meals, transfers and viewpoints together, making the journey itself part of the story.`
     },
     market: {
-      overview: `${place} should be explained through ${focus}: stalls, goods, vendors, prices, shopping habits and neighborhood exchange.`,
+      overview: `${place} is best experienced through ${focus}: stalls, goods, vendors, prices, shopping habits and neighborhood exchange.`,
       experience: `A good market walk should slow down at specific stalls and explain what local people buy, when they come and how the market connects to daily cooking.`
     },
     tea: {

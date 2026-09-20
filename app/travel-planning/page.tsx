@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { Footer, Header } from "@/components/SiteChrome";
+import { StructuredData } from "@/components/StructuredData";
 import { useLanguage, type Lang } from "@/components/LanguageProvider";
 import { featuredPlans, getPlanText } from "@/lib/featured-travel-plans";
 import {
@@ -15,6 +16,7 @@ import {
   type TravelRoute
 } from "@/lib/travel-planning-routes";
 import { getEditorialText, getRouteEditorial } from "@/lib/travel-planning-editorial";
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo";
 
 type Localized = Record<Lang, string>;
 type FilterMode = "duration" | "region" | "interest";
@@ -391,6 +393,14 @@ export default function TravelPlanningPage() {
 
   return (
     <>
+      <StructuredData data={[
+        breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Travel Planning", path: "/travel-planning" }]),
+        serviceSchema({
+          name: "Custom China itinerary planning",
+          description: "Private China itinerary planning shaped around the traveler's dates, cities, interests and preferred pace.",
+          path: "/travel-planning",
+        }),
+      ]} />
       <Header />
       <main className="bg-cream pt-[124px] text-ink xl:pt-20" dir={dir}>
         <section className="relative min-h-[480px] overflow-hidden lg:min-h-[560px]">

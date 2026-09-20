@@ -3,8 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Footer, Header } from "@/components/SiteChrome";
+import { StructuredData } from "@/components/StructuredData";
 import { useLanguage, type Lang } from "@/components/LanguageProvider";
 import { WuhanNationwideMap } from "@/components/WuhanNationwideMap";
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo";
 import { getSiteCopy } from "@/lib/site-copy";
 
 const formCopy: Record<Lang, { name: string; email: string; notice: string }> = {
@@ -46,6 +48,14 @@ export default function PrivateCarPage() {
   const formText = formCopy[lang] ?? formCopy.en;
   return (
     <>
+      <StructuredData data={[
+        breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Private Car", path: "/private-car" }]),
+        serviceSchema({
+          name: "Private car travel in China",
+          description: "Flexible private car travel for countryside routes, regional journeys and destinations that are easier to reach with a local driver.",
+          path: "/private-car",
+        }),
+      ]} />
       <Header />
       <main className="bg-[#0d0f0c] pt-[124px] text-white xl:pt-20" dir={dir}>
         <section className="relative min-h-[620px] overflow-hidden lg:min-h-[720px]">

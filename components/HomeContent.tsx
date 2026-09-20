@@ -23,7 +23,8 @@ export function HomeContent() {
             <div className="min-w-0 max-w-3xl text-cream">
               <p className="safe-wrap text-xs font-semibold uppercase leading-5 tracking-[0.18em] text-gold">{t.eyebrow}</p>
               <h1 className="safe-wrap mt-5 font-serif text-4xl font-semibold leading-[1.08] sm:text-6xl lg:text-7xl xl:text-8xl">{t.title}</h1>
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-cream/85 sm:text-xl">{t.intro}</p>
+              <p className="mt-6 font-serif text-2xl text-gold sm:text-3xl">{t.brand}</p>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-cream/85 sm:text-xl">{t.intro}</p>
               <Link href="/experiences" className="mt-9 inline-flex min-h-12 items-center justify-center rounded-full bg-moss px-7 py-3 text-sm font-semibold text-cream transition hover:bg-cream hover:text-ink">{t.explore}</Link>
             </div>
           </div>

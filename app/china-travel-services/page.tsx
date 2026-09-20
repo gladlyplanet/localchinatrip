@@ -3,7 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Footer, Header } from "@/components/SiteChrome";
+import { StructuredData } from "@/components/StructuredData";
 import { useLanguage } from "@/components/LanguageProvider";
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo";
 import { getSiteCopy } from "@/lib/site-copy";
 
 const serviceImages = [
@@ -18,6 +20,14 @@ export default function ServicesPage() {
   const t = getSiteCopy(lang).services;
   return (
     <>
+      <StructuredData data={[
+        breadcrumbSchema([{ name: "Home", path: "/" }, { name: "China Travel Services", path: "/china-travel-services" }]),
+        serviceSchema({
+          name: "Private China travel planning",
+          description: "Private trip planning, local experiences, flexible transport and practical support for travel in China.",
+          path: "/china-travel-services",
+        }),
+      ]} />
       <Header />
       <main className="bg-ink pt-[124px] text-bone xl:pt-20" dir={dir}>
         <section className="relative min-h-[68vh] overflow-hidden">

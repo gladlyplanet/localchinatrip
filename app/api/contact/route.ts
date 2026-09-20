@@ -40,19 +40,29 @@ export async function POST(request: Request) {
 
   const name = value(formData, "name");
   const email = value(formData, "email");
+  const whatsappPhone = value(formData, "whatsapp_phone");
   const travelDates = value(formData, "travel_dates");
-  const numberOfPeople = value(formData, "number_of_people");
+  const numberOfTravelers = value(formData, "number_of_travelers") || value(formData, "number_of_people");
+  const places = value(formData, "places");
+  const experienceInterests = value(formData, "experience_interests");
+  const travelPace = value(formData, "travel_pace");
+  const budget = value(formData, "budget");
   const message = value(formData, "message");
   const formType = value(formData, "form_type") || "Travel enquiry";
   const isPrivateCarEnquiry = formType.toLowerCase().includes("private car");
 
-  if (!name || !email || !message) {
+  if (!name || !email) {
     return statusRedirect(request, "missing");
   }
 
   const extraRows = [
     row("Travel dates", travelDates),
-    row("Number of people", numberOfPeople),
+    row("WhatsApp / phone", whatsappPhone),
+    row("Number of travelers", numberOfTravelers),
+    row("Cities or places", places),
+    row("Experience interests", experienceInterests),
+    row("Preferred travel pace", travelPace),
+    row("Approximate budget per person", budget),
     row("Private car days", value(formData, "days")),
     row("Destination", value(formData, "destination")),
     row("Group size", value(formData, "group")),
@@ -99,8 +109,13 @@ export async function POST(request: Request) {
           `Form: ${formType}`,
           `Name: ${name}`,
           `Email: ${email}`,
+          whatsappPhone ? `WhatsApp / phone: ${whatsappPhone}` : "",
           travelDates ? `Travel dates: ${travelDates}` : "",
-          numberOfPeople ? `Number of people: ${numberOfPeople}` : "",
+          numberOfTravelers ? `Number of travelers: ${numberOfTravelers}` : "",
+          places ? `Cities or places: ${places}` : "",
+          experienceInterests ? `Experience interests: ${experienceInterests}` : "",
+          travelPace ? `Preferred travel pace: ${travelPace}` : "",
+          budget ? `Approximate budget per person: ${budget}` : "",
           value(formData, "days") ? `Private car days: ${value(formData, "days")}` : "",
           value(formData, "destination") ? `Destination: ${value(formData, "destination")}` : "",
           value(formData, "group") ? `Group size: ${value(formData, "group")}` : "",

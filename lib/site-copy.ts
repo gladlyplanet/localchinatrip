@@ -10,6 +10,7 @@ type SiteCopy = {
   home: {
     eyebrow: string;
     title: string;
+    brand: string;
     intro: string;
     explore: string;
     localLife: string;
@@ -115,8 +116,9 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     whatsapp: "WhatsApp",
     home: {
       eyebrow: "Private journeys through real China",
-      title: "Real China. Real moments.",
-      intro: "A local guide with 40 years in China, creating calm private journeys through food, villages, culture and everyday life.",
+      title: "Private China Tours & Custom Itineraries",
+      brand: "Real China. Real moments.",
+      intro: "Private journeys designed around your interests, with local experiences, custom itineraries and practical support throughout your trip in China.",
       explore: "Explore experiences",
       localLife: "Ways into local life",
       localLifeIntro: "Each choice opens a real destination and a story worth staying for.",
@@ -239,8 +241,9 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     whatsapp: "WhatsApp",
     home: {
       eyebrow: "走进真实中国的私人旅行",
-      title: "真实中国，真实时刻。",
-      intro: "一位在中国生活40年的本地向导，为外国旅行者设计从容、私密、深入日常生活的中国旅程。",
+      title: "中国私人旅行与定制行程",
+      brand: "真实中国，真实时刻。",
+      intro: "围绕你的兴趣设计私人旅程，结合本地体验、定制行程与贯穿中国旅行全程的实用支持。",
       explore: "探索体验",
       localLife: "走进本地生活",
       localLifeIntro: "每个选择都对应真实目的地，也通向一段值得停留的故事。",
@@ -363,8 +366,9 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     whatsapp: "WhatsApp",
     home: {
       eyebrow: "走進真實中國的私人旅行",
-      title: "真實中國，真實時刻。",
-      intro: "一位在中國生活40年的在地嚮導，為外國旅人設計從容、私密、深入日常生活的中國旅程。",
+      title: "中國私人旅行與訂製行程",
+      brand: "真實中國，真實時刻。",
+      intro: "圍繞你的興趣設計私人旅程，結合在地體驗、訂製行程與貫穿中國旅行全程的實用支援。",
       explore: "探索體驗",
       localLife: "走進在地生活",
       localLifeIntro: "每個選擇都對應真實目的地，也通向一段值得停留的故事。",
@@ -487,8 +491,9 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     whatsapp: "WhatsApp",
     home: {
       eyebrow: "Viajes privados por la China real",
-      title: "China real. Momentos reales.",
-      intro: "Un guía local con 40 años en China crea viajes privados y tranquilos por comida, aldeas, cultura y vida cotidiana.",
+      title: "Tours privados por China e itinerarios a medida",
+      brand: "China real. Momentos reales.",
+      intro: "Viajes privados diseñados según tus intereses, con experiencias locales, itinerarios a medida y apoyo práctico durante todo el recorrido por China.",
       explore: "Explorar experiencias",
       localLife: "Caminos hacia la vida local",
       localLifeIntro: "Cada elección abre un destino real y una historia que merece tiempo.",
@@ -611,8 +616,9 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     whatsapp: "WhatsApp",
     home: {
       eyebrow: "Viagens privadas pela China real",
-      title: "China real. Momentos reais.",
-      intro: "Um guia local com 40 anos na China cria viagens tranquilas e privadas por comida, vilas, cultura e vida cotidiana.",
+      title: "Tours privados na China e roteiros personalizados",
+      brand: "China real. Momentos reais.",
+      intro: "Viagens privadas criadas em torno dos seus interesses, com experiências locais, roteiros personalizados e apoio prático durante toda a viagem pela China.",
       explore: "Explorar experiências",
       localLife: "Caminhos para a vida local",
       localLifeIntro: "Cada escolha abre um destino real e uma história que merece tempo.",
@@ -735,8 +741,9 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     whatsapp: "واتساب",
     home: {
       eyebrow: "رحلات خاصة في الصين الحقيقية",
-      title: "الصين الحقيقية. لحظات حقيقية.",
-      intro: "دليل محلي عاش في الصين 40 عاما يصمم رحلات خاصة هادئة عبر الطعام والقرى والثقافة والحياة اليومية.",
+      title: "جولات خاصة في الصين ومسارات مصممة حسب الطلب",
+      brand: "الصين الحقيقية. لحظات حقيقية.",
+      intro: "رحلات خاصة مصممة حول اهتماماتك، مع تجارب محلية ومسارات مخصصة ودعم عملي طوال رحلتك في الصين.",
       explore: "استكشف التجارب",
       localLife: "طرق إلى الحياة المحلية",
       localLifeIntro: "كل اختيار يفتح وجهة حقيقية وقصة تستحق التمهل.",

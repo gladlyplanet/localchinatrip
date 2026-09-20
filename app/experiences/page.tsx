@@ -3,14 +3,24 @@
 import Image from "next/image";
 import { ExperienceCatalog } from "@/components/ExperienceCatalog";
 import { Footer, Header } from "@/components/SiteChrome";
+import { StructuredData } from "@/components/StructuredData";
 import { useLanguage } from "@/components/LanguageProvider";
 import { experienceUi } from "@/lib/experience-themes";
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo";
 
 export default function ExperiencesPage() {
   const { lang, dir } = useLanguage();
   const t = experienceUi[lang];
   return (
     <>
+      <StructuredData data={[
+        breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Experiences", path: "/experiences" }]),
+        serviceSchema({
+          name: "Private local experiences in China",
+          description: "Private local experiences built around food, markets, villages, living crafts, culture, wellness and an unhurried pace.",
+          path: "/experiences",
+        }),
+      ]} />
       <Header />
       <main className="bg-cream pt-[124px] text-ink xl:pt-20" dir={dir}>
         <section className="paper-texture overflow-hidden border-b hairline px-5 py-12 sm:px-8 sm:py-16 lg:py-20">

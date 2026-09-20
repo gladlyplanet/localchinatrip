@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { LanguageProvider, type Lang } from "@/components/LanguageProvider";
+import { StructuredData } from "@/components/StructuredData";
+import { createMetadata, organizationSchema, siteUrl, websiteSchema } from "@/lib/seo";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Private China Journeys | Bespoke Travel With a Local Insider",
-  description:
-    "High-end private travel in China for foreign travelers, guided by a local insider with 40 years of life in China."
+  metadataBase: new URL(siteUrl),
+  ...createMetadata({
+    title: "Private China Tours & Custom Itineraries | Local China Trip",
+    description: "Plan a private China journey around your interests, with custom itineraries, local experiences and practical support throughout the trip.",
+    path: "/",
+  }),
 };
 
 export default async function RootLayout({
@@ -23,6 +28,7 @@ export default async function RootLayout({
   return (
     <html lang={initialLang} dir={dir} suppressHydrationWarning>
       <body className="font-sans antialiased">
+        <StructuredData data={[websiteSchema, organizationSchema]} />
         <LanguageProvider initialLang={initialLang}>{children}</LanguageProvider>
       </body>
     </html>

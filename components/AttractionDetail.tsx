@@ -72,7 +72,7 @@ const text = {
     ar: "مناسب لـ"
   },
   keywords: {
-    en: "Keywords",
+    en: "Local focus",
     "zh-CN": "体验关键词",
     "zh-TW": "體驗關鍵詞",
     es: "Claves",
@@ -388,13 +388,13 @@ function destinationFocusMeta(attraction: ProvinceRecommendation, base: (typeof 
     season: destinationPhrase(base.season.en, specific.season, base.season.es, base.season.pt, base.season.ar),
     pace: destinationPhrase(base.pace.en, specific.pace, base.pace.es, base.pace.pt, base.pace.ar),
     people: destinationPhrase(base.people.en, specific.people, base.people.es, base.people.pt, base.people.ar),
-    keywords: destinationPhrase(focus, focusZh, `Claves: ${focus}`, `Palavras-chave: ${focus}`, `Keywords: ${focus}`),
+    keywords: destinationPhrase(focus, focusZh, `Focus: ${focus}`, `Foco: ${focus}`, `التركيز: ${focus}`),
     lead: destinationPhrase(
-      `${name} should be read through ${focus}, with the route shaped by real details, local rhythm and the setting on site.`,
+      `${name} brings ${focus} together with real details, local rhythm and the setting on site.`,
       specific.lead,
       `Usa ${focus} como hilo principal de ${name}, con detalles reales del lugar.`,
       `Use ${focus} como fio principal de ${name}, com detalhes reais do lugar.`,
-      `${name} should be read through ${focus}.`
+      `${name} is best experienced through ${focus} and the details visible on site.`
     )
   };
   return {
@@ -504,13 +504,13 @@ function auditedDestinationMeta(attraction: ProvinceRecommendation) {
     season: destinationPhrase("Choose the season and hour around the site itself.", item.season),
     pace: destinationPhrase("Keep the route paced around real stops and local rhythm.", item.pace),
     people: destinationPhrase("Travelers who want local detail rather than a quick photo stop.", item.people),
-    keywords: destinationPhrase(focus, focusZh, `Claves: ${focus}`, `Palavras-chave: ${focus}`, `Keywords: ${focus}`),
+    keywords: destinationPhrase(focus, focusZh, `Focus: ${focus}`, `Foco: ${focus}`, `التركيز: ${focus}`),
     lead: destinationPhrase(
-      `${name} should be read through ${focus}, with the route shaped by real details, local rhythm and the setting on site.`,
+      `${name} brings ${focus} together with real details, local rhythm and the setting on site.`,
       item.lead,
       `Usa ${focus} como hilo principal de ${name}, con detalles reales del lugar.`,
       `Use ${focus} como fio principal de ${name}, com detalhes reais do lugar.`,
-      `${name} should be read through ${focus}.`
+      `${name} is best experienced through ${focus} and the details visible on site.`
     ),
     advice: destinationAdvice(attraction),
     guide: destinationGuide(attraction)
@@ -655,7 +655,7 @@ function destinationHowToVisitLead(attraction: ProvinceRecommendation) {
   const focus = attraction.focus;
   const focusZh = attraction.focusZh || attraction.focus;
   return destinationPhrase(
-    `Guiding for ${name} should be arranged around ${focus}, on-site details and practical access.`,
+    `A visit to ${name} works best when it follows ${focus}, on-site details and practical access.`,
     `${nameZh}的导览应根据${focusZh}、现场细节和实际交通来安排。`
   );
 }
@@ -802,13 +802,13 @@ function reviewedDestinationMeta(attraction: ProvinceRecommendation, base: (type
     season: hasSpecificMeta ? base.season : destinationPhrase(base.season.en, tone.season, base.season.es, base.season.pt, base.season.ar),
     pace: hasSpecificMeta ? base.pace : destinationPhrase(base.pace.en, tone.pace, base.pace.es, base.pace.pt, base.pace.ar),
     people: hasSpecificMeta ? base.people : destinationPhrase(base.people.en, tone.people, base.people.es, base.people.pt, base.people.ar),
-    keywords: hasSpecificMeta ? base.keywords : destinationPhrase(focus, focusZh, `Claves: ${focus}`, `Palavras-chave: ${focus}`, `Keywords: ${focus}`),
+    keywords: hasSpecificMeta ? base.keywords : destinationPhrase(focus, focusZh, `Focus: ${focus}`, `Foco: ${focus}`, `التركيز: ${focus}`),
     lead: hasSpecificMeta ? base.lead : destinationPhrase(
-      `${name} should be interpreted through ${focus}, with visible site details, local use and route context explained together.`,
+      `${name} comes into focus through ${focus}, visible site details, local use and route context.`,
       tone.notesLead,
       `Usa ${focus} como hilo principal de ${name}, con detalles reales del lugar.`,
       `Use ${focus} como fio principal de ${name}, com detalhes reais do lugar.`,
-      `${name} should be interpreted through ${focus}.`
+      `${name} is best understood through ${focus} and the details visible on site.`
     ),
     advice: hasSpecificMeta ? base.advice : reviewedDestinationAdvice(attraction),
     guide: hasSpecificMeta ? base.guide : reviewedDestinationGuide(attraction)
@@ -888,7 +888,7 @@ function detailMeta(kind: RecommendationKind, en: string, zhCN: string, zhTW: st
     "2-4小时，适合步行与短暂停留": "Two to four hours, best as a walk with short stops.",
     "城市漫步、建筑与咖啡街区爱好者": "Urban walkers, architecture lovers and cafe-neighborhood travelers.",
     "梧桐树 · 里弄 · 老洋房 · 社区街巷": "Plane trees, lane houses, old villas, neighborhood streets",
-    "原法租界要看街道尺度、梧桐树荫、里弄和老洋房如何组成上海日常，而不是把它当成一张区域地图。": "The Former French Concession should be read through street scale, plane-tree shade, lanes and villas that form everyday Shanghai, not as a district map.",
+    "原法租界要看街道尺度、梧桐树荫、里弄和老洋房如何组成上海日常，而不是把它当成一张区域地图。": "The Former French Concession comes into focus through street scale, plane-tree shade, lanes and villas that form everyday Shanghai, not as a district map.",
     "春秋舒适，雨后和冬雪各有特色": "Spring and autumn are comfortable; after rain and winter snow each have character.",
     "一日到两日，需按索道、步道和天气安排": "One to two days, planned around cable cars, trails and weather.",
     "山水摄影、徒步与自然景观爱好者": "Landscape photographers, hikers and nature lovers.",
@@ -908,7 +908,7 @@ function detailMeta(kind: RecommendationKind, en: string, zhCN: string, zhTW: st
     "一日为宜，按索道与栈道体力安排": "One day works well, planned around cable cars, cliff paths and energy.",
     "山水摄影、徒步和自然景观爱好者": "Landscape photographers, hikers and nature lovers.",
     "三清山 · 奇峰 · 云雾 · 栈道": "Sanqing Mountain, peaks, mist, cliff paths",
-    "三清山要看奇峰、云雾、栈道和道教山水意象如何叠在一起，而不是用一张地图代替现场。": "Sanqing Mountain should be read through peaks, mist, paths and Daoist mountain imagery, not replaced by a map.",
+    "三清山要看奇峰、云雾、栈道和道教山水意象如何叠在一起，而不是用一张地图代替现场。": "Sanqing Mountain comes alive through peaks, mist, paths and Daoist mountain imagery, not a map standing in for the landscape.",
     "春秋舒适，雨雾天需预留弹性": "Spring and autumn are comfortable; keep flexibility for rain and mist.",
     "一日，按索道、排队和天气安排": "One day, planned around cable cars, queues and weather.",
     "山地摄影、自然和佛教文化爱好者": "Mountain photography, nature and Buddhist-culture lovers.",
@@ -1184,7 +1184,7 @@ const priorityDestinationMeta: typeof destinationMeta = {
       "Su Causeway, Bai Causeway, Broken Bridge, Three Pools, Leifeng"
     ),
     lead: phrase(
-      "West Lake should be read through causeways, islands, bridges, temples, gardens and poetic views.",
+      "West Lake comes into focus through causeways, islands, bridges, temples, gardens and poetic views.",
       "西湖要看堤、岛、桥、寺、园林和诗画视线。",
       "西湖要看堤、島、橋、寺、園林和詩畫視線。",
       "West Lake se lee por calzadas, islas, puentes, templos, jardines y vistas poeticas.",
@@ -1200,7 +1200,7 @@ const priorityDestinationMeta: typeof destinationMeta = {
     pace: phrase("Half day, leaving time for the tower, Guangyou Temple and White Pagoda Park.", "半日，留给白塔、广佑寺和白塔公园", "半日，留給白塔、廣佑寺和白塔公園", "Medio día para la pagoda, Guangyou y el parque.", "Meio dia para a pagode, Guangyou e o parque.", "賳氐賮 賷賵賲 賱賱亘乇噩 賵賲毓亘丿 睾賵丕賳睾賷賵 賵丕賱丨丿賷賯丞"),
     people: phrase("History, Buddhist architecture and old-city walkers.", "历史、佛教建筑和老城漫步爱好者", "歷史、佛教建築和老城漫步愛好者", "Amantes de historia, arquitectura budista y ciudad antigua.", "Quem gosta de história, arquitetura budista e cidade antiga.", "賲丨亘賵 丕賱鬲丕乇賷禺 賵丕賱毓賲丕乇丞 丕賱亘賵匕賷丞 賵丕賱賲丿賳 丕賱賯丿賷賲丞"),
     keywords: phrase("Guangyou Temple, Liao brick pagoda, dense eaves, old city axis", "广佑寺 · 辽代砖塔 · 密檐结构 · 老城中轴", "廣佑寺 · 遼代磚塔 · 密簷結構 · 老城中軸", "Guangyou, pagoda Liao, aleros densos, eje antiguo", "Guangyou, pagode Liao, beirais densos, eixo antigo", "睾賵丕賳睾賷賵貙 亘乇噩 胤賵亘 賱賷丕賵貙 兀賮丕乇賷夭 賰孬賷賮丞貙 賲丨賵乇 丕賱賲丿賷賳丞 丕賱賯丿賷賲丞"),
-    lead: phrase("Liaoyang White Pagoda should be read through Guangyou Temple, Liao-dynasty brickwork, tower proportions and old-city memory, not only as a generic pagoda.", "辽阳白塔要从广佑寺、辽代砖塔形制、塔身比例和老城记忆来理解，不只是普通佛塔照片。", "遼陽白塔要從廣佑寺、遼代磚塔形制、塔身比例和老城記憶來理解，不只是普通佛塔照片。", "La pagoda se entiende por Guangyou, ladrillo Liao y memoria urbana, no como una torre genérica.", "A pagode se entende por Guangyou, tijolo Liao e memória urbana, não como torre genérica.", "賷賮賴賲 亘乇噩 賱賷丕賵賷丕賳睾 毓亘乇 睾賵丕賳睾賷賵 賵胤賵亘 賱賷丕賵 賵匕丕賰乇丞 丕賱賲丿賷賳丞 賵賱賷爻 賰亘乇噩 毓丕賲"),
+    lead: phrase("Liaoyang White Pagoda is best understood through Guangyou Temple, Liao-dynasty brickwork, tower proportions and old-city memory, not only as a generic pagoda.", "辽阳白塔要从广佑寺、辽代砖塔形制、塔身比例和老城记忆来理解，不只是普通佛塔照片。", "遼陽白塔要從廣佑寺、遼代磚塔形制、塔身比例和老城記憶來理解，不只是普通佛塔照片。", "La pagoda se entiende por Guangyou, ladrillo Liao y memoria urbana, no como una torre genérica.", "A pagode se entende por Guangyou, tijolo Liao e memória urbana, não como torre genérica.", "賷賮賴賲 亘乇噩 賱賷丕賵賷丕賳睾 毓亘乇 睾賵丕賳睾賷賵 賵胤賵亘 賱賷丕賵 賵匕丕賰乇丞 丕賱賲丿賷賳丞 賵賱賷爻 賰亘乇噩 毓丕賲"),
     advice: sharedAdvice("spiritual"),
     guide: sharedGuide("spiritual")
   },
@@ -1210,7 +1210,7 @@ const priorityDestinationMeta: typeof destinationMeta = {
     pace: phrase("Two to three hours, with time for kiln space, making steps and craft explanation.", "2-3小时，留给窑址空间、制作工序和工艺讲解", "2-3小時，留給窯址空間、製作工序和工藝講解", "Dos a tres horas para horno, proceso y explicación.", "Duas a três horas para forno, processo e explicação.", "爻丕毓鬲丕賳 廿賱賶 孬賱丕孬 爻丕毓丕鬲 賱賲爻丕丨丞 丕賱賮乇賳 賵丕賱毓賲賱賷丞 賵丕賱卮乇丨"),
     people: phrase("Design, handcraft and Lingnan culture lovers.", "设计、手作和岭南文化爱好者", "設計、手作和嶺南文化愛好者", "Amantes de diseño, artesanía y cultura Lingnan.", "Amantes de design, artesanato e cultura Lingnan.", "賲丨亘賵 丕賱鬲氐賲賷賲 賵丕賱丨乇賮 丕賱賷丿賵賷丞 賵孬賯丕賮丞 賱賷賳睾賳丕賳"),
     keywords: phrase("Shiwan kiln, ceramic figures, clay, glaze, Foshan craft", "石湾窑 · 陶塑人物 · 泥料 · 釉色 · 佛山工艺", "石灣窯 · 陶塑人物 · 泥料 · 釉色 · 佛山工藝", "Horno Shiwan, figuras cerámicas, barro, esmalte, artesanía de Foshan", "Forno Shiwan, figuras cerâmicas, barro, esmalte, artesanato de Foshan", "賮乇賳 卮賷賵丕賳貙 卮禺氐賷丕鬲 禺夭賮賷丞貙 胤賷賳貙 鬲夭噩賷噩貙 丨乇賮 賮賵卮丕賳"),
-    lead: phrase("Shiwan ceramic culture should be read through kiln space, clay shaping and Lingnan folk aesthetics, not one isolated artifact.", "石湾陶艺要看窑址空间、泥塑造型和岭南民间审美，不是一件孤立陶塑。", "石灣陶藝要看窯址空間、泥塑造型和嶺南民間審美，不是一件孤立陶塑。", "Shiwan se entiende por hornos, modelado y estética Lingnan, no por una pieza aislada.", "Shiwan se entende por fornos, modelagem e estética Lingnan, não por uma peça isolada.", "賷賮賴賲 禺夭賮 卮賷賵丕賳 毓亘乇 丕賱賮乇賳 賵鬲卮賰賷賱 丕賱胤賷賳 賵噩賲丕賱賷丕鬲 賱賷賳睾賳丕賳貙 賱丕 賯胤毓丞 賲毓夭賵賱丞"),
+    lead: phrase("Shiwan ceramic culture comes alive through kiln space, clay shaping and Lingnan folk aesthetics, not one isolated artifact.", "石湾陶艺要看窑址空间、泥塑造型和岭南民间审美，不是一件孤立陶塑。", "石灣陶藝要看窯址空間、泥塑造型和嶺南民間審美，不是一件孤立陶塑。", "Shiwan se entiende por hornos, modelado y estética Lingnan, no por una pieza aislada.", "Shiwan se entende por fornos, modelagem e estética Lingnan, não por uma peça isolada.", "賷賮賴賲 禺夭賮 卮賷賵丕賳 毓亘乇 丕賱賮乇賳 賵鬲卮賰賷賱 丕賱胤賷賳 賵噩賲丕賱賷丕鬲 賱賷賳睾賳丕賳貙 賱丕 賯胤毓丞 賲毓夭賵賱丞"),
     advice: sharedAdvice("craft"),
     guide: sharedGuide("craft")
   },
@@ -1268,8 +1268,7 @@ export function AttractionDetail({ province, attraction }: { province: Province;
   const facts = [
     { icon: "leaf" as IconName, title: text.bestSeason, value: meta.season },
     { icon: "clock" as IconName, title: text.pace, value: meta.pace },
-    { icon: "people" as IconName, title: text.goodFor, value: meta.people },
-    { icon: "star" as IconName, title: text.keywords, value: meta.keywords }
+    { icon: "people" as IconName, title: text.goodFor, value: meta.people }
   ];
 
   return (
@@ -1295,7 +1294,7 @@ export function AttractionDetail({ province, attraction }: { province: Province;
               </div>
               <p className="mt-7 max-w-3xl text-xl leading-9 text-mist">{enrichment.overview}</p>
 
-              <div className="mt-9 grid overflow-hidden rounded-lg border hairline bg-white/82 shadow-card sm:grid-cols-2 xl:grid-cols-4">
+              <div className="mt-9 grid overflow-hidden rounded-lg border hairline bg-white/82 shadow-card sm:grid-cols-2 xl:grid-cols-3">
                 {facts.map((fact) => (
                   <div key={l(lang, fact.title)} className="min-h-[128px] border-b hairline p-5 sm:border-r xl:border-b-0">
                     <div className="flex items-center gap-3 text-moss">

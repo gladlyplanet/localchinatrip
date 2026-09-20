@@ -3,7 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Footer, Header } from "@/components/SiteChrome";
+import { StructuredData } from "@/components/StructuredData";
 import { useLanguage, type Lang } from "@/components/LanguageProvider";
+import { breadcrumbSchema } from "@/lib/seo";
 import { getSiteCopy } from "@/lib/site-copy";
 
 const localFriendCopy: Record<Lang, string[]> = {
@@ -69,6 +71,7 @@ export default function AboutPage() {
 
   return (
     <>
+      <StructuredData data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "About", path: "/about" }])} />
       <Header />
       <main className="bg-ink pt-[124px] text-bone xl:pt-20" dir={dir}>
         <section className="px-5 py-16 sm:px-8 lg:py-24">
