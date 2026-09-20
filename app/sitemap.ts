@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/destinations",
     "/experiences",
     "/faq-for-foreign-travelers",
+    "/guides/private-china-tour-cost",
     "/private-car",
     "/travel-planning",
   ];

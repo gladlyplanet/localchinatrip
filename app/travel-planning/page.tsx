@@ -39,6 +39,8 @@ const pageCopy = {
     intro: "Every route is a starting point. Time, interests and daily pace can all be adjusted around you.",
     process: ["Get in touch", "Free first plan", "Review together", "Confirm with deposit", "Begin the journey"],
     processNote: "The first route proposal is free. We move into execution only after you are happy with the plan.",
+    costGuidePrompt: "Wondering what a private China journey actually costs?",
+    costGuideLink: "Read the 2026 private tour cost guide",
     libraryEyebrow: "ROUTE INSPIRATION",
     libraryTitle: "China route inspiration library",
     libraryIntro: "The same number of days can reveal a completely different China.",
@@ -74,6 +76,8 @@ const pageCopy = {
     intro: "每条路线都是参考起点，可以根据时间、兴趣和每天的体力重新调整。",
     process: ["建立联系", "免费初步计划", "一起核对调整", "确认并支付定金", "开始执行"],
     processNote: "初步路线设计免费，确认满意后再进入执行阶段。",
+    costGuidePrompt: "想知道私人中国旅行实际需要多少预算？",
+    costGuideLink: "查看 2026 私人旅行费用指南",
     libraryEyebrow: "路线灵感",
     libraryTitle: "中国路线灵感库",
     libraryIntro: "同样的天数，也可以看到完全不同的中国。",
@@ -109,6 +113,8 @@ const pageCopy = {
     intro: "每條路線都是參考起點，可以依照時間、興趣和每天的體力重新調整。",
     process: ["建立聯絡", "免費初步計畫", "一起核對調整", "確認並支付訂金", "開始執行"],
     processNote: "初步路線設計免費，確認滿意後再進入執行階段。",
+    costGuidePrompt: "想知道私人中國旅行實際需要多少預算？",
+    costGuideLink: "查看 2026 私人旅行費用指南",
     libraryEyebrow: "路線靈感",
     libraryTitle: "中國路線靈感庫",
     libraryIntro: "同樣的天數，也可以看到完全不同的中國。",
@@ -144,6 +150,8 @@ const pageCopy = {
     intro: "Cada ruta es un punto de partida que puede adaptarse a tu tiempo, intereses y energía diaria.",
     process: ["Primer contacto", "Primer plan gratuito", "Revisión conjunta", "Confirmación y depósito", "Comienza el viaje"],
     processNote: "La primera propuesta es gratuita. Solo pasamos a la ejecución cuando el plan te convence.",
+    costGuidePrompt: "¿Quieres saber cuánto cuesta realmente un viaje privado por China?",
+    costGuideLink: "Lee la guía de costes de 2026",
     libraryEyebrow: "INSPIRACIÓN DE RUTAS",
     libraryTitle: "Biblioteca de rutas por China",
     libraryIntro: "El mismo número de días puede mostrarte una China completamente distinta.",
@@ -179,6 +187,8 @@ const pageCopy = {
     intro: "Cada roteiro é um ponto de partida que pode mudar conforme seu tempo, interesses e energia diária.",
     process: ["Primeiro contato", "Primeiro plano gratuito", "Revisão em conjunto", "Confirmação e sinal", "Começa a viagem"],
     processNote: "A primeira proposta é gratuita. Só seguimos para a execução quando você estiver satisfeito.",
+    costGuidePrompt: "Quer saber quanto custa realmente uma viagem privada pela China?",
+    costGuideLink: "Leia o guia de custos de 2026",
     libraryEyebrow: "INSPIRAÇÃO DE ROTEIROS",
     libraryTitle: "Biblioteca de roteiros pela China",
     libraryIntro: "O mesmo número de dias pode revelar uma China completamente diferente.",
@@ -214,6 +224,8 @@ const pageCopy = {
     intro: "كل مسار نقطة بداية قابلة للتعديل حسب وقتك واهتماماتك وطاقة كل يوم.",
     process: ["التواصل", "خطة أولية مجانية", "المراجعة معا", "التأكيد ودفع العربون", "بدء الرحلة"],
     processNote: "اقتراح المسار الأول مجاني، ولا ننتقل إلى التنفيذ إلا بعد رضاك عن الخطة.",
+    costGuidePrompt: "هل تتساءل عن التكلفة الفعلية لرحلة خاصة في الصين؟",
+    costGuideLink: "اقرأ دليل تكاليف الرحلات الخاصة لعام 2026",
     libraryEyebrow: "أفكار للمسارات",
     libraryTitle: "مكتبة مسارات السفر في الصين",
     libraryIntro: "يمكن لنفس عدد الأيام أن يكشف لك صينا مختلفة تماما.",
@@ -426,6 +438,12 @@ export default function TravelPlanningPage() {
               ))}
             </div>
             <p className="safe-wrap mt-7 text-center text-sm leading-6 text-mist">{t.processNote}</p>
+            <p className="safe-wrap mt-4 text-center text-sm leading-6 text-mist">
+              {t.costGuidePrompt}{" "}
+              <Link href="/guides/private-china-tour-cost" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">
+                {t.costGuideLink} <span aria-hidden="true">→</span>
+              </Link>
+            </p>
           </div>
         </section>
 
