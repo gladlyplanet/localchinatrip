@@ -12,9 +12,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "OAI-SearchBot",
         allow: "/",
+        disallow: ["/api/", "/thank-you"],
       },
     ],
     sitemap: absoluteUrl("/sitemap.xml"),
-    host: absoluteUrl("/"),
   };
 }

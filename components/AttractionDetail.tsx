@@ -857,7 +857,7 @@ function reviewedHowToVisitLead(attraction: ProvinceRecommendation) {
   const focus = attraction.focus;
   const tone = reviewedDestinationTone(attraction);
   return destinationPhrase(
-    `Guiding for ${name} should follow ${focus}, the route on site and practical access.`,
+    `A visit to ${name} follows ${focus}, the route on site and practical access.`,
     tone.guideLead
   );
 }

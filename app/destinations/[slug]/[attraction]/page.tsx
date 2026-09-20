@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!province || !attraction) return {};
   return createMetadata({
     title: `${attraction.name} Private Visit in ${province.name} | Local China Trip`,
-    description: `Explore ${attraction.name} with local context focused on ${attraction.focus}, planned as a flexible private experience in ${province.name}.`,
+    description: `Explore ${attraction.name} in ${province.name}, focused on ${attraction.focus}.`,
     path: `/destinations/${province.slug}/${itemSlug}`,
     image: destinationImages[`${province.name}::${attraction.name}`],
   });

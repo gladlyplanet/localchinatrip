@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const image = firstRecommendation ? destinationImages[`${province.name}::${firstRecommendation.name}`] : undefined;
   return createMetadata({
     title: `${province.name} Private Tours & Local Experiences | Local China Trip`,
-    description: `Explore ${province.name} through local experiences and custom pacing. ${province.intro} Build a private route around the places and pace that fit you.`,
+    description: `${province.intro} Plan a private ${province.name} route around your interests and pace.`,
     path: `/destinations/${province.slug}`,
     image,
   });

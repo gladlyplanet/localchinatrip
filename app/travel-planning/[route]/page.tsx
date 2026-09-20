@@ -30,9 +30,12 @@ export async function generateMetadata({ params }: { params: Promise<{ route: st
     const featuredTitle = featuredPlan.id === "china-culture-7"
       ? "7-Day Beijing, Suzhou & Shanghai Private China Tour"
       : "14-Day Sanya Wellness Stay";
+    const featuredDescription = featuredPlan.id === "sanya-wellness-14"
+      ? "A slow private Sanya stay with one seaside base, professional assessment, individually selected wellness sessions and genuine rest."
+      : getPlanText(featuredPlan.summary, "en");
     return createMetadata({
       title: `${featuredTitle} | Local China Trip`,
-      description: getPlanText(featuredPlan.summary, "en"),
+      description: featuredDescription,
       path: `/travel-planning/${featuredPlan.id}`,
       image: featuredPlan.heroImage,
     });
@@ -40,9 +43,12 @@ export async function generateMetadata({ params }: { params: Promise<{ route: st
   const route = travelRoutes.find((item) => item.id === routeId);
   if (!route) return {};
   const places = routePlaces(route);
+  const routeDescription = places.length <= 4
+    ? `Compare a ${route.duration}-day private China route through ${places.join(", ")}, with flexible pacing and room to adapt the itinerary around your interests.`
+    : `Compare a ${route.duration}-day private China route from ${places[0]} to ${places.at(-1)}, with selected stops, flexible pacing and room to adapt it around your interests.`;
   return createMetadata({
     title: routeTitle(route),
-    description: `Compare a ${route.duration}-day private China route through ${places.join(", ")}, with flexible pacing and room to adapt the itinerary around your interests.`,
+    description: routeDescription,
     path: `/travel-planning/${route.id}`,
     image: route.image,
   });
