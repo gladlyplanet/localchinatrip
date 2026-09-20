@@ -292,6 +292,7 @@ export default function PrivateChinaTourCostGuide() {
               <h2 id="local-view" className="safe-wrap mt-4 font-serif text-3xl font-semibold leading-tight sm:text-4xl">Private should not mean paying for a guide and car every hour</h2>
               <p className="safe-wrap mt-6 text-lg leading-8 text-mist">Sometimes the best itinerary mixes private support, independent time and local experiences. This is how I prefer to plan China journeys: spend money where local help genuinely improves the trip, and leave space where you do not need it.</p>
               <p className="safe-wrap mt-5 leading-7 text-mist">You can read more about the <Link href="/about" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">Local China planning approach</Link>, or review practical questions in the <Link href="/faq-for-foreign-travelers" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">FAQ for foreign travelers</Link>.</p>
+              <p className="safe-wrap mt-4 leading-7 text-mist">Wondering whether you need a guide every day? Read: <Link href="/guides/do-you-need-a-tour-guide-in-china" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">Do You Need a Tour Guide in China?</Link></p>
             </section>
 
             <section aria-labelledby="cost-faq" className="mt-20">
