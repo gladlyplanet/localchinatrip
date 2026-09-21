@@ -16,6 +16,8 @@ type UiCopy = {
   pace: string;
   overviewEyebrow: string;
   overviewTitle: string;
+  guidePrompt: string;
+  guideLink: string;
   timelineEyebrow: string;
   timelineTitle: string;
   day: string;
@@ -38,6 +40,7 @@ const ui: Record<Lang, UiCopy> = {
   en: {
     back: "All travel plans", duration: "Duration", nights: "nights", route: "Route structure", idealFor: "Designed for", season: "Best timing", pace: "Travel rhythm",
     overviewEyebrow: "HOW THIS PLAN WORKS", overviewTitle: "A complete starting point, still built around you",
+    guidePrompt: "Not sure whether three places fit comfortably into one week?", guideLink: "Read: 7 Days in China: What Can You Realistically See?",
     timelineEyebrow: "DAY-BY-DAY RHYTHM", timelineTitle: "The journey in a clear, workable sequence", day: "Day", days: "Days",
     choicesEyebrow: "YOUR CHOICES", choicesTitle: "Keep the structure, change the emphasis",
     galleryEyebrow: "REAL SETTINGS", galleryTitle: "The places and experiences behind the plan",
@@ -47,6 +50,7 @@ const ui: Record<Lang, UiCopy> = {
   "zh-CN": {
     back: "返回旅行计划", duration: "旅行天数", nights: "晚", route: "路线结构", idealFor: "适合人群", season: "推荐时间", pace: "旅行节奏",
     overviewEyebrow: "方案如何运作", overviewTitle: "内容已经完整，仍然围绕你重新调整",
+    guidePrompt: "不确定一周安排三个地方是否舒适？", guideLink: "阅读：7天在中国，实际能看多少？",
     timelineEyebrow: "每日节奏", timelineTitle: "按照真实交通与体验顺序展开",
     day: "第", days: "第",
     choicesEyebrow: "可以选择的分支", choicesTitle: "保留合理结构，改变体验重点",
@@ -57,6 +61,7 @@ const ui: Record<Lang, UiCopy> = {
   "zh-TW": {
     back: "返回旅行計畫", duration: "旅行天數", nights: "晚", route: "路線結構", idealFor: "適合人群", season: "推薦時間", pace: "旅行節奏",
     overviewEyebrow: "方案如何運作", overviewTitle: "內容已經完整，仍然圍繞你重新調整",
+    guidePrompt: "不確定一週安排三個地方是否舒適？", guideLink: "閱讀：7天在中國，實際能看多少？",
     timelineEyebrow: "每日節奏", timelineTitle: "按照真實交通與體驗順序展開", day: "第", days: "第",
     choicesEyebrow: "可以選擇的分支", choicesTitle: "保留合理結構，改變體驗重點",
     galleryEyebrow: "真實場景", galleryTitle: "方案背後的地點與體驗",
@@ -66,6 +71,7 @@ const ui: Record<Lang, UiCopy> = {
   es: {
     back: "Todos los planes", duration: "Duración", nights: "noches", route: "Estructura", idealFor: "Pensado para", season: "Mejor momento", pace: "Ritmo",
     overviewEyebrow: "CÓMO FUNCIONA", overviewTitle: "Un punto de partida completo que se adapta a ti",
+    guidePrompt: "¿No sabes si tres lugares caben cómodamente en una semana?", guideLink: "Lee: 7 días en China: ¿qué puedes ver de forma realista?",
     timelineEyebrow: "RITMO DÍA A DÍA", timelineTitle: "La ruta en una secuencia clara y realizable", day: "Día", days: "Días",
     choicesEyebrow: "TUS ELECCIONES", choicesTitle: "Mantén la estructura y cambia el enfoque",
     galleryEyebrow: "LUGARES REALES", galleryTitle: "Los lugares y experiencias del plan",
@@ -75,6 +81,7 @@ const ui: Record<Lang, UiCopy> = {
   pt: {
     back: "Todos os planos", duration: "Duração", nights: "noites", route: "Estrutura", idealFor: "Pensado para", season: "Melhor época", pace: "Ritmo",
     overviewEyebrow: "COMO FUNCIONA", overviewTitle: "Um ponto de partida completo que se adapta a você",
+    guidePrompt: "Não sabe se três lugares cabem confortavelmente em uma semana?", guideLink: "Leia: 7 dias na China: o que é possível conhecer?",
     timelineEyebrow: "RITMO DIA A DIA", timelineTitle: "O roteiro em uma sequência clara e possível", day: "Dia", days: "Dias",
     choicesEyebrow: "SUAS ESCOLHAS", choicesTitle: "Mantenha a estrutura e mude o foco",
     galleryEyebrow: "CENÁRIOS REAIS", galleryTitle: "Os lugares e experiências do plano",
@@ -84,6 +91,7 @@ const ui: Record<Lang, UiCopy> = {
   ar: {
     back: "كل خطط السفر", duration: "المدة", nights: "ليلة", route: "هيكل المسار", idealFor: "مناسب لـ", season: "الوقت الأفضل", pace: "إيقاع السفر",
     overviewEyebrow: "كيف تعمل الخطة", overviewTitle: "نقطة بداية متكاملة تبنى حولك",
+    guidePrompt: "لست متأكدًا من إمكانية زيارة ثلاثة أماكن براحة خلال أسبوع؟", guideLink: "اقرأ: 7 أيام في الصين، ما الذي يمكنك رؤيته بشكل واقعي؟",
     timelineEyebrow: "إيقاع الأيام", timelineTitle: "الرحلة في تسلسل واضح وقابل للتنفيذ", day: "اليوم", days: "الأيام",
     choicesEyebrow: "خياراتك", choicesTitle: "احتفظ بالهيكل وغيّر التركيز",
     galleryEyebrow: "أماكن حقيقية", galleryTitle: "الأماكن والتجارب خلف الخطة",
@@ -150,6 +158,11 @@ export function FeaturedPlanClient({ plan }: { plan: FeaturedPlan }) {
                 <p className="text-xs font-semibold uppercase text-mist">{t.idealFor}</p>
                 <p className="safe-wrap mt-2 leading-7 text-moss">{tx(plan.idealFor)}</p>
               </div>
+              {plan.id === "china-culture-7" ? (
+                <p className="safe-wrap mt-6 text-sm leading-6 text-mist">
+                  {t.guidePrompt}{" "}<Link href="/guides/7-days-in-china" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">{t.guideLink}</Link>
+                </p>
+              ) : null}
             </div>
           </div>
         </section>
