@@ -239,6 +239,7 @@ export default function TourGuideInChinaGuide() {
                 <div className="border-t border-gold/50 pt-5">
                   <h3 className="font-serif text-2xl font-semibold">6. Traveling with older parents</h3>
                   <p className="safe-wrap mt-3 leading-7 text-mist">Reducing unnecessary walking, choosing practical drop-off points, allowing lunch and rest time, and changing the plan when energy drops can matter more than fitting in another attraction.</p>
+                  <p className="safe-wrap mt-3 text-sm leading-6 text-mist">Planning China with older parents? Read the <Link href="/guides/china-with-older-parents" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">comfortable travel guide</Link>.</p>
                 </div>
                 <div className="border-t border-gold/50 pt-5">
                   <h3 className="font-serif text-2xl font-semibold">7. Countryside and remote areas</h3>

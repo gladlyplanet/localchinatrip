@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/experiences",
     "/faq-for-foreign-travelers",
     "/guides/7-days-in-china",
+    "/guides/china-with-older-parents",
     "/guides/do-you-need-a-tour-guide-in-china",
     "/guides/private-china-tour-cost",
     "/private-car",
