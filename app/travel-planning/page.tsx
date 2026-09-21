@@ -41,6 +41,8 @@ const pageCopy = {
     processNote: "The first route proposal is free. We move into execution only after you are happy with the plan.",
     costGuidePrompt: "Wondering what a private China journey actually costs?",
     costGuideLink: "Read the 2026 private tour cost guide",
+    tenDayGuidePrompt: "Planning around ten days for a first trip?",
+    tenDayGuideLink: "Compare three realistic 10-day China routes",
     libraryEyebrow: "ROUTE INSPIRATION",
     libraryTitle: "China route inspiration library",
     libraryIntro: "The same number of days can reveal a completely different China.",
@@ -78,6 +80,8 @@ const pageCopy = {
     processNote: "初步路线设计免费，确认满意后再进入执行阶段。",
     costGuidePrompt: "想知道私人中国旅行实际需要多少预算？",
     costGuideLink: "查看 2026 私人旅行费用指南",
+    tenDayGuidePrompt: "第一次来中国，计划安排十天左右？",
+    tenDayGuideLink: "比较三条现实可行的中国10天路线",
     libraryEyebrow: "路线灵感",
     libraryTitle: "中国路线灵感库",
     libraryIntro: "同样的天数，也可以看到完全不同的中国。",
@@ -115,6 +119,8 @@ const pageCopy = {
     processNote: "初步路線設計免費，確認滿意後再進入執行階段。",
     costGuidePrompt: "想知道私人中國旅行實際需要多少預算？",
     costGuideLink: "查看 2026 私人旅行費用指南",
+    tenDayGuidePrompt: "第一次來中國，計畫安排十天左右？",
+    tenDayGuideLink: "比較三條現實可行的中國10天路線",
     libraryEyebrow: "路線靈感",
     libraryTitle: "中國路線靈感庫",
     libraryIntro: "同樣的天數，也可以看到完全不同的中國。",
@@ -152,6 +158,8 @@ const pageCopy = {
     processNote: "La primera propuesta es gratuita. Solo pasamos a la ejecución cuando el plan te convence.",
     costGuidePrompt: "¿Quieres saber cuánto cuesta realmente un viaje privado por China?",
     costGuideLink: "Lee la guía de costes de 2026",
+    tenDayGuidePrompt: "¿Planeas unos diez días para tu primer viaje?",
+    tenDayGuideLink: "Compara tres rutas realistas de 10 días por China",
     libraryEyebrow: "INSPIRACIÓN DE RUTAS",
     libraryTitle: "Biblioteca de rutas por China",
     libraryIntro: "El mismo número de días puede mostrarte una China completamente distinta.",
@@ -189,6 +197,8 @@ const pageCopy = {
     processNote: "A primeira proposta é gratuita. Só seguimos para a execução quando você estiver satisfeito.",
     costGuidePrompt: "Quer saber quanto custa realmente uma viagem privada pela China?",
     costGuideLink: "Leia o guia de custos de 2026",
+    tenDayGuidePrompt: "Planeja cerca de dez dias para a primeira viagem?",
+    tenDayGuideLink: "Compare três roteiros realistas de 10 dias pela China",
     libraryEyebrow: "INSPIRAÇÃO DE ROTEIROS",
     libraryTitle: "Biblioteca de roteiros pela China",
     libraryIntro: "O mesmo número de dias pode revelar uma China completamente diferente.",
@@ -226,6 +236,8 @@ const pageCopy = {
     processNote: "اقتراح المسار الأول مجاني، ولا ننتقل إلى التنفيذ إلا بعد رضاك عن الخطة.",
     costGuidePrompt: "هل تتساءل عن التكلفة الفعلية لرحلة خاصة في الصين؟",
     costGuideLink: "اقرأ دليل تكاليف الرحلات الخاصة لعام 2026",
+    tenDayGuidePrompt: "هل تخطط لنحو عشرة أيام في زيارتك الأولى؟",
+    tenDayGuideLink: "قارن بين ثلاثة مسارات واقعية لعشرة أيام في الصين",
     libraryEyebrow: "أفكار للمسارات",
     libraryTitle: "مكتبة مسارات السفر في الصين",
     libraryIntro: "يمكن لنفس عدد الأيام أن يكشف لك صينا مختلفة تماما.",
@@ -502,6 +514,10 @@ export default function TravelPlanningPage() {
               <p className="safe-wrap text-xs font-semibold uppercase leading-5 tracking-[0.18em] text-gold">{t.libraryEyebrow}</p>
               <h2 className="safe-wrap mt-4 font-serif text-4xl font-semibold leading-tight sm:text-5xl">{t.libraryTitle}</h2>
               <p className="safe-wrap mt-5 text-lg leading-8 text-mist">{t.libraryIntro}</p>
+              <p className="safe-wrap mt-4 text-sm leading-6 text-mist">
+                {t.tenDayGuidePrompt}{" "}
+                <Link href="/guides/10-days-in-china" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">{t.tenDayGuideLink} <span aria-hidden="true">→</span></Link>
+              </p>
             </div>
 
             <div className="mt-10 grid gap-4 lg:grid-cols-[360px_1fr] lg:items-start">

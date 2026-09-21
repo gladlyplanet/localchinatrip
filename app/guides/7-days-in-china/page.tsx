@@ -305,6 +305,7 @@ export default function SevenDaysInChinaGuide() {
                   "Protect one flexible block that can absorb delay, tiredness or a changed priority",
                 ].map((item) => <li key={item} className="safe-wrap flex gap-3 leading-7 text-mist"><span className="text-gold" aria-hidden="true">✓</span><span>{item}</span></li>)}
               </ul>
+              <p className="safe-wrap mt-6 leading-7 text-mist">Have a little more time? Read the <Link href="/guides/10-days-in-china" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">10-day China route guide</Link>.</p>
             </section>
           </div>
 
