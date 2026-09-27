@@ -108,7 +108,7 @@ type SiteCopy = {
 
 export const siteCopy: Record<Lang, SiteCopy> = {
   en: {
-    nav: ["Experiences", "Private Car", "Travel Planning", "Destinations", "About Me", "Contact"],
+    nav: ["Experiences", "Private Car", "Travel Planning", "Destinations", "About Us", "Contact"],
     tagline: "Travel like a local",
     plan: "Plan My Journey",
     footer: "Local China. Real moments, thoughtful routes, private comfort.",
@@ -118,7 +118,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       eyebrow: "Private journeys through real China",
       title: "Private China Tours & Custom Itineraries",
       brand: "Real China. Real moments.",
-      intro: "Private journeys designed around your interests, with local experiences, custom itineraries and practical support throughout your trip in China.",
+      intro: "Private journeys designed with deep local knowledge — through food, culture, neighbourhoods and everyday life across China.",
       explore: "Explore experiences",
       localLife: "Ways into local life",
       localLifeIntro: "Each choice opens a real destination and a story worth staying for.",
@@ -157,15 +157,16 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       recommendationIntro: "Each recommendation pairs a real destination with an experience suited to its landscape, heritage and local life."
     },
     about: {
-      eyebrow: "About your guide",
-      title: "Forty years inside the rhythm of China.",
-      body1: "I am a local guide who has lived in China for 40 years. I help foreign guests move beyond the surface and understand the people, customs and daily life behind each place.",
-      body2: "The style is private, calm and personal: useful context, flexible pacing and practical support from arrival to departure.",
-      cta: "Start a conversation",
+      eyebrow: "About Local China Trip",
+      title: "See China Beyond the Surface.",
+      body1: "We create private journeys for travelers who want to understand China beyond the famous sights — through local life, food, neighbourhoods, culture and the everyday details that make each place different.",
+      body2: "Our trips are not built around rigid group-tour schedules. We shape each journey around the traveler: what you want to experience, how fast or slowly you want to move, and which parts of China feel most meaningful to you.",
+      cta: "Plan My China Trip",
       pillars: [
-        ["Local fluency", "Language, etiquette, history and the small human cues that make travel graceful."],
-        ["Private pacing", "Days shaped around your energy, the weather and genuine curiosity."],
-        ["Real access", "Neighborhoods, food, crafts, homes and cultural moments chosen for meaning."]
+        ["Local knowledge", "We understand how different regions of China live, eat, travel and communicate — not only what their famous sights are."],
+        ["Deeper experiences", "Markets, food, neighbourhoods, crafts, villages and cultural traditions that add context to the landmarks."],
+        ["Private pacing", "The journey adapts to your interests, energy and circumstances rather than forcing you into a fixed timetable."],
+        ["Practical support", "Transport, reservations, communication and day-to-day adjustments handled with local knowledge when you need it."]
       ]
     },
     services: {
@@ -233,7 +234,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     }
   },
   "zh-CN": {
-    nav: ["体验", "私人用车", "旅行计划", "目的地", "关于我", "联系"],
+    nav: ["体验", "私人用车", "旅行计划", "目的地", "关于我们", "联系"],
     tagline: "像本地人一样旅行",
     plan: "定制我的旅程",
     footer: "Local China。真实时刻，用心路线，舒适私享。",
@@ -243,7 +244,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       eyebrow: "走进真实中国的私人旅行",
       title: "中国私人旅行与定制行程",
       brand: "真实中国，真实时刻。",
-      intro: "围绕你的兴趣设计私人旅程，结合本地体验、定制行程与贯穿中国旅行全程的实用支持。",
+      intro: "以深入的本地经验设计私人旅程，走进中国各地的饮食、文化、社区与日常生活。",
       explore: "探索体验",
       localLife: "走进本地生活",
       localLifeIntro: "每个选择都对应真实目的地，也通向一段值得停留的故事。",
@@ -282,15 +283,16 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       recommendationIntro: "每个推荐都把真实地点与适合当地景观、文化遗产和生活方式的体验项目对应起来。"
     },
     about: {
-      eyebrow: "关于你的向导",
-      title: "在中国生活四十年，熟悉这里的真实节奏。",
-      body1: "我是一名在中国生活40年的本地向导，帮助外国客人越过表面观光，理解每个地方背后的人、习俗与日常生活。",
-      body2: "旅程私密、从容且个性化：需要时提供背景，想停留时放慢节奏，并从抵达到离开给予实际支持。",
-      cta: "开始沟通",
+      eyebrow: "关于 Local China Trip",
+      title: "看见表面之外的中国。",
+      body1: "我们为希望深入理解中国的旅行者设计私人旅程，不只看著名景点，也走进本地生活、饮食、社区、文化，以及让每个地方与众不同的日常细节。",
+      body2: "我们的行程不围绕固定的跟团时间表，而是根据旅行者想体验什么、希望走得快或慢，以及中国哪些部分对你最有意义来设计。",
+      cta: "定制我的中国之旅",
       pillars: [
-        ["熟悉本地", "语言、礼仪、历史与细微的人情方式，让旅行更自然。"],
-        ["私人节奏", "根据体力、天气、季节与兴趣安排每一天。"],
-        ["真实进入", "社区、饮食、手艺、家庭与有意义的文化时刻。"]
+        ["本地经验", "我们理解中国不同地区怎样生活、饮食、出行与交流，而不只知道著名景点。"],
+        ["深度体验", "用市场、饮食、社区、手艺、村落与文化传统，为地标补充真实背景。"],
+        ["私人节奏", "旅程顺应你的兴趣、体力与实际情况，而不是把你塞进固定时间表。"],
+        ["实用支持", "在需要时，以本地经验协助交通、预订、沟通与每天的灵活调整。"]
       ]
     },
     services: {
@@ -358,7 +360,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     }
   },
   "zh-TW": {
-    nav: ["體驗", "私人用車", "旅行計畫", "目的地", "關於我", "聯絡"],
+    nav: ["體驗", "私人用車", "旅行計畫", "目的地", "關於我們", "聯絡"],
     tagline: "像在地人一樣旅行",
     plan: "訂製我的旅程",
     footer: "Local China。真實時刻，用心路線，舒適私享。",
@@ -368,7 +370,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       eyebrow: "走進真實中國的私人旅行",
       title: "中國私人旅行與訂製行程",
       brand: "真實中國，真實時刻。",
-      intro: "圍繞你的興趣設計私人旅程，結合在地體驗、訂製行程與貫穿中國旅行全程的實用支援。",
+      intro: "以深入的在地經驗設計私人旅程，走進中國各地的飲食、文化、社區與日常生活。",
       explore: "探索體驗",
       localLife: "走進在地生活",
       localLifeIntro: "每個選擇都對應真實目的地，也通向一段值得停留的故事。",
@@ -407,15 +409,16 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       recommendationIntro: "每個推薦都把真實地點與適合當地景觀、文化遺產和生活方式的體驗項目對應起來。"
     },
     about: {
-      eyebrow: "關於你的嚮導",
-      title: "在中國生活四十年，熟悉這裡的真實節奏。",
-      body1: "我是一名在中國生活40年的在地嚮導，幫助外國客人越過表面觀光，理解每個地方背後的人、習俗與日常生活。",
-      body2: "旅程私密、從容且個性化：需要時提供背景，想停留時放慢節奏，並從抵達到離開給予實際支援。",
-      cta: "開始溝通",
+      eyebrow: "關於 Local China Trip",
+      title: "看見表面之外的中國。",
+      body1: "我們為希望深入理解中國的旅客設計私人旅程，不只看著名景點，也走進在地生活、飲食、社區、文化，以及讓每個地方與眾不同的日常細節。",
+      body2: "我們的行程不圍繞固定的跟團時間表，而是根據旅客想體驗什麼、希望走得快或慢，以及中國哪些部分對你最有意義來設計。",
+      cta: "訂製我的中國之旅",
       pillars: [
-        ["熟悉在地", "語言、禮儀、歷史與細微的人情方式，讓旅行更自然。"],
-        ["私人節奏", "根據體力、天氣、季節與興趣安排每一天。"],
-        ["真實進入", "社區、飲食、手藝、家庭與有意義的文化時刻。"]
+        ["在地經驗", "我們理解中國不同地區怎樣生活、飲食、出行與交流，而不只知道著名景點。"],
+        ["深度體驗", "用市場、飲食、社區、手藝、村落與文化傳統，為地標補充真實背景。"],
+        ["私人節奏", "旅程順應你的興趣、體力與實際情況，而不是把你放進固定時間表。"],
+        ["實用支援", "在需要時，以在地經驗協助交通、預訂、溝通與每天的彈性調整。"]
       ]
     },
     services: {
@@ -483,7 +486,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     }
   },
   es: {
-    nav: ["Experiencias", "Coche privado", "Plan de viaje", "Destinos", "Sobre mí", "Contacto"],
+    nav: ["Experiencias", "Coche privado", "Plan de viaje", "Destinos", "Sobre nosotros", "Contacto"],
     tagline: "Viaja como una persona local",
     plan: "Diseñar mi viaje",
     footer: "Local China. Momentos reales, rutas cuidadas y comodidad privada.",
@@ -493,7 +496,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       eyebrow: "Viajes privados por la China real",
       title: "Tours privados por China e itinerarios a medida",
       brand: "China real. Momentos reales.",
-      intro: "Viajes privados diseñados según tus intereses, con experiencias locales, itinerarios a medida y apoyo práctico durante todo el recorrido por China.",
+      intro: "Viajes privados diseñados con profundo conocimiento local, a través de la comida, la cultura, los barrios y la vida cotidiana de China.",
       explore: "Explorar experiencias",
       localLife: "Caminos hacia la vida local",
       localLifeIntro: "Cada elección abre un destino real y una historia que merece tiempo.",
@@ -532,15 +535,16 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       recommendationIntro: "Cada recomendación combina un destino real con una experiencia adecuada para su paisaje, patrimonio y vida local."
     },
     about: {
-      eyebrow: "Sobre tu guía",
-      title: "Cuarenta años dentro del ritmo de China.",
-      body1: "Soy un guía local que ha vivido 40 años en China y ayudo a comprender las personas, costumbres y vida cotidiana detrás de cada lugar.",
-      body2: "El estilo es privado, tranquilo y personal: contexto útil, ritmo flexible y apoyo práctico de llegada a salida.",
-      cta: "Iniciar una conversación",
+      eyebrow: "Sobre Local China Trip",
+      title: "Descubre China más allá de la superficie.",
+      body1: "Creamos viajes privados para quienes desean comprender China más allá de sus lugares famosos, a través de la vida local, la comida, los barrios, la cultura y los detalles cotidianos que distinguen cada lugar.",
+      body2: "Nuestros viajes no siguen horarios rígidos de grupo. Cada recorrido se adapta a lo que quieres vivir, al ritmo que prefieres y a las partes de China que tienen más significado para ti.",
+      cta: "Planificar mi viaje a China",
       pillars: [
-        ["Fluidez local", "Idioma, etiqueta, historia y pequeños códigos humanos."],
-        ["Ritmo privado", "Días adaptados a tu energía, clima e intereses."],
-        ["Acceso real", "Barrios, comida, artesanía, hogares y cultura con sentido."]
+        ["Conocimiento local", "Entendemos cómo viven, comen, viajan y se comunican las distintas regiones de China, no solo cuáles son sus lugares famosos."],
+        ["Experiencias profundas", "Mercados, comida, barrios, artesanía, pueblos y tradiciones que dan contexto a los monumentos."],
+        ["Ritmo privado", "El viaje se adapta a tus intereses, energía y circunstancias, sin imponerte un horario fijo."],
+        ["Apoyo práctico", "Transporte, reservas, comunicación y ajustes diarios resueltos con conocimiento local cuando lo necesites."]
       ]
     },
     services: {
@@ -608,7 +612,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     }
   },
   pt: {
-    nav: ["Experiências", "Carro privado", "Planejamento", "Destinos", "Sobre mim", "Contato"],
+    nav: ["Experiências", "Carro privado", "Planejamento", "Destinos", "Sobre nós", "Contato"],
     tagline: "Viaje como uma pessoa local",
     plan: "Criar minha viagem",
     footer: "Local China. Momentos reais, rotas cuidadosas e conforto privado.",
@@ -618,7 +622,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       eyebrow: "Viagens privadas pela China real",
       title: "Tours privados na China e roteiros personalizados",
       brand: "China real. Momentos reais.",
-      intro: "Viagens privadas criadas em torno dos seus interesses, com experiências locais, roteiros personalizados e apoio prático durante toda a viagem pela China.",
+      intro: "Viagens privadas criadas com profundo conhecimento local, por meio da comida, cultura, bairros e vida cotidiana da China.",
       explore: "Explorar experiências",
       localLife: "Caminhos para a vida local",
       localLifeIntro: "Cada escolha abre um destino real e uma história que merece tempo.",
@@ -657,15 +661,16 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       recommendationIntro: "Cada recomendação combina um destino real com uma experiência adequada à paisagem, ao patrimônio e à vida local."
     },
     about: {
-      eyebrow: "Sobre seu guia",
-      title: "Quarenta anos dentro do ritmo da China.",
-      body1: "Sou um guia local que vive na China há 40 anos e ajudo visitantes a compreender pessoas, costumes e vida cotidiana por trás de cada lugar.",
-      body2: "O estilo é privado, tranquilo e pessoal: contexto útil, ritmo flexível e apoio prático da chegada à partida.",
-      cta: "Iniciar uma conversa",
+      eyebrow: "Sobre a Local China Trip",
+      title: "Veja a China além da superfície.",
+      body1: "Criamos viagens privadas para quem deseja entender a China além dos pontos famosos, por meio da vida local, comida, bairros, cultura e detalhes cotidianos que tornam cada lugar diferente.",
+      body2: "Nossas viagens não seguem horários rígidos de grupo. Cada percurso é moldado pelo que você quer viver, pelo ritmo que prefere e pelas partes da China que têm mais significado para você.",
+      cta: "Planejar minha viagem à China",
       pillars: [
-        ["Fluência local", "Idioma, etiqueta, história e pequenos códigos humanos."],
-        ["Ritmo privado", "Dias adaptados à energia, clima e interesses."],
-        ["Acesso real", "Bairros, comida, artesanato, casas e cultura com significado."]
+        ["Conhecimento local", "Entendemos como diferentes regiões da China vivem, comem, viajam e se comunicam, não apenas quais são seus pontos famosos."],
+        ["Experiências profundas", "Mercados, comida, bairros, artesanato, vilarejos e tradições que dão contexto aos monumentos."],
+        ["Ritmo privado", "A viagem se adapta aos seus interesses, energia e circunstâncias, sem impor um horário fixo."],
+        ["Apoio prático", "Transporte, reservas, comunicação e ajustes diários resolvidos com conhecimento local quando necessário."]
       ]
     },
     services: {
@@ -733,7 +738,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     }
   },
   ar: {
-    nav: ["التجارب", "سيارة خاصة", "خطة الرحلة", "الوجهات", "عنّي", "اتصل بنا"],
+    nav: ["التجارب", "سيارة خاصة", "خطة الرحلة", "الوجهات", "من نحن", "اتصل بنا"],
     tagline: "سافر مثل السكان المحليين",
     plan: "خطط رحلتي",
     footer: "Local China. لحظات حقيقية، مسارات مدروسة وراحة خاصة.",
@@ -743,7 +748,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       eyebrow: "رحلات خاصة في الصين الحقيقية",
       title: "جولات خاصة في الصين ومسارات مصممة حسب الطلب",
       brand: "الصين الحقيقية. لحظات حقيقية.",
-      intro: "رحلات خاصة مصممة حول اهتماماتك، مع تجارب محلية ومسارات مخصصة ودعم عملي طوال رحلتك في الصين.",
+      intro: "رحلات خاصة مصممة بمعرفة محلية عميقة، عبر الطعام والثقافة والأحياء والحياة اليومية في أنحاء الصين.",
       explore: "استكشف التجارب",
       localLife: "طرق إلى الحياة المحلية",
       localLifeIntro: "كل اختيار يفتح وجهة حقيقية وقصة تستحق التمهل.",
@@ -782,15 +787,16 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       recommendationIntro: "كل توصية تجمع بين وجهة حقيقية وتجربة مناسبة لطبيعتها وتراثها وحياتها المحلية."
     },
     about: {
-      eyebrow: "عن دليلك",
-      title: "أربعون عاما داخل إيقاع الصين.",
-      body1: "أنا دليل محلي عشت في الصين 40 عاما وأساعد الضيوف على فهم الناس والعادات والحياة اليومية خلف كل مكان.",
-      body2: "الأسلوب خاص وهادئ وشخصي: سياق مفيد، إيقاع مرن ودعم عملي من الوصول حتى المغادرة.",
-      cta: "ابدأ المحادثة",
+      eyebrow: "عن Local China Trip",
+      title: "شاهد الصين أبعد من ظاهرها.",
+      body1: "نصمم رحلات خاصة للمسافرين الذين يريدون فهم الصين أبعد من معالمها الشهيرة، من خلال الحياة المحلية والطعام والأحياء والثقافة والتفاصيل اليومية التي تميز كل مكان.",
+      body2: "لا تقوم رحلاتنا على جداول جماعية جامدة. نصمم كل رحلة حول ما تريد تجربته، والسرعة التي تناسبك، والأجزاء الأكثر معنى لك في الصين.",
+      cta: "خطط لرحلتي إلى الصين",
       pillars: [
-        ["معرفة محلية", "اللغة والعادات والتاريخ والتفاصيل الإنسانية الصغيرة."],
-        ["إيقاع خاص", "أيام تناسب الطاقة والطقس والاهتمامات."],
-        ["وصول حقيقي", "أحياء وطعام وحرف وبيوت وثقافة ذات معنى."]
+        ["معرفة محلية", "نفهم كيف تعيش مناطق الصين المختلفة وتأكل وتسافر وتتواصل، وليس فقط ما هي معالمها الشهيرة."],
+        ["تجارب أعمق", "أسواق وطعام وأحياء وحرف وقرى وتقاليد تمنح المعالم سياقها الحقيقي."],
+        ["إيقاع خاص", "تتكيف الرحلة مع اهتماماتك وطاقتك وظروفك بدلا من فرض جدول ثابت."],
+        ["دعم عملي", "نساعد في النقل والحجوزات والتواصل والتعديلات اليومية بمعرفة محلية عند الحاجة."]
       ]
     },
     services: {
