@@ -159,8 +159,8 @@ export const siteCopy: Record<Lang, SiteCopy> = {
     about: {
       eyebrow: "About Local China Trip",
       title: "See China Beyond the Surface.",
-      body1: "We create private journeys for travelers who want to understand China beyond the famous sights — through local life, food, neighbourhoods, culture and the everyday details that make each place different.",
-      body2: "Our trips are not built around rigid group-tour schedules. We shape each journey around the traveler: what you want to experience, how fast or slowly you want to move, and which parts of China feel most meaningful to you.",
+      body1: "We are a travel team based in China, creating private, flexible and personal journeys for international travelers.",
+      body2: "We believe China is not only the Forbidden City, the Great Wall, the Bund and its best-known sights. It also lives in morning markets, neighbourhood teahouses, community parks, small restaurants, craft studios and the rhythms of everyday life. These places may not appear on the first page of a guidebook, but they are often what people remember most.",
       cta: "Plan My China Trip",
       pillars: [
         ["Local knowledge", "We understand how different regions of China live, eat, travel and communicate — not only what their famous sights are."],
