@@ -166,8 +166,8 @@ const aboutPhotos = [
     objectPosition: "50% 38%"
   },
   {
-    src: "/images/about/local-restaurant-selfie.jpg",
-    alt: "Guests sharing a relaxed meal at a local restaurant in China",
+    src: "/images/about/indoor-five-person-visit.jpg",
+    alt: "International guests and local hosts during a visit in China",
     objectPosition: "50% 50%"
   },
   {
