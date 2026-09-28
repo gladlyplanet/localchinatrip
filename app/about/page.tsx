@@ -155,14 +155,46 @@ const aboutDetails: Record<Lang, AboutDetails> = {
 };
 
 const aboutPhotos = [
-  { src: "/images/about/great-wall-guests.jpg", alt: "A guest meeting a local host on the Great Wall of China" },
-  { src: "/images/about-me-dinner-table.jpg", alt: "Guests and a local host sharing dinner around a round table in China" },
-  { src: "/images/about/local-restaurant-selfie.jpg", alt: "Guests sharing a relaxed meal at a local restaurant in China" },
-  { src: "/images/about-me-beach-group.jpg", alt: "Guests and a local host enjoying an unhurried day by the coast in China" },
-  { src: "/images/about/restaurant-group.png", alt: "An international guest and local hosts after a meal in China" },
-  { src: "/images/about-me-boat-seafood.jpg", alt: "A family and local host discovering seafood by boat in China" },
-  { src: "/images/about/international-reception.jpg", alt: "International visitors and local hosts at a formal reception in China" },
-  { src: "/images/about-me-restaurant-selfie.jpg", alt: "A guest and local host sharing an everyday restaurant moment in China" }
+  {
+    src: "/images/about-me-dinner-table.jpg",
+    alt: "Guests and a local host sharing dinner around a round table in China",
+    objectPosition: "42% 48%"
+  },
+  {
+    src: "/images/about/great-wall-guests.jpg",
+    alt: "A guest meeting a local host on the Great Wall of China",
+    objectPosition: "50% 38%"
+  },
+  {
+    src: "/images/about/local-restaurant-selfie.jpg",
+    alt: "Guests sharing a relaxed meal at a local restaurant in China",
+    objectPosition: "50% 50%"
+  },
+  {
+    src: "/images/about-me-beach-group.jpg",
+    alt: "Guests and a local host enjoying an unhurried day by the coast in China",
+    objectPosition: "50% 42%"
+  },
+  {
+    src: "/images/about-me-boat-seafood.jpg",
+    alt: "A family and local host discovering seafood by boat in China",
+    objectPosition: "50% 38%"
+  },
+  {
+    src: "/images/about/restaurant-group.png",
+    alt: "An international guest and local hosts after a meal in China",
+    objectPosition: "50% 45%"
+  },
+  {
+    src: "/images/about/international-reception.jpg",
+    alt: "International visitors and local hosts at a formal reception in China",
+    objectPosition: "50% 52%"
+  },
+  {
+    src: "/images/about-me-restaurant-selfie.jpg",
+    alt: "A guest and local host sharing an everyday restaurant moment in China",
+    objectPosition: "50% 45%"
+  }
 ];
 
 export default function AboutPage() {
@@ -175,149 +207,54 @@ export default function AboutPage() {
       <StructuredData data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "About", path: "/about" }])} />
       <Header />
       <main className="bg-ink pt-[124px] text-bone xl:pt-20" dir={dir}>
-        <section className="px-5 py-16 sm:px-8 lg:py-24">
-          <div className="mx-auto max-w-5xl">
-            <p className="text-xs uppercase tracking-[0.24em] text-gold">{t.eyebrow}</p>
-            <h1 className="safe-wrap mt-5 font-serif text-5xl leading-tight sm:text-7xl">{t.title}</h1>
-            <div className="mt-8 max-w-4xl space-y-5">
-              <p className="text-xl leading-9 text-bone sm:text-2xl">{t.body1}</p>
-              <p className="text-lg leading-8 text-bone/70">{t.body2}</p>
-            </div>
-          </div>
-        </section>
+        <section className="px-5 pb-10 pt-16 sm:px-8 lg:pb-12 lg:pt-20">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-stretch lg:gap-10 xl:gap-12">
+            <article className="min-w-0">
+                <p className="text-xs uppercase tracking-[0.24em] text-gold">{t.eyebrow}</p>
+                <h1 className="safe-wrap mt-5 font-serif text-5xl leading-tight sm:text-7xl">{t.title}</h1>
 
-        <section className="border-y hairline bg-charcoal px-5 py-16 sm:px-8 lg:py-20">
-          <div className="mx-auto max-w-7xl">
-            <h2 className="font-serif text-3xl sm:text-4xl">{details.photosTitle}</h2>
-            <div className="mt-7 grid gap-5 md:grid-cols-[1.12fr_0.88fr] md:items-start">
-              <figure className="min-w-0 overflow-hidden rounded-lg border border-white/10 bg-ink/35 shadow-card">
-                <div className="relative aspect-[3/4] md:min-h-[650px]">
-                  <Image
-                    src={aboutPhotos[0].src}
-                    alt={aboutPhotos[0].alt}
-                    fill
-                    priority
-                    sizes="(min-width: 1024px) 57vw, (min-width: 768px) 55vw, 100vw"
-                    className="object-cover"
-                  />
+                <div className="space-y-4">
+                  <p className="mt-8 text-xl leading-8 text-bone sm:text-2xl sm:leading-9">{t.body1}</p>
+                  <p className="text-lg leading-8 text-bone/70">{t.body2}</p>
                 </div>
-                <figcaption className="px-4 py-3 text-sm leading-6 text-bone/75">{details.captions[0]}</figcaption>
-              </figure>
 
-              <div className="grid min-w-0 gap-5">
-                {[1, 2].map((index) => (
-                  <figure key={aboutPhotos[index].src} className="min-w-0 overflow-hidden rounded-lg border border-white/10 bg-ink/35 shadow-card">
-                    <div className="relative aspect-[16/10]">
-                      <Image
-                        src={aboutPhotos[index].src}
-                        alt={aboutPhotos[index].alt}
-                        fill
-                        sizes="(min-width: 1024px) 38vw, (min-width: 768px) 42vw, 100vw"
-                        className="object-cover"
-                      />
-                    </div>
-                    <figcaption className="px-4 py-3 text-sm leading-6 text-bone/75">{details.captions[index]}</figcaption>
-                  </figure>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="px-5 py-16 sm:px-8 lg:py-20">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <figure className="min-w-0 overflow-hidden rounded-lg border border-white/10 bg-charcoal shadow-card">
-              <div className="relative aspect-[4/3]">
-                <Image
-                  src={aboutPhotos[3].src}
-                  alt={aboutPhotos[3].alt}
-                  fill
-                  sizes="(min-width: 1024px) 43vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <figcaption className="px-4 py-3 text-sm leading-6 text-bone/75">{details.captions[3]}</figcaption>
-            </figure>
-
-            <article className="rounded-lg border border-white/10 bg-charcoal p-6 shadow-card sm:p-8 lg:p-10">
-              <h2 className="font-serif text-3xl sm:text-4xl">{details.storyTitle}</h2>
-              <div className="mt-6 space-y-5">
-                {details.story.map((paragraph) => (
-                  <p key={paragraph} className="text-lg leading-8 text-bone/85">{paragraph}</p>
-                ))}
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section className="border-y hairline bg-charcoal px-5 py-16 sm:px-8 lg:py-20">
-          <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {t.pillars.map(([title, body]) => (
-              <div key={title} className="rounded-lg border border-white/10 bg-ink/35 p-6 shadow-card">
-                <h2 className="font-serif text-2xl">{title}</h2>
-                <p className="mt-4 leading-7 text-bone/70">{body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="px-5 py-16 sm:px-8 lg:py-20">
-          <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[1.12fr_0.88fr] lg:items-start">
-            <figure className="min-w-0 overflow-hidden rounded-lg border border-white/10 bg-charcoal shadow-card">
-              <div className="relative aspect-[4/3]">
-                <Image
-                  src={aboutPhotos[4].src}
-                  alt={aboutPhotos[4].alt}
-                  fill
-                  sizes="(min-width: 1024px) 57vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <figcaption className="px-4 py-3 text-sm leading-6 text-bone/75">{details.captions[4]}</figcaption>
-            </figure>
-
-            <div className="grid min-w-0 gap-5 sm:grid-cols-2 lg:grid-cols-1">
-              {[5, 6].map((index) => (
-                <figure key={aboutPhotos[index].src} className="min-w-0 overflow-hidden rounded-lg border border-white/10 bg-charcoal shadow-card">
-                  <div className={index === 5 ? "relative aspect-[3/4] lg:aspect-[4/3]" : "relative aspect-[4/3]"}>
-                    <Image
-                      src={aboutPhotos[index].src}
-                      alt={aboutPhotos[index].alt}
-                      fill
-                      sizes="(min-width: 1024px) 38vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover"
-                    />
+                <div className="mt-9">
+                  <h2 className="font-serif text-3xl sm:text-4xl">{details.storyTitle}</h2>
+                  <div className="mt-5 space-y-4">
+                    {details.story.map((paragraph) => (
+                      <p key={paragraph} className="text-lg leading-8 text-bone/85">{paragraph}</p>
+                    ))}
                   </div>
-                  <figcaption className="px-4 py-3 text-sm leading-6 text-bone/75">{details.captions[index]}</figcaption>
+                </div>
+
+                <div className="mt-9 space-y-5">
+                  <p className="text-lg leading-8 text-bone/75">{details.closing}</p>
+                  <p className="font-serif text-3xl leading-tight text-bone sm:text-4xl">{details.brandLine}</p>
+                  <p className="text-lg leading-8 text-bone/85">{details.ctaBody}</p>
+                </div>
+            </article>
+
+            <div className="grid min-w-0 grid-cols-2 gap-3 self-start sm:gap-4 lg:h-full lg:grid-rows-4 lg:self-stretch">
+              {aboutPhotos.map((photo, index) => (
+                <figure key={photo.src} className="relative aspect-square min-w-0 overflow-hidden rounded-lg bg-charcoal shadow-card lg:aspect-auto lg:min-h-0">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    priority={index < 2}
+                    sizes="(min-width: 1024px) 24vw, (min-width: 640px) 48vw, 46vw"
+                    className="object-cover"
+                    style={{ objectPosition: photo.objectPosition }}
+                  />
                 </figure>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="border-t hairline bg-charcoal px-5 py-16 sm:px-8 lg:py-20">
-          <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-            <figure className="min-w-0 overflow-hidden rounded-lg border border-white/10 bg-ink/35 shadow-card">
-              <div className="relative aspect-[16/10]">
-                <Image
-                  src={aboutPhotos[7].src}
-                  alt={aboutPhotos[7].alt}
-                  fill
-                  sizes="(min-width: 1024px) 38vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <figcaption className="px-4 py-3 text-sm leading-6 text-bone/75">{details.captions[7]}</figcaption>
-            </figure>
-
-            <div>
-              <p className="text-lg leading-8 text-bone/75">{details.closing}</p>
-              <p className="mt-7 font-serif text-3xl leading-tight text-bone sm:text-5xl">{details.brandLine}</p>
-              <div className="mt-8 rounded-lg border border-white/10 bg-ink/35 p-6 shadow-card sm:p-8">
-                <p className="text-lg leading-8 text-bone/85">{details.ctaBody}</p>
-                <Link href="/contact" className="mt-7 inline-flex min-h-12 items-center justify-center rounded-full bg-bone px-7 py-3 text-sm font-semibold text-ink transition hover:bg-gold">{t.cta}</Link>
-              </div>
-            </div>
+        <section className="border-t hairline bg-charcoal px-5 py-10 sm:px-8 lg:py-12">
+          <div className="mx-auto max-w-4xl text-center">
+            <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-full bg-bone px-7 py-3 text-sm font-semibold text-ink transition hover:bg-gold">{t.cta}</Link>
           </div>
         </section>
       </main>
