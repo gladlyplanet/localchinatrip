@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { languageOptions, useLanguage, type Lang } from "@/components/LanguageProvider";
 import { getSiteCopy } from "@/lib/site-copy";
 
@@ -34,25 +35,79 @@ function LanguageSwitcher() {
 export function Header() {
   const { lang, dir } = useLanguage();
   const text = getSiteCopy(lang);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMobileMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mobileMenuOpen]);
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b hairline bg-cream/95 backdrop-blur-xl" dir={dir}>
-      <nav className="mx-auto flex h-20 max-w-[1680px] items-center justify-between gap-3 px-4 sm:px-8 2xl:px-24">
-        <Link href="/" className="min-w-0 shrink-0 leading-none text-ink">
-          <span className="script-title block whitespace-nowrap text-2xl font-semibold sm:text-3xl lg:text-4xl">Local China</span>
-          <span className="safe-wrap mt-1 hidden max-w-48 text-[11px] leading-4 tracking-[0.08em] text-mist sm:block">{text.tagline}</span>
-        </Link>
-        <div className="hidden items-center gap-5 text-sm font-medium text-ink xl:flex 2xl:gap-7 2xl:text-[15px]">
-          {text.nav.map((label, index) => <Link key={navHrefs[index]} href={navHrefs[index]} className="whitespace-nowrap transition-colors hover:text-moss">{label}</Link>)}
-        </div>
-        <div className="flex shrink-0 items-center gap-2 sm:gap-4">
-          <Link href="/contact" className="safe-wrap hidden max-w-44 items-center justify-center rounded-full bg-moss px-5 py-3 text-center text-sm font-semibold leading-5 text-cream transition-colors hover:bg-ink lg:inline-flex">{text.plan}</Link>
-          <LanguageSwitcher />
-        </div>
-      </nav>
-      <div className="no-scrollbar flex h-11 items-center gap-5 overflow-x-auto border-t hairline px-4 text-sm font-medium xl:hidden">
-        {text.nav.map((label, index) => <Link key={navHrefs[index]} href={navHrefs[index]} className="shrink-0 leading-5">{label}</Link>)}
-      </div>
-    </header>
+    <>
+      <header data-site-header className="fixed inset-x-0 top-0 z-50 border-b hairline bg-cream/95 backdrop-blur-xl" dir={dir}>
+        <nav className="mx-auto flex h-20 max-w-[1680px] items-center justify-between gap-3 px-4 sm:px-8 2xl:px-24">
+          <Link href="/" className="min-w-0 shrink-0 leading-none text-ink">
+            <span className="script-title block whitespace-nowrap text-2xl font-semibold sm:text-3xl lg:text-4xl">Local China</span>
+            <span className="safe-wrap mt-1 hidden max-w-48 text-[11px] leading-4 tracking-[0.08em] text-mist sm:block">{text.tagline}</span>
+          </Link>
+          <div className="hidden items-center font-medium text-ink lg:flex lg:gap-3 lg:text-xs xl:gap-5 xl:text-sm 2xl:gap-7 2xl:text-[15px]">
+            {text.nav.map((label, index) => <Link key={navHrefs[index]} href={navHrefs[index]} className="whitespace-nowrap transition-colors hover:text-moss">{label}</Link>)}
+          </div>
+          <div className="flex shrink-0 items-center gap-2 xl:gap-4">
+            <Link href="/contact" className="safe-wrap hidden max-w-44 items-center justify-center rounded-full bg-moss px-3 py-3 text-center text-xs font-semibold leading-5 text-cream transition-colors hover:bg-ink lg:inline-flex xl:px-5 xl:text-sm">{text.plan}</Link>
+            <LanguageSwitcher />
+            <button
+              type="button"
+              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border hairline text-ink transition-colors hover:border-moss hover:text-moss focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-moss lg:hidden"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
+              onClick={() => setMobileMenuOpen((open) => !open)}
+            >
+              <span className="sr-only">{mobileMenuOpen ? "Close menu" : "Open menu"}</span>
+              {mobileMenuOpen ? (
+                <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
+                  <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.8" />
+                </svg>
+              ) : (
+                <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
+                  <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.8" />
+                </svg>
+              )}
+            </button>
+          </div>
+        </nav>
+        {mobileMenuOpen && (
+          <div id="mobile-navigation" className="border-t hairline bg-cream px-4 pb-5 pt-3 shadow-card sm:px-8 lg:hidden">
+            <div className="mx-auto grid max-w-[1680px] gap-1 text-base font-medium text-ink">
+              {text.nav.map((label, index) => (
+                <Link key={navHrefs[index]} href={navHrefs[index]} onClick={closeMobileMenu} className="rounded-lg px-3 py-3 transition-colors hover:bg-bone focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-moss">
+                  {label}
+                </Link>
+              ))}
+              <Link href="/contact" onClick={closeMobileMenu} className="mt-2 inline-flex min-h-12 items-center justify-center rounded-full bg-moss px-5 py-3 text-center text-sm font-semibold text-cream transition-colors hover:bg-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-moss">
+                {text.plan}
+              </Link>
+            </div>
+          </div>
+        )}
+      </header>
+      <style jsx global>{`
+        @media (max-width: 1279px) {
+          header[data-site-header] ~ main {
+            padding-top: 5rem !important;
+          }
+        }
+      `}</style>
+    </>
   );
 }
 
