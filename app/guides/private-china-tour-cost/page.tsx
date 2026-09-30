@@ -45,7 +45,7 @@ const articleSchema = {
   url: absoluteUrl(path),
   mainEntityOfPage: absoluteUrl(path),
   datePublished: "2026-09-20",
-  dateModified: "2026-09-20",
+  dateModified: "2026-09-30",
   author: {
     "@type": "Organization",
     name: "Local China Trip",
@@ -205,6 +205,7 @@ export default function PrivateChinaTourCostGuide() {
             <section aria-labelledby="budget-shape" className="mt-20">
               <h2 id="budget-shape" className="safe-wrap font-serif text-3xl font-semibold leading-tight sm:text-5xl">A useful way to think about the budget</h2>
               <p className="safe-wrap mt-5 text-lg leading-8 text-mist">You do not have to choose between arranging everything yourself and buying private service every day.</p>
+              <p className="safe-wrap mt-4 leading-7 text-mist">If the main decision is whether shared services justify less flexibility, see our <Link href="/guides/private-china-tour-vs-group-tour" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">private tour vs group tour comparison</Link>.</p>
               <div className="mt-9 grid gap-5 lg:grid-cols-3">
                 <div className="rounded-lg border bg-bone p-6 hairline">
                   <p className="text-xs font-semibold text-gold">01</p>

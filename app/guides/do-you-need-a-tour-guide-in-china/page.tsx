@@ -45,7 +45,7 @@ const articleSchema = {
   url: absoluteUrl(path),
   mainEntityOfPage: absoluteUrl(path),
   datePublished: "2026-09-21",
-  dateModified: "2026-09-21",
+  dateModified: "2026-09-30",
   author: {
     "@type": "Organization",
     name: "Local China Trip",
@@ -179,6 +179,7 @@ export default function TourGuideInChinaGuide() {
             <section aria-labelledby="comparison" className="mt-20">
               <h2 id="comparison" className="safe-wrap font-serif text-3xl font-semibold leading-tight sm:text-5xl">DIY vs group tour vs private guide</h2>
               <p className="safe-wrap mt-5 text-lg leading-8 text-mist">Each style solves a different problem. Compare the service and responsibility involved rather than looking for a universal winner.</p>
+              <p className="safe-wrap mt-4 leading-7 text-mist">If you already know you want an organized trip but are deciding how personal it should be, <Link href="/guides/private-china-tour-vs-group-tour" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">compare private and group travel in China</Link>.</p>
               <div className="mt-9 grid items-start gap-6 lg:grid-cols-3">
                 {comparisonOptions.map((option) => (
                   <section key={option.name} className="min-w-0 rounded-lg border bg-white p-6 hairline sm:p-7">

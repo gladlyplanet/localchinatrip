@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/guides/china-with-older-parents",
     "/guides/do-you-need-a-tour-guide-in-china",
     "/guides/private-china-tour-cost",
+    "/guides/private-china-tour-vs-group-tour",
     "/private-car",
     "/travel-planning",
   ];
