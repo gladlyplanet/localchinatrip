@@ -314,7 +314,7 @@ export default function PrivateChinaTourCostGuide() {
             <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <h2 className="safe-wrap font-serif text-3xl font-semibold leading-tight sm:text-5xl">Planning a private trip to China?</h2>
-                <p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-mist">Send me your travel dates, group size, cities you are considering and the pace you prefer. I can help you work out which parts are worth arranging privately and which parts you can comfortably do on your own.</p>
+                <p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-mist">Send us your travel dates, group size, cities you are considering and the pace you prefer. We can help you work out which parts are worth arranging privately and which parts you can comfortably do on your own.</p>
               </div>
               <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-md bg-cream px-7 py-3 text-center text-sm font-semibold text-ink transition hover:bg-gold">Plan My China Trip <span className="ms-2">→</span></Link>
             </div>

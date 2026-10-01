@@ -293,7 +293,7 @@ export default function TourGuideInChinaGuide() {
 
             <section className="mt-20 rounded-lg border border-moss/30 bg-white p-7 shadow-card sm:p-10">
               <h2 className="safe-wrap font-serif text-3xl font-semibold leading-tight sm:text-4xl">Not sure how much of your China trip needs private support?</h2>
-              <p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-mist">Tell me your dates, cities, group size and how independently you like to travel. I can help you work out which days are worth arranging and which days you can comfortably keep for yourself.</p>
+              <p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-mist">Tell us your dates, cities, group size and how independently you like to travel. We can help you work out which days are worth arranging and which days you can comfortably keep for yourself.</p>
               <Link href="/contact" className="mt-7 inline-flex min-h-12 items-center justify-center rounded-md bg-moss px-7 py-3 text-center text-sm font-semibold text-cream transition hover:bg-ink">Plan My China Trip <span className="ms-2">→</span></Link>
             </section>
 
@@ -339,7 +339,7 @@ export default function TourGuideInChinaGuide() {
             <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <h2 className="safe-wrap font-serif text-3xl font-semibold leading-tight sm:text-5xl">Build the right mix for your trip</h2>
-                <p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-mist">Tell me your dates, cities, group size and how independently you like to travel. We can identify the days where private help adds real value and keep the rest open.</p>
+                <p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-mist">Tell us your dates, cities, group size and how independently you like to travel. We can identify the days where private help adds real value and keep the rest open.</p>
               </div>
               <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-md bg-cream px-7 py-3 text-center text-sm font-semibold text-ink transition hover:bg-gold">Plan My China Trip <span className="ms-2">→</span></Link>
             </div>

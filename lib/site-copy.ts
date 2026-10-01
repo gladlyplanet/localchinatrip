@@ -180,7 +180,7 @@ export const siteCopy: Record<Lang, SiteCopy> = {
         ["Hidden local experiences", "Tea, markets, craftspeople, countryside stays, neighborhood walks and local conversations."]
       ],
       consultTitle: "Every journey begins with a personal consultation.",
-      consultBody: "Tell me who is traveling, what you hope to feel and how you like to move. I will shape the route, rhythm, stays and experiences around you.",
+      consultBody: "Tell us who is traveling, what you hope to feel and how you like to move. We will shape the route, rhythm, stays and experiences around you.",
       cta: "Request a private proposal"
     },
     faq: {

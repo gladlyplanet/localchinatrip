@@ -32,7 +32,7 @@ const contactFields: Record<Lang, ContactFields> = {
     paceOptions: ["Not sure yet", "Relaxed", "Balanced", "Active"],
     budget: "Approximate budget per person (optional)",
     budgetOptions: ["Not sure yet", "Under US$1,500", "US$1,500–3,000", "US$3,000–5,000", "US$5,000+"],
-    details: "Anything else I should know?",
+    details: "Anything else we should know?",
   },
   "zh-CN": {
     whatsapp: "WhatsApp / 电话（选填）",

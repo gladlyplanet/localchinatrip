@@ -351,7 +351,7 @@ export default function SevenDaysInChinaGuide() {
             <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <h2 className="safe-wrap font-serif text-3xl font-semibold leading-tight sm:text-5xl">Only have seven days in China?</h2>
-                <p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-cream/75">Tell me your arrival city, departure city, dates, group size and the places you care about most. I can help you work out what realistically fits—and what is better saved for the next trip.</p>
+                <p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-cream/75">Tell us your arrival city, departure city, dates, group size and the places you care about most. We can help you work out what realistically fits—and what is better saved for the next trip.</p>
               </div>
               <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-md bg-cream px-7 py-3 text-center text-sm font-semibold text-ink transition hover:bg-gold">Plan My China Trip <span className="ms-2">→</span></Link>
             </div>

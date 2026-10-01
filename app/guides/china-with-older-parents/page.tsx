@@ -343,7 +343,7 @@ export default function ChinaWithOlderParentsGuide() {
             <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <h2 className="safe-wrap font-serif text-3xl font-semibold leading-tight sm:text-5xl">Planning a China trip with your parents?</h2>
-                <p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-cream/75">Tell me their preferred pace, walking comfort, your dates and the places your family most wants to see. I can help shape a route that keeps the important experiences and removes unnecessary rushing.</p>
+                <p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-cream/75">Tell us their preferred pace, walking comfort, your dates and the places your family most wants to see. We can help shape a route that keeps the important experiences and removes unnecessary rushing.</p>
               </div>
               <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-md bg-cream px-7 py-3 text-center text-sm font-semibold text-ink transition hover:bg-gold">Plan My China Trip <span className="ms-2">→</span></Link>
             </div>

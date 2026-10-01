@@ -69,7 +69,7 @@ const pageCopy = {
     adjustTitle: "What can be adjusted",
     adjust: [["Cities", "Change the route or focus on one region."], ["Nature", "Balance landscapes with city time."], ["Food", "Markets, home-style meals and local specialties."], ["Culture", "History, crafts and everyday life."], ["Transport", "Rail, flights or private car where useful."], ["Daily pace", "More rest, more walking or flexible mornings."]],
     finalTitle: "A route should fit you, not the other way around.",
-    finalBody: "Tell me your dates, interests and preferred pace. I will prepare a free first route for us to review together.",
+    finalBody: "Tell us your dates, interests and preferred pace. We will prepare a free first route so we can review it together.",
     contact: "Tell me about my trip"
   },
   "zh-CN": {

@@ -70,7 +70,7 @@ const copy: Record<Lang, Copy> = {
     whyTitle: "Why this route works",
     whyBody: (count) => `The route limits itself to ${count} main stops so travel time does not consume the experience. Longer stays can be added where your interests are strongest.`,
     adjustTitle: "Build your version of this route",
-    adjustBody: "Tell me your dates, preferred pace, must-see places and what you would rather skip. I will prepare a free first version for us to review together.",
+    adjustBody: "Tell us your dates, preferred pace, must-see places and what you would rather skip. We will prepare a free first version so we can review it together.",
     contact: "Start with this route",
     seasons: { allYear: "All year", springAutumn: "Spring / autumn", summerAutumn: "Summer / autumn", winter: "Winter" },
     paces: { easy: "Easy", balanced: "Balanced", active: "Active" },

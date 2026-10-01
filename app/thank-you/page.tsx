@@ -8,7 +8,7 @@ const copy: Record<Lang, { eyebrow: string; title: string; body: string; home: s
   en: {
     eyebrow: "Enquiry sent",
     title: "Thank you.",
-    body: "Your message has been sent. I will reply by email or WhatsApp as soon as possible.",
+    body: "Your message has been sent. We will reply by email or WhatsApp as soon as possible.",
     home: "Back to home",
     another: "Send another enquiry"
   },

@@ -296,7 +296,7 @@ export default function TenDaysInChinaGuide() {
 
           <section className="bg-ink px-5 py-16 text-cream sm:px-8 lg:px-24 lg:py-20">
             <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
-              <div><h2 className="safe-wrap font-serif text-3xl font-semibold leading-tight sm:text-5xl">Have 10 days in China but too many places on your list?</h2><p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-cream/75">Send me your dates, arrival and departure cities, group size and the experiences you care about most. I can help you turn the list into a route that actually fits the time.</p></div>
+              <div><h2 className="safe-wrap font-serif text-3xl font-semibold leading-tight sm:text-5xl">Have 10 days in China but too many places on your list?</h2><p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-cream/75">Send us your dates, arrival and departure cities, group size and the experiences you care about most. We can help you turn the list into a route that actually fits the time.</p></div>
               <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-md bg-cream px-7 py-3 text-center text-sm font-semibold text-ink transition hover:bg-gold">Plan My China Trip <span className="ms-2">→</span></Link>
             </div>
           </section>
