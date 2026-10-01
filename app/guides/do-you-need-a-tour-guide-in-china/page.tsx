@@ -45,7 +45,7 @@ const articleSchema = {
   url: absoluteUrl(path),
   mainEntityOfPage: absoluteUrl(path),
   datePublished: "2026-09-21",
-  dateModified: "2026-09-30",
+  dateModified: "2026-10-01",
   author: {
     "@type": "Organization",
     name: "Local China Trip",
@@ -173,6 +173,7 @@ export default function TourGuideInChinaGuide() {
               <p className="safe-wrap mt-5 text-lg leading-8 text-mist">
                 That does not mean every step is effortless. Some ticketing systems can be confusing, passport-based booking occasionally adds friction, and language differences still matter. Payment, mapping and translation tools need to be set up, while large stations and popular attractions can feel overwhelming on a first visit. Plans can also change quickly when tickets sell out, weather shifts or a train connection is missed.
               </p>
+              <p className="safe-wrap mt-5 leading-7 text-mist">If this is your first visit, our <Link href="/guides/first-trip-to-china" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">first-trip China planning guide</Link> places the choice of support alongside your time, route, budget and pace.</p>
               <p className="safe-wrap mt-5 font-semibold leading-7 text-moss">China is very possible independently. It is not always friction-free.</p>
             </section>
 

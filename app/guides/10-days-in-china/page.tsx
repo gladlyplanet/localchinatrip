@@ -41,7 +41,7 @@ const articleSchema = {
   url: absoluteUrl(path),
   mainEntityOfPage: absoluteUrl(path),
   datePublished: "2026-09-21",
-  dateModified: "2026-09-21",
+  dateModified: "2026-10-01",
   author: { "@type": "Organization", name: "Local China Trip", url: absoluteUrl("/about") },
 };
 
@@ -160,6 +160,7 @@ export default function TenDaysInChinaGuide() {
               <p className="safe-wrap mt-6 text-lg leading-8 text-mist">Ten calendar days may include an international arrival, an international departure, jet lag, intercity transfers and several hotel changes. That does not mean the trip is too short; it means ten days should not be treated as ten identical sightseeing blocks.</p>
               <p className="safe-wrap mt-5 text-lg leading-8 text-mist">A four-hour train or a two-hour flight is not the full cost of changing cities. The journey begins when you leave the hotel and includes reaching the station or airport, security, waiting, boarding, arrival, luggage and the transfer to a new hotel.</p>
               <p className="safe-wrap mt-5 border-s-2 border-gold ps-5 text-lg font-semibold leading-8">Count door-to-door travel, not timetable travel.</p>
+              <p className="safe-wrap mt-5 leading-7 text-mist">If you are still deciding how the whole trip should work, our <Link href="/guides/first-trip-to-china" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">first-trip China planning guide</Link> puts time, route, support and budget in a useful order.</p>
             </section>
 
             <section aria-labelledby="how-many" className="mt-20">

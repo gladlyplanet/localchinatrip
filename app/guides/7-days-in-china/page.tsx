@@ -45,7 +45,7 @@ const articleSchema = {
   url: absoluteUrl(path),
   mainEntityOfPage: absoluteUrl(path),
   datePublished: "2026-09-21",
-  dateModified: "2026-09-21",
+  dateModified: "2026-10-01",
   author: {
     "@type": "Organization",
     name: "Local China Trip",
@@ -162,6 +162,7 @@ export default function SevenDaysInChinaGuide() {
               <p className="safe-wrap mt-5 text-lg leading-8 text-mist">
                 Think door to door, not platform to platform. The exact cost depends on the city, station, traffic, departure time and how lightly you travel, so a useful itinerary protects part of the transfer day instead of promising a full sightseeing schedule on both sides.
               </p>
+              <p className="safe-wrap mt-5 leading-7 text-mist">If this is your first visit, start with our <Link href="/guides/first-trip-to-china" className="font-semibold text-moss underline decoration-moss/40 underline-offset-4">First Trip to China planning guide</Link> to work through time, travel style and pace before settling on a route.</p>
             </section>
 
             <section aria-labelledby="two-or-three" className="mt-20">
