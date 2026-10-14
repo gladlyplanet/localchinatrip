@@ -16,6 +16,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/destinations/jilin/chagan-lake",
+        destination: "/destinations/jilin/chagan-lake-winter-fishing",
+        statusCode: 301
+      },
+      {
         source: "/destinations/liaoning/dalian-coastal-road",
         destination: "/destinations/liaoning/dalian-binhai-road",
         permanent: true
