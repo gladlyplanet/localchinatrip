@@ -45,7 +45,7 @@ const articleSchema = {
   url: absoluteUrl(path),
   mainEntityOfPage: absoluteUrl(path),
   datePublished: "2026-09-20",
-  dateModified: "2026-09-30",
+  dateModified: "2026-10-15",
   author: {
     "@type": "Organization",
     name: "Local China Trip",
@@ -107,7 +107,7 @@ export default function PrivateChinaTourCostGuide() {
                 <span>Cost guide</span>
               </nav>
               <p className="mt-10 text-xs font-semibold uppercase tracking-[0.2em] text-gold">2026 planning guide</p>
-              <p className="mt-3 text-sm text-mist">Last reviewed: September 2026</p>
+              <p className="mt-3 text-sm text-mist">Last reviewed: October 2026</p>
               <h1 className="safe-wrap mt-5 max-w-4xl font-serif text-4xl font-semibold leading-[1.08] sm:text-6xl lg:text-7xl">
                 How Much Does a Private China Tour Cost in 2026?
               </h1>
@@ -145,6 +145,9 @@ export default function PrivateChinaTourCostGuide() {
               <h2 id="meaning" className="safe-wrap font-serif text-3xl font-semibold leading-tight sm:text-5xl">What does “private China tour” actually mean?</h2>
               <p className="safe-wrap mt-6 text-lg leading-8 text-mist">
                 It is not one standard product. One quote may cover a complete journey, while another covers only selected local services. Depending on the plan, it may include itinerary design, guides on agreed days, a private vehicle and driver, hotels, attraction tickets, high-speed trains or domestic transport, airport and station transfers, local experiences and on-the-ground support.
+              </p>
+              <p className="safe-wrap mt-5 text-lg leading-8 text-mist">
+                A guide-only fee covers a different scope from a complete private journey. Check whether transport, tickets, hotels and intercity travel are included before comparing a guide&apos;s daily rate with a per-person trip price.
               </p>
               <p className="safe-wrap mt-5 text-lg leading-8 text-mist">
                 That is why two quotes with a similar total can represent very different trips. Before comparing prices, compare exactly what each quote asks someone else to arrange for you.
@@ -314,7 +317,7 @@ export default function PrivateChinaTourCostGuide() {
             <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
                 <h2 className="safe-wrap font-serif text-3xl font-semibold leading-tight sm:text-5xl">Planning a private trip to China?</h2>
-                <p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-mist">Send us your travel dates, group size, cities you are considering and the pace you prefer. We can help you work out which parts are worth arranging privately and which parts you can comfortably do on your own.</p>
+                <p className="safe-wrap mt-5 max-w-3xl text-lg leading-8 text-cream/90">Send us your travel dates, group size, cities you are considering and the pace you prefer. If you have hotel preferences or know which services you want included, share those too. We can help you work out which parts are worth arranging privately and which parts you can comfortably do on your own.</p>
               </div>
               <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-md bg-cream px-7 py-3 text-center text-sm font-semibold text-ink transition hover:bg-gold">Plan My China Trip <span className="ms-2">→</span></Link>
             </div>

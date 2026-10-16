@@ -13,6 +13,12 @@ type SiteCopy = {
     brand: string;
     intro: string;
     explore: string;
+    planTrip: string;
+    planHint: string;
+    serviceDetails: string;
+    guidePrompt: string;
+    guideChoice: string;
+    guideCost: string;
     localLife: string;
     localLifeIntro: string;
     featured: string;
@@ -120,6 +126,12 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       brand: "Real China. Real moments.",
       intro: "Private journeys designed with deep local knowledge — through food, culture, neighbourhoods and everyday life across China.",
       explore: "Explore experiences",
+      planTrip: "Plan My China Trip",
+      planHint: "Share your dates and interests for a free first route proposal that we can review together.",
+      serviceDetails: "See what our private planning can include.",
+      guidePrompt: "Deciding how to travel?",
+      guideChoice: "Do you need a guide in China?",
+      guideCost: "What does a private China trip cost?",
       localLife: "Ways into local life",
       localLifeIntro: "Each choice opens a real destination and a story worth staying for.",
       featured: "Featured experiences",
@@ -246,6 +258,12 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       brand: "真实中国，真实时刻。",
       intro: "以深入的本地经验设计私人旅程，走进中国各地的饮食、文化、社区与日常生活。",
       explore: "探索体验",
+      planTrip: "定制我的中国之旅",
+      planHint: "告诉我们旅行日期和兴趣，我们会提供免费的初步路线方案，一起讨论调整。",
+      serviceDetails: "了解私人行程可以包含哪些服务。",
+      guidePrompt: "还在考虑怎样旅行？",
+      guideChoice: "在中国旅行需要向导吗？",
+      guideCost: "中国私人旅行费用如何估算？",
       localLife: "走进本地生活",
       localLifeIntro: "每个选择都对应真实目的地，也通向一段值得停留的故事。",
       featured: "精选体验",
@@ -372,6 +390,12 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       brand: "真實中國，真實時刻。",
       intro: "以深入的在地經驗設計私人旅程，走進中國各地的飲食、文化、社區與日常生活。",
       explore: "探索體驗",
+      planTrip: "訂製我的中國之旅",
+      planHint: "告訴我們旅行日期和興趣，我們會提供免費的初步路線方案，一起討論調整。",
+      serviceDetails: "了解私人行程可以包含哪些服務。",
+      guidePrompt: "還在考慮怎樣旅行？",
+      guideChoice: "在中國旅行需要嚮導嗎？",
+      guideCost: "中國私人旅行費用如何估算？",
       localLife: "走進在地生活",
       localLifeIntro: "每個選擇都對應真實目的地，也通向一段值得停留的故事。",
       featured: "精選體驗",
@@ -498,6 +522,12 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       brand: "China real. Momentos reales.",
       intro: "Viajes privados diseñados con profundo conocimiento local, a través de la comida, la cultura, los barrios y la vida cotidiana de China.",
       explore: "Explorar experiencias",
+      planTrip: "Planear mi viaje a China",
+      planHint: "Comparte tus fechas e intereses para recibir una primera propuesta de ruta gratuita que podamos revisar juntos.",
+      serviceDetails: "Descubre qué puede incluir la planificación privada.",
+      guidePrompt: "¿Cómo te gustaría viajar?",
+      guideChoice: "¿Necesitas un guía en China?",
+      guideCost: "¿Cuánto cuesta un viaje privado por China?",
       localLife: "Caminos hacia la vida local",
       localLifeIntro: "Cada elección abre un destino real y una historia que merece tiempo.",
       featured: "Experiencias destacadas",
@@ -624,6 +654,12 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       brand: "China real. Momentos reais.",
       intro: "Viagens privadas criadas com profundo conhecimento local, por meio da comida, cultura, bairros e vida cotidiana da China.",
       explore: "Explorar experiências",
+      planTrip: "Planejar minha viagem à China",
+      planHint: "Compartilhe suas datas e interesses para receber uma primeira proposta de roteiro gratuita que possamos rever juntos.",
+      serviceDetails: "Veja o que o planejamento privado pode incluir.",
+      guidePrompt: "Decidindo como viajar?",
+      guideChoice: "Precisa de um guia na China?",
+      guideCost: "Quanto custa uma viagem privada pela China?",
       localLife: "Caminhos para a vida local",
       localLifeIntro: "Cada escolha abre um destino real e uma história que merece tempo.",
       featured: "Experiências em destaque",
@@ -750,6 +786,12 @@ export const siteCopy: Record<Lang, SiteCopy> = {
       brand: "الصين الحقيقية. لحظات حقيقية.",
       intro: "رحلات خاصة مصممة بمعرفة محلية عميقة، عبر الطعام والثقافة والأحياء والحياة اليومية في أنحاء الصين.",
       explore: "استكشف التجارب",
+      planTrip: "خطط لرحلتي إلى الصين",
+      planHint: "شارك تواريخك واهتماماتك لنعد مقترح مسار أولي مجانياً ونراجعه معاً.",
+      serviceDetails: "تعرّف على ما قد يشمله التخطيط الخاص.",
+      guidePrompt: "هل ما زلت تختار أسلوب رحلتك؟",
+      guideChoice: "هل تحتاج إلى مرشد في الصين؟",
+      guideCost: "كم تكلف رحلة خاصة في الصين؟",
       localLife: "طرق إلى الحياة المحلية",
       localLifeIntro: "كل اختيار يفتح وجهة حقيقية وقصة تستحق التمهل.",
       featured: "تجارب مختارة",

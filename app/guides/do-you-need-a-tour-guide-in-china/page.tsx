@@ -45,7 +45,7 @@ const articleSchema = {
   url: absoluteUrl(path),
   mainEntityOfPage: absoluteUrl(path),
   datePublished: "2026-09-21",
-  dateModified: "2026-10-01",
+  dateModified: "2026-10-15",
   author: {
     "@type": "Organization",
     name: "Local China Trip",
@@ -137,7 +137,7 @@ export default function TourGuideInChinaGuide() {
                 <span>Guide or independent travel?</span>
               </nav>
               <p className="mt-10 text-xs font-semibold uppercase tracking-[0.2em] text-gold">China travel decisions</p>
-              <p className="mt-3 text-sm text-mist">Last reviewed: September 2026</p>
+              <p className="mt-3 text-sm text-mist">Last reviewed: October 2026</p>
               <h1 className="safe-wrap mt-5 max-w-4xl font-serif text-4xl font-semibold leading-[1.08] sm:text-6xl lg:text-7xl">
                 Do You Need a Tour Guide in China?
               </h1>
@@ -155,7 +155,7 @@ export default function TourGuideInChinaGuide() {
                   A guide becomes more useful when a trip involves complicated reservations, limited time, cultural interpretation, remote locations, children, older travelers or days where several moving parts need to work smoothly.
                 </p>
                 <p className="safe-wrap mt-4 leading-7 text-mist">
-                  For many travelers, the best answer is not “guided or unguided.” It is a mix of independent days and private support where it actually adds value.
+                  For many travelers, the useful choice is day by day: keep straightforward city days independent, and consider local support for timed visits, difficult transfers or places where an explanation will change what you see.
                 </p>
                 <p className="safe-wrap mt-5 border-s-2 border-gold ps-4 text-sm leading-6 text-moss">
                   Some destinations or special regions can have separate permit or travel requirements, so always check current official rules for your specific route.

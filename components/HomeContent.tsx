@@ -25,8 +25,20 @@ export function HomeContent() {
               <h1 className="safe-wrap mt-5 font-serif text-4xl font-semibold leading-[1.08] sm:text-6xl lg:text-7xl xl:text-8xl">{t.title}</h1>
               <p className="mt-6 font-serif text-2xl text-gold sm:text-3xl">{t.brand}</p>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-cream/85 sm:text-xl">{t.intro}</p>
-              <Link href="/experiences" className="mt-9 inline-flex min-h-12 items-center justify-center rounded-full bg-moss px-7 py-3 text-sm font-semibold text-cream transition hover:bg-cream hover:text-ink">{t.explore}</Link>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-full bg-moss px-7 py-3 text-center text-sm font-semibold text-cream transition hover:bg-cream hover:text-ink">{t.planTrip}</Link>
+                <Link href="/experiences" className="inline-flex min-h-12 items-center justify-center rounded-full border border-cream/70 px-7 py-3 text-center text-sm font-semibold text-cream transition hover:bg-cream hover:text-ink">{t.explore}</Link>
+              </div>
+              <p className="mt-4 max-w-xl text-sm leading-6 text-cream/90">{t.planHint} <Link href="/china-travel-services" className="font-semibold text-cream underline decoration-cream/60 underline-offset-4">{t.serviceDetails}</Link></p>
             </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="home-planning-guides" className="border-b hairline bg-bone px-5 py-7 sm:px-8">
+          <div className="mx-auto flex max-w-[1220px] flex-wrap items-center gap-x-8 gap-y-3">
+            <h2 id="home-planning-guides" className="font-serif text-xl font-semibold">{t.guidePrompt}</h2>
+            <Link href="/guides/do-you-need-a-tour-guide-in-china" className="text-sm font-semibold text-moss underline decoration-moss/40 underline-offset-4">{t.guideChoice}</Link>
+            <Link href="/guides/private-china-tour-cost" className="text-sm font-semibold text-moss underline decoration-moss/40 underline-offset-4">{t.guideCost}</Link>
           </div>
         </section>
 
